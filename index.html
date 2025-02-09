@@ -6,22 +6,37 @@
   <title>Dblocks na prática</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="assets/css/style.css" rel="stylesheet" />
-  <script defer src="/assets/js/main.js"></script>
 </head>
 <body class="bg-gray-100">
 
   <!-- MENU DE NAVEGAÇÃO -->
-  <nav class="bg-orange-300 text-white py-6 px-4 fixed w-full top-0 shadow-md z-10">
-
+  <nav class="bg-orange-300 text-white py-4 px-6 fixed w-full top-0 shadow-md z-10">
     <div class="container mx-auto flex justify-between items-center">
+      <!-- LOGO -->
       <a href="index.html" class="flex items-center">
         <img src="assets/images/logo-dblocks.svg" alt="Logo Dblocks" class="logo">
       </a>
-      <div>
-        <a href="index.html" class="mx-3 hover:text-gray-200 transition-colors">Início</a>
-        <a href="section.html" class="mx-3 hover:text-gray-200 transition-colors">Seções</a>
-        <a href="about.html" class="mx-3 hover:text-gray-200 transition-colors">Sobre</a>
+      
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-gray-200 transition-colors">Início</a>
+        <a href="section.html" class="hover:text-gray-200 transition-colors">Seções</a>
+        <a href="about.html" class="hover:text-gray-200 transition-colors">Sobre</a>
       </div>
+      
+      <div class="md:hidden">
+        <button id="menu-button" class="focus:outline-none">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    
+    <div id="mobile-menu" class="hidden md:hidden mt-4">
+      <a href="index.html" class="block py-2 px-4 hover:bg-orange-400 transition-colors">Início</a>
+      <a href="section.html" class="block py-2 px-4 hover:bg-orange-400 transition-colors">Seções</a>
+      <a href="about.html" class="block py-2 px-4 hover:bg-orange-400 transition-colors">Sobre</a>
     </div>
   </nav>
 
