@@ -1,0 +1,163 @@
+.container-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.title > strong {
+  color: var(--secondary);
+  font-weight: 300;
+}
+
+.description {
+  color: #808080;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 616px;
+}
+
+.container-search {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-search input {
+  width: 50%;
+}
+
+.btn-search {
+  min-width: 56px;
+  display: flex;
+  height: 50px;
+  padding: 3px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  height: 40px;
+}
+
+.modern-card {
+  width: 403px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  box-shadow: 0px 4px 15px 0px rgba(129, 129, 129, 0.25);
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#container-cards {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.modern-card:hover {
+  transform: scale(1.01);
+}
+
+.card-image {
+  border-radius: 8px;
+  border: 1px solid #dadada;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card-text {
+  color: #808080;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  color: var(--primary);
+}
+.card-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .container-search {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .container-search input {
+    width: 90%;
+    max-width: none;
+  }
+
+  #container-cards {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .modern-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+    width: 95%;
+  }
+
+  .modern-card {
+    width: 100%;
+  }
+}
