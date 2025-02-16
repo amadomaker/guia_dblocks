@@ -1,0 +1,23 @@
+[
+    {
+      "title": "Introdução ao Dblocks",
+      "image": "inicialdblocks.png",
+      "description": "Nesta parte do livro, vamos entender os conceitos básicos de programação em blocos e por que ela pode ser uma ótima forma de aprender a programar."
+    },
+    {
+      "title": "Variáveis e Atribuições",
+      "image": "christmas-background-1864718_1280.jpg",
+      "description": "Veja como criar e manipular variáveis dentro de uma abordagem de programação em blocos, entendendo as estruturas básicas para armazenamento de dados."
+    },
+    {
+      "title": "Estruturas de Controle",
+      "image": "cap3.jpg",
+      "description": "Aprenda sobre blocos condicionais e loops que permitem criar fluxos de execução mais complexos, tornando seu programa inteligente."
+    },
+    {
+      "title": "Estruturas de Controle",
+      "image": "cap3.jpg",
+      "description": "Aprenda sobre blocos condicionais e loops que permitem criar fluxos de execução mais complexos, tornando seu programa inteligente."
+    }
+  ]
+  
