@@ -1,71 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dblocks na prática</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="assets/css/style.css" rel="stylesheet" />
-</head>
-<body class="bg-gray-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dblocks na prática</title>
+    <link href="assets/css/global.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
 
-  <!-- MENU DE NAVEGAÇÃO -->
-  <nav class="bg-orange-300 text-white py-4 px-6 fixed w-full top-0 shadow-md z-10">
-    <div class="container mx-auto flex justify-between items-center">
-      <!-- LOGO -->
-      <a href="index.html" class="flex items-center">
-        <img src="assets/images/logo-dblocks.svg" alt="Logo Dblocks" class="logo">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="assets/images/logo-dblocks.svg"
+        alt="Logo Dblocks"
+        class="logo-dblocks"
+      />
+
+      <nav class="">
+        <ul class="container-nav">
+          <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://dblocks.com.br/ui/index.html?lang=pt-br">
+        <button class="btn btn-primary">Comece a programar</button>
       </a>
-      
-      <div class="hidden md:flex space-x-6">
-        <a href="index.html" class="hover:text-gray-200 transition-colors">Início</a>
-        <a href="section.html" class="hover:text-gray-200 transition-colors">Seções</a>
-        <a href="about.html" class="hover:text-gray-200 transition-colors">Sobre</a>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      
-      <div class="md:hidden">
-        <button id="menu-button" class="focus:outline-none">
-          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
+        </ul>
       </div>
-    </div>
+    </header>
 
-    
-    <div id="mobile-menu" class="hidden md:hidden mt-4">
-      <a href="index.html" class="block py-2 px-4 hover:bg-orange-400 transition-colors">Início</a>
-      <a href="section.html" class="block py-2 px-4 hover:bg-orange-400 transition-colors">Seções</a>
-      <a href="about.html" class="block py-2 px-4 hover:bg-orange-400 transition-colors">Sobre</a>
-    </div>
-  </nav>
+    <main>
+      <section class="container-title">
+        <h2 class="title">
+          Seja bem-vindo(a) ao <strong class="strong">Guia Dblocks!</strong>
+        </h2>
 
-  <!-- SEÇÃO HERO (Boas-vindas) -->
-  <section class="hero-section">
-    <div class="hero-container">
-      <h1 class="hero-title">Bem-vindo ao guia: <span class="hero-highlight">Dblocks na prática</span></h1>
-      <p class="hero-subtitle">Aprenda programação em blocos de forma interativa e intuitiva!</p>
-    </div>
-  </section>
+        <h5 class="description">
+          Explore o Dblocks e aprenda programação passo a passo com um guia
+          interativo e acessível.
+        </h5>
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  <div class="container mx-auto px-4 py-8">
-    <!-- Campo de Pesquisa -->
-    <div class="flex justify-center mb-8">
-      <input type="text" placeholder="Pesquise capítulos..." 
-        class="w-full md:w-1/2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" />
-    </div>
+        <div class="container-search">
+          <input
+            type="text"
+            class="standard-input"
+            placeholder="Pesquise por capítulos..."
+          />
 
-    <!-- Título Secundário -->
-    <h2 class="text-2xl font-bold mb-6 text-center">Capítulos do Livro</h2>
+          <button class="btn btn-primary btn-search" id="btn-search">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+      </section>
 
-    <!-- GRID DE CARDS -->
-    <div id="container-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    </div>
-  </div>
+      <section id="container-cards"></section>
+    </main>
 
-  
-  <!-- SCRIPTS -->
-  <script src="assets/js/main.js"></script>
-</body>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
