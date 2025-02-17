@@ -1,47 +1,47 @@
 [
     {
       "title": "Introdução ao Dblocks",
-      "image": "inicialdblocks.png",
+      "image": "introducao.png",
       "description": "Nesta seção, vamos explorar os conceitos fundamentais do Dblocks, conhecer sua plataforma e entender a placa AmadoBoard. Aprenda como a programação em blocos pode facilitar o desenvolvimento de projetos interativos."
     },
     {
       "title": "Preparando o ambiente",
-      "image": "christmas-background-1864718_1280.jpg",
+      "image": "logo-micropython3.png",
       "description": "Aprenda como instalar os drivers necessários e configurar a AmadoBoard com MicroPython para começar desenvolver seus projetos."
     },
     {
       "title": "Entrada e saída digital",
-      "image": "christmas-background-1864718_1280.jpg",
+      "image": "saida-digital.png",
       "description": "Descubra como funcionam as entradas e saídas digitais no Dblocks, aprendendo a conectar sensores e atuadores para criar projetos interativos "
     },
     {
       "title": "Entrada e saída analógica",
-      "image": "christmas-background-1864718_1280.jpg",
+      "image": "entrada-analogica.png",
       "description": "Descubra como funcionam as entradas e saídas analógicas no Dblocks, aprendendo a ler sensores e controlar atuadores com precisão para criar projetos avançados."
     },
     {
       "title": "Sensores",
-      "image": "cap3.jpg",
+      "image": "sensores.png",
       "description": "Aprenda como utilizar sensores no Dblocks, aprendendo a coletar dados do ambiente e integrá-los em seus projetos para criar soluções interativas e inteligentes."
     },
     {
       "title": "Atuadores",
-      "image": "cap3.jpg",
+      "image": "atuadores.png",
       "description": "Aprenda como funcionam os atuadores no Dblocks, aprendendo a controlá-los para criar projetos interativos e dinâmicos que respondem a diferentes estímulos."
     },
     {
       "title": "Música",
-      "image": "cap3.jpg",
+      "image": "musica.png",
       "description": "Aprenda a ultilizar a funcionalidade de música no Dblcks para compor melodias, ajustar tempo e reproduzir sons em seus projetos "
     },
     {
       "title": "Display",
-      "image": "cap3.jpg",
+      "image": "display.png",
       "description": "Aprenda a utilizar o display para exibir textos, variáveis e leituras de sensores."
     },
     {
       "title": "Recursos e funcionalidades",
-      "image": "cap3.jpg",
+      "image": "recursos.png",
       "description": "Conheça os recursos e funcionalidades que o Dblocks oferece para evoluir seus projetos."
     }
   ]
