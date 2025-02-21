@@ -5,22 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programação por blocos</title>
     <style>
-        body {
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%; /* Faz a página ocupar 100% da altura da tela */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+            overflow-y: auto; /* Mantém rolagem vertical apenas quando necessário */
             font-family: Arial, sans-serif;
-            margin: 70px;
-            line-height: 1.6;
+            background-color: #f4f4f4;
+            line-height: 1.8;
+            box-sizing: border-box;
         }
+
+
+        div {
+            width: 100%; /* Faz o container ocupar toda a largura */
+            max-width: 100%; /* Garante que ele não fique menor */
+            padding: 40px; /* Ajusta o espaçamento interno */
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
         h1 {
             color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
         }
         p {
             text-align: justify;
         }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Programação por blocos</h1>
-    <p>Página de teste</p>
-    
 
+    <div class="container">
+        <h1>Programação por blocos: Simplificando o complexo</h1>
+        
+        <p>A programação por blocos é o coração da experiência do Dblocks. Inspirada em plataformas como Scratch, essa abordagem traduz conceitos complexos de programação em blocos visuais que podem ser arrastados e conectados como peças de quebra-cabeça. Cada bloco representa uma instrução ou conjunto de instruções, como “ligar um LED”, “esperar 1 segundo” ou “verificar o estado de um sensor”.</p>
+
+        <h2>Vantagens da Programação por Blocos</h2>
+        <ul>
+            <li><strong>Facilidade de aprendizado:</strong> Ideal para iniciantes, que podem se concentrar nos conceitos lógicos sem se preocupar com a sintaxe de linguagens de programação. Permite que estudantes vejam resultados imediatos de seus programas, o que é altamente motivador.</li>
+            <li><strong>Redução de erros:</strong> A programação visual reduz falhas comuns, como erros de digitação ou de sintaxe.</li>
+            <li><strong>Eficiência no desenvolvimento:</strong> Mesmo programadores experientes podem prototipar soluções rapidamente, testando ideias e conceitos antes de implementar um código definitivo.</li>
+            <li><strong>Maior acessibilidade:</strong> Qualquer pessoa com acesso à plataforma pode criar aplicações funcionais, independentemente do nível de experiência.</li>
+            <li><strong>Educação colaborativa:</strong> Ideal para ser usada em sala de aula ou em projetos em grupo, promovendo o aprendizado colaborativo e incentivando a criatividade.</li>
+        </ul>
+    </div>
+
+</body>
 </html>

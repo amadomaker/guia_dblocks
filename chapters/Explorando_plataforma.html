@@ -3,23 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explorando a plataforma</title>
+    <title>Explorando a Plataforma</title>
     <style>
-        body {
+        /* Garante que a página use toda a altura sem cortar conteúdo */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%; /* Faz a página ocupar 100% da altura da tela */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+            overflow-y: auto; /* Mantém rolagem vertical apenas quando necessário */
             font-family: Arial, sans-serif;
-            margin: 70px;
-            line-height: 1.6;
+            background-color: #f4f4f4;
+            line-height: 1.8;
+            box-sizing: border-box;
         }
+
+
+        div {
+            width: 100%; /* Faz o container ocupar toda a largura */
+            max-width: 100%; /* Garante que ele não fique menor */
+            padding: 40px; /* Ajusta o espaçamento interno */
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+
         h1 {
             color: #333;
+            text-align: center;
+            margin-bottom: 20px;
         }
+
+        h2 {
+            color: #555;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
         p {
             text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        /* Ajuste do tamanho das imagens */
+        img {
+            display: block;
+            max-width: 50%; /* Reduz a largura para 50% */
+            height: auto;
+            margin: 20px auto; /* Centraliza */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <h1>Sobre o Dblocks</h1>
-    <p>Página de teste</p>
+
+    <div>
+        <h1>Explorando a Plataforma</h1>
+
+        <p>Neste capítulo, vamos explorar e conhecer um pouco mais sobre a plataforma antes de colocar a mão na massa. Para facilitar o entendimento, vamos definir alguns termos que usaremos ao longo deste guia e que podem aparecer com frequência.</p>
+
+        <h2>Workspace</h2>
+        <p>O espaço de trabalho é o componente de nível mais alto. É aqui que você faz o trabalho de programação usando os blocos disponíveis, tendo opção de colocar, arrastar, excluir e estruturar conforme a sua necessidade.</p>
+        <img src="../assets/images/introducao_dblocks/expl1.png" alt="Imagem do workspace">
+
+        <h2>Caixa de Ferramentas</h2>
+        <p>A caixa de ferramentas contém os blocos usados para programar. Os blocos podem ser arrastados para o espaço de trabalho. Há dois tipos principais de caixas de ferramentas: suspensas e de categoria.</p>
+
+        <h2>Caixa de Ferramentas da Categoria</h2>
+        <p>A caixa de ferramentas de categoria tem vários conjuntos de blocos. Se você clicar em um item de categoria, ele abrirá um menu suspenso que exibe os blocos dessa categoria.</p>
+        <img src="../assets/images/introducao_dblocks/expl2.png" alt="Imagem da caixa de ferramentas de categoria">
+
+        <h2>Caixa de Ferramentas de Menu Suspenso</h2>
+        <p>A caixa de ferramentas de menu suspenso contém um conjunto de blocos que estão disponíveis para uso. É nela que você escolhe os blocos que serão usados no workspace.</p>
+        <img src="../assets/images/introducao_dblocks/expl3.png" alt="Imagem da caixa de ferramentas de menu suspenso">
+
+        <h2>Menu de Contexto</h2>
+        <p>O menu de contexto aparece quando você clica com o botão direito do mouse. Ele exibe uma lista de ações que você pode realizar nesse elemento, como duplicar um bloco, adicionar comentários e outras ações.</p>
+        <img src="../assets/images/introducao_dblocks/expl4.png" alt="Imagem do menu de contexto">
+
+        <h2>Lixeira</h2>
+        <p>Na lixeira, você pode arrastar e soltar blocos para excluí-los. Também é possível clicar na lixeira para abrir um menu suspenso com os blocos excluídos para que você possa recuperá-los.</p>
+        <img src="../assets/images/introducao_dblocks/expl5.png" alt="Imagem da lixeira">
+
+        <h2>Campos</h2>
+        <p>Um campo é um elemento visual que reside em um bloco. Ele pode ser editável (como uma entrada de texto) ou apenas informativo (como um rótulo).</p>
+        <img src="../assets/images/introducao_dblocks/expl6.png" alt="Imagem dos campos">
+
+        <h2>Ícones</h2>
+        <p>Um ícone é um elemento visual que reside em um bloco. Eles sempre estão no canto superior do bloco e geralmente criam bolhas.</p>
+        <img src="../assets/images/introducao_dblocks/expl7.png" alt="Imagem dos ícones">
+
+        <h2>Barra de Ações</h2>
+        <p>A barra de ações é uma parte fundamental para interagir com a Amadoboard. É aqui onde você pode conectar a placa, executar programas, baixar o seu código para usar em qualquer outro momento e carregá-lo de volta quando quiser, além de outras funcionalidades.</p>
+        <img src="../assets/images/introducao_dblocks/expl8.png" alt="Imagem da barra de ações">
+
+        <p>Neste capítulo, aprendemos sobre diversas nomenclaturas e áreas da plataforma Dblocks. O próximo passo é conhecer um pouco mais sobre a placa Amadoboard, que será fundamental em nossa jornada de aprendizado.</p>
+    </div>
+
 </body>
 </html>
