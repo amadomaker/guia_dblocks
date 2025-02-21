@@ -2,12 +2,14 @@
     {
       "title": "Introdução ao Dblocks",
       "image": "introducao.png",
-      "description": "Nesta seção, vamos explorar os conceitos fundamentais do Dblocks, conhecer sua plataforma e entender a placa AmadoBoard. Aprenda como a programação em blocos pode facilitar o desenvolvimento de projetos interativos."
+      "description": "Nesta seção, vamos explorar os conceitos fundamentais do Dblocks, conhecer sua plataforma e entender a placa AmadoBoard. Aprenda como a programação em blocos pode facilitar o desenvolvimento de projetos interativos.",
+      "url": "chapters/introduction.html"
     },
     {
       "title": "Preparando o ambiente",
       "image": "logo-micropython3.png",
-      "description": "Aprenda como instalar os drivers necessários e configurar a AmadoBoard com MicroPython para começar desenvolver seus projetos."
+      "description": "Aprenda como instalar os drivers necessários e configurar a AmadoBoard com MicroPython para começar desenvolver seus projetos.",
+      "url": "chapters/environment.html"
     },
     {
       "title": "Entrada e saída digital",
