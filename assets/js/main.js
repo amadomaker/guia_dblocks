@@ -40,7 +40,7 @@ const loadDOMCards = async (query = "") => {
         <div class="card-content">
           <h3 class="card-title">Capítulo ${chapterNumber}: ${cardData.title}</h3>
           <p class="card-text">${truncateText(cardData.description)}</p>
-          <a href="subchapters.html" class="card-link">Ler mais &rarr;</a>
+          <a href="./${cardData.url}" class="card-link">Ler mais &rarr;</a>
         </div>
       `;
 
@@ -49,35 +49,6 @@ const loadDOMCards = async (query = "") => {
   } catch (error) {
     console.error("Erro ao carregar os cards:", error);
   }
-};
-
-const setupMobileMenu = () => {
-  const menuToggle = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  if (!menuToggle || !mobileMenu) {
-    console.error("Menu mobile não encontrado.");
-    return;
-  }
-
-  menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
-    menuToggle.classList.toggle("active");
-  });
-
-  document.querySelectorAll(".mobile-menu a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("open");
-      menuToggle.classList.remove("active");
-    });
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-      mobileMenu.classList.remove("open");
-      menuToggle.classList.remove("active");
-    }
-  });
 };
 
 const setupSearchTrigger = () => {
@@ -108,6 +79,5 @@ const setupSearchTrigger = () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   loadDOMCards();
-  setupMobileMenu();
   setupSearchTrigger();
 });
