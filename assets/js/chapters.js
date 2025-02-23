@@ -43,8 +43,4 @@ const loadDomChapters = async () => {
   }
 };
 
-function truncateText(text, maxLength = 20) {
-  return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
-}
-
 window.addEventListener("DOMContentLoaded", loadDomChapters);

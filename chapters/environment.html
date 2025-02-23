@@ -15,7 +15,7 @@
         class="logo-dblocks"
       />
 
-      <nav class="">
+      <nav>
         <ul class="container-nav">
           <li><a href="/">Início</a></li>
           <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
@@ -48,14 +48,13 @@
     </header>
 
     <main class="main-chapters">
-      <aside class="container-chapters">
+      <aside class="container-chapters" id="sidebar">
         <div class="header-chapters">
-          <h4>Capítulos</h4>
-        </div>
+          <h4>Seções</h4>
 
-        <div id="chapters-list">
-          
+          <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
         </div>
+        <div id="chapters-list"></div>
       </aside>
 
       <section class="content">
@@ -63,12 +62,19 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
           labore eos veritatis possimus, obcaecati omnis harum sit enim
           necessitatibus provident vel culpa quibusdam facilis voluptatibus
-          architecto iure reiciendis nemo! Impedit. 
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto id esse numquam consectetur earum sequi vitae est officia incidunt laboriosam eius, veniam ea nisi enim commodi quam mollitia eligendi suscipit.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, sequi molestiae suscipit quisquam veritatis facere optio sed, veniam harum commodi vitae neque voluptatibus consequuntur sint aperiam deleniti. Earum, dolores incidunt.
+          architecto iure reiciendis nemo! Impedit. Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Architecto id esse numquam consectetur
+          earum sequi vitae est officia incidunt laboriosam eius, veniam ea nisi
+          enim commodi quam mollitia eligendi suscipit. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Mollitia, sequi molestiae suscipit
+          quisquam veritatis facere optio sed, veniam harum commodi vitae neque
+          voluptatibus consequuntur sint aperiam deleniti. Earum, dolores
+          incidunt.
         </p>
       </section>
     </main>
+
+    <script src="../assets/js/sidebar.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/chapters.js"></script>
   </body>
