@@ -36,9 +36,9 @@ const loadDOMCards = async (query = "") => {
       card.setAttribute("data-chapter", chapterNumber.toString());
 
       card.innerHTML = `
-        <img src="${IMAGE_PATH}/${cardData.image}" alt="Capítulo ${chapterNumber}" class="card-image" />
+        <img src="${IMAGE_PATH}/${cardData.image}" alt="${cardData.title}" class="card-image" />
         <div class="card-content">
-          <h3 class="card-title">Capítulo ${chapterNumber}: ${cardData.title}</h3>
+          <h3 class="card-title">${cardData.title}</h3>
           <p class="card-text">${truncateText(cardData.description)}</p>
           <a href="./${cardData.url}" class="card-link">Ler mais &rarr;</a>
         </div>
