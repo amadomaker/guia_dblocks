@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conhecendo a AmadoBoard</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/chapters.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="../assets/images/logo-dblocks.svg"
+        alt="Logo Dblocks"
+        class="logo-dblocks"
+      />
+
+      <nav>
+        <ul class="container-nav">
+          <li><a href="/">Início</a></li>
+          <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <a href="https://dblocks.com.br/ui/index.html?lang=pt-br">
+        <button class="btn btn-primary">Comece a programar</button>
+      </a>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main-chapters">
+      <aside class="container-chapters" id="sidebar">
+        <div class="header-chapters">
+          <h4>Seções</h4>
+          <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
+        </div>
+        <div id="chapters-list"></div>
+      </aside>
+
+      <section class="content">
+        <h1>Conhecendo a AmadoBoard</h1>
+
+        <div class="chapter-index">
+          <h3>Nesta Seção</h3>
+          <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li>
+              <a href="#caracteristicas-principais"
+                >Características Principais</a
+              >
+            </li>
+            <li><a href="#alimentacao">Alimentação do Sistema</a></li>
+            <li><a href="#sensores-analogicos">Sensores Analógicos</a></li>
+            <li><a href="#motor-driver">Motor Driver</a></li>
+            <li><a href="#servo-motores">Conexão para Servo Motores</a></li>
+            <li><a href="#leds-e-buzzer">LEDs e Buzzer</a></li>
+            <li><a href="#conectores-io">Conectores de Entrada/Saída</a></li>
+            <li><a href="#componentes-extras">Componentes Extras</a></li>
+          </ul>
+        </div>
+
+        <div id="introducao">
+          <h2>Introdução</h2>
+          <p>
+            A AmadoBoard é uma placa de desenvolvimento criada para facilitar
+            projetos educacionais e experimentos tecnológicos. Baseada no ESP32,
+            ela foi projetada para ser simples, prática e acessível, atendendo
+            tanto iniciantes quanto usuários mais experientes. Com diversos
+            componentes integrados, elimina a necessidade de acessórios extras,
+            tornando o aprendizado e o desenvolvimento mais fáceis e eficientes.
+          </p>
+
+          <div class="image-placeholder">
+            <img src="../assets/images/amadoboard-legendas.svg" alt="" />
+          </div>
+        </div>
+
+        <div id="caracteristicas-principais">
+          <h2>Características Principais</h2>
+          <ul>
+            <li>Arquitetura ESP32</li>
+            <li>Interface Wi-Fi</li>
+            <li>Interface Bluetooth</li>
+            <li>
+              Duas possibilidades de alimentação: via porta microUSB ou entrada
+              jack de 6 a 12VDC
+            </li>
+            <li>LED indicador de alimentação</li>
+            <li>Porta MicroUSB para debug e programação</li>
+            <li>Controlador para dois motores DC integrados</li>
+            <li>13 pinos de IO disponíveis em headers</li>
+            <li>
+              Headers formatados para pinouts específicos (servomotores, display
+              OLED, sensor de ultrassons, etc.)
+            </li>
+            <li>Header para SPI</li>
+            <li>Dois headers para I2C</li>
+            <li>3 LEDs integrados e diretamente ligados a portas de IO</li>
+            <li>Buzzer integrado e diretamente conectado a um porto de IO</li>
+            <li>Sensor de temperatura integrado</li>
+            <li>LDR integrada</li>
+            <li>Trimmer resistivo integrado</li>
+          </ul>
+        </div>
+
+        <div id="alimentacao">
+          <h2>Alimentação do Sistema</h2>
+          <p>O sistema pode ser alimentado de duas formas:</p>
+          <ul>
+            <li>Porta USB (J4)</li>
+            <li>Jack de alimentação (J2) - 6V a 12V</li>
+          </ul>
+          <p>Inclui reguladores de tensão para 5V e 3.3V.</p>
+
+          <div class="image-placeholder">
+            <img
+              width="600px"
+              height="600px"
+              src="../assets/images/alimentacao-amadoboard.png"
+              alt="Alimentação da Amado Board"
+            />
+          </div>
+        </div>
+
+        <div id="sensores-analogicos">
+          <h2>Sensores Analógicos</h2>
+          <p>
+            Esses dispositivos não estão conectados ao microcontrolador, mas a
+            um conector. Para utilizá-los, conecte um cabo jumper a uma porta do
+            microcontrolador.
+          </p>
+          <ul>
+            <li>Sensor de temperatura integrado (LM35)</li>
+            <li>LDR integrado</li>
+            <li>Trimmer resistivo integrado</li>
+          </ul>
+        </div>
+
+        <div id="motor-driver">
+          <h2>Motor Driver</h2>
+          <p>
+            Inclui um circuito (L293) para controlar dois motores DC. Pinos de
+            controle:
+          </p>
+          <ul>
+            <li>Motor A: D12, D13, D14</li>
+            <li>Motor B: D25, D26, D27</li>
+          </ul>
+          <p>
+            Os pinos de entrada determinam a direção, e o pino EN controla a
+            velocidade via PWM.
+          </p>
+
+          <div class="image-placeholder">
+            <img
+              width="600px"
+              height="600px"
+              src="../assets/images/motor-driver-amadoboard.png"
+              alt="Motor Driver da Amado Board"
+            />
+          </div>
+        </div>
+
+        <div id="servo-motores">
+          <h2>Conexão para Servo Motores</h2>
+          <p>Dois conectores para servo motores:</p>
+          <ul>
+            <li>Servo A: D15 (alimentação 3.3V ou 5V)</li>
+            <li>Servo B: D16 (alimentação 3.3V ou 5V)</li>
+          </ul>
+
+          <div class="image-placeholder">
+            <img
+              width="600px"
+              height="600px"
+              src="../assets/images/conexao-servo-motores.png"
+              alt="Motor Driver da Amado Board"
+            />
+          </div>
+        </div>
+
+        <div id="leds-e-buzzer">
+          <h2>LEDs e Buzzer</h2>
+          <p>
+            - LED vermelho indica 3.3V. - 3 LEDs controláveis: - Vermelho: D32 -
+            Verde: D33 - Azul: D2 - Buzzer: D4
+          </p>
+        </div>
+
+        <div id="conectores-io">
+          <h2>Conectores de Entrada/Saída</h2>
+          <p>
+            - Entrada: D34, D35, D36, D39 (analógico ou digital). - Saída: D5,
+            D15, D16, D17, D18, D19, D21, D22, D23 (ex.: LEDs, buzzer). - I2C
+            para OLED Display. - Barramento SPI.
+          </p>
+
+          <div class="image-placeholder">
+            <img
+              width="600px"
+              height="600px"
+              src="../assets/images/entrada-saida-amadoboard.png"
+              alt="Motor Driver da Amado Board"
+            />
+          </div>
+        </div>
+
+        <div id="componentes-extras">
+          <h2>Componentes Extras</h2>
+          <ul>
+            <li>Potenciômetro: ajusta resistência (ex.: luz, volume).</li>
+            <li>Resistores (100Ω, 330Ω, 1KΩ, 10kΩ): limitam corrente.</li>
+            <li>Fonte 9V 1A Bivolt: para projetos Arduino.</li>
+            <li>Módulo Sensor de Distância Sonar HC-SR04: mede distâncias.</li>
+            <li>Módulo Seguidor de Linha TCRT5000: detecta linhas.</li>
+            <li>Buzzer: emite som.</li>
+            <li>Módulo LDR: mede intensidade de luz.</li>
+            <li>Sensor de temperatura DHT11: mede temperatura e umidade.</li>
+            <li>LEDs: indicam estados.</li>
+            <li>Servo Motor: controle preciso de ângulos.</li>
+            <li>Motor DC: movimento contínuo.</li>
+            <li>Display OLED (0.96", 128x64, I2C): tela compacta.</li>
+          </ul>
+          <p>
+            Esses componentes permitem explorar conceitos de eletrônica e
+            programação, integrando teoria e prática.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/chapters.js"></script>
+  </body>
+</html>
