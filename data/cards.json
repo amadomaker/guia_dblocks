@@ -2,8 +2,14 @@
     {
       "title": "Introdução ao Dblocks",
       "image": "introducao.png",
-      "description": "Nesta seção, vamos explorar os conceitos fundamentais do Dblocks, conhecer sua plataforma e entender a placa AmadoBoard. Aprenda como a programação em blocos pode facilitar o desenvolvimento de projetos interativos.",
+      "description": "Nesta seção, vamos explorar os conceitos fundamentais do Dblocks e conhecer sua plataforma. Aprenda como a programação em blocos pode facilitar o desenvolvimento de projetos interativos.",
       "url": "chapters/introduction.html"
+    },
+    {
+      "title": "Conhecendo a Amado Board",
+      "image": "amadoboard-legendas.svg",
+      "description": "Nesta seção, vamos conhecer a Amado Board e suas principais características",
+      "url": "chapters/amadoboard.html"
     },
     {
       "title": "Preparando o ambiente",
