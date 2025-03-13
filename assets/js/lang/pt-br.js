@@ -129,4 +129,93 @@ var MSG = {
   resources_and_features: "Recursos e funcionalidades",
   resources_description:
     "Conheça os recursos e funcionalidades que o Dblocks oferece para evoluir seus projetos.",
+  // Página "Conhecendo a AmadoBoard" - Título
+  ab_knowing_amado_board: "Conhecendo a AmadoBoard",
+
+  // Índice
+  ab_introduction: "Introdução",
+  ab_main_features: "Características Principais",
+  ab_system_power: "Alimentação do Sistema",
+  ab_analog_sensors: "Sensores Analógicos",
+  ab_motor_driver: "Motor Driver",
+  ab_servo_motors_connection: "Conexão para Servo Motores",
+  ab_leds_and_buzzer: "LEDs e Buzzer",
+  ab_io_connectors: "Conectores de Entrada/Saída",
+  ab_extra_components: "Componentes Extras",
+
+  // Introdução
+  ab_introduction_text:
+    "A AmadoBoard é uma placa de desenvolvimento criada para facilitar projetos educacionais e experimentos tecnológicos. Baseada no ESP32, ela foi projetada para ser simples, prática e acessível, atendendo tanto iniciantes quanto usuários mais experientes. Com diversos componentes integrados, elimina a necessidade de acessórios extras, tornando o aprendizado e o desenvolvimento mais fáceis e eficientes.",
+
+  // Características Principais
+  ab_feature_esp32: "Arquitetura ESP32",
+  ab_feature_wifi: "Interface Wi-Fi",
+  ab_feature_bluetooth: "Interface Bluetooth",
+  ab_feature_power_options:
+    "Duas possibilidades de alimentação: via porta microUSB ou entrada jack de 6 a 12VDC",
+  ab_feature_power_led: "LED indicador de alimentação",
+  ab_feature_usb_debug: "Porta MicroUSB para debug e programação",
+  ab_feature_motor_controller: "Controlador para dois motores DC integrados",
+  ab_feature_io_pins: "13 pinos de IO disponíveis em headers",
+  ab_feature_special_headers:
+    "Headers formatados para pinouts específicos (servomotores, display OLED, sensor de ultrassons, etc.)",
+  ab_feature_spi: "Header para SPI",
+  ab_feature_i2c: "Dois headers para I2C",
+  ab_feature_leds: "3 LEDs integrados e diretamente ligados a portas de IO",
+  ab_feature_buzzer:
+    "Buzzer integrado e diretamente conectado a um porto de IO",
+  ab_feature_temp_sensor: "Sensor de temperatura integrado",
+  ab_feature_ldr: "LDR integrada",
+  ab_feature_trimmer: "Trimmer resistivo integrado",
+
+  // Alimentação do Sistema
+  ab_power_intro: "O sistema pode ser alimentado de duas formas:",
+  ab_power_usb: "Porta USB (J4)",
+  ab_power_jack: "Jack de alimentação (J2) - 6V a 12V",
+  ab_power_regulators: "Inclui reguladores de tensão para 5V e 3.3V.",
+
+  // Sensores Analógicos
+  ab_analog_sensors_text:
+    "Esses dispositivos não estão conectados ao microcontrolador, mas a um conector. Para utilizá-los, conecte um cabo jumper a uma porta do microcontrolador.",
+  ab_sensor_temp: "Sensor de temperatura integrado (LM35)",
+  ab_sensor_ldr: "LDR integrado",
+  ab_sensor_trimmer: "Trimmer resistivo integrado",
+
+  // Motor Driver
+  ab_motor_driver_intro:
+    "Inclui um circuito (L293) para controlar dois motores DC. Pinos de controle:",
+  ab_motor_a: "Motor A: D12, D13, D14",
+  ab_motor_b: "Motor B: D25, D26, D27",
+  ab_motor_driver_control:
+    "Os pinos de entrada determinam a direção, e o pino EN controla a velocidade via PWM.",
+
+  // Conexão para Servo Motores
+  ab_servo_motors_intro: "Dois conectores para servo motores:",
+  ab_servo_a: "Servo A: D15 (alimentação 3.3V ou 5V)",
+  ab_servo_b: "Servo B: D16 (alimentação 3.3V ou 5V)",
+
+  // LEDs e Buzzer
+  ab_leds_and_buzzer_text:
+    "- LED vermelho indica 3.3V. - 3 LEDs controláveis: - Vermelho: D32 - Verde: D33 - Azul: D2 - Buzzer: D4",
+
+  // Conectores de Entrada/Saída
+  ab_io_connectors_text:
+    "- Entrada: D34, D35, D36, D39 (analógico ou digital). - Saída: D5, D15, D16, D17, D18, D19, D21, D22, D23 (ex.: LEDs, buzzer). - I2C para OLED Display. - Barramento SPI.",
+
+  // Componentes Extras
+  ab_extra_potentiometer:
+    "Potenciômetro: ajusta resistência (ex.: luz, volume).",
+  ab_extra_resistors: "Resistores (100Ω, 330Ω, 1KΩ, 10kΩ): limitam corrente.",
+  ab_extra_power_supply: "Fonte 9V 1A Bivolt: para projetos Arduino.",
+  ab_extra_sonar: "Módulo Sensor de Distância Sonar HC-SR04: mede distâncias.",
+  ab_extra_line_follower: "Módulo Seguidor de Linha TCRT5000: detecta linhas.",
+  ab_extra_buzzer: "Buzzer: emite som.",
+  ab_extra_ldr_module: "Módulo LDR: mede intensidade de luz.",
+  ab_extra_dht11: "Sensor de temperatura DHT11: mede temperatura e umidade.",
+  ab_extra_leds: "LEDs: indicam estados.",
+  ab_extra_servo: "Servo Motor: controle preciso de ângulos.",
+  ab_extra_dc_motor: "Motor DC: movimento contínuo.",
+  ab_extra_oled: 'Display OLED (0.96", 128x64, I2C): tela compacta.',
+  ab_extra_components_text:
+    "Esses componentes permitem explorar conceitos de eletrônica e programação, integrando teoria e prática.",
 };

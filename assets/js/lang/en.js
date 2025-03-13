@@ -129,4 +129,92 @@ var MSG = {
   resources_and_features: "Resources and Features",
   resources_description:
     "Discover the resources and features Dblocks offers to enhance your projects.",
+  ab_knowing_amado_board: "Getting to Know the AmadoBoard",
+
+  // Índice
+  ab_introduction: "Introduction",
+  ab_main_features: "Main Features",
+  ab_system_power: "System Power",
+  ab_analog_sensors: "Analog Sensors",
+  ab_motor_driver: "Motor Driver",
+  ab_servo_motors_connection: "Servo Motors Connection",
+  ab_leds_and_buzzer: "LEDs and Buzzer",
+  ab_io_connectors: "Input/Output Connectors",
+  ab_extra_components: "Extra Components",
+
+  // Introduction
+  ab_introduction_text:
+    "The AmadoBoard is a development board designed to simplify educational projects and technological experiments. Based on the ESP32, it was created to be simple, practical, and accessible, catering to both beginners and more experienced users. With various integrated components, it eliminates the need for additional accessories, making learning and development easier and more efficient.",
+
+  // Main Features
+  ab_feature_esp32: "ESP32 Architecture",
+  ab_feature_wifi: "Wi-Fi Interface",
+  ab_feature_bluetooth: "Bluetooth Interface",
+  ab_feature_power_options:
+    "Two power options: via microUSB port or 6 to 12VDC jack input",
+  ab_feature_power_led: "Power indicator LED",
+  ab_feature_usb_debug: "MicroUSB port for debugging and programming",
+  ab_feature_motor_controller: "Controller for two integrated DC motors",
+  ab_feature_io_pins: "13 IO pins available on headers",
+  ab_feature_special_headers:
+    "Headers formatted for specific pinouts (servomotors, OLED display, ultrasonic sensor, etc.)",
+  ab_feature_spi: "SPI header",
+  ab_feature_i2c: "Two I2C headers",
+  ab_feature_leds: "3 integrated LEDs directly connected to IO ports",
+  ab_feature_buzzer: "Integrated buzzer directly connected to an IO port",
+  ab_feature_temp_sensor: "Integrated temperature sensor",
+  ab_feature_ldr: "Integrated LDR",
+  ab_feature_trimmer: "Integrated resistive trimmer",
+
+  // System Power
+  ab_power_intro: "The system can be powered in two ways:",
+  ab_power_usb: "USB port (J4)",
+  ab_power_jack: "Power jack (J2) - 6V to 12V",
+  ab_power_regulators: "Includes voltage regulators for 5V and 3.3V.",
+
+  // Analog Sensors
+  ab_analog_sensors_text:
+    "These devices are not connected to the microcontroller but to a connector. To use them, connect a jumper cable to a microcontroller port.",
+  ab_sensor_temp: "Integrated temperature sensor (LM35)",
+  ab_sensor_ldr: "Integrated LDR",
+  ab_sensor_trimmer: "Integrated resistive trimmer",
+
+  // Motor Driver
+  ab_motor_driver_intro:
+    "Includes a circuit (L293) to control two DC motors. Control pins:",
+  ab_motor_a: "Motor A: D12, D13, D14",
+  ab_motor_b: "Motor B: D25, D26, D27",
+  ab_motor_driver_control:
+    "Input pins determine the direction, and the EN pin controls speed via PWM.",
+
+  // Servo Motors Connection
+  ab_servo_motors_intro: "Two connectors for servo motors:",
+  ab_servo_a: "Servo A: D15 (3.3V or 5V power)",
+  ab_servo_b: "Servo B: D16 (3.3V or 5V power)",
+
+  // LEDs and Buzzer
+  ab_leds_and_buzzer_text:
+    "- Red LED indicates 3.3V. - 3 controllable LEDs: - Red: D32 - Green: D33 - Blue: D2 - Buzzer: D4",
+
+  // Input/Output Connectors
+  ab_io_connectors_text:
+    "- Input: D34, D35, D36, D39 (analog or digital). - Output: D5, D15, D16, D17, D18, D19, D21, D22, D23 (e.g., LEDs, buzzer). - I2C for OLED Display. - SPI bus.",
+
+  // Extra Components
+  ab_extra_potentiometer:
+    "Potentiometer: adjusts resistance (e.g., light, volume).",
+  ab_extra_resistors: "Resistors (100Ω, 330Ω, 1KΩ, 10kΩ): limit current.",
+  ab_extra_power_supply: "9V 1A Bivolt power supply: for Arduino projects.",
+  ab_extra_sonar: "HC-SR04 Sonar Distance Sensor Module: measures distances.",
+  ab_extra_line_follower: "TCRT5000 Line Follower Module: detects lines.",
+  ab_extra_buzzer: "Buzzer: emits sound.",
+  ab_extra_ldr_module: "LDR Module: measures light intensity.",
+  ab_extra_dht11:
+    "DHT11 Temperature Sensor: measures temperature and humidity.",
+  ab_extra_leds: "LEDs: indicate states.",
+  ab_extra_servo: "Servo Motor: precise angle control.",
+  ab_extra_dc_motor: "DC Motor: continuous motion.",
+  ab_extra_oled: 'OLED Display (0.96", 128x64, I2C): compact screen.',
+  ab_extra_components_text:
+    "These components allow you to explore electronics and programming concepts, integrating theory and practice.",
 };
