@@ -231,6 +231,18 @@ input {
   right: 0;
 }
 
+.container-lang{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.container-lang select{
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid #d2d1d1;
+}
+
 @media (max-width: 768px) {
   .header{
     padding: 20px;
