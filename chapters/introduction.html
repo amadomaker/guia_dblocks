@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introdução ao Dblocks</title>
+    <title data-translate="introduction_to_dblocks">Introdução ao Dblocks</title>
     <link rel="stylesheet" href="../assets/css/global.css" />
     <link rel="stylesheet" href="../assets/css/chapters.css" />
   </head>
@@ -17,25 +17,33 @@
 
       <nav>
         <ul class="container-nav">
-          <li><a href="/">Início</a></li>
-          <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
+          <li><a href="/" data-translate="home">Início</a></li>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
           <li>
-            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
           </li>
-          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
           <li>
             <a
               target="_blank"
               href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
               >Ebook Dblocks na Prática</a
             >
           </li>
         </ul>
       </nav>
 
-      <a href="https://dblocks.com.br/ui/index.html?lang=pt-br">
-        <button class="btn btn-primary">Comece a programar</button>
-      </a>
+      <div class="container-button-lang">
+        <div class="container-lang">
+          <select id="languageMenu"></select>
+          <img
+            id="languageFlag"
+            alt="Language Flag"
+            style="width: 32px; height: 20px"
+          />
+        </div>
+      </div>
 
       <div class="menu-toggle" id="menu-toggle">
         <span></span>
@@ -45,15 +53,16 @@
 
       <div class="mobile-menu" id="mobile-menu">
         <ul>
-          <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
           <li>
-            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
           </li>
-          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
           <li>
             <a
               target="_blank"
               href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
               >Ebook Dblocks na Prática</a
             >
           </li>
@@ -64,32 +73,29 @@
     <main class="main-chapters">
       <aside class="container-chapters" id="sidebar">
         <div class="header-chapters">
-          <h4>Seções</h4>
+          <h4 data-translate="sections">Seções</h4>
           <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
         </div>
         <div id="chapters-list"></div>
       </aside>
 
       <section class="content">
-        <h1>Introdução ao Dblocks</h1>
+        <h1 data-translate="introduction_to_dblocks">Introdução ao Dblocks</h1>
 
-        <!-- Índice Interno -->
         <div class="chapter-index">
-          <h3>Nesta Seção</h3>
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
           <ul>
-            <li><a href="#visao-geral">Visão Geral</a></li>
-            <li><a href="#o-que-e">O que é o Dblocks?</a></li>
-            <li><a href="#primeiros-passos">Primeiros Passos</a></li>
-            <li>
-              <a href="#explorando-a-plataforma">Explorando a plataforma</a>
-            </li>
-            <li><a href="#recursos">Recursos e Suporte</a></li>
+            <li><a href="#visao-geral" data-translate="overview">Visão Geral</a></li>
+            <li><a href="#o-que-e" data-translate="what_is_dblocks">O que é o Dblocks?</a></li>
+            <li><a href="#primeiros-passos" data-translate="first_steps">Primeiros Passos</a></li>
+            <li><a href="#explorando-a-plataforma" data-translate="exploring_platform">Explorando a plataforma</a></li>
+            <li><a href="#recursos" data-translate="resources_support">Recursos e Suporte</a></li>
           </ul>
         </div>
 
         <div id="visao-geral">
-          <h2>Visão Geral</h2>
-          <p>
+          <h2 data-translate="overview">Visão Geral</h2>
+          <p data-translate="welcome_text">
             Bem-vindo ao Dblocks! Este guia é sua porta de entrada para explorar
             o mundo da programação de sistemas embarcados e Internet das Coisas
             (IoT) de forma simples e criativa. Com uma interface baseada em
@@ -97,58 +103,51 @@
             torna a tecnologia acessível para todos — de iniciantes curiosos a
             profissionais experientes.
           </p>
-          <h3>O que você vai aprender?</h3>
+          <h3 data-translate="what_you_will_learn">O que você vai aprender?</h3>
           <ul>
             <li>
-              <strong>Aprendizado intuitivo</strong>: O Dblocks utiliza blocos
-              visuais para simplificar a programação, permitindo que você veja
-              seus projetos ganharem vida com facilidade.
+              <strong data-translate="intuitive_learning">Aprendizado intuitivo</strong>: 
+              <span data-translate="intuitive_learning_text">O Dblocks utiliza blocos visuais para simplificar a programação, permitindo que você veja seus projetos ganharem vida com facilidade.</span>
             </li>
             <li>
-              <strong>Ferramentas poderosas</strong>: A AmadoBoard, uma placa
-              baseada no chip ESP32, será sua principal aliada, com
-              funcionalidades como Wi-Fi, Bluetooth, sensores e atuadores
-              embarcados.
+              <strong data-translate="powerful_tools">Ferramentas poderosas</strong>: 
+              <span data-translate="powerful_tools_text">A AmadoBoard, uma placa baseada no chip ESP32, será sua principal aliada, com funcionalidades como Wi-Fi, Bluetooth, sensores e atuadores embarcados.</span>
             </li>
             <li>
-              <strong>Projetos práticos</strong>: Este guia está repleto de
-              exercícios e exemplos que te ajudarão a aplicar o que aprendeu,
-              desde acender LEDs até criar sistemas mais complexos.
+              <strong data-translate="practical_projects">Projetos práticos</strong>: 
+              <span data-translate="practical_projects_text">Este guia está repleto de exercícios e exemplos que te ajudarão a aplicar o que aprendeu, desde acender LEDs até criar sistemas mais complexos.</span>
             </li>
             <li>
-              <strong>Exploração criativa</strong>: Além dos fundamentos, você
-              terá a chance de experimentar e criar projetos reais que refletem
-              aplicações do mundo moderno.
+              <strong data-translate="creative_exploration">Exploração criativa</strong>: 
+              <span data-translate="creative_exploration_text">Além dos fundamentos, você terá a chance de experimentar e criar projetos reais que refletem aplicações do mundo moderno.</span>
             </li>
           </ul>
         </div>
 
         <div id="o-que-e">
-          <h2>O que é o Dblocks?</h2>
-          <p>
+          <h2 data-translate="what_is_dblocks">O que é o Dblocks?</h2>
+          <p data-translate="what_is_dblocks_text1">
             O Dblocks é uma plataforma que simplifica a programação de sistemas
             embarcados e IoT. Com uma interface de blocos visuais, você pode
             criar projetos sem se preocupar com detalhes técnicos complicados.
             Se preferir mais controle, também é possível programar em
             MicroPython.
           </p>
-          <p>
+          <p data-translate="what_is_dblocks_text2">
             A plataforma é especialmente projetada para atender desde
             iniciantes, que desejam aprender os primeiros conceitos de
             programação, até profissionais que buscam desenvolver soluções
             rápidas e eficazes. Com o Dblocks, é possível explorar uma ampla
-            gama de possibilidades, desde acionar LEDS até criar dashboards
-            interativos para monitoramento remoto de sensores e dispositivos
+            gama de possibilidades, desde acionar LEDs até criar dashboards
+            interativos para monitoramento remoto de sensores e dispositivos.
           </p>
-          <!-- Placeholder para Imagem -->
           <div class="image-placeholder">
             <img
               src="../assets/images/imagem-dblocks.png"
               alt="Plataforma Dblocks com blocos de exemplo"
             />
           </div>
-
-          <p>
+          <p data-translate="what_is_dblocks_text3">
             O Dblocks foi inspirado no
             <a href="https://bipes.net.br/wp/" target="_blank"
               >BIPES (Block-based Integrated Platafor for Embedded Systems)</a
@@ -161,8 +160,7 @@
             com diversos componentes embarcados e integra recursos avançados,
             como conectividade wi-fi e Bluetooth.
           </p>
-
-          <p>
+          <p data-translate="what_is_dblocks_text4">
             A AmadoBoard não apenas é tecnicamente poderosa, mas também foi
             projetada pensando no aprendizado, facilitando o acesso de
             estudantes e entusiastas à programação e ao universo da IoT.
@@ -170,11 +168,11 @@
         </div>
 
         <div id="primeiros-passos">
-          <h2>Primeiros Passos</h2>
-          <h3>Requisitos Básicos</h3>
+          <h2 data-translate="first_steps">Primeiros Passos</h2>
+          <h3 data-translate="basic_requirements">Requisitos Básicos</h3>
           <ul>
-            <li>Placa AmadoBoard.</li>
-            <li>
+            <li data-translate="requirements_list_1">Placa AmadoBoard.</li>
+            <li data-translate="requirements_list_2">
               Ter a biblioteca
               <a
                 href="https://joaodrj.github.io/Micropython_install/"
@@ -183,15 +181,15 @@
               >
               instalada na placa.
             </li>
-            <li>Cabo USB para conectar a placa ao computador.</li>
+            <li data-translate="requirements_list_3">Cabo USB para conectar a placa ao computador.</li>
           </ul>
-          <h3>Guia Rápido</h3>
+          <h3 data-translate="quick_guide">Guia Rápido</h3>
           <ol>
-            <li>
+            <li data-translate="quick_guide_list_1">
               <strong>Conecte a placa</strong>: Use o cabo USB para ligar sua
               AmadoBoard ao computador.
             </li>
-            <li>
+            <li data-translate="quick_guide_list_2">
               <strong>Abra o Dblocks</strong>: Acesse a
               <a
                 href="https://dblocks.com.br/ui/index.html?lang=pt-br"
@@ -200,7 +198,7 @@
               >
               pelo navegador.
             </li>
-            <li>
+            <li data-translate="quick_guide_list_3">
               <strong>Crie seu primeiro projeto</strong>: Arraste os blocos para
               o workspace e clique em "Executar".
             </li>
@@ -208,72 +206,63 @@
         </div>
 
         <div id="explorando-a-plataforma">
-          <h2>Explorando a plataforma</h2>
+          <h2 data-translate="exploring_platform">Explorando a plataforma</h2>
 
-          <h3>Workspace</h3>
-
-          <p>
+          <h3 data-translate="workspace">Workspace</h3>
+          <p data-translate="workspace_text">
             O espaço de trabalho é o componente de nível mais alto. É aqui que
             você faz o trabalho de programação usando os blocos disponíveis,
             tendo opção de colocar, arrastar, excluir estruturar conforme a sua
             necessidade.
           </p>
-
           <img
             src="../assets/images/workspace-dblocks.png"
             alt="Workspace do Dblocks"
           />
 
-          <h3>Caixa de ferramentas</h3>
-
-          <p>
+          <h3 data-translate="toolbox">Caixa de ferramentas</h3>
+          <p data-translate="toolbox_text">
             A caixa de ferramentas contém os blocos usados para programar. Os
             blocos podem ser arrastados para o espaço de trabalho. Há dois tipos
             principais de caixas de ferramentas: suspensas e de categoria.
           </p>
 
-          <h3>Caixa de ferramentas da categoria</h3>
-
-          <p>
+          <h3 data-translate="category_toolbox">Caixa de ferramentas da categoria</h3>
+          <p data-translate="category_toolbox_text">
             A caixa de ferramentas de categoria têm vários conjuntos de blocos,
             se você clicar em um item de categoria, ele abrirá um menu suspenso
             que exibe os blocos dessa categoria.
           </p>
-
           <img
             src="../assets/images/caixa-de-ferramentas-categoria.png"
             alt="Caixa de ferramentas da categoria"
           />
 
-          <h3>Caixa de ferramentas de menu suspenso</h3>
-
-          <p>
+          <h3 data-translate="dropdown_toolbox">Caixa de ferramentas de menu suspenso</h3>
+          <p data-translate="dropdown_toolbox_text">
             A caixa de ferramentas de menu suspenso contem um conjunto de blocos
             que estão disponíveis para uso, é nela que você escolhe os blocos
             que serão usados no workspace.
           </p>
-
           <img
             src="../assets/images/caixa-ferramentas-menu-suspenso.png"
             alt="Caixa de ferramentas do menu suspenso"
           />
 
-          <h3>Menu de contexto</h3>
-          <p>
+          <h3 data-translate="context_menu">Menu de contexto</h3>
+          <p data-translate="context_menu_text">
             O menu de contexto aparece quando você clica com o botão direito do
             mouse. Ele exibe uma lista de ações que você pode realizar nesse
             elemento como duplicar um bloco, adicionar comentários e outras
             ações.
           </p>
-
           <img
             src="../assets/images/menu-de-contexto.png"
             alt="Menu de contexto do Dblocks"
           />
 
-          <h3>Lixeira</h3>
-
-          <p>
+          <h3 data-translate="trash">Lixeira</h3>
+          <p data-translate="trash_text">
             Na lixeira, você pode arrastar e soltar blocos para excluí-los.
             Também é possível clicar na lixeira para abrir um menu suspenso com
             os blocos excluídos para que você possa recuperá-los.
@@ -283,63 +272,54 @@
             alt="Lixeira do Dblocks"
           />
 
-          <h3>Campos</h3>
-
-          <p>
+          <h3 data-translate="fields">Campos</h3>
+          <p data-translate="fields_text">
             Um campo é um elemento visual que reside em um bloco. Ele pode ser
             editável(como uma entrada de texto) ou apenas informativa(como um
             rótulo).
           </p>
-
           <img
             src="../assets/images/campo-dblocks.png"
             alt="Campos dos blocos do Dblocks"
           />
 
-          <h3>Ícones</h3>
-
-          <p>
+          <h3 data-translate="icons">Ícones</h3>
+          <p data-translate="icons_text">
             Um ícone é um elemento visual que reside em um bloco. Eles sempre
             estão no canto superior do bloco e geralmente criam bolhas.
           </p>
-
           <img
             src="../assets/images/icones-dblocks.png"
             alt="Ícones dos blocos do Dblocks"
           />
 
-          <h3>Barra de ações</h3>
-
-          <p>
+          <h3 data-translate="action_bar">Barra de ações</h3>
+          <p data-translate="action_bar_text">
             A barra de ações é uma parte fundamental para interagir com a
             Amadoboard. É aqui onde você pode conectar a placa, executar
             programas, baixar o seu código para usar em qualquer outro momento e
             carrega-lo de volta quando quiser, além de outras funcionalidades.
           </p>
-
           <img
-          src="../assets/images/barra-acoes.png"
-          alt="Barra de ações do Dblocks"
-        />
+            src="../assets/images/barra-acoes.png"
+            alt="Barra de ações do Dblocks"
+          />
         </div>
 
         <div id="recursos">
-          <h2>Recursos e Suporte</h2>
-
-          <p>Precisa de ajuda? Confira nossos recursos adicionais:</p>
+          <h2 data-translate="resources_support">Recursos e Suporte</h2>
+          <p data-translate="resources_text">Precisa de ajuda? Confira nossos recursos adicionais:</p>
           <ul>
             <li>
               <a
                 target="_blank"
                 href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+                data-translate="ebook_link"
                 >Ebook Dblocks na Prática</a
               >
-              
             </li>
             <li>
-              <a
-                target="_blank"
-                href="../public/guia-amadoboard.pdf"
+              <a target="_blank" href="../public/guia-amadoboard.pdf" data-translate="complete_amadoboard_guide"
                 >Guia Completo AmadoBoard</a
               >
             </li>
@@ -348,8 +328,10 @@
       </section>
     </main>
 
+    <script src="../assets/js/lang/translation.js"></script>
     <script src="../assets/js/sidebar.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/chapters.js"></script>
+
   </body>
 </html>

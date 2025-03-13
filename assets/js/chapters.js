@@ -20,7 +20,7 @@ const loadDomChapters = async () => {
 
     chaptersData.forEach((cardData, index) => {
       const chapterNumber = index + 1;
-      
+
       const cardLink = document.createElement("a");
       cardLink.href = window.location.origin + "/" + cardData.url;
       cardLink.classList.add("chapter");
@@ -32,15 +32,19 @@ const loadDomChapters = async () => {
       cardLink.innerHTML = `
         <img src="${IMAGE_PATH}/${cardData.image}" alt="Capítulo ${chapterNumber}" class="card-image" />
         <div class="chapter-content">
-          <h3 class="chapter-title">${cardData.title}</h3>
+          <h3 data-translate="${cardData.title_key}" class="chapter-title"></h3>
         </div>
       `;
 
       containerChapters.appendChild(cardLink);
     });
+
+    applyTranslations();
   } catch (error) {
     console.error("Erro ao carregar os capítulos:", error);
   }
 };
 
-window.addEventListener("DOMContentLoaded", loadDomChapters);
+window.addEventListener("DOMContentLoaded", () => {
+  initLanguage(loadDomChapters);
+});

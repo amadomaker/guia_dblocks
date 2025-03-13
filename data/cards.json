@@ -1,56 +1,62 @@
 [
-    {
-      "title": "Introdução ao Dblocks",
-      "image": "introducao.png",
-      "description": "Nesta seção, vamos explorar os conceitos fundamentais do Dblocks e conhecer sua plataforma. Aprenda como a programação em blocos pode facilitar o desenvolvimento de projetos interativos.",
-      "url": "chapters/introduction.html"
-    },
-    {
-      "title": "Conhecendo a Amado Board",
-      "image": "amadoboard-legendas.svg",
-      "description": "Nesta seção, vamos conhecer a Amado Board e suas principais características",
-      "url": "chapters/amadoboard.html"
-    },
-    {
-      "title": "Preparando o ambiente",
-      "image": "logo-micropython3.png",
-      "description": "Aprenda como instalar os drivers necessários e configurar a AmadoBoard com MicroPython para começar desenvolver seus projetos.",
-      "url": "chapters/environment.html"
-    },
-    {
-      "title": "Entrada e saída digital",
-      "image": "saida-digital.png",
-      "description": "Descubra como funcionam as entradas e saídas digitais no Dblocks, aprendendo a conectar sensores e atuadores para criar projetos interativos "
-    },
-    {
-      "title": "Entrada e saída analógica",
-      "image": "entrada-analogica.png",
-      "description": "Descubra como funcionam as entradas e saídas analógicas no Dblocks, aprendendo a ler sensores e controlar atuadores com precisão para criar projetos avançados."
-    },
-    {
-      "title": "Sensores",
-      "image": "sensores.png",
-      "description": "Aprenda como utilizar sensores no Dblocks, aprendendo a coletar dados do ambiente e integrá-los em seus projetos para criar soluções interativas e inteligentes."
-    },
-    {
-      "title": "Atuadores",
-      "image": "atuadores.png",
-      "description": "Aprenda como funcionam os atuadores no Dblocks, aprendendo a controlá-los para criar projetos interativos e dinâmicos que respondem a diferentes estímulos."
-    },
-    {
-      "title": "Música",
-      "image": "musica.png",
-      "description": "Aprenda a ultilizar a funcionalidade de música no Dblcks para compor melodias, ajustar tempo e reproduzir sons em seus projetos "
-    },
-    {
-      "title": "Display",
-      "image": "display.png",
-      "description": "Aprenda a utilizar o display para exibir textos, variáveis e leituras de sensores."
-    },
-    {
-      "title": "Recursos e funcionalidades",
-      "image": "recursos.png",
-      "description": "Conheça os recursos e funcionalidades que o Dblocks oferece para evoluir seus projetos."
-    }
-  ]
-  
+  {
+    "title_key": "introduction_to_dblocks",
+    "image": "introducao.png",
+    "description_key": "introduction_description",
+    "url": "chapters/introduction.html"
+  },
+  {
+    "title_key": "knowing_amado_board",
+    "image": "amadoboard-legendas.svg",
+    "description_key": "amado_board_description",
+    "url": "chapters/amadoboard.html"
+  },
+  {
+    "title_key": "preparing_environment",
+    "image": "logo-micropython3.png",
+    "description_key": "environment_description",
+    "url": "chapters/environment.html"
+  },
+  {
+    "title_key": "digital_input_output",
+    "image": "saida-digital.png",
+    "description_key": "digital_io_description",
+    "url": ""
+  },
+  {
+    "title_key": "analog_input_output",
+    "image": "entrada-analogica.png",
+    "description_key": "analog_io_description",
+    "url": ""
+  },
+  {
+    "title_key": "sensors",
+    "image": "sensores.png",
+    "description_key": "sensors_description",
+    "url": ""
+  },
+  {
+    "title_key": "actuators",
+    "image": "atuadores.png",
+    "description_key": "actuators_description",
+    "url": ""
+  },
+  {
+    "title_key": "music",
+    "image": "musica.png",
+    "description_key": "music_description",
+    "url": ""
+  },
+  {
+    "title_key": "display",
+    "image": "display.png",
+    "description_key": "display_description",
+    "url": ""
+  },
+  {
+    "title_key": "resources_and_features",
+    "image": "recursos.png",
+    "description_key": "resources_description",
+    "url": ""
+  }
+]
