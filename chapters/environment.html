@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preparando o ambiente</title>
+    <title data-translate="preparing_environment">Preparando o ambinte</title>
     <link rel="stylesheet" href="../assets/css/global.css" />
     <link rel="stylesheet" href="../assets/css/chapters.css" />
   </head>
@@ -17,19 +17,33 @@
 
       <nav>
         <ul class="container-nav">
-          <li><a href="/">Início</a></li>
-          <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
+          <li><a href="/" data-translate="home">Início</a></li>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
           <li>
-            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
           </li>
-          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
-          <li><a target="_blank" href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf">Ebook Dblocks na Prática</a></li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
         </ul>
       </nav>
 
-      <a href="https://dblocks.com.br/ui/index.html?lang=pt-br">
-        <button class="btn btn-primary">Comece a programar</button>
-      </a>
+      <div class="container-button-lang">
+        <div class="container-lang">
+          <select id="languageMenu"></select>
+          <img
+            id="languageFlag"
+            alt="Language Flag"
+            style="width: 32px; height: 20px"
+          />
+        </div>
+      </div>
 
       <div class="menu-toggle" id="menu-toggle">
         <span></span>
@@ -39,12 +53,19 @@
 
       <div class="mobile-menu" id="mobile-menu">
         <ul>
-          <li><a target="_blank" href="https://bipes.net.br/wp/">BIPES</a></li>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
           <li>
-            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
           </li>
-          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
-          <li><a target="_blank" href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf">Ebook Dblocks na Prática</a></li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
         </ul>
       </div>
     </header>
@@ -52,30 +73,56 @@
     <main class="main-chapters">
       <aside class="container-chapters" id="sidebar">
         <div class="header-chapters">
-          <h4>Seções</h4>
-
+          <h4 data-translate="in_this_section">Seções</h4>
           <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
         </div>
         <div id="chapters-list"></div>
       </aside>
 
       <section class="content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-          labore eos veritatis possimus, obcaecati omnis harum sit enim
-          necessitatibus provident vel culpa quibusdam facilis voluptatibus
-          architecto iure reiciendis nemo! Impedit. Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Architecto id esse numquam consectetur
-          earum sequi vitae est officia incidunt laboriosam eius, veniam ea nisi
-          enim commodi quam mollitia eligendi suscipit. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Mollitia, sequi molestiae suscipit
-          quisquam veritatis facere optio sed, veniam harum commodi vitae neque
-          voluptatibus consequuntur sint aperiam deleniti. Earum, dolores
-          incidunt.
-        </p>
+        <h1 data-translate="preparing_environment"></h1>
+
+        <div class="chapter-index">
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
+          <ul>
+            <li><a href="#introducao" data-translate="ab_introduction">Introdução</a></li>
+            <li><a href="#caracteristicas-principais" data-translate="ab_main_features">Características Principais</a></li>
+            <li><a href="#alimentacao" data-translate="ab_system_power">Alimentação do Sistema</a></li>
+          </ul>
+        </div>
+
+        <div id="introducao">
+          <h2 data-translate="ab_first_step">Primeiros passos</h2>
+          <p data-translate="en_introduction_text">
+          </p>
+          <p data-translate="en_found_download" class="bold-text"></p>
+          <ul>
+            <li><a href="https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers" data-translate="en_install_driver"></a></li> 
+          </ul>
+          <img
+              width="1000px"
+              height="600px"
+              src="../assets/images/environment/environment_driver.png"
+              alt=""
+            />
+            <p data-translate="en_info_micropython"></p>
+            <ul>
+              <li style="margin-bottom: 20px;">
+                <a href="https://amadomaker.github.io/Instalador_Micropython/" data-translate="en_install_micropython"></a>
+              </li> 
+            </ul>
+            <p data-translate="en_info_micropython_page">
+              <span style="color: red;">Processo</span> <!-- Substitua ou insira isso conforme necessário no texto traduzido -->
+              <!-- Resto do texto traduzido -->
+            </p>
+
+          </div>
+        </div>
+
       </section>
     </main>
 
+    <script src="../assets/js/lang/translation.js"></script>
     <script src="../assets/js/sidebar.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/chapters.js"></script>

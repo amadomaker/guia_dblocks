@@ -17,6 +17,7 @@ var MSG = {
   exploring_platform: "Explorando a plataforma",
   resources_support: "Recursos e Suporte",
 
+
   // Subsections
   welcome_to_dblocks: "Bem-vindo ao Dblocks!",
   welcome_text:
@@ -218,4 +219,16 @@ var MSG = {
   ab_extra_oled: 'Display OLED (0.96", 128x64, I2C): tela compacta.',
   ab_extra_components_text:
     "Esses componentes permitem explorar conceitos de eletrônica e programação, integrando teoria e prática.",
-};
+
+
+//Pagina "Preparando o ambiente"
+
+preparing_environment: "Preparando o ambiente",
+en_first_step: "Primeiros passos",
+en_introduction_text: "Primeiro precisamos instalar um driver para o computador/notebook reconhecer a placa através da conexão por cabo microusb. Baixe o driver CP210x através do link abaixo:",
+en_install_driver: "Instalar driver",
+en_found_download: "Procure por download ou transferência e baixe a versão indicada abaixo:",
+en_info_micropython: "Para programar a placa Amado board no dblocks precisamos instalar o micropython e vamos fazer issoatravés do link abaixo para facilitar a instalação.",
+en_install_micropython: "Instalar micropython",
+en_info_micropython_page: "<span style='color:red;'>Na página de instalação contém um vídeo tutorial ensinando todo o processo</span>, o site é bem simples e intuitivo, basta clicar em conectar, selecionar a porta USB conforme a imagem abaixo e instalar o Micropython, esse processo pode demorar uns 2 minutos ou mais."
+,}

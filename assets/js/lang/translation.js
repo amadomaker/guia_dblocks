@@ -101,3 +101,5 @@ function initLanguage(callback) {
     if (callback) callback();
   });
 }
+
+document.querySelector('[data-translate="en_info_micropython_page"]').innerHTML = MSG["en_info_micropython_page"];
