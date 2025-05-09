@@ -11,7 +11,7 @@
   width: 250px;
   border-right: 1px solid #d2d1d1;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 20px;  
   overflow-y: auto;
   transition: width 0.3s ease;
 }
@@ -157,13 +157,13 @@ p {
   margin-bottom: 15px;
 }
 
-ul,
+.contentul ul,
 ol {
   margin-bottom: 15px;
   padding-left: 20px;
 }
 
-ul li,
+.contentul li,
 ol li {
   line-height: 26px;
   font-size: 18px;
@@ -190,6 +190,18 @@ ol li {
 
 .content a:hover {
   text-decoration: underline;
+}
+
+.container-lang{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.container-lang select{
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid #d2d1d1;
 }
 
 @media (max-width: 768px) {

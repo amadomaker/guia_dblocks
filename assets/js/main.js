@@ -3,10 +3,6 @@
 const IMAGE_PATH = "assets/images";
 const DATA_URL = "data/cards.json";
 
-const truncateText = (text, maxLength = 90) => {
-  return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
-};
-
 const loadDOMCards = async (query = "") => {
   try {
     const response = await fetch(DATA_URL);
@@ -25,27 +21,29 @@ const loadDOMCards = async (query = "") => {
     cards.forEach((cardData, index) => {
       const chapterNumber = index + 1;
       const lowerCaseQuery = query.toLowerCase().trim();
-      const titleMatch = cardData.title.toLowerCase().includes(lowerCaseQuery);
+      const titleMatch = MSG[cardData.title_key].toLowerCase().includes(lowerCaseQuery);
       const chapterMatch = chapterNumber.toString().includes(lowerCaseQuery);
 
       if (query && !titleMatch && !chapterMatch) return;
 
       const card = document.createElement("div");
       card.classList.add("modern-card");
-      card.setAttribute("data-title", cardData.title.toLowerCase());
+      card.setAttribute("data-title", MSG[cardData.title_key].toLowerCase());
       card.setAttribute("data-chapter", chapterNumber.toString());
 
       card.innerHTML = `
-        <img src="${IMAGE_PATH}/${cardData.image}" alt="${cardData.title}" class="card-image" />
+        <img src="${IMAGE_PATH}/${cardData.image}" alt="${MSG[cardData.title_key]}" class="card-image" />
         <div class="card-content">
-          <h3 class="card-title">${cardData.title}</h3>
-          <p class="card-text">${truncateText(cardData.description)}</p>
-          <a href="./${cardData.url}" class="card-link">Ler mais &rarr;</a>
+          <h3 data-translate="${cardData.title_key}" class="card-title"></h3>
+          <p data-translate="${cardData.description_key}" class="card-text"></p>
+          <a href="./${cardData.url}" class="card-link">Ler mais →</a>
         </div>
       `;
 
       containerCards.appendChild(card);
     });
+
+    applyTranslations();
   } catch (error) {
     console.error("Erro ao carregar os cards:", error);
   }
@@ -78,6 +76,8 @@ const setupSearchTrigger = () => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadDOMCards();
-  setupSearchTrigger();
+  initLanguage(() => {
+    loadDOMCards();
+    setupSearchTrigger();
+  });
 });
