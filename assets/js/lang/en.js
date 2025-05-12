@@ -217,4 +217,35 @@ var MSG = {
   ab_extra_oled: 'OLED Display (0.96", 128x64, I2C): compact screen.',
   ab_extra_components_text:
     "These components allow you to explore electronics and programming concepts, integrating theory and practice.",
+
+  // Page "Preparing the environment"
+
+preparing_environment: "Preparing the environment",
+en_first_step: "First steps",
+en_introduction_text: "First, we need to install a driver so the computer/laptop can recognize the board through the micro-USB cable connection. Download the CP210x driver using the link below:",
+en_install_driver: "Install driver",
+en_found_download: "Look for download or transfer and download the version indicated below:",
+en_info_micropython: "To program the Amado board on Dblocks, we need to install MicroPython. We'll do this through the link below to simplify the process.",
+en_install_micropython: "Install MicroPython",
+en_info_micropython_page: "<span style='color:red;'>The installation page contains a tutorial video explaining the entire process</span>. The site is very simple and intuitive – just click connect, select the USB port as shown in the image below, and install MicroPython. This process can take 2 minutes or more.",
+en_acessing_plataform_title: "Accessing the platform",
+en_acessing_plataform_info1: "In the search bar, look for Dblocks and access the first site, or go directly to: dblocks.com.br",
+en_acessing_plataform_info2: "On the homepage, click the 'start programming' button. A welcome message will appear with some information. If you’ve already installed MicroPython, you can close the message – your board is ready to use. If not, click on 'MicroPython Installer' and follow the process.",
+en_useful_information: "Useful information",
+en_inf_toolbox: "On the left side, there is the toolbox with the blocks available for use",
+en_inf_workspace: "The central area is called the workspace, where we place our blocks.",
+en_info_steel_bar: "In the top right, there are some buttons like the one to connect your board and the one to run the program.",
+en_info_extra: "**Note: You can also download and reload the program to use it later or on another computer.",
+en_first_project_title: "First project: Blink a LED infinitely",
+en_first_project_step1: "First, click on Control, then on Loops, and select the 'repeat while' block. Position it as you like.",
+en_first_project_step2: "Then click on Variables, Booleans, and select the 'True' block. Snap it into the previous block as shown in the image below:",
+en_first_project_step3: "At this point, we have our loop, which is responsible for repeatedly executing our program – in this case, making the LED blink infinitely.",
+en_first_project_step4: "The next step is to use the blocks responsible for turning the LED on and off. These can be found in the Input/Output Pins category. Look for the 'set output pin' block and place it inside the loop. We'll need to add this block twice – once to turn the LED on and once to turn it off. For the second block, select the 'false' option in 'to'.",
+en_first_project_step5: "We’ll also use a pause to keep the LED on and off for a time interval. Look for the 'wait' block under Control, in the Timing category. Position the blocks as shown in the image below.",
+en_first_project_step6: "Now that we’ve built the program, click the connect button in the top right corner, select the connected port (board) from your computer, and click connect.",
+en_first_project_step7: "Once done, you'll see the icon indicating that the Amado board is connected to the platform.",
+en_first_project_step8: "Now just click the button to run the program, and you’ll see the onboard LED blinking at 1-second intervals.",
+en_first_project_step9: "Notes: You can run and pause the program as many times as you like by clicking the same button.",
+en_first_project_step10: "Congratulations! You've just created your first program using the Amado board on the Dblocks platform."
+
 };

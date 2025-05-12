@@ -218,4 +218,35 @@ var MSG = {
   ab_extra_oled: 'Pantalla OLED (0.96", 128x64, I2C): pantalla compacta.',
   ab_extra_components_text:
     "Estos componentes permiten explorar conceptos de electrónica y programación, integrando teoría y práctica.",
+
+    // Página "Preparando el entorno"
+
+preparing_environment: "Preparando el entorno",
+en_first_step: "Primeros pasos",
+en_introduction_text: "Primero necesitamos instalar un controlador para que la computadora/portátil reconozca la placa a través de la conexión por cable microUSB. Descarga el controlador CP210x desde el enlace a continuación:",
+en_install_driver: "Instalar controlador",
+en_found_download: "Busca la opción de descarga o transferencia y descarga la versión indicada a continuación:",
+en_info_micropython: "Para programar la placa Amado board en Dblocks necesitamos instalar MicroPython, y lo haremos mediante el enlace a continuación para facilitar la instalación.",
+en_install_micropython: "Instalar MicroPython",
+en_info_micropython_page: "<span style='color:red;'>En la página de instalación hay un video tutorial que enseña todo el proceso</span>. El sitio es muy simple e intuitivo: solo haz clic en conectar, selecciona el puerto USB como se muestra en la imagen de abajo e instala MicroPython. Este proceso puede tardar unos 2 minutos o más.",
+en_acessing_plataform_title: "Accediendo a la plataforma",
+en_acessing_plataform_info1: "En la barra de búsqueda escribe Dblocks y accede al primer sitio, o entra directamente en: dblocks.com.br",
+en_acessing_plataform_info2: "En la página principal haz clic en el botón “comienza a programar”. A continuación, aparecerá un mensaje de bienvenida con algunas informaciones. Si ya instalaste MicroPython puedes cerrar el mensaje, tu placa ya está lista para usar; de lo contrario, haz clic en “Instalador de MicroPython” y sigue el proceso.",
+en_useful_information: "Información útil",
+en_inf_toolbox: "En el lado izquierdo se encuentra la caja de herramientas con los bloques disponibles para usar",
+en_inf_workspace: "El área central se llama espacio de trabajo (workspace) y es donde colocaremos nuestros bloques.",
+en_info_steel_bar: "En la parte superior derecha hay algunos botones, como el de conectar la placa y el de ejecutar el programa.",
+en_info_extra: "**Nota: También es posible descargar y recargar el programa para usarlo cuando quieras o en otra computadora.",
+en_first_project_title: "Primer proyecto: Parpadear un LED infinitamente",
+en_first_project_step1: "Primero haz clic en Control, luego en Bucles y selecciona el bloque 'repetir mientras'. Colócalo donde desees.",
+en_first_project_step2: "Luego haz clic en Variables, Booleanas y selecciona el bloque 'Verdadero'. Encájalo dentro del bloque anterior como muestra la imagen abajo:",
+en_first_project_step3: "En este punto ya tenemos nuestro bucle, que es responsable por ejecutar repetidamente nuestro programa – en este caso, hacer que el LED parpadee infinitamente.",
+en_first_project_step4: "El siguiente paso es usar los bloques responsables de encender y apagar el LED, que se encuentran en la categoría Pines de entrada/salida. Busca el bloque 'ajustar pin de salida' y colócalo dentro del bucle. Deberás añadir este bloque dos veces: uno para encender y otro para apagar. En el segundo bloque selecciona la opción falso en 'a'.",
+en_first_project_step5: "También usaremos una pausa para que el LED permanezca encendido y apagado durante un intervalo de tiempo. Busca el bloque 'esperar' en Control, dentro de la categoría Temporización. Coloca los bloques como muestra la imagen abajo.",
+en_first_project_step6: "Ahora que ya montamos el programa, haz clic en el botón de conectar en la parte superior derecha, selecciona el puerto (placa) conectado a tu computadora y haz clic en conectar.",
+en_first_project_step7: "Una vez hecho, verás el ícono de esta forma indicando que la placa Amado está conectada a la plataforma.",
+en_first_project_step8: "Ahora solo haz clic en el botón de ejecutar el programa y verás el LED incorporado en la placa parpadeando en intervalos de 1 segundo.",
+en_first_project_step9: "Observaciones: Es posible ejecutar y pausar el programa cuantas veces quieras haciendo clic en el mismo botón.",
+en_first_project_step10: "¡Felicidades! Acabas de crear tu primer programa usando la placa Amado en la plataforma Dblocks."
+
 };

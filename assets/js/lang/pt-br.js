@@ -230,5 +230,26 @@ en_install_driver: "Instalar driver",
 en_found_download: "Procure por download ou transferência e baixe a versão indicada abaixo:",
 en_info_micropython: "Para programar a placa Amado board no dblocks precisamos instalar o micropython e vamos fazer issoatravés do link abaixo para facilitar a instalação.",
 en_install_micropython: "Instalar micropython",
-en_info_micropython_page: "<span style='color:red;'>Na página de instalação contém um vídeo tutorial ensinando todo o processo</span>, o site é bem simples e intuitivo, basta clicar em conectar, selecionar a porta USB conforme a imagem abaixo e instalar o Micropython, esse processo pode demorar uns 2 minutos ou mais."
+en_info_micropython_page: "<span style='color:red;'>Na página de instalação contém um vídeo tutorial ensinando todo o processo</span>, o site é bem simples e intuitivo, basta clicar em conectar, selecionar a porta USB conforme a imagem abaixo e instalar o Micropython, esse processo pode demorar uns 2 minutos ou mais.",
+en_acessing_plataform_title: "Acessando a plataforma",
+en_acessing_plataform_info1: "Na barra de pesquisa procure por dblocks e acesse o primeiro site ou acesse pelo link: dblocks.com.br",
+en_acessing_plataform_info2: "Na pagina inicial clique no botão “comece a programar”, logo após aparecerá uma mensagem de boas vindas com algumas informações, se já tiver feito a instalação do micropython pode fechar a mensagem, a sua placa já está pronta para uso, caso contrario clique em “Instalador Micropython e faça o processo”.",
+en_useful_information: "Informações úteis",
+en_inf_toolbox: "Na parte esquerda contem a toolbox com os blocos disponíveis para usar",
+en_inf_workspace: "O espaçõ central é chamado de workspace e é onde colocaremos os nossos blocos.",
+en_info_steel_bar: "Na parte superior direita temos alguns botões como o de concectar a nossa placa e o de rodar a programação.",
+en_info_extra: "**Obs: Também é possivel baixar e recarregar a programação para usar quando quiser ou em outro computador.",
+en_first_project_title: "Primeiro projeto: Piscar um led infinitamente",
+en_first_project_step1: "Primeiro clique em Controle, depois em Laços e clique sobre o bloco “repita enquanto”, posicione conforme a sua vontade.",
+en_first_project_step2: "Logo após clique em váriaveis, Boleanas e selecione o bloco 'Verdadeiro'. Posicione o bloco encaixando no bloco anterior no bloco anterior conforme mostra a imagem abaixo:",
+en_first_project_step3: "Neste momento já temos o nosso loop que é responsável pela execução repetidamente do nosso programa, nesse caso fazer com que o nosso led piscar de forma infinita.",
+en_first_project_step4: "O próximo passo é usar os blocos responsáveis por acender e apagar o nosso led que podem ser encontrados na categoria Pinos entrada/saida. Procure pelo bloco 'ajustar pino de saida' e posicione dentro do loop. Teremos que adicionar o mesmo bloco duas vezes, um para acender e outro para apagar, no segundo bloco escolha a opção flaso em 'para'.",
+en_first_project_step5: "Também usaremos uma pausa para que o led permaneça aceso e apagado por um intervalo de tempo, procure pelo bloco 'esperar' em controle, selecionando a categoria Temporização. Posicione os blocos conforme a imagem abaixo mostra.",
+en_first_project_step6: "Agora que já montamos o programa, clique no botão de conectar na parte superior direito, selecione a porta(placa) conectada ao seu computador e clique em conectar.",
+en_first_project_step7: "Feito isso verá o ícone dessa forma sinalizando que a Amado board já está conectada a plataforma",
+en_first_project_step8: "Agora basta clicar no botão que executa o programa e verá o led embutido na placa piscando em intervalos de 1 segundo.",
+en_first_project_step9: "Observações: É possível executar e pausar o programa quantas vezes quiser clicando no mesmo botão.",
+en_first_project_step10: "Parabéns! Você acaba de criar o seu primeiro programa usando a Amado board na plataforma Dblocks."
+
+
 ,}

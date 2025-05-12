@@ -21,7 +21,7 @@
     "title_key": "digital_input_output",
     "image": "saida-digital.png",
     "description_key": "digital_io_description",
-    "url": ""
+    "url": "chapters/InOutDigital.html"
   },
   {
     "title_key": "analog_input_output",
