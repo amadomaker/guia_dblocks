@@ -217,4 +217,75 @@ var MSG = {
   ab_extra_oled: 'OLED Display (0.96", 128x64, I2C): compact screen.',
   ab_extra_components_text:
     "These components allow you to explore electronics and programming concepts, integrating theory and practice.",
+
+  // Page "Preparing the environment"
+
+preparing_environment: "Preparing the environment",
+en_first_step: "First steps",
+en_introduction_text: "First, we need to install a driver so the computer/laptop can recognize the board through the micro-USB cable connection. Download the CP210x driver using the link below:",
+en_install_driver: "Install driver",
+en_found_download: "Look for download or transfer and download the version indicated below:",
+en_info_micropython: "To program the Amado board on Dblocks, we need to install MicroPython. We'll do this through the link below to simplify the process.",
+en_install_micropython: "Install MicroPython",
+en_info_micropython_page: "<span style='color:red;'>The installation page contains a tutorial video explaining the entire process</span>. The site is very simple and intuitive – just click connect, select the USB port as shown in the image below, and install MicroPython. This process can take 2 minutes or more.",
+en_acessing_plataform_title: "Accessing the platform",
+en_acessing_plataform_info1: "In the search bar, look for Dblocks and access the first site, or go directly to: dblocks.com.br",
+en_acessing_plataform_info2: "On the homepage, click the 'start programming' button. A welcome message will appear with some information. If you’ve already installed MicroPython, you can close the message – your board is ready to use. If not, click on 'MicroPython Installer' and follow the process.",
+en_useful_information: "Useful information",
+en_inf_toolbox: "On the left side, there is the toolbox with the blocks available for use",
+en_inf_workspace: "The central area is called the workspace, where we place our blocks.",
+en_info_steel_bar: "In the top right, there are some buttons like the one to connect your board and the one to run the program.",
+en_info_extra: "**Note: You can also download and reload the program to use it later or on another computer.",
+en_first_project_title: "First project: Blink a LED infinitely",
+en_first_project_step1: "First, click on Control, then on Loops, and select the 'repeat while' block. Position it as you like.",
+en_first_project_step2: "Then click on Variables, Booleans, and select the 'True' block. Snap it into the previous block as shown in the image below:",
+en_first_project_step3: "At this point, we have our loop, which is responsible for repeatedly executing our program – in this case, making the LED blink infinitely.",
+en_first_project_step4: "The next step is to use the blocks responsible for turning the LED on and off. These can be found in the Input/Output Pins category. Look for the 'set output pin' block and place it inside the loop. We'll need to add this block twice – once to turn the LED on and once to turn it off. For the second block, select the 'false' option in 'to'.",
+en_first_project_step5: "We’ll also use a pause to keep the LED on and off for a time interval. Look for the 'wait' block under Control, in the Timing category. Position the blocks as shown in the image below.",
+en_first_project_step6: "Now that we’ve built the program, click the connect button in the top right corner, select the connected port (board) from your computer, and click connect.",
+en_first_project_step7: "Once done, you'll see the icon indicating that the Amado board is connected to the platform.",
+en_first_project_step8: "Now just click the button to run the program, and you’ll see the onboard LED blinking at 1-second intervals.",
+en_first_project_step9: "Notes: You can run and pause the program as many times as you like by clicking the same button.",
+en_first_project_step10: "Congratulations! You've just created your first program using the Amado board on the Dblocks platform.",
+
+//Page inOutDigital
+di_introduction_title: "Introduction",
+di_intro1: 'In electronic and automation systems, <strong>digital inputs</strong> are signals that the device receives from the environment. These signals represent binary states — usually "on" or "off" (1 or 0). Common examples include buttons, presence sensors, and switches.',
+di_intro2: "<strong>Digital outputs</strong>, on the other hand, are signals that the device sends to act on the environment, also in binary form. With them, it's possible to control LEDs, relays, motors, and other components that operate in two states (on/off).",
+di_intro3: "These concepts are fundamental in automation projects, where sensors report the state of the environment and actuators respond according to the defined logic.",
+di_intro4: "Next, we'll see how to use digital inputs and outputs in practice in a simple and intuitive way.",
+
+//Digital input
+di_in_title: "Digital Input",
+di_in1: "A practical example of a digital input can be created using the <strong>dBlocks</strong> platform and the <strong>Amado Board</strong>.",
+di_in2: "In the image below, we have a program that continuously reads a digital pin from the board:",
+di_in3: "What does this program do?",
+di_in4: "<strong>While the program is running</strong>, it repeatedly executes the instructions inside the <code>repeat while true</code> block.",
+di_in5: "It <strong>reads the logic state</strong> (0 or 1) of the <strong>D16 / SERVO B</strong> pin using the <code>read digital input</code> command.",
+di_in6: "The value read is <strong>stored in the <code>x</code> variable</strong>.",
+di_in7: "Then, the program <strong>prints to the console</strong> a message like: <code>Value of x: 1</code> or <code>Value of x: 0</code>.",
+di_in8: "The program then <strong>waits 500 milliseconds</strong> before repeating the reading.",
+di_in9: "Hardware setup",
+di_in10: "To test this code in practice, you can use a <strong>jumper</strong> connected to the <code>D16</code> pin of the Amado Board. Toggle this jumper between <strong>GND</strong> (0V) and <strong>3.3V</strong>, thus simulating a digital signal:",
+di_in11: "When the jumper is connected to <strong>GND</strong>, the value read will be <code>0</code>.",
+di_in12: "When the jumper is connected to <strong>3.3V</strong>, the value read will be <code>1</code>.",
+di_in13: "This clearly demonstrates the operation of a digital input, showing how the board interprets two distinct states and how this can be visualized on the console.",
+di_in14: "Visualizing the results in the console",
+di_in15: "The dBlocks platform has a console that allows you to monitor, in real time, the results of the readings performed by the blocks. In the example below, we see the value of the <code>x</code> variable being printed continuously:",
+di_in16: "As the jumper is switched between GND and 3.3V, the value of <code>x</code> changes between <strong>0</strong> and <strong>1</strong>, and this is immediately reflected in the console. This is an efficient and clear way to test and debug your project's logic.",
+
+//Digital output
+di_out_title: "Digital Output",
+di_out1: 'Digital outputs allow the board to control external devices by sending "on" or "off" type signals. A classic example is controlling an LED.',
+di_out2: "Below we have an example where the blue LED connected to pin <code>D2</code> of the <strong>Amado Board</strong> blinks continuously:",
+di_out3: "What does this program do?",
+di_out4: "The <code>repeat while true</code> block ensures the program keeps running in a loop.",
+di_out5: "The <code>D2 / BLUE LED</code> pin is configured as a digital output.",
+di_out6: "First, the LED is turned on with the <code>set output pin to true</code> command.",
+di_out7: "The program then waits for <strong>500 milliseconds</strong>.",
+di_out8: "After that, the LED is turned off with the <code>set output pin to false</code> command.",
+di_out9: "Again, the program waits for <strong>500 milliseconds</strong>.",
+di_out10: "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests."
+
+
 };

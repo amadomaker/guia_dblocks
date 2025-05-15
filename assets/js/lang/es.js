@@ -218,4 +218,75 @@ var MSG = {
   ab_extra_oled: 'Pantalla OLED (0.96", 128x64, I2C): pantalla compacta.',
   ab_extra_components_text:
     "Estos componentes permiten explorar conceptos de electrónica y programación, integrando teoría y práctica.",
+
+    // Página "Preparando el entorno"
+
+preparing_environment: "Preparando el entorno",
+en_first_step: "Primeros pasos",
+en_introduction_text: "Primero necesitamos instalar un controlador para que la computadora/portátil reconozca la placa a través de la conexión por cable microUSB. Descarga el controlador CP210x desde el enlace a continuación:",
+en_install_driver: "Instalar controlador",
+en_found_download: "Busca la opción de descarga o transferencia y descarga la versión indicada a continuación:",
+en_info_micropython: "Para programar la placa Amado board en Dblocks necesitamos instalar MicroPython, y lo haremos mediante el enlace a continuación para facilitar la instalación.",
+en_install_micropython: "Instalar MicroPython",
+en_info_micropython_page: "<span style='color:red;'>En la página de instalación hay un video tutorial que enseña todo el proceso</span>. El sitio es muy simple e intuitivo: solo haz clic en conectar, selecciona el puerto USB como se muestra en la imagen de abajo e instala MicroPython. Este proceso puede tardar unos 2 minutos o más.",
+en_acessing_plataform_title: "Accediendo a la plataforma",
+en_acessing_plataform_info1: "En la barra de búsqueda escribe Dblocks y accede al primer sitio, o entra directamente en: dblocks.com.br",
+en_acessing_plataform_info2: "En la página principal haz clic en el botón “comienza a programar”. A continuación, aparecerá un mensaje de bienvenida con algunas informaciones. Si ya instalaste MicroPython puedes cerrar el mensaje, tu placa ya está lista para usar; de lo contrario, haz clic en “Instalador de MicroPython” y sigue el proceso.",
+en_useful_information: "Información útil",
+en_inf_toolbox: "En el lado izquierdo se encuentra la caja de herramientas con los bloques disponibles para usar",
+en_inf_workspace: "El área central se llama espacio de trabajo (workspace) y es donde colocaremos nuestros bloques.",
+en_info_steel_bar: "En la parte superior derecha hay algunos botones, como el de conectar la placa y el de ejecutar el programa.",
+en_info_extra: "**Nota: También es posible descargar y recargar el programa para usarlo cuando quieras o en otra computadora.",
+en_first_project_title: "Primer proyecto: Parpadear un LED infinitamente",
+en_first_project_step1: "Primero haz clic en Control, luego en Bucles y selecciona el bloque 'repetir mientras'. Colócalo donde desees.",
+en_first_project_step2: "Luego haz clic en Variables, Booleanas y selecciona el bloque 'Verdadero'. Encájalo dentro del bloque anterior como muestra la imagen abajo:",
+en_first_project_step3: "En este punto ya tenemos nuestro bucle, que es responsable por ejecutar repetidamente nuestro programa – en este caso, hacer que el LED parpadee infinitamente.",
+en_first_project_step4: "El siguiente paso es usar los bloques responsables de encender y apagar el LED, que se encuentran en la categoría Pines de entrada/salida. Busca el bloque 'ajustar pin de salida' y colócalo dentro del bucle. Deberás añadir este bloque dos veces: uno para encender y otro para apagar. En el segundo bloque selecciona la opción falso en 'a'.",
+en_first_project_step5: "También usaremos una pausa para que el LED permanezca encendido y apagado durante un intervalo de tiempo. Busca el bloque 'esperar' en Control, dentro de la categoría Temporización. Coloca los bloques como muestra la imagen abajo.",
+en_first_project_step6: "Ahora que ya montamos el programa, haz clic en el botón de conectar en la parte superior derecha, selecciona el puerto (placa) conectado a tu computadora y haz clic en conectar.",
+en_first_project_step7: "Una vez hecho, verás el ícono de esta forma indicando que la placa Amado está conectada a la plataforma.",
+en_first_project_step8: "Ahora solo haz clic en el botón de ejecutar el programa y verás el LED incorporado en la placa parpadeando en intervalos de 1 segundo.",
+en_first_project_step9: "Observaciones: Es posible ejecutar y pausar el programa cuantas veces quieras haciendo clic en el mismo botón.",
+en_first_project_step10: "¡Felicidades! Acabas de crear tu primer programa usando la placa Amado en la plataforma Dblocks.",
+
+//Página inOutDigital
+di_introduction_title: "Introducción",
+di_intro1: 'En sistemas electrónicos y de automatización, las <strong>entradas digitales</strong> son señales que el dispositivo recibe del entorno. Estas señales representan estados binarios — generalmente "encendido" o "apagado" (1 o 0). Algunos ejemplos comunes son botones, sensores de presencia e interruptores.',
+di_intro2: "Las <strong>salidas digitales</strong>, por otro lado, son señales que el dispositivo envía para actuar sobre el entorno, también en forma binaria. Con ellas, es posible controlar LEDs, relés, motores y otros componentes que operan en dos estados (encendido/apagado).",
+di_intro3: "Estos conceptos son fundamentales en proyectos de automatización, donde los sensores informan el estado del entorno y los actuadores responden de acuerdo con la lógica definida.",
+di_intro4: "A continuación, veremos cómo utilizar entradas y salidas digitales en la práctica de forma sencilla e intuitiva.",
+
+//Entrada digital
+di_in_title: "Entrada Digital",
+di_in1: "Un ejemplo práctico de entrada digital se puede realizar con la plataforma <strong>dBlocks</strong> y la <strong>Amado Board</strong>.",
+di_in2: "En la imagen a continuación, tenemos un programa que realiza la lectura continua de un pin digital de la placa:",
+di_in3: "¿Qué hace este programa?",
+di_in4: "<strong>Mientras el programa esté en ejecución</strong>, ejecuta repetidamente las instrucciones dentro del bloque <code>repetir mientras verdadero</code>.",
+di_in5: "Lee el <strong>estado lógico</strong> (0 o 1) del pin <strong>D16 / SERVO B</strong> usando el comando <code>leer entrada digital</code>.",
+di_in6: "El valor leído se <strong>almacena en la variable <code>x</code></strong>.",
+di_in7: "Luego, el programa <strong>imprime en la consola</strong> un mensaje como: <code>Valor de x: 1</code> o <code>Valor de x: 0</code>.",
+di_in8: "El programa <strong>espera 500 milisegundos</strong> antes de repetir la lectura.",
+di_in9: "Montaje del hardware",
+di_in10: "Para probar este código en la práctica, puedes utilizar un <strong>jumper</strong> conectado al pin <code>D16</code> de la Amado Board. Cambia este jumper entre <strong>GND</strong> (0V) y <strong>3.3V</strong>, simulando así una señal digital:",
+di_in11: "Cuando el jumper está en <strong>GND</strong>, el valor leído será <code>0</code>.",
+di_in12: "Cuando el jumper está en <strong>3.3V</strong>, el valor leído será <code>1</code>.",
+di_in13: "Esto demuestra claramente el funcionamiento de una entrada digital, mostrando cómo la placa interpreta dos estados distintos y cómo esto puede visualizarse en la consola.",
+di_in14: "Visualización de los resultados en la consola",
+di_in15: "La plataforma dBlocks cuenta con una consola que permite seguir, en tiempo real, el resultado de las lecturas realizadas por los bloques. En el siguiente ejemplo, vemos el valor de la variable <code>x</code> imprimiéndose continuamente:",
+di_in16: "A medida que el jumper se alterna entre GND y 3.3V, el valor de <code>x</code> cambia entre <strong>0</strong> y <strong>1</strong>, y esto se refleja inmediatamente en la consola. Esta es una forma eficiente y clara de probar y depurar la lógica de tu proyecto.",
+
+//Salida Digital
+di_out_title: "Salida Digital",
+di_out1: 'Las salidas digitales permiten que la placa controle dispositivos externos enviando señales del tipo "encendido" o "apagado". Un ejemplo clásico es el control de un LED.',
+di_out2: "A continuación, tenemos un ejemplo donde el LED azul conectado al pin <code>D2</code> de la <strong>Amado Board</strong> parpadea continuamente:",
+di_out3: "¿Qué hace este programa?",
+di_out4: "El bloque <code>repetir mientras verdadero</code> garantiza que el programa se ejecute en bucle.",
+di_out5: "El pin <code>D2 / LED AZUL</code> se configura como salida digital.",
+di_out6: "Primero, el LED se enciende con el comando <code>ajustar pin de salida a verdadero</code>.",
+di_out7: "El programa espera <strong>500 milisegundos</strong>.",
+di_out8: "Luego, el LED se apaga con el comando <code>ajustar pin de salida a falso</code>.",
+di_out9: "Una vez más, el programa espera <strong>500 milisegundos</strong>.",
+di_out10: "Esto hace que el LED parpadee continuamente con un intervalo de medio segundo entre encenderse y apagarse. Este tipo de control es muy útil en sistemas de señalización, notificaciones visuales o pruebas simples del funcionamiento de los pines."
+
+
 };

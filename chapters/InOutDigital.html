@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="preparing_environment">Preparando o ambinte</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/chapters.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="../assets/images/logo-dblocks.svg"
+        alt="Logo Dblocks"
+        class="logo-dblocks"
+      />
+
+      <nav>
+        <ul class="container-nav">
+          <li><a href="/" data-translate="home">Início</a></li>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container-button-lang">
+        <div class="container-lang">
+          <select id="languageMenu"></select>
+          <img
+            id="languageFlag"
+            alt="Language Flag"
+            style="width: 32px; height: 20px"
+          />
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main-chapters">
+      <aside class="container-chapters" id="sidebar">
+        <div class="header-chapters">
+          <h4 data-translate="in_this_section">Seções</h4>
+          <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
+        </div>
+        <div id="chapters-list"></div>
+      </aside>
+
+      <section class="content">
+        <h1 data-translate="preparing_environment"></h1>
+
+        <div class="chapter-index">
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
+          <ul>
+            <li><a href="#introduction" data-translate="ab_introduction">Introdução</a></li>
+            <li><a href="#userful-information" data-translate="en_useful_information"></a></li>
+            <li><a href="#first-project" data-translate="en_first_project_title"></a></li>
+          </ul>
+        </div>
+        <div id="introducao" class="chapter-section">
+          <h2 data-translate="di_introduction_title ">
+            Introdução
+          </h2>
+          <p data-translate="di_intro1">
+            Em sistemas eletrônicos e de automação, as <strong>entradas digitais</strong> são sinais que o dispositivo recebe do ambiente. Esses sinais representam estados binários — geralmente "ligado" ou "desligado" (1 ou 0). Exemplos comuns incluem botões, sensores de presença e interruptores.
+          </p>
+          <p data-translate="di_intro2">
+            Já as <strong>saídas digitais</strong> são os sinais que o dispositivo envia para atuar sobre o ambiente, também em forma binária. Com elas, é possível controlar LEDs, relés, motores e outros componentes que operam em dois estados (ligado/desligado).
+          </p>
+          <img 
+            width="450px" 
+            height="300px" 
+            src="../assets/images/InOutDigital/Digital.gif" 
+            alt="" 
+          />
+          <p data-translate="di_intro3">
+            Esses conceitos são fundamentais em projetos de automação, onde sensores informam o estado do ambiente e atuadores respondem de acordo com a lógica definida.
+          </p>
+
+          <p data-translate="di_intro4">
+            A seguir, vamos ver como utilizar entradas e saídas digitais na prática de forma simples e intuitiva.
+          </p>
+          <h2 data-translate="di_in_title">Entrada Digital</h2>
+          <p data-translate="di_in1">
+            Um exemplo prático de entrada digital pode ser feito com a plataforma <strong>dBlocks</strong> e a <strong>Amado Board</strong>.
+          </p>
+
+          <p data-translate="di_in2">
+            Na imagem abaixo, temos um programa que realiza a leitura contínua de um pino digital da placa:
+          </p>
+
+          <img 
+            width="550px" 
+            height="400px" 
+            src="../assets/images/InOutDigital/leituraDigital.png" 
+            alt="Exemplo de leitura de entrada digital com dBlocks" 
+          />
+
+          <h3 data-translate="di_in3">O que este programa faz?</h3>
+          <ul>
+            <li data-translate="di_in4"><strong>Enquanto o programa estiver rodando</strong>, ele executa repetidamente as instruções dentro do bloco <code>repita enquanto verdadeiro</code>.</li>
+            <li data-translate="di_in5">Ele <strong>lê o estado lógico</strong> (0 ou 1) do pino <strong>D16 / SERVO B</strong> usando o comando <code>ler entrada digital</code>.</li>
+            <li data-translate="di_in6">O valor lido é <strong>armazenado na variável <code>x</code></strong>.</li>
+            <li data-translate="di_in7">Em seguida, o programa <strong>imprime no console</strong> uma mensagem como: <code>Valor de x: 1</code> ou <code>Valor de x: 0</code>.</li>
+            <li data-translate="di_in8">O programa então <strong>aguarda 500 milissegundos</strong> antes de repetir a leitura.</li>
+          </ul>
+
+          <h3 data-translate="di_in9">Montagem no hardware</h3>
+          <p data-translate="di_in10">
+            Para testar esse código na prática, você pode utilizar um <strong>jumper</strong> conectado ao pino <code>D16</code> da Amado Board. Alterne esse jumper entre o <strong>GND</strong> (0V) e os <strong>3.3V</strong>, simulando assim um sinal digital:
+          </p>
+          <ul>
+            <li data-translate="di_in11">Quando o jumper está no <strong>GND</strong>, o valor lido será <code>0</code>.</li>
+            <li data-translate="di_in12">Quando o jumper está nos <strong>3.3V</strong>, o valor lido será <code>1</code>.</li>
+          </ul>
+
+          <p data-translate="di_in13">
+            Isso demonstra claramente o funcionamento de uma entrada digital, mostrando como a placa interpreta dois estados distintos e como isso pode ser visualizado no console.
+          </p>
+          <h3 data-translate="di_in14">Visualização dos resultados no console</h3>
+          <p data-translate="di_in15">
+            A plataforma dBlocks possui um console que permite acompanhar, em tempo real, o resultado das leituras feitas pelos blocos. No exemplo a seguir, vemos o valor da variável <code>x</code> sendo impresso continuamente:
+          </p>
+
+          <img 
+            width="300px" 
+            src="../assets/images/InOutDigital/consoleEntradaDigital.png" 
+            alt="Resultados da leitura no console dBlocks" 
+          />
+
+          <p data-translate="di_in16">
+            À medida que o jumper é alternado entre o GND e os 3.3V, o valor de <code>x</code> muda entre <strong>0</strong> e <strong>1</strong>, e isso é refletido imediatamente no console. Essa é uma maneira eficiente e clara de testar e depurar a lógica do seu projeto.
+          </p>
+          <h2 data-translate="di_out_title">Saída Digital</h2>
+          <p data-translate="di_out1">
+            As saídas digitais permitem que a placa controle dispositivos externos, enviando sinais do tipo "ligado" ou "desligado". Um exemplo clássico é o controle de um LED.
+          </p>
+
+          <p data-translate="di_out2">
+            Abaixo temos um exemplo onde o LED azul conectado ao pino <code>D2</code> da <strong>Amado Board</strong> pisca continuamente:
+          </p>
+
+          <img 
+            width="450px" 
+            src="../assets/images/InOutDigital/saidaDigital.png" 
+            alt="Exemplo de saída digital com dBlocks" 
+          />
+
+          <h3 data-translate="di_out3">O que este programa faz?</h3>
+          <ul>
+            <li data-translate="di_out4">O bloco <code>repita enquanto verdadeiro</code> garante que o programa fique executando em loop.</li>
+            <li data-translate="di_out5">O pino <code>D2 / LED AZUL</code> é configurado como saída digital.</li>
+            <li data-translate="di_out6">Primeiro, o LED é ligado com o comando <code>ajustar pino de saída para verdadeiro</code>.</li>
+            <li data-translate="di_out7">O programa então aguarda <strong>500 milissegundos</strong>.</li>
+            <li data-translate="di_out8">Depois, o LED é desligado com o comando <code>ajustar pino de saída para falso</code>.</li>
+            <li data-translate="di_out9">Mais uma vez, o programa aguarda <strong>500 milissegundos</strong>.</li>
+          </ul>
+
+          <p data-translate="di_out10" style="margin-top: 20px;">
+            Isso faz com que o LED pisque continuamente com um intervalo de meio segundo entre acender e apagar. Esse tipo de controle é muito útil em sistemas de sinalização, notificações visuais ou testes simples de funcionamento de pinos.
+          </p>
+
+        </div>
+        </div>  
+
+      </section>
+    </main>
+
+    <script src="../assets/js/lang/translation.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/chapters.js"></script>
+  </body>
+</html>
