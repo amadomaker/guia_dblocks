@@ -4,13 +4,13 @@ const LANGUAGE_NAMES = {
   es: "ES",
 };
 
-const LANG_SELECTED = "pt-br";
-
 const PATH_IMAGE_FLAGS = {
   en: "/assets/images/usa.svg",
   "pt-br": "/assets/images/brazil.svg",
   es: "/assets/images/spanish.svg",
 };
+
+const LANG_SELECTED = "pt-br";
 
 function applyTranslations() {
   const elements = document.querySelectorAll("[data-translate]");
@@ -22,44 +22,21 @@ function applyTranslations() {
   });
 }
 
-function changeLanguage() {
-  var languageMenu = document.getElementById("languageMenu");
-  var newLang = languageMenu.options[languageMenu.selectedIndex].value;
-
-  var flagElement = document.getElementById("languageFlag");
-  if (flagElement) {
-    flagElement.src = PATH_IMAGE_FLAGS[newLang] || "landing/media/brazil.svg";
-    flagElement.alt = LANGUAGE_NAMES[newLang] || "Language";
-  }
-
-  var search = window.location.search;
-  if (search.length <= 1) {
-    search = "?lang=" + newLang;
-  } else if (search.match(/[?&]lang=[^&]*/)) {
-    search = search.replace(/([?&]lang=)[^&]*/, "$1" + newLang);
-  } else {
-    search = search.replace(/\?/, "?lang=" + newLang + "&");
-  }
-
-  window.location =
-    window.location.protocol +
-    "//" +
-    window.location.host +
-    window.location.pathname +
-    search;
+function getLang() {
+  return localStorage.getItem("selectedLang") || detectBrowserLanguage();
 }
 
-function getLang() {
-  var urlParams = new URLSearchParams(window.location.search);
-  const paramLang = urlParams.get("lang");
+function changeLanguage() {
+  const languageMenu = document.getElementById("languageMenu");
+  const newLang = languageMenu.options[languageMenu.selectedIndex].value;
 
-  if (paramLang) return paramLang;
+  localStorage.setItem("selectedLang", newLang);
 
-  return LANG_SELECTED;
+  location.reload();
 }
 
 function loadScript(src, callback) {
-  var script = document.createElement("script");
+  const script = document.createElement("script");
   script.src = src;
   script.onload = callback || function () {};
   document.head.appendChild(script);
@@ -68,9 +45,9 @@ function loadScript(src, callback) {
 function initLanguage(callback) {
   const LANG = getLang();
 
-  let flagElement = document.getElementById("languageFlag");
+  const flagElement = document.getElementById("languageFlag");
   if (flagElement) {
-    flagElement.src = PATH_IMAGE_FLAGS[LANG] || "assets/images/brazil.svg";
+    flagElement.src = PATH_IMAGE_FLAGS[LANG] || "/assets/images/brazil.svg";
     flagElement.alt = LANGUAGE_NAMES[LANG] || "Language";
   }
 
@@ -78,21 +55,16 @@ function initLanguage(callback) {
     document.dir = "ltr";
     document.head.parentElement.setAttribute("lang", LANG);
 
-    var languages = [];
-    for (var lang in LANGUAGE_NAMES) {
-      languages.push([LANGUAGE_NAMES[lang], lang]);
-    }
-    languages.sort(function (a, b) {
-      return a[0].localeCompare(b[0]);
-    });
-
-    var languageMenu = document.getElementById("languageMenu");
+    const languageMenu = document.getElementById("languageMenu");
     languageMenu.options.length = 0;
-    languages.forEach(function (tuple) {
-      var option = new Option(tuple[0], tuple[1]);
-      if (tuple[1] === LANG) {
-        option.selected = true;
-      }
+
+    const sortedLanguages = Object.entries(LANGUAGE_NAMES).sort((a, b) =>
+      a[1].localeCompare(b[1])
+    );
+
+    sortedLanguages.forEach(([langCode, label]) => {
+      const option = new Option(label, langCode);
+      if (langCode === LANG) option.selected = true;
       languageMenu.options.add(option);
     });
 
@@ -102,4 +74,18 @@ function initLanguage(callback) {
   });
 }
 
-document.querySelector('[data-translate="en_info_micropython_page"]').innerHTML = MSG["en_info_micropython_page"];
+initLanguage(function () {
+  applyTranslations();
+
+  const key = "en_info_micropython_page";
+  const el = document.querySelector(`[data-translate="${key}"]`);
+  if (el && MSG[key]) {
+    el.innerHTML = MSG[key];
+  }
+});
+
+function detectBrowserLanguage() {
+  const browserLang = navigator.language.toLowerCase();
+  if (LANGUAGE_NAMES[browserLang]) return browserLang;
+  return LANG_SELECTED;
+}
