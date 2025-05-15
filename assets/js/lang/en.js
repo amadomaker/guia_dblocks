@@ -285,7 +285,40 @@ di_out6: "First, the LED is turned on with the <code>set output pin to true</cod
 di_out7: "The program then waits for <strong>500 milliseconds</strong>.",
 di_out8: "After that, the LED is turned off with the <code>set output pin to false</code> command.",
 di_out9: "Again, the program waits for <strong>500 milliseconds</strong>.",
-di_out10: "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests."
+di_out10: "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests.",
+
+
+// Page inOutAnalog
+an_introduction_title: "Introduction",
+an_intro1: "In electronic projects, <strong>analog inputs and outputs</strong> allow working with signals that vary continuously. Unlike digital signals, which have only two states (0 or 1), analog signals can represent a range of values, making them ideal for measuring things like light, temperature, or controlling LED intensity.",
+an_intro2: "In this example, we’ll use the <strong>LDR light sensor</strong> already built into the <strong>Amado Board</strong> as an analog input. For the output, we’ll adjust the brightness of the onboard LED using a PWM signal.",
+an_intro3: "These features are useful in projects that need to detect environmental changes or control devices with more precision.",
+
+// Analog Input
+an_in_title: "Analog Input",
+an_in1: "We’ll read the onboard LDR light sensor by connecting a jumper from the LDR terminal to pin <code>39</code>, which is an analog input.",
+an_in2: "The following program continuously reads the light intensity captured by the sensor and stores it in a variable:",
+an_in3: "What does this program do?",
+an_in4: "Inside the <code>repeat while true</code> block, it repeatedly executes the instructions.",
+an_in5: "Pin <code>39</code> is read using the <code>read analog input</code> command.",
+an_in6: "The value read is stored in the variable <code>valor_ldr</code>.",
+an_in7: "This value is printed to the console for real-time monitoring.",
+an_in8: "There is a pause of <strong>500 milliseconds</strong> before the next reading.",
+an_in9: "Viewing the results",
+an_in10: "As ambient light changes, the value of the <code>valor_ldr</code> variable also changes. This can be seen in the platform’s console:",
+an_in11: "The brighter the environment, the higher the value read. In darker settings, the value decreases. This shows how the analog signal continuously represents a physical quantity.",
+
+// Analog Output
+an_out_title: "Analog Output",
+an_out1: "To control the brightness of an LED, we use a technique called <strong>PWM (pulse-width modulation)</strong>. In practice, it simulates an analog signal on a digital pin.",
+an_out2: "Below is an example using the PWM block to control the onboard blue LED of the <strong>Amado Board</strong> connected to pin <code>D2</code>:",
+an_out3: "What does this program do?",
+an_out4: "The <code>PWM</code> block is used inside a continuous <code>repeat while true</code> loop.",
+an_out5: "It sets <strong>pin D2 / BLUE LED</strong> as a PWM output.",
+an_out6: "The <strong>frequency</strong> is set to <code>100 Hz</code>, indicating how many cycles per second the signal is sent.",
+an_out7: "The <strong>duty cycle</strong> is set to <code>512</code>, which represents 50% intensity (on a scale from 0 to 1023).",
+an_out8: "By changing the duty cycle value, you can control the LED’s brightness. Lower values make the LED dimmer, and higher values increase brightness. The frequency can also be adjusted to test how different rates affect the smoothness of the light.",
+an_out9: "This approach is very useful in projects like dimmers, motor speed controllers, or any application where the output needs to vary instead of just switching on or off.",
 
 
 };

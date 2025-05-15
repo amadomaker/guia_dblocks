@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="preparing_environment">Preparando o ambinte</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/chapters.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="../assets/images/logo-dblocks.svg"
+        alt="Logo Dblocks"
+        class="logo-dblocks"
+      />
+
+      <nav>
+        <ul class="container-nav">
+          <li><a href="/" data-translate="home">Início</a></li>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container-button-lang">
+        <div class="container-lang">
+          <select id="languageMenu"></select>
+          <img
+            id="languageFlag"
+            alt="Language Flag"
+            style="width: 32px; height: 20px"
+          />
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main-chapters">
+      <aside class="container-chapters" id="sidebar">
+        <div class="header-chapters">
+          <h4 data-translate="in_this_section">Seções</h4>
+          <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
+        </div>
+        <div id="chapters-list"></div>
+      </aside>
+
+      <section class="content">
+        <h1 data-translate="preparing_environment"></h1>
+
+        <div class="chapter-index">
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
+          <ul>
+            <li><a href="#analog-introduction" data-translate="ab_introduction">Introdução</a></li>
+            <li><a href="#analog-input" data-translate="an_in_title"></a></li>
+            <li><a href="#analog-output" data-translate="an_out_title"></a></li>
+          </ul>
+        </div>
+        <div id="analog-introduction" class="chapter-section">
+          <h2 data-translate="an_introduction_title">
+            Introdução
+          </h2>
+          <p data-translate="an_intro1">
+            Em projetos eletrônicos, as <strong>entradas e saídas analógicas</strong> permitem trabalhar com sinais que variam de forma contínua. Diferente dos sinais digitais que só têm dois estados (0 ou 1), os sinais analógicos podem representar uma faixa de valores, o que os torna ideais para medir grandezas como luminosidade, temperatura ou controlar intensidade de um LED.
+          </p>
+          <img 
+            width="450px" 
+            height="300px" 
+            src="../assets/images/InOutAnalog/Analogico.gif" 
+            alt="" 
+          />
+          <p data-translate="an_intro2">
+            Neste exemplo, vamos utilizar o sensor de luz <strong>LDR</strong>, que já está embutido na <strong>Amado Board</strong>, como entrada analógica. E para a saída, vamos ajustar o brilho do LED interno da placa utilizando um sinal PWM.
+          </p>
+
+          <p data-translate="an_intro3">
+            Esses recursos são úteis em projetos onde é necessário perceber variações do ambiente ou controlar dispositivos com mais precisão.
+          </p>
+
+          <h2 id="analog-input" data-translate="an_in_title">Entrada Analógica</h2>
+          <p data-translate="an_in1">
+            Vamos fazer a leitura do sensor de luz LDR da placa ligando um jumper do terminal do LDR até o pino <code>39</code>, que é uma entrada analógica.
+          </p>
+
+          <p data-translate="an_in2">
+            O programa a seguir lê continuamente o valor de luminosidade captado pelo sensor e armazena esse valor em uma variável:
+          </p>
+
+          <img 
+            width="550px" 
+            height="400px" 
+            src="../assets/images/InOutAnalog/leituraAnalogica.png" 
+            alt="Exemplo de leitura de entrada analógica com dBlocks" 
+          />
+
+          <h3 data-translate="an_in3">O que este programa faz?</h3>
+          <ul>
+            <li data-translate="an_in4">Dentro do bloco <code>repita enquanto verdadeiro</code>, ele executa repetidamente as instruções.</li>
+            <li data-translate="an_in5">O pino <code>39</code> é lido com o comando <code>ler entrada analógica</code>.</li>
+            <li data-translate="an_in6">O valor lido é armazenado na variável <code>valor_ldr</code>.</li>
+            <li data-translate="an_in7">Esse valor é impresso no console para acompanhamento em tempo real.</li>
+            <li data-translate="an_in8">Há uma pausa de <strong>500 milissegundos</strong> antes da próxima leitura.</li>
+          </ul>
+
+          <h3 data-translate="an_in9">Visualização dos resultados</h3>
+          <p data-translate="an_in10">
+            A cada variação da luminosidade ambiente, o valor da variável <code>valor_ldr</code> também varia. Isso pode ser observado no console da plataforma:
+          </p>
+
+          <img 
+            width="300px" 
+            src="../assets/images/InOutAnalog/ConsoleEntradaAnalogica.png" 
+            alt="Console mostrando valor analógico do LDR" 
+          />
+
+          <p data-translate="an_in11">
+            Quanto mais claro o ambiente, maior o valor lido. Em ambientes escuros, o valor diminui. Isso demonstra como o sinal analógico representa uma grandeza física de forma contínua.
+          </p>
+
+          <h2 id="analog-output" data-translate="an_out_title">Saída Analógica</h2>
+            <p data-translate="an_out1">
+              Para controlar a intensidade de um LED, utilizamos a técnica chamada <strong>PWM (modulação por largura de pulso)</strong>. Na prática, ela permite simular um sinal analógico em um pino digital.
+            </p>
+
+            <p data-translate="an_out2">
+              Abaixo temos um exemplo utilizando o bloco PWM para controlar o LED azul embutido da <strong>Amado Board</strong> conectado ao pino <code>D2</code>:
+            </p>
+
+            <img 
+              width="550px" 
+              height="450px" 
+              src="../assets/images/InOutAnalog/saidaAnalogica.png" 
+              alt="Exemplo de saída analógica com dBlocks"
+            />
+
+            <h3 data-translate="an_out3">O que este programa faz?</h3>
+            <ul>
+              <li data-translate="an_out4">O bloco <code>PWM</code> é usado dentro de um laço de repetição contínuo <code>repita enquanto verdadeiro</code>.</li>
+              <li data-translate="an_out5">Ele define o <strong>pino D2 / LED AZUL</strong> como saída com sinal PWM.</li>
+              <li data-translate="an_out6">A <strong>frequência</strong> foi configurada como <code>100 Hz</code>, o que indica quantos ciclos por segundo o sinal será enviado.</li>
+              <li data-translate="an_out7">O <strong>ciclo de trabalho (duty cycle)</strong> foi ajustado para <code>512</code>, o que representa 50% de intensidade (em uma escala de 0 a 1023).</li>
+            </ul>
+
+            <p data-translate="an_out8" style="margin-top: 20px;">
+              Alterando o valor do ciclo de trabalho, você pode controlar o brilho do LED. Valores mais baixos tornam o LED mais fraco e valores mais altos aumentam a intensidade. A frequência também pode ser ajustada para testar como diferentes taxas de oscilação afetam a suavidade da luz.
+            </p>
+            <p data-translate="an_out9">
+              Essa abordagem é muito útil em projetos como dimmers, controle de velocidade de motores ou qualquer aplicação onde a saída precisa ser graduada em vez de apenas ligada ou desligada.
+            </p>
+
+        </div>
+
+    
+
+      </section>
+    </main>
+
+    <script src="../assets/js/lang/translation.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/chapters.js"></script>
+  </body>
+</html>

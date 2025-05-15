@@ -27,7 +27,7 @@
     "title_key": "analog_input_output",
     "image": "entrada-analogica.png",
     "description_key": "analog_io_description",
-    "url": ""
+    "url": "chapters/InOutAnalog.html"
   },
   {
     "title_key": "sensors",

@@ -286,7 +286,40 @@ di_out6: "Primero, el LED se enciende con el comando <code>ajustar pin de salida
 di_out7: "El programa espera <strong>500 milisegundos</strong>.",
 di_out8: "Luego, el LED se apaga con el comando <code>ajustar pin de salida a falso</code>.",
 di_out9: "Una vez más, el programa espera <strong>500 milisegundos</strong>.",
-di_out10: "Esto hace que el LED parpadee continuamente con un intervalo de medio segundo entre encenderse y apagarse. Este tipo de control es muy útil en sistemas de señalización, notificaciones visuales o pruebas simples del funcionamiento de los pines."
+di_out10: "Esto hace que el LED parpadee continuamente con un intervalo de medio segundo entre encenderse y apagarse. Este tipo de control es muy útil en sistemas de señalización, notificaciones visuales o pruebas simples del funcionamiento de los pines.",
+
+// Página inOutAnalog
+an_introduction_title: "Introducción",
+an_intro1: "En proyectos electrónicos, las <strong>entradas y salidas analógicas</strong> permiten trabajar con señales que varían de forma continua. A diferencia de las señales digitales, que solo tienen dos estados (0 o 1), las señales analógicas pueden representar un rango de valores, lo que las hace ideales para medir magnitudes como la luz, la temperatura o controlar la intensidad de un LED.",
+an_intro2: "En este ejemplo, utilizaremos el sensor de luz <strong>LDR</strong> que ya viene incorporado en la <strong>Amado Board</strong> como entrada analógica. Para la salida, ajustaremos el brillo del LED integrado usando una señal PWM.",
+an_intro3: "Estas funciones son útiles en proyectos que requieren detectar variaciones del entorno o controlar dispositivos con mayor precisión.",
+
+// Entrada Analógica
+an_in_title: "Entrada Analógica",
+an_in1: "Vamos a leer el sensor de luz LDR de la placa conectando un jumper desde el terminal del LDR hasta el pin <code>39</code>, que es una entrada analógica.",
+an_in2: "El siguiente programa lee continuamente el valor de luminosidad captado por el sensor y lo almacena en una variable:",
+an_in3: "¿Qué hace este programa?",
+an_in4: "Dentro del bloque <code>repetir mientras verdadero</code>, ejecuta repetidamente las instrucciones.",
+an_in5: "El pin <code>39</code> se lee con el comando <code>leer entrada analógica</code>.",
+an_in6: "El valor leído se almacena en la variable <code>valor_ldr</code>.",
+an_in7: "Este valor se imprime en la consola para su monitoreo en tiempo real.",
+an_in8: "Hay una pausa de <strong>500 milisegundos</strong> antes de la siguiente lectura.",
+an_in9: "Visualización de resultados",
+an_in10: "Con cada variación en la luz ambiente, también cambia el valor de la variable <code>valor_ldr</code>. Esto puede observarse en la consola de la plataforma:",
+an_in11: "Cuanto más claro esté el entorno, mayor será el valor leído. En ambientes oscuros, el valor disminuye. Esto demuestra cómo la señal analógica representa una magnitud física de forma continua.",
+
+// Salida Analógica
+an_out_title: "Salida Analógica",
+an_out1: "Para controlar la intensidad de un LED, utilizamos una técnica llamada <strong>PWM (modulación por ancho de pulso)</strong>. En la práctica, simula una señal analógica en un pin digital.",
+an_out2: "A continuación, vemos un ejemplo usando el bloque PWM para controlar el LED azul integrado de la <strong>Amado Board</strong> conectado al pin <code>D2</code>:",
+an_out3: "¿Qué hace este programa?",
+an_out4: "El bloque <code>PWM</code> se usa dentro de un bucle continuo <code>repetir mientras verdadero</code>.",
+an_out5: "Configura el <strong>pin D2 / LED AZUL</strong> como salida con señal PWM.",
+an_out6: "La <strong>frecuencia</strong> se configuró en <code>100 Hz</code>, lo que indica cuántos ciclos por segundo se envía la señal.",
+an_out7: "El <strong>ciclo de trabajo</strong> se estableció en <code>512</code>, lo que representa un 50% de intensidad (en una escala de 0 a 1023).",
+an_out8: "Cambiando el valor del ciclo de trabajo puedes controlar el brillo del LED. Valores bajos reducen el brillo y valores altos lo aumentan. También puedes modificar la frecuencia para observar cómo afectan las diferentes tasas a la suavidad de la luz.",
+an_out9: "Este enfoque es muy útil en proyectos como reguladores de luz, controladores de velocidad de motores o cualquier aplicación donde la salida necesite variar en lugar de solo encenderse o apagarse.",
+
 
 
 };
