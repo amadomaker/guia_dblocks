@@ -246,6 +246,46 @@ en_first_project_step6: "Now that we’ve built the program, click the connect b
 en_first_project_step7: "Once done, you'll see the icon indicating that the Amado board is connected to the platform.",
 en_first_project_step8: "Now just click the button to run the program, and you’ll see the onboard LED blinking at 1-second intervals.",
 en_first_project_step9: "Notes: You can run and pause the program as many times as you like by clicking the same button.",
-en_first_project_step10: "Congratulations! You've just created your first program using the Amado board on the Dblocks platform."
+en_first_project_step10: "Congratulations! You've just created your first program using the Amado board on the Dblocks platform.",
+
+//Page inOutDigital
+di_introduction_title: "Introduction",
+di_intro1: 'In electronic and automation systems, <strong>digital inputs</strong> are signals that the device receives from the environment. These signals represent binary states — usually "on" or "off" (1 or 0). Common examples include buttons, presence sensors, and switches.',
+di_intro2: "<strong>Digital outputs</strong>, on the other hand, are signals that the device sends to act on the environment, also in binary form. With them, it's possible to control LEDs, relays, motors, and other components that operate in two states (on/off).",
+di_intro3: "These concepts are fundamental in automation projects, where sensors report the state of the environment and actuators respond according to the defined logic.",
+di_intro4: "Next, we'll see how to use digital inputs and outputs in practice in a simple and intuitive way.",
+
+//Digital input
+di_in_title: "Digital Input",
+di_in1: "A practical example of a digital input can be created using the <strong>dBlocks</strong> platform and the <strong>Amado Board</strong>.",
+di_in2: "In the image below, we have a program that continuously reads a digital pin from the board:",
+di_in3: "What does this program do?",
+di_in4: "<strong>While the program is running</strong>, it repeatedly executes the instructions inside the <code>repeat while true</code> block.",
+di_in5: "It <strong>reads the logic state</strong> (0 or 1) of the <strong>D16 / SERVO B</strong> pin using the <code>read digital input</code> command.",
+di_in6: "The value read is <strong>stored in the <code>x</code> variable</strong>.",
+di_in7: "Then, the program <strong>prints to the console</strong> a message like: <code>Value of x: 1</code> or <code>Value of x: 0</code>.",
+di_in8: "The program then <strong>waits 500 milliseconds</strong> before repeating the reading.",
+di_in9: "Hardware setup",
+di_in10: "To test this code in practice, you can use a <strong>jumper</strong> connected to the <code>D16</code> pin of the Amado Board. Toggle this jumper between <strong>GND</strong> (0V) and <strong>3.3V</strong>, thus simulating a digital signal:",
+di_in11: "When the jumper is connected to <strong>GND</strong>, the value read will be <code>0</code>.",
+di_in12: "When the jumper is connected to <strong>3.3V</strong>, the value read will be <code>1</code>.",
+di_in13: "This clearly demonstrates the operation of a digital input, showing how the board interprets two distinct states and how this can be visualized on the console.",
+di_in14: "Visualizing the results in the console",
+di_in15: "The dBlocks platform has a console that allows you to monitor, in real time, the results of the readings performed by the blocks. In the example below, we see the value of the <code>x</code> variable being printed continuously:",
+di_in16: "As the jumper is switched between GND and 3.3V, the value of <code>x</code> changes between <strong>0</strong> and <strong>1</strong>, and this is immediately reflected in the console. This is an efficient and clear way to test and debug your project's logic.",
+
+//Digital output
+di_out_title: "Digital Output",
+di_out1: 'Digital outputs allow the board to control external devices by sending "on" or "off" type signals. A classic example is controlling an LED.',
+di_out2: "Below we have an example where the blue LED connected to pin <code>D2</code> of the <strong>Amado Board</strong> blinks continuously:",
+di_out3: "What does this program do?",
+di_out4: "The <code>repeat while true</code> block ensures the program keeps running in a loop.",
+di_out5: "The <code>D2 / BLUE LED</code> pin is configured as a digital output.",
+di_out6: "First, the LED is turned on with the <code>set output pin to true</code> command.",
+di_out7: "The program then waits for <strong>500 milliseconds</strong>.",
+di_out8: "After that, the LED is turned off with the <code>set output pin to false</code> command.",
+di_out9: "Again, the program waits for <strong>500 milliseconds</strong>.",
+di_out10: "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests."
+
 
 };

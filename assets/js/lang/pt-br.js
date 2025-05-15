@@ -249,7 +249,46 @@ en_first_project_step6: "Agora que já montamos o programa, clique no botão de 
 en_first_project_step7: "Feito isso verá o ícone dessa forma sinalizando que a Amado board já está conectada a plataforma",
 en_first_project_step8: "Agora basta clicar no botão que executa o programa e verá o led embutido na placa piscando em intervalos de 1 segundo.",
 en_first_project_step9: "Observações: É possível executar e pausar o programa quantas vezes quiser clicando no mesmo botão.",
-en_first_project_step10: "Parabéns! Você acaba de criar o seu primeiro programa usando a Amado board na plataforma Dblocks."
+en_first_project_step10: "Parabéns! Você acaba de criar o seu primeiro programa usando a Amado board na plataforma Dblocks.",
+
+//Página inOutDigital
+di_introduction_title: "Introdução",
+di_intro1: 'Em sistemas eletrônicos e de automação, as <strong>entradas digitais</strong> são sinais que o dispositivo recebe do ambiente. Esses sinais representam estados binários — geralmente "ligado" ou "desligado" (1 ou 0). Exemplos comuns incluem botões, sensores de presença e interruptores.',
+di_intro2: "Já as <strong>saídas digitais</strong> são os sinais que o dispositivo envia para atuar sobre o ambiente, também em forma binária. Com elas, é possível controlar LEDs, relés, motores e outros componentes que operam em dois estados (ligado/desligado).",
+di_intro3: "Esses conceitos são fundamentais em projetos de automação, onde sensores informam o estado do ambiente e atuadores respondem de acordo com a lógica definida.",
+di_intro4: "A seguir, vamos ver como utilizar entradas e saídas digitais na prática de forma simples e intuitiva.",
+
+//Entrada digital
+di_in_title: "Entrada Digital",
+di_in1: "Um exemplo prático de entrada digital pode ser feito com a plataforma <strong>dBlocks</strong> e a <strong>Amado Board</strong>.",
+di_in2:"Na imagem abaixo, temos um programa que realiza a leitura contínua de um pino digital da placa:",
+di_in3: "O que este programa faz?",
+di_in4: "<strong>Enquanto o programa estiver rodando</strong>, ele executa repetidamente as instruções dentro do bloco <code>repita enquanto verdadeiro</code>.",
+di_in5: "Ele <strong>lê o estado lógico</strong> (0 ou 1) do pino <strong>D16 / SERVO B</strong> usando o comando <code>ler entrada digital</code>.",
+di_in6: "O valor lido é <strong>armazenado na variável <code>x</code></strong>.",
+di_in7: "Em seguida, o programa <strong>imprime no console</strong> uma mensagem como: <code>Valor de x: 1</code> ou <code>Valor de x: 0</code>.",
+di_in8: "O programa então <strong>aguarda 500 milissegundos</strong> antes de repetir a leitura.",
+di_in9: "Montagem no hardware",
+di_in10: "Para testar esse código na prática, você pode utilizar um <strong>jumper</strong> conectado ao pino <code>D16</code> da Amado Board. Alterne esse jumper entre o <strong>GND</strong> (0V) e os <strong>3.3V</strong>, simulando assim um sinal digital:",
+di_in11: "Quando o jumper está no <strong>GND</strong>, o valor lido será <code>0</code>.",
+di_in12: "Quando o jumper está nos <strong>3.3V</strong>, o valor lido será <code>1</code>.",
+di_in13: "Isso demonstra claramente o funcionamento de uma entrada digital, mostrando como a placa interpreta dois estados distintos e como isso pode ser visualizado no console.",
+di_in14: "Visualização dos resultados no console",
+di_in15: "A plataforma dBlocks possui um console que permite acompanhar, em tempo real, o resultado das leituras feitas pelos blocos. No exemplo a seguir, vemos o valor da variável <code>x</code> sendo impresso continuamente:",
+di_in16: "À medida que o jumper é alternado entre o GND e os 3.3V, o valor de <code>x</code> muda entre <strong>0</strong> e <strong>1</strong>, e isso é refletido imediatamente no console. Essa é uma maneira eficiente e clara de testar e depurar a lógica do seu projeto.",
+
+//Saida Digital
+di_out_title: "Saída Digital",
+di_out1: 'As saídas digitais permitem que a placa controle dispositivos externos, enviando sinais do tipo "ligado" ou "desligado". Um exemplo clássico é o controle de um LED.',
+di_out2: "Abaixo temos um exemplo onde o LED azul conectado ao pino <code>D2</code> da <strong>Amado Board</strong> pisca continuamente:",
+di_out3: "O que este programa faz?",
+di_out4: "O bloco <code>repita enquanto verdadeiro</code> garante que o programa fique executando em loop.",
+di_out5: "O pino <code>D2 / LED AZUL</code> é configurado como saída digital.",
+di_out6: "Primeiro, o LED é ligado com o comando <code>ajustar pino de saída para verdadeiro</code>.",
+di_out7: "O programa então aguarda <strong>500 milissegundos</strong>.",
+di_out8: "Depois, o LED é desligado com o comando <code>ajustar pino de saída para falso</code>.",
+di_out9: "Mais uma vez, o programa aguarda <strong>500 milissegundos</strong>.",
+di_out10: "Isso faz com que o LED pisque continuamente com um intervalo de meio segundo entre acender e apagar. Esse tipo de controle é muito útil em sistemas de sinalização, notificações visuais ou testes simples de funcionamento de pinos.",
 
 
-,}
+}
