@@ -100,6 +100,7 @@ var MSG = {
     "<strong>Abra o Dblocks</strong>: Acesse a <a href='https://dblocks.com.br/ui/index.html?lang=pt-br' target='_blank'>plataforma</a> pelo navegador.",
   quick_guide_list_3:
     "<strong>Crie seu primeiro projeto</strong>: Arraste os blocos para o workspace e clique em 'Executar'.",
+  //Cards index
   introduction_to_dblocks: "Introdução ao Dblocks",
   introduction_description:
     "Nesta seção, vamos explorar os conceitos fundamentais do Dblocks e conhecer sua plataforma. Aprenda como a programação em blocos pode facilitar o desenvolvimento de projetos interativos.",
@@ -109,6 +110,9 @@ var MSG = {
   preparing_environment: "Preparando o ambiente",
   environment_description:
     "Aprenda como instalar os drivers necessários e configurar a AmadoBoard com MicroPython para começar a desenvolver seus projetos.",
+  var_loop_print: "Variáveis, loops e impressão",
+  var_loop_print_description:
+    "Nesta seção, vamos aprender como trabalhar com variáveis, estruturas de controle e imprimir dados na tela.",
   digital_input_output: "Entrada e saída digital",
   digital_io_description:
     "Descubra como funcionam as entradas e saídas digitais no Dblocks, aprendendo a conectar sensores e atuadores para criar projetos interativos.",
@@ -324,5 +328,63 @@ an_out6: "A <strong>frequência</strong> foi configurada como <code>100 Hz</code
 an_out7: "O <strong>ciclo de trabalho (duty cycle)</strong> foi ajustado para <code>512</code>, o que representa 50% de intensidade (em uma escala de 0 a 1023).",
 an_out8: "Alterando o valor do ciclo de trabalho, você pode controlar o brilho do LED. Valores mais baixos tornam o LED mais fraco e valores mais altos aumentam a intensidade. A frequência também pode ser ajustada para testar como diferentes taxas de oscilação afetam a suavidade da luz.",
 an_out9: "Essa abordagem é muito útil em projetos como dimmers, controle de velocidade de motores ou qualquer aplicação onde a saída precisa ser graduada em vez de apenas ligada ou desligada.",
+
+// Página Variáveis, Loops e Impressão - Parte de Variáveis
+var_section_title: "Variáveis",
+var_intro1: "Em programação, <strong>variáveis</strong> são usadas para armazenar valores que podem mudar ao longo do tempo. Elas são essenciais para guardar informações, fazer cálculos, controlar sensores ou mesmo imprimir mensagens no console.",
+var_intro2: "Para criar uma variável, vá até a categoria <strong>Variáveis</strong> no menu lateral e clique em <strong>Criar variável...</strong>. Escolha um nome claro e significativo, pois isso evita erros e torna o programa mais fácil de entender.",
+var_intro3: "Após criada, sua variável aparecerá em <strong>Variáveis criadas</strong> e poderá ser usada nos blocos para definir, alterar ou acessar seu valor.",
+var_intro4: "Existem diferentes tipos de variáveis disponíveis:",
+var_type_bool: "<strong>Booleanas</strong>: representam verdadeiro ou falso. Úteis para verificações ou condições.",
+var_type_num: "<strong>Numéricas</strong>: armazenam números inteiros, decimais ou aleatórios, comuns em leituras de sensores e cálculos.",
+var_type_text: "<strong>Texto</strong>: armazenam frases ou palavras, ideais para mostrar mensagens ou nomes.",
+var_type_list: "<strong>Listas</strong>: armazenam vários valores em uma mesma variável. Muito útil para organizar dados.",
+var_use_robotics: "Na robótica, variáveis são muito utilizadas para armazenar leituras de sensores como temperatura, distância, luz, entre outros. Isso permite tomar decisões ou ajustar comportamentos com base nos dados do ambiente.",
+var_examples_title: "Exemplos de tipos de variáveis",
+var_list_title: "Variáveis de Lista",
+var_text_title: "Variáveis de Texto",
+var_num_title: "Variáveis Numéricas",
+var_bool_title: "Variáveis Booleanas",
+var_print_example_title: "Exemplo prático: usando variáveis e impressão",
+var_print_example_desc: "No exemplo abaixo, criamos duas variáveis: uma de texto chamada <code>nome</code> e outra numérica chamada <code>valor</code>. Depois, usamos o bloco <strong>imprime</strong> que está localizado na categoria Funções --> Texto para mostrar os valores no console.",
+var_print_console_desc: "O resultado aparece no console como mostra a imagem a seguir. Esse recurso é muito útil para acompanhar os valores de sensores durante a execução do programa.",
+//Seção Print
+print_section_title: 'Impressão com o bloco "imprime"',
+print_intro1: "A função de <strong>impressão</strong> permite acompanhar os valores durante a execução do programa. Isso é muito útil para verificar se os dados dos sensores ou variáveis estão corretos.",
+print_intro2: "Para usar, acesse a categoria <strong>Funções → Texto</strong> e selecione o bloco <code>imprime</code>. Ele pode ser usado para mostrar textos simples ou valores de variáveis.",
+print_ex1: "Exemplo 1: imprimir uma mensagem fixa",
+print_ex2: "Exemplo 2: imprimir o valor de uma variável",
+print_ex3: "Exemplo 3: imprimir dentro de um laço (loop)",
+print_console_output: "O resultado desse último exemplo pode ser visto no console da plataforma, mostrando a contagem de 1 até 10:",
+
+//seção loop
+loop_section_title: "Laços de repetição (Loops)",
+loop_intro1: "Loops são estruturas que permitem executar um mesmo conjunto de comandos várias vezes. Eles são úteis para automatizar tarefas repetitivas, como contar, exibir mensagens, ou manipular listas.",
+loop_intro2: "Na plataforma, os blocos de repetição estão disponíveis na categoria <strong>Controle</strong> e incluem diferentes tipos de laços com finalidades variadas.",
+
+loop_repeat_times_title: "1. Repetição com número fixo",
+loop_repeat_times_desc: "O bloco <code>repita X vezes</code> executa o conjunto de comandos um número específico de vezes. Ideal para contagens simples ou ações repetidas.",
+loop_repeat_times_explanation: "Neste exemplo, usamos uma variável <code>contador</code> para contar até 5. A cada repetição, imprimimos o valor atual.",
+
+loop_repeat_while_title: "2. Repetição enquanto uma condição for verdadeira",
+loop_repeat_while_desc: "O bloco <code>repita enquanto</code> continua executando os comandos enquanto a condição definida for verdadeira.",
+loop_repeat_while_explanation: "Neste exemplo, a variável <code>numero</code> é incrementada até chegar a 5. O loop para quando a condição <code>numero < 5</code> não for mais verdadeira.",
+
+loop_count_title: "3. Repetição com contador personalizado",
+loop_count_desc: "O bloco <code>contar com i de X até Y por Z</code> permite maior controle sobre a repetição, incluindo o valor inicial, final e o passo.",
+loop_count_explanation: "Neste exemplo, imprimimos a tabuada do 2, multiplicando o valor de <code>i</code> a cada repetição.",
+
+loop_for_each_title: "4. Repetição para cada item de uma lista",
+loop_for_each_desc: "O bloco <code>para cada item na lista</code> percorre todos os elementos de uma lista. Ideal para processar ou exibir vários dados.",
+loop_for_each_explanation: "Aqui temos uma lista de nomes. O loop imprime um nome por vez até que todos sejam exibidos.",
+
+loop_break_title: "5. Encerrar laço com condição",
+loop_break_desc: "O bloco <code>encerra o laço</code> permite interromper a execução do loop antes de ele completar todas as repetições.",
+loop_break_explanation: "Neste exemplo, contamos de 1 até 10, mas encerramos o laço quando o contador atinge o valor 6.",
+loop_forever_title: "2. Repita enquanto verdadeiro",
+loop_forever_desc: "O bloco <code>repita enquanto verdadeiro</code> executa os comandos de forma contínua, sem parar. É muito usado em projetos de robótica, onde o programa precisa rodar constantemente enquanto o sistema estiver ligado.",
+loop_forever_explanation: "Neste exemplo, a variável <code>contador</code> é incrementada a cada segundo, e seu valor é impresso no console repetidamente.",
+
+
 
 }
