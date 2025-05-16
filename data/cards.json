@@ -18,16 +18,22 @@
     "url": "chapters/environment.html"
   },
   {
+  "title_key": "var_loop_print",
+  "image": "var_loop_print.png",
+  "description_key": "var_loop_print_description",
+  "url": "chapters/var_loop_print.html"
+  },
+  {
     "title_key": "digital_input_output",
-    "image": "saida-digital.png",
+    "image": "InOutDigital/Digital.gif",
     "description_key": "digital_io_description",
     "url": "chapters/InOutDigital.html"
   },
   {
     "title_key": "analog_input_output",
-    "image": "entrada-analogica.png",
+    "image": "InOutAnalog/Analogico.gif",
     "description_key": "analog_io_description",
-    "url": ""
+    "url": "chapters/InOutAnalog.html"
   },
   {
     "title_key": "sensors",
@@ -59,4 +65,5 @@
     "description_key": "resources_description",
     "url": ""
   }
+
 ]

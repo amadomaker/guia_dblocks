@@ -108,6 +108,9 @@ var MSG = {
   preparing_environment: "Preparing the Environment",
   environment_description:
     "Learn how to install the necessary drivers and set up the AmadoBoard with MicroPython to start developing your projects.",
+  var_loop_print: "Variables, loops, and printing",
+  var_loop_print_description: "In this section, we will learn how to work with variables, control structures, and print data to the screen.",
+
   digital_input_output: "Digital Input and Output",
   digital_io_description:
     "Discover how digital inputs and outputs work in Dblocks, learning to connect sensors and actuators to create interactive projects.",
@@ -285,7 +288,98 @@ di_out6: "First, the LED is turned on with the <code>set output pin to true</cod
 di_out7: "The program then waits for <strong>500 milliseconds</strong>.",
 di_out8: "After that, the LED is turned off with the <code>set output pin to false</code> command.",
 di_out9: "Again, the program waits for <strong>500 milliseconds</strong>.",
-di_out10: "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests."
+di_out10: "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests.",
 
 
+// Page inOutAnalog
+an_introduction_title: "Introduction",
+an_intro1: "In electronic projects, <strong>analog inputs and outputs</strong> allow working with signals that vary continuously. Unlike digital signals, which have only two states (0 or 1), analog signals can represent a range of values, making them ideal for measuring things like light, temperature, or controlling LED intensity.",
+an_intro2: "In this example, we’ll use the <strong>LDR light sensor</strong> already built into the <strong>Amado Board</strong> as an analog input. For the output, we’ll adjust the brightness of the onboard LED using a PWM signal.",
+an_intro3: "These features are useful in projects that need to detect environmental changes or control devices with more precision.",
+
+// Analog Input
+an_in_title: "Analog Input",
+an_in1: "We’ll read the onboard LDR light sensor by connecting a jumper from the LDR terminal to pin <code>39</code>, which is an analog input.",
+an_in2: "The following program continuously reads the light intensity captured by the sensor and stores it in a variable:",
+an_in3: "What does this program do?",
+an_in4: "Inside the <code>repeat while true</code> block, it repeatedly executes the instructions.",
+an_in5: "Pin <code>39</code> is read using the <code>read analog input</code> command.",
+an_in6: "The value read is stored in the variable <code>valor_ldr</code>.",
+an_in7: "This value is printed to the console for real-time monitoring.",
+an_in8: "There is a pause of <strong>500 milliseconds</strong> before the next reading.",
+an_in9: "Viewing the results",
+an_in10: "As ambient light changes, the value of the <code>valor_ldr</code> variable also changes. This can be seen in the platform’s console:",
+an_in11: "The brighter the environment, the higher the value read. In darker settings, the value decreases. This shows how the analog signal continuously represents a physical quantity.",
+
+// Analog Output
+an_out_title: "Analog Output",
+an_out1: "To control the brightness of an LED, we use a technique called <strong>PWM (pulse-width modulation)</strong>. In practice, it simulates an analog signal on a digital pin.",
+an_out2: "Below is an example using the PWM block to control the onboard blue LED of the <strong>Amado Board</strong> connected to pin <code>D2</code>:",
+an_out3: "What does this program do?",
+an_out4: "The <code>PWM</code> block is used inside a continuous <code>repeat while true</code> loop.",
+an_out5: "It sets <strong>pin D2 / BLUE LED</strong> as a PWM output.",
+an_out6: "The <strong>frequency</strong> is set to <code>100 Hz</code>, indicating how many cycles per second the signal is sent.",
+an_out7: "The <strong>duty cycle</strong> is set to <code>512</code>, which represents 50% intensity (on a scale from 0 to 1023).",
+an_out8: "By changing the duty cycle value, you can control the LED’s brightness. Lower values make the LED dimmer, and higher values increase brightness. The frequency can also be adjusted to test how different rates affect the smoothness of the light.",
+an_out9: "This approach is very useful in projects like dimmers, motor speed controllers, or any application where the output needs to vary instead of just switching on or off.",
+
+// Variables, Loops and Print - Variables Section
+var_section_title: "Variables",
+var_intro1: "In programming, <strong>variables</strong> are used to store values that may change over time. They are essential for storing information, performing calculations, controlling sensors, or even printing messages to the console.",
+var_intro2: "To create a variable, go to the <strong>Variables</strong> category in the side menu and click <strong>Create variable...</strong>. Choose a clear and meaningful name to avoid errors and make the program easier to understand.",
+var_intro3: "Once created, your variable will appear in <strong>Created Variables</strong> and can be used in blocks to set, change, or access its value.",
+var_intro4: "There are different types of variables available:",
+var_type_bool: "<strong>Booleans</strong>: represent true or false. Useful for checks or conditions.",
+var_type_num: "<strong>Numerical</strong>: store integers, decimals, or random numbers, common in sensor readings and calculations.",
+var_type_text: "<strong>Text</strong>: store phrases or words, ideal for showing messages or names.",
+var_type_list: "<strong>Lists</strong>: store multiple values in a single variable. Very useful for organizing data.",
+var_use_robotics: "In robotics, variables are widely used to store sensor readings such as temperature, distance, light, and more. This allows the system to make decisions or adjust behaviors based on environmental data.",
+var_examples_title: "Examples of variable types",
+var_list_title: "List Variables",
+var_text_title: "Text Variables",
+var_num_title: "Numerical Variables",
+var_bool_title: "Boolean Variables",
+var_print_example_title: "Practical example: using variables and print",
+var_print_example_desc: "In the example below, we create two variables: a text one called <code>name</code> and a numerical one called <code>value</code>. Then we use the <strong>print</strong> block, found in the Functions → Text category, to show the values in the console.",
+var_print_console_desc: "The result appears in the console as shown in the image below. This is very useful to monitor sensor values during program execution.",
+
+// Print Section
+print_section_title: 'Printing with the "print" block',
+print_intro1: "The <strong>print</strong> function allows you to monitor values during program execution. This is useful for checking if sensor data or variables are correct.",
+print_intro2: "To use it, go to the <strong>Functions → Text</strong> category and select the <code>print</code> block. It can be used to show plain text or variable values.",
+print_ex1: "Example 1: print a fixed message",
+print_ex2: "Example 2: print the value of a variable",
+print_ex3: "Example 3: print inside a loop",
+print_console_output: "The result of the last example appears in the platform console, showing a count from 1 to 10:",
+
+// Loop Section
+loop_section_title: "Repetition Loops",
+loop_intro1: "Loops are structures that allow executing the same set of commands multiple times. They are useful for automating repetitive tasks such as counting, displaying messages, or handling lists.",
+loop_intro2: "On the platform, repetition blocks are available in the <strong>Control</strong> category and include different types of loops for various purposes.",
+
+loop_repeat_times_title: "1. Repeat a fixed number of times",
+loop_repeat_times_desc: "The <code>repeat X times</code> block runs the set of commands a specific number of times. Ideal for simple counts or repeated actions.",
+loop_repeat_times_explanation: "In this example, we use a <code>counter</code> variable to count up to 5. On each repetition, we print the current value.",
+
+loop_forever_title: "2. Repeat while true",
+loop_forever_desc: "The <code>repeat while true</code> block executes the commands continuously, without stopping. It is widely used in robotics projects where the program must run as long as the system is on.",
+loop_forever_explanation: "In this example, the <code>counter</code> variable is incremented every second, and its value is printed to the console repeatedly.",
+
+loop_repeat_while_title: "3. Repeat while a condition is true",
+loop_repeat_while_desc: "The <code>repeat while</code> block keeps executing the commands as long as the defined condition is true.",
+loop_repeat_while_explanation: "In this example, the <code>number</code> variable is incremented until it reaches 5. The loop stops when the condition <code>number < 5</code> is no longer true.",
+
+loop_count_title: "4. Loop with custom counter",
+loop_count_desc: "The <code>count with i from X to Y by Z</code> block gives more control over the repetition, including start, end, and step values.",
+loop_count_explanation: "In this example, we print the multiplication table of 2, multiplying the value of <code>i</code> in each repetition.",
+
+loop_for_each_title: "5. Loop through each item in a list",
+loop_for_each_desc: "The <code>for each item in list</code> block iterates through all elements in a list. Ideal for displaying or processing data.",
+loop_for_each_explanation: "Here we have a list of names. The loop prints one name at a time until all are displayed.",
+
+loop_break_title: "6. Break the loop with a condition",
+loop_break_desc: "The <code>break loop</code> block allows stopping the loop execution before it finishes all repetitions.",
+loop_break_explanation: "In this example, we count from 1 to 10, but break the loop when the counter reaches 6.",
+
+var_loop_print_end: "All the results from the examples above can be seen in the platform console.",
 };

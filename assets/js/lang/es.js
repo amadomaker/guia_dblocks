@@ -108,6 +108,9 @@ var MSG = {
   preparing_environment: "Preparando el entorno",
   environment_description:
     "Aprende cómo instalar los controladores necesarios y configurar la AmadoBoard con MicroPython para comenzar a desarrollar tus proyectos.",
+  var_loop_print: "Variables, bucles e impresión",
+  var_loop_print_description: "En esta sección, aprenderemos a trabajar con variables, estructuras de control e imprimir datos en pantalla.",
+
   digital_input_output: "Entrada y salida digital",
   digital_io_description:
     "Descubre cómo funcionan las entradas y salidas digitales en Dblocks, aprendiendo a conectar sensores y actuadores para crear proyectos interactivos.",
@@ -286,7 +289,100 @@ di_out6: "Primero, el LED se enciende con el comando <code>ajustar pin de salida
 di_out7: "El programa espera <strong>500 milisegundos</strong>.",
 di_out8: "Luego, el LED se apaga con el comando <code>ajustar pin de salida a falso</code>.",
 di_out9: "Una vez más, el programa espera <strong>500 milisegundos</strong>.",
-di_out10: "Esto hace que el LED parpadee continuamente con un intervalo de medio segundo entre encenderse y apagarse. Este tipo de control es muy útil en sistemas de señalización, notificaciones visuales o pruebas simples del funcionamiento de los pines."
+di_out10: "Esto hace que el LED parpadee continuamente con un intervalo de medio segundo entre encenderse y apagarse. Este tipo de control es muy útil en sistemas de señalización, notificaciones visuales o pruebas simples del funcionamiento de los pines.",
+
+// Página inOutAnalog
+an_introduction_title: "Introducción",
+an_intro1: "En proyectos electrónicos, las <strong>entradas y salidas analógicas</strong> permiten trabajar con señales que varían de forma continua. A diferencia de las señales digitales, que solo tienen dos estados (0 o 1), las señales analógicas pueden representar un rango de valores, lo que las hace ideales para medir magnitudes como la luz, la temperatura o controlar la intensidad de un LED.",
+an_intro2: "En este ejemplo, utilizaremos el sensor de luz <strong>LDR</strong> que ya viene incorporado en la <strong>Amado Board</strong> como entrada analógica. Para la salida, ajustaremos el brillo del LED integrado usando una señal PWM.",
+an_intro3: "Estas funciones son útiles en proyectos que requieren detectar variaciones del entorno o controlar dispositivos con mayor precisión.",
+
+// Entrada Analógica
+an_in_title: "Entrada Analógica",
+an_in1: "Vamos a leer el sensor de luz LDR de la placa conectando un jumper desde el terminal del LDR hasta el pin <code>39</code>, que es una entrada analógica.",
+an_in2: "El siguiente programa lee continuamente el valor de luminosidad captado por el sensor y lo almacena en una variable:",
+an_in3: "¿Qué hace este programa?",
+an_in4: "Dentro del bloque <code>repetir mientras verdadero</code>, ejecuta repetidamente las instrucciones.",
+an_in5: "El pin <code>39</code> se lee con el comando <code>leer entrada analógica</code>.",
+an_in6: "El valor leído se almacena en la variable <code>valor_ldr</code>.",
+an_in7: "Este valor se imprime en la consola para su monitoreo en tiempo real.",
+an_in8: "Hay una pausa de <strong>500 milisegundos</strong> antes de la siguiente lectura.",
+an_in9: "Visualización de resultados",
+an_in10: "Con cada variación en la luz ambiente, también cambia el valor de la variable <code>valor_ldr</code>. Esto puede observarse en la consola de la plataforma:",
+an_in11: "Cuanto más claro esté el entorno, mayor será el valor leído. En ambientes oscuros, el valor disminuye. Esto demuestra cómo la señal analógica representa una magnitud física de forma continua.",
+
+// Salida Analógica
+an_out_title: "Salida Analógica",
+an_out1: "Para controlar la intensidad de un LED, utilizamos una técnica llamada <strong>PWM (modulación por ancho de pulso)</strong>. En la práctica, simula una señal analógica en un pin digital.",
+an_out2: "A continuación, vemos un ejemplo usando el bloque PWM para controlar el LED azul integrado de la <strong>Amado Board</strong> conectado al pin <code>D2</code>:",
+an_out3: "¿Qué hace este programa?",
+an_out4: "El bloque <code>PWM</code> se usa dentro de un bucle continuo <code>repetir mientras verdadero</code>.",
+an_out5: "Configura el <strong>pin D2 / LED AZUL</strong> como salida con señal PWM.",
+an_out6: "La <strong>frecuencia</strong> se configuró en <code>100 Hz</code>, lo que indica cuántos ciclos por segundo se envía la señal.",
+an_out7: "El <strong>ciclo de trabajo</strong> se estableció en <code>512</code>, lo que representa un 50% de intensidad (en una escala de 0 a 1023).",
+an_out8: "Cambiando el valor del ciclo de trabajo puedes controlar el brillo del LED. Valores bajos reducen el brillo y valores altos lo aumentan. También puedes modificar la frecuencia para observar cómo afectan las diferentes tasas a la suavidad de la luz.",
+an_out9: "Este enfoque es muy útil en proyectos como reguladores de luz, controladores de velocidad de motores o cualquier aplicación donde la salida necesite variar en lugar de solo encenderse o apagarse.",
+
+// Página Variables, Bucles e Impresión - Sección de Variables
+var_section_title: "Variables",
+var_intro1: "En programación, las <strong>variables</strong> se utilizan para almacenar valores que pueden cambiar con el tiempo. Son esenciales para guardar información, realizar cálculos, controlar sensores o incluso imprimir mensajes en la consola.",
+var_intro2: "Para crear una variable, ve a la categoría <strong>Variables</strong> en el menú lateral y haz clic en <strong>Crear variable...</strong>. Elige un nombre claro y significativo para evitar errores y facilitar la comprensión del programa.",
+var_intro3: "Una vez creada, tu variable aparecerá en <strong>Variables creadas</strong> y podrás usarla en bloques para definir, cambiar o acceder a su valor.",
+var_intro4: "Existen diferentes tipos de variables disponibles:",
+var_type_bool: "<strong>Booleanas</strong>: representan verdadero o falso. Útiles para verificaciones o condiciones.",
+var_type_num: "<strong>Numéricas</strong>: almacenan números enteros, decimales o aleatorios. Comunes en lecturas de sensores y cálculos.",
+var_type_text: "<strong>Texto</strong>: almacenan frases o palabras. Ideales para mostrar mensajes o nombres.",
+var_type_list: "<strong>Listas</strong>: almacenan múltiples valores en una sola variable. Muy útiles para organizar datos.",
+var_use_robotics: "En robótica, las variables se usan ampliamente para almacenar lecturas de sensores como temperatura, distancia, luz, entre otros. Esto permite tomar decisiones o ajustar comportamientos según los datos del entorno.",
+var_examples_title: "Ejemplos de tipos de variables",
+var_list_title: "Variables de Lista",
+var_text_title: "Variables de Texto",
+var_num_title: "Variables Numéricas",
+var_bool_title: "Variables Booleanas",
+var_print_example_title: "Ejemplo práctico: uso de variables e impresión",
+var_print_example_desc: "En el siguiente ejemplo, creamos dos variables: una de texto llamada <code>nombre</code> y otra numérica llamada <code>valor</code>. Luego usamos el bloque <strong>imprime</strong> (en Funciones → Texto) para mostrar sus valores en la consola.",
+var_print_console_desc: "El resultado aparece en la consola como muestra la imagen. Esta función es muy útil para observar valores durante la ejecución del programa.",
+
+// Sección de Impresión
+print_section_title: 'Impresión con el bloque "imprime"',
+print_intro1: "La función de <strong>impresión</strong> permite monitorear los valores durante la ejecución del programa. Esto es útil para verificar si los datos de sensores o variables son correctos.",
+print_intro2: "Para usarla, ve a la categoría <strong>Funciones → Texto</strong> y selecciona el bloque <code>imprime</code>. Puede usarse para mostrar texto fijo o valores de variables.",
+print_ex1: "Ejemplo 1: imprimir un mensaje fijo",
+print_ex2: "Ejemplo 2: imprimir el valor de una variable",
+print_ex3: "Ejemplo 3: imprimir dentro de un bucle",
+print_console_output: "El resultado del último ejemplo aparece en la consola de la plataforma, mostrando la cuenta del 1 al 10:",
+
+// Sección de Bucles
+loop_section_title: "Bucles de repetición",
+loop_intro1: "Los bucles son estructuras que permiten ejecutar un mismo conjunto de instrucciones varias veces. Son útiles para automatizar tareas repetitivas como contar, mostrar mensajes o manipular listas.",
+loop_intro2: "En la plataforma, los bloques de bucle están en la categoría <strong>Control</strong> y ofrecen varios tipos con diferentes propósitos.",
+
+loop_repeat_times_title: "1. Repetición con número fijo",
+loop_repeat_times_desc: "El bloque <code>repite X veces</code> ejecuta un conjunto de instrucciones un número determinado de veces. Ideal para contar o repetir acciones simples.",
+loop_repeat_times_explanation: "En este ejemplo, usamos una variable <code>contador</code> para contar hasta 5. En cada repetición, se imprime el valor actual.",
+
+loop_forever_title: "2. Repite mientras verdadero",
+loop_forever_desc: "El bloque <code>repite mientras verdadero</code> ejecuta las instrucciones continuamente, sin detenerse. Es muy usado en proyectos de robótica donde el programa debe funcionar todo el tiempo que el sistema esté encendido.",
+loop_forever_explanation: "En este ejemplo, la variable <code>contador</code> se incrementa cada segundo y su valor se imprime repetidamente en la consola.",
+
+loop_repeat_while_title: "3. Repetición mientras se cumpla una condición",
+loop_repeat_while_desc: "El bloque <code>repite mientras</code> ejecuta instrucciones mientras la condición definida sea verdadera.",
+loop_repeat_while_explanation: "En este ejemplo, la variable <code>numero</code> se incrementa hasta llegar a 5. El bucle termina cuando la condición <code>numero < 5</code> deja de cumplirse.",
+
+loop_count_title: "4. Bucle con contador personalizado",
+loop_count_desc: "El bloque <code>contar con i desde X hasta Y por Z</code> permite controlar el valor inicial, final y el incremento.",
+loop_count_explanation: "En este ejemplo, imprimimos la tabla del 2 multiplicando el valor de <code>i</code> en cada repetición.",
+
+loop_for_each_title: "5. Repetición para cada elemento de una lista",
+loop_for_each_desc: "El bloque <code>para cada elemento en la lista</code> recorre todos los elementos. Ideal para procesar o mostrar información.",
+loop_for_each_explanation: "Aquí tenemos una lista de nombres. El bucle imprime un nombre en cada vuelta hasta que se terminen.",
+
+loop_break_title: "6. Interrumpir el bucle con una condición",
+loop_break_desc: "El bloque <code>termina el bucle</code> permite detener la ejecución antes de que se complete.",
+loop_break_explanation: "En este ejemplo, contamos del 1 al 10 pero detenemos el bucle cuando el valor alcanza 6.",
+
+var_loop_print_end: "Todos los resultados de los ejemplos anteriores pueden verse en la consola de la plataforma.",
+
 
 
 };

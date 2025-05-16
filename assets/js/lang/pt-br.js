@@ -100,6 +100,7 @@ var MSG = {
     "<strong>Abra o Dblocks</strong>: Acesse a <a href='https://dblocks.com.br/ui/index.html?lang=pt-br' target='_blank'>plataforma</a> pelo navegador.",
   quick_guide_list_3:
     "<strong>Crie seu primeiro projeto</strong>: Arraste os blocos para o workspace e clique em 'Executar'.",
+  //Cards index
   introduction_to_dblocks: "Introdução ao Dblocks",
   introduction_description:
     "Nesta seção, vamos explorar os conceitos fundamentais do Dblocks e conhecer sua plataforma. Aprenda como a programação em blocos pode facilitar o desenvolvimento de projetos interativos.",
@@ -109,6 +110,9 @@ var MSG = {
   preparing_environment: "Preparando o ambiente",
   environment_description:
     "Aprenda como instalar os drivers necessários e configurar a AmadoBoard com MicroPython para começar a desenvolver seus projetos.",
+  var_loop_print: "Variáveis, loops e impressão",
+  var_loop_print_description:
+    "Nesta seção, vamos aprender como trabalhar com variáveis, estruturas de controle e imprimir dados na tela.",
   digital_input_output: "Entrada e saída digital",
   digital_io_description:
     "Descubra como funcionam as entradas e saídas digitais no Dblocks, aprendendo a conectar sensores e atuadores para criar projetos interativos.",
@@ -252,11 +256,13 @@ en_first_project_step9: "Observações: É possível executar e pausar o program
 en_first_project_step10: "Parabéns! Você acaba de criar o seu primeiro programa usando a Amado board na plataforma Dblocks.",
 
 //Página inOutDigital
+di_title: "Entrada e Saída Digital",
 di_introduction_title: "Introdução",
 di_intro1: 'Em sistemas eletrônicos e de automação, as <strong>entradas digitais</strong> são sinais que o dispositivo recebe do ambiente. Esses sinais representam estados binários — geralmente "ligado" ou "desligado" (1 ou 0). Exemplos comuns incluem botões, sensores de presença e interruptores.',
 di_intro2: "Já as <strong>saídas digitais</strong> são os sinais que o dispositivo envia para atuar sobre o ambiente, também em forma binária. Com elas, é possível controlar LEDs, relés, motores e outros componentes que operam em dois estados (ligado/desligado).",
 di_intro3: "Esses conceitos são fundamentais em projetos de automação, onde sensores informam o estado do ambiente e atuadores respondem de acordo com a lógica definida.",
 di_intro4: "A seguir, vamos ver como utilizar entradas e saídas digitais na prática de forma simples e intuitiva.",
+
 
 //Entrada digital
 di_in_title: "Entrada Digital",
@@ -290,5 +296,95 @@ di_out8: "Depois, o LED é desligado com o comando <code>ajustar pino de saída 
 di_out9: "Mais uma vez, o programa aguarda <strong>500 milissegundos</strong>.",
 di_out10: "Isso faz com que o LED pisque continuamente com um intervalo de meio segundo entre acender e apagar. Esse tipo de controle é muito útil em sistemas de sinalização, notificações visuais ou testes simples de funcionamento de pinos.",
 
+
+// Página inOutAnalog
+an_introduction_title: "Introdução",
+an_intro1: "Em projetos eletrônicos, as <strong>entradas e saídas analógicas</strong> permitem trabalhar com sinais que variam de forma contínua. Diferente dos sinais digitais que só têm dois estados (0 ou 1), os sinais analógicos podem representar uma faixa de valores, o que os torna ideais para medir grandezas como luminosidade, temperatura ou controlar intensidade de um LED.",
+an_intro2: "Neste exemplo, vamos utilizar o sensor de luz <strong>LDR</strong>, que já está embutido na <strong>Amado Board</strong>, como entrada analógica. E para a saída, vamos ajustar o brilho do LED interno da placa utilizando um sinal PWM.",
+an_intro3: "Esses recursos são úteis em projetos onde é necessário perceber variações do ambiente ou controlar dispositivos com mais precisão.",
+
+// Entrada Analógica
+an_in_title: "Entrada Analógica",
+an_in1: "Vamos fazer a leitura do sensor de luz LDR da placa ligando um jumper do terminal do LDR até o pino <code>39</code>, que é uma entrada analógica.",
+an_in2: "O programa a seguir lê continuamente o valor de luminosidade captado pelo sensor e armazena esse valor em uma variável:",
+an_in3: "O que este programa faz?",
+an_in4: "Dentro do bloco <code>repita enquanto verdadeiro</code>, ele executa repetidamente as instruções.",
+an_in5: "O pino <code>39</code> é lido com o comando <code>ler entrada analógica</code>.",
+an_in6: "O valor lido é armazenado na variável <code>valor_ldr</code>.",
+an_in7: "Esse valor é impresso no console para acompanhamento em tempo real.",
+an_in8: "Há uma pausa de <strong>500 milissegundos</strong> antes da próxima leitura.",
+an_in9: "Visualização dos resultados",
+an_in10: "A cada variação da luminosidade ambiente, o valor da variável <code>valor_ldr</code> também varia. Isso pode ser observado no console da plataforma:",
+an_in11: "Quanto mais claro o ambiente, maior o valor lido. Em ambientes escuros, o valor diminui. Isso demonstra como o sinal analógico representa uma grandeza física de forma contínua.",
+
+// Saída Analógica
+an_out_title: "Saída Analógica",
+an_out1: "Para controlar a intensidade de um LED, utilizamos a técnica chamada <strong>PWM (modulação por largura de pulso)</strong>. Na prática, ela permite simular um sinal analógico em um pino digital.",
+an_out2: "Abaixo temos um exemplo utilizando o bloco PWM para controlar o LED azul embutido da <strong>Amado Board</strong> conectado ao pino <code>D2</code>:",
+an_out3: "O que este programa faz?",
+an_out4: "O bloco <code>PWM</code> é usado dentro de um laço de repetição contínuo <code>repita enquanto verdadeiro</code>.",
+an_out5: "Ele define o <strong>pino D2 / LED AZUL</strong> como saída com sinal PWM.",
+an_out6: "A <strong>frequência</strong> foi configurada como <code>100 Hz</code>, o que indica quantos ciclos por segundo o sinal será enviado.",
+an_out7: "O <strong>ciclo de trabalho (duty cycle)</strong> foi ajustado para <code>512</code>, o que representa 50% de intensidade (em uma escala de 0 a 1023).",
+an_out8: "Alterando o valor do ciclo de trabalho, você pode controlar o brilho do LED. Valores mais baixos tornam o LED mais fraco e valores mais altos aumentam a intensidade. A frequência também pode ser ajustada para testar como diferentes taxas de oscilação afetam a suavidade da luz.",
+an_out9: "Essa abordagem é muito útil em projetos como dimmers, controle de velocidade de motores ou qualquer aplicação onde a saída precisa ser graduada em vez de apenas ligada ou desligada.",
+
+// Página Variáveis, Loops e Impressão - Parte de Variáveis
+var_section_title: "Variáveis",
+var_intro1: "Em programação, <strong>variáveis</strong> são usadas para armazenar valores que podem mudar ao longo do tempo. Elas são essenciais para guardar informações, fazer cálculos, controlar sensores ou mesmo imprimir mensagens no console.",
+var_intro2: "Para criar uma variável, vá até a categoria <strong>Variáveis</strong> no menu lateral e clique em <strong>Criar variável...</strong>. Escolha um nome claro e significativo, pois isso evita erros e torna o programa mais fácil de entender.",
+var_intro3: "Após criada, sua variável aparecerá em <strong>Variáveis criadas</strong> e poderá ser usada nos blocos para definir, alterar ou acessar seu valor.",
+var_intro4: "Existem diferentes tipos de variáveis disponíveis:",
+var_type_bool: "<strong>Booleanas</strong>: representam verdadeiro ou falso. Úteis para verificações ou condições.",
+var_type_num: "<strong>Numéricas</strong>: armazenam números inteiros, decimais ou aleatórios, comuns em leituras de sensores e cálculos.",
+var_type_text: "<strong>Texto</strong>: armazenam frases ou palavras, ideais para mostrar mensagens ou nomes.",
+var_type_list: "<strong>Listas</strong>: armazenam vários valores em uma mesma variável. Muito útil para organizar dados.",
+var_use_robotics: "Na robótica, variáveis são muito utilizadas para armazenar leituras de sensores como temperatura, distância, luz, entre outros. Isso permite tomar decisões ou ajustar comportamentos com base nos dados do ambiente.",
+var_examples_title: "Exemplos de tipos de variáveis",
+var_list_title: "Variáveis de Lista",
+var_text_title: "Variáveis de Texto",
+var_num_title: "Variáveis Numéricas",
+var_bool_title: "Variáveis Booleanas",
+var_print_example_title: "Exemplo prático: usando variáveis e impressão",
+var_print_example_desc: "No exemplo abaixo, criamos duas variáveis: uma de texto chamada <code>nome</code> e outra numérica chamada <code>valor</code>. Depois, usamos o bloco <strong>imprime</strong> que está localizado na categoria Funções --> Texto para mostrar os valores no console.",
+var_print_console_desc: "O resultado aparece no console como mostra a imagem a seguir. Esse recurso é muito útil para acompanhar os valores de sensores durante a execução do programa.",
+//Seção Print
+print_section_title: 'Impressão com o bloco "imprime"',
+print_intro1: "A função de <strong>impressão</strong> permite acompanhar os valores durante a execução do programa. Isso é muito útil para verificar se os dados dos sensores ou variáveis estão corretos.",
+print_intro2: "Para usar, acesse a categoria <strong>Funções → Texto</strong> e selecione o bloco <code>imprime</code>. Ele pode ser usado para mostrar textos simples ou valores de variáveis.",
+print_ex1: "Exemplo 1: imprimir uma mensagem fixa",
+print_ex2: "Exemplo 2: imprimir o valor de uma variável",
+print_ex3: "Exemplo 3: imprimir dentro de um laço (loop)",
+print_console_output: "O resultado desse último exemplo pode ser visto no console da plataforma, mostrando a contagem de 1 até 10:",
+
+//seção loop
+loop_section_title: "Laços de repetição (Loops)",
+loop_intro1: "Loops são estruturas que permitem executar um mesmo conjunto de comandos várias vezes. Eles são úteis para automatizar tarefas repetitivas, como contar, exibir mensagens, ou manipular listas.",
+loop_intro2: "Na plataforma, os blocos de repetição estão disponíveis na categoria <strong>Controle</strong> e incluem diferentes tipos de laços com finalidades variadas.",
+
+loop_repeat_times_title: "1. Repetição com número fixo",
+loop_repeat_times_desc: "O bloco <code>repita X vezes</code> executa o conjunto de comandos um número específico de vezes. Ideal para contagens simples ou ações repetidas.",
+loop_repeat_times_explanation: "Neste exemplo, usamos uma variável <code>contador</code> para contar até 5. A cada repetição, imprimimos o valor atual.",
+
+loop_repeat_while_title: "2. Repetição enquanto uma condição for verdadeira",
+loop_repeat_while_desc: "O bloco <code>repita enquanto</code> continua executando os comandos enquanto a condição definida for verdadeira.",
+loop_repeat_while_explanation: "Neste exemplo, a variável <code>numero</code> é incrementada até chegar a 5. O loop para quando a condição <code>numero < 5</code> não for mais verdadeira.",
+
+loop_count_title: "3. Repetição com contador personalizado",
+loop_count_desc: "O bloco <code>contar com i de X até Y por Z</code> permite maior controle sobre a repetição, incluindo o valor inicial, final e o passo.",
+loop_count_explanation: "Neste exemplo, imprimimos a tabuada do 2, multiplicando o valor de <code>i</code> a cada repetição.",
+
+loop_for_each_title: "4. Repetição para cada item de uma lista",
+loop_for_each_desc: "O bloco <code>para cada item na lista</code> percorre todos os elementos de uma lista. Ideal para processar ou exibir vários dados.",
+loop_for_each_explanation: "Aqui temos uma lista de nomes. O loop imprime um nome por vez até que todos sejam exibidos.",
+
+loop_break_title: "5. Encerrar laço com condição",
+loop_break_desc: "O bloco <code>encerra o laço</code> permite interromper a execução do loop antes de ele completar todas as repetições.",
+loop_break_explanation: "Neste exemplo, contamos de 1 até 10, mas encerramos o laço quando o contador atinge o valor 6.",
+loop_forever_title: "2. Repita enquanto verdadeiro",
+loop_forever_desc: "O bloco <code>repita enquanto verdadeiro</code> executa os comandos de forma contínua, sem parar. É muito usado em projetos de robótica, onde o programa precisa rodar constantemente enquanto o sistema estiver ligado.",
+loop_forever_explanation: "Neste exemplo, a variável <code>contador</code> é incrementada a cada segundo, e seu valor é impresso no console repetidamente.",
+
+var_loop_print_end: "Todos os resultados dos exemplos acima podem ser visto no console da plataforma.",
 
 }
