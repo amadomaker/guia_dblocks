@@ -381,4 +381,5 @@ loop_break_title: "6. Break the loop with a condition",
 loop_break_desc: "The <code>break loop</code> block allows stopping the loop execution before it finishes all repetitions.",
 loop_break_explanation: "In this example, we count from 1 to 10, but break the loop when the counter reaches 6.",
 
+var_loop_print_end: "All the results from the examples above can be seen in the platform console.",
 };

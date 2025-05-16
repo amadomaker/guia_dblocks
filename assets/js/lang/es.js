@@ -381,5 +381,8 @@ loop_break_title: "6. Interrumpir el bucle con una condición",
 loop_break_desc: "El bloque <code>termina el bucle</code> permite detener la ejecución antes de que se complete.",
 loop_break_explanation: "En este ejemplo, contamos del 1 al 10 pero detenemos el bucle cuando el valor alcanza 6.",
 
+var_loop_print_end: "Todos los resultados de los ejemplos anteriores pueden verse en la consola de la plataforma.",
+
+
 
 };

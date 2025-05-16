@@ -385,6 +385,6 @@ loop_forever_title: "2. Repita enquanto verdadeiro",
 loop_forever_desc: "O bloco <code>repita enquanto verdadeiro</code> executa os comandos de forma contínua, sem parar. É muito usado em projetos de robótica, onde o programa precisa rodar constantemente enquanto o sistema estiver ligado.",
 loop_forever_explanation: "Neste exemplo, a variável <code>contador</code> é incrementada a cada segundo, e seu valor é impresso no console repetidamente.",
 
-
+var_loop_print_end: "Todos os resultados dos exemplos acima podem ser visto no console da plataforma.",
 
 }
