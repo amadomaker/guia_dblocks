@@ -39,7 +39,7 @@
     "title_key": "sensors",
     "image": "sensores.png",
     "description_key": "sensors_description",
-    "url": ""
+    "url": "chapters/sensors.html"
   },
   {
     "title_key": "actuators",

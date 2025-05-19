@@ -387,4 +387,54 @@ loop_forever_explanation: "Neste exemplo, a variável <code>contador</code> é i
 
 var_loop_print_end: "Todos os resultados dos exemplos acima podem ser visto no console da plataforma.",
 
+//Página Sensores
+sensor_title: "Sensores",
+sensor_section_title: "Sensores na Robótica",
+sensor_intro1: "Sensores são componentes que permitem que os robôs e sistemas embarcados percebam o ambiente ao seu redor. Eles captam informações como temperatura, luminosidade, distância, umidade, entre outros, convertendo esses dados em sinais que podem ser processados.",
+sensor_intro2: "Na plataforma, os blocos relacionados a sensores estão disponíveis na categoria <strong>Sensores</strong>.",
+//Sensor de temperatura e umidade
+sensor_dht_title: "Sensor de Temperatura e Umidade DHT11/22",
+sensor_dht_desc1: "O sensor DHT11/22 é utilizado para medir dois dados importantes do ambiente: <strong>temperatura</strong> e <strong>umidade relativa do ar</strong>. Ele é muito comum em projetos de automação, estações meteorológicas e controle ambiental.",
+sensor_dht_desc2: "Para que o sensor funcione corretamente na <strong>Amado Board</strong>, ele deve estar conectado a um <strong>pino digital</strong>. Recomendamos usar os pinos D5, D15, D16, D17, D18, D19, D21, D22 ou D23. Neste exemplo, vamos utilizar o pino <code>D17</code>.",
+sensor_dht_desc3: "Como funciona o exemplo acima?",
+sensor_dht_step1: "Inicializamos o sensor DHT11/22 e indicamos o pino de conexão.",
+sensor_dht_step2: "Entramos em um loop que repete continuamente enquanto o sistema estiver ligado.",
+sensor_dht_step3: "A cada repetição, a leitura da <strong>temperatura</strong> e da <strong>umidade</strong> é atualizada e armazenada em variáveis.",
+sensor_dht_step4: "Esses valores são exibidos no console usando o bloco <code>imprime</code>.",
+sensor_dht_step5: "Uma pausa de 1 segundo entre as leituras é muito importante para garantir o bom funcionamento do sensor.",
+//Sensor Ultrassônico
+sensor_ultra_title: "Sensor de Distância Ultrassônico HCSR04",
+sensor_ultra_desc1: "O sensor ultrassônico HCSR04 é utilizado para medir distâncias com precisão, usando ondas de som. Ele envia um sinal sonoro (trigger) e mede o tempo até que o eco (echo) retorne após bater em um objeto. Com base nesse tempo, calcula-se a distância.",
+sensor_ultra_desc2: "Na <strong>Amado Board</strong>, já existe um espaço próprio para encaixar esse sensor diretamente nos pinos <code>D17</code> (trigger) e <code>D34</code> (echo), facilitando sua conexão e uso em projetos de robótica.",
+sensor_ultra_desc3: "Como funciona o exemplo acima?",
+sensor_ultra_step1: "Inicializamos o sensor especificando os pinos de trigger (D17) e echo (D34), além do tempo limite para a leitura.",
+sensor_ultra_step2: "Usamos um <strong>loop contínuo</strong> para medir a distância constantemente.",
+sensor_ultra_step3: "A cada repetição, armazenamos o valor da distância em uma variável.",
+sensor_ultra_step4: "O valor é impresso no console para que possamos acompanhar a medição em tempo real.",
+sensor_ultra_step5: "Adicionamos uma pausa de 500 milissegundos para evitar leituras muito rápidas e garantir a estabilidade do sensor.",
+sensor_ultra_note: "Observação: as leituras podem sofrer oscilações, apresentando valores muito altos ou até mesmo -1. Para melhorar a confiabilidade, implemente um filtro simples que descarte leituras fora da faixa esperada.",
+
+//Módulo RFID
+sensor_rfid_title: "Leitor RFID RC522",
+sensor_rfid_desc1: "O RFID (Identificação por Rádio Frequência) é uma tecnologia usada para identificar objetos ou pessoas através de cartões ou tags que emitem sinais. É muito utilizada em sistemas de acesso, controle de presença e rastreamento de ativos.",
+sensor_rfid_desc2: "O módulo utilizado neste exemplo é o RC522, que funciona por meio de comunicação SPI. Ele lê o UID (código único) de cartões RFID e pode também acessar a memória interna do cartão para leitura e escrita de dados.",
+sensor_rfid_desc3: "A ligação do módulo à Amado Board deve seguir corretamente os nomes dos pinos. Alguns nomes são iguais, outros mudam entre o módulo, o bloco e a placa. Veja a correspondência recomendada:",
+sensor_rfid_map1: "3.3V → 3.3V",
+sensor_rfid_map2: "GND → GND",
+sensor_rfid_map3: "SCK (módulo) = SCK no bloco = D18 / CLK na placa",
+sensor_rfid_map4: "MOSI = MOSI no bloco = D23 / MOSI na placa",
+sensor_rfid_map5: "MISO = MISO no bloco = D19 / MISO na placa",
+sensor_rfid_map6: "RST = RST no bloco = D22 / SCL na placa",
+sensor_rfid_map7: "SDA (do módulo) deve ser conectado ao CS no bloco, recomendado usar D5 como na imagem.",
+sensor_rfid_desc4: "Embora os pinos RST e CS possam ser conectados a outros pinos digitais (como D17, D21 ou D22), recomendamos seguir o exemplo para maior compatibilidade.",
+
+sensor_rfid_expl_title: "Como funciona o exemplo acima?",
+sensor_rfid_step1: "Inicializamos o módulo informando todos os pinos de conexão SPI.",
+sensor_rfid_step2: "Entramos em um loop contínuo que verifica constantemente se um cartão está presente.",
+sensor_rfid_step3: "Se um cartão for detectado (status = 0), uma mensagem será exibida no console e o UID será lido e impresso.",
+sensor_rfid_step4: "Mesmo quando não há cartão, as informações de status e tipo da tag são mostradas para facilitar o debug.",
+sensor_rfid_step5: "Adicionamos um delay de 500 milissegundos para evitar repetições muito rápidas.",
+sensor_rfid_console_desc: "Abaixo você pode ver como os resultados aparecem no console da plataforma, mostrando o status, tipo de tag e o UID quando um cartão é detectado.",
+sensor_rfid_advanced: "Abaixo dos blocos principais também existem os blocos <code>Ler memória do cartão RFID</code> e <code>Escrever na memória do cartão RFID</code>. Esses blocos são usados para acessar áreas específicas da memória do cartão, permitindo gravar ou ler informações personalizadas. Eles são recomendados para projetos mais avançados.",
+
 }

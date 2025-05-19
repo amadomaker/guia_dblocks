@@ -382,4 +382,57 @@ loop_break_desc: "The <code>break loop</code> block allows stopping the loop exe
 loop_break_explanation: "In this example, we count from 1 to 10, but break the loop when the counter reaches 6.",
 
 var_loop_print_end: "All the results from the examples above can be seen in the platform console.",
+
+// Sensors Page
+sensor_title: "Sensors",
+sensor_section_title: "Sensors in Robotics",
+sensor_intro1: "Sensors are components that allow robots and embedded systems to perceive their surroundings. They capture information such as temperature, light, distance, humidity, and more, converting this data into signals that can be processed.",
+sensor_intro2: "On the platform, blocks related to sensors are available in the <strong>Sensors</strong> category.",
+
+// Temperature and Humidity Sensor
+sensor_dht_title: "Temperature and Humidity Sensor DHT11/22",
+sensor_dht_desc1: "The DHT11/22 sensor is used to measure two important environmental variables: <strong>temperature</strong> and <strong>relative humidity</strong>. It is commonly used in automation projects, weather stations, and environmental control.",
+sensor_dht_desc2: "For the sensor to work properly with the <strong>Amado Board</strong>, it must be connected to a <strong>digital pin</strong>. We recommend using pins D5, D15, D16, D17, D18, D19, D21, D22, or D23. In this example, we’ll use pin <code>D17</code>.",
+sensor_dht_desc3: "How does the example above work?",
+sensor_dht_step1: "We initialize the DHT11/22 sensor and specify the connection pin.",
+sensor_dht_step2: "We enter a loop that continuously repeats while the system is powered.",
+sensor_dht_step3: "In each loop, the <strong>temperature</strong> and <strong>humidity</strong> readings are updated and stored in variables.",
+sensor_dht_step4: "These values are displayed in the console using the <code>print</code> block.",
+sensor_dht_step5: "A 1-second pause between readings is very important to ensure proper sensor operation.",
+
+// Ultrasonic Sensor
+sensor_ultra_title: "Ultrasonic Distance Sensor HCSR04",
+sensor_ultra_desc1: "The HCSR04 ultrasonic sensor is used to measure distances accurately using sound waves. It sends a sound signal (trigger) and measures the time until the echo returns after bouncing off an object. Based on this time, the distance is calculated.",
+sensor_ultra_desc2: "The <strong>Amado Board</strong> has a dedicated space to connect this sensor directly to pins <code>D17</code> (trigger) and <code>D34</code> (echo), making its use in robotics projects easier.",
+sensor_ultra_desc3: "How does the example above work?",
+sensor_ultra_step1: "We initialize the sensor by specifying the trigger (D17) and echo (D34) pins, along with a timeout.",
+sensor_ultra_step2: "We use a <strong>continuous loop</strong> to measure distance repeatedly.",
+sensor_ultra_step3: "On each repetition, the measured distance is stored in a variable.",
+sensor_ultra_step4: "The value is printed to the console to monitor real-time readings.",
+sensor_ultra_step5: "We add a 500-millisecond pause to avoid overly rapid readings and ensure stability.",
+sensor_ultra_note: "Note: Readings may vary, showing very high values or even -1. To improve reliability, implement a simple filter to discard readings outside the expected range.",
+
+// RFID Module
+sensor_rfid_title: "RFID Reader RC522",
+sensor_rfid_desc1: "RFID (Radio Frequency Identification) is a technology used to identify objects or people through cards or tags that emit signals. It is widely used in access control, attendance systems, and asset tracking.",
+sensor_rfid_desc2: "The module used in this example is the RC522, which communicates via SPI. It reads the UID (unique ID) of RFID cards and can also access the internal memory of the card for reading and writing data.",
+sensor_rfid_desc3: "The connection of the module to the Amado Board must follow the correct pin mapping. Some pin names are the same, while others differ between the module, the block, and the board. See the recommended mapping:",
+sensor_rfid_map1: "3.3V → 3.3V",
+sensor_rfid_map2: "GND → GND",
+sensor_rfid_map3: "SCK (module) = SCK in block = D18 / CLK on board",
+sensor_rfid_map4: "MOSI = MOSI in block = D23 / MOSI on board",
+sensor_rfid_map5: "MISO = MISO in block = D19 / MISO on board",
+sensor_rfid_map6: "RST = RST in block = D22 / SCL on board",
+sensor_rfid_map7: "SDA (on module) should be connected to CS in the block, we recommend using D5 as in the image.",
+sensor_rfid_desc4: "Although the RST and CS pins can be connected to other digital pins (like D17, D21, or D22), we recommend following the example for better compatibility.",
+
+sensor_rfid_expl_title: "How does the example above work?",
+sensor_rfid_step1: "We initialize the module by informing all SPI connection pins.",
+sensor_rfid_step2: "We enter a continuous loop that constantly checks if a card is present.",
+sensor_rfid_step3: "If a card is detected (status = 0), a message is printed in the console and the UID is read and shown.",
+sensor_rfid_step4: "Even when no card is present, the status and tag type are shown to help with debugging.",
+sensor_rfid_step5: "We add a 500-millisecond delay to avoid very fast repetitions.",
+sensor_rfid_console_desc: "Below you can see how the results appear in the platform console, showing the status, tag type, and UID when a card is detected.",
+sensor_rfid_advanced: "Below the main blocks are also the <code>Read memory from RFID card</code> and <code>Write to memory of RFID card</code> blocks. These blocks are used to access specific areas of the card’s memory, allowing custom data to be read or written. They are recommended for more advanced projects.",
+
 };
