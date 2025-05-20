@@ -433,7 +433,6 @@ sensor_rfid_step3: "Si se detecta una tarjeta (estado = 0), se muestra un mensaj
 sensor_rfid_step4: "Incluso cuando no hay tarjeta, se muestran el estado y el tipo de etiqueta para facilitar el depurado.",
 sensor_rfid_step5: "Agregamos un retardo de 500 milisegundos para evitar repeticiones muy rápidas.",
 sensor_rfid_console_desc: "A continuación puedes ver cómo aparecen los resultados en la consola de la plataforma, mostrando el estado, tipo de etiqueta y UID cuando se detecta una tarjeta.",
-sensor_rfid_advanced: "Debajo de los bloques principales también se encuentran los bloques <code>Leer memoria de la tarjeta RFID</code> y <code>Escribir en la memoria de la tarjeta RFID</code>. Estos bloques permiten acceder a áreas específicas de la memoria de la tarjeta para leer o escribir datos personalizados. Están recomendados para proyectos más avanzados.",
 
 
 };

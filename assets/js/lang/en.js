@@ -433,6 +433,5 @@ sensor_rfid_step3: "If a card is detected (status = 0), a message is printed in 
 sensor_rfid_step4: "Even when no card is present, the status and tag type are shown to help with debugging.",
 sensor_rfid_step5: "We add a 500-millisecond delay to avoid very fast repetitions.",
 sensor_rfid_console_desc: "Below you can see how the results appear in the platform console, showing the status, tag type, and UID when a card is detected.",
-sensor_rfid_advanced: "Below the main blocks are also the <code>Read memory from RFID card</code> and <code>Write to memory of RFID card</code> blocks. These blocks are used to access specific areas of the card’s memory, allowing custom data to be read or written. They are recommended for more advanced projects.",
 
 };

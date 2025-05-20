@@ -435,6 +435,5 @@ sensor_rfid_step3: "Se um cartão for detectado (status = 0), uma mensagem será
 sensor_rfid_step4: "Mesmo quando não há cartão, as informações de status e tipo da tag são mostradas para facilitar o debug.",
 sensor_rfid_step5: "Adicionamos um delay de 500 milissegundos para evitar repetições muito rápidas.",
 sensor_rfid_console_desc: "Abaixo você pode ver como os resultados aparecem no console da plataforma, mostrando o status, tipo de tag e o UID quando um cartão é detectado.",
-sensor_rfid_advanced: "Abaixo dos blocos principais também existem os blocos <code>Ler memória do cartão RFID</code> e <code>Escrever na memória do cartão RFID</code>. Esses blocos são usados para acessar áreas específicas da memória do cartão, permitindo gravar ou ler informações personalizadas. Eles são recomendados para projetos mais avançados.",
 
 }
