@@ -436,4 +436,98 @@ sensor_rfid_step4: "Mesmo quando não há cartão, as informações de status e 
 sensor_rfid_step5: "Adicionamos um delay de 500 milissegundos para evitar repetições muito rápidas.",
 sensor_rfid_console_desc: "Abaixo você pode ver como os resultados aparecem no console da plataforma, mostrando o status, tipo de tag e o UID quando um cartão é detectado.",
 
+
+
+//Página actuators
+// Seção Atuadores
+actuator_section_title: "Atuadores",
+actuator_introduction: "Atuadores na robótica",
+actuator_intro1: "Atuadores são dispositivos que recebem comandos de um sistema e realizam uma ação física no mundo real. Eles transformam sinais elétricos em movimento, som, luz, calor ou outras formas de resposta.",
+actuator_intro2: "Na robótica e na automação, os atuadores são essenciais para interagir com o ambiente, permitindo acender lâmpadas, acionar motores, abrir válvulas, tocar buzinas, entre outros.",
+actuator_intro3: "Na plataforma, os blocos de atuadores estão disponíveis na categoria <strong>Saídas e Atuadores</strong>. Cada tipo de atuador terá seus próprios blocos com comandos específicos.",
+
+//Seção Módulo Relé
+relay_title: "Módulo Relé",
+relay_desc1: "O relé é um componente que funciona como um interruptor controlado eletronicamente. Ele permite ligar ou desligar dispositivos de maior potência (como lâmpadas, ventiladores ou eletrodomésticos) usando um sinal digital da placa.",
+relay_desc2: "No bloco do relé, você pode escolher o pino ao qual ele está conectado e o comando desejado: <strong>ligar</strong> ou <strong>desligar</strong>. É importante lembrar que o módulo relé deve ser alimentado corretamente (geralmente com 5V e GND), e que a carga conectada precisa estar isolada e bem conectada para segurança.\n\nImportante: muitos módulos relé são acionados com sinal 0 (nível lógico baixo). Ou seja, ao usar o comando 'desligar' no bloco, o relé será ativado (ligando o dispositivo). Já o comando 'ligar' no bloco desativa o relé (desligando o dispositivo).",
+relay_example_title: "Exemplo: ligar uma lâmpada com atraso",
+relay_example_desc: "No exemplo abaixo, usamos o bloco de relé para simular o controle de uma lâmpada. Ao iniciar o programa, o relé é ligado (simulando a lâmpada acendendo), e após 3 segundos ele é desligado. Esse tipo de controle pode ser usado em aplicações como temporizadores, simulação de presença ou automação residencial.",
+relay_example_note: "Esse exemplo simples de temporizador também poderia ser usado dentro de uma <strong>condição</strong> (por exemplo, ao detectar um cartão RFID, presença, horário, etc.) para tomar decisões automáticas no programa.",
+
+// Seção Servo motor
+servo_title: "Servo Motor",
+
+servo_desc1: "O servo motor é um atuador muito utilizado em projetos de robótica e automação. Ele permite posicionar um eixo em ângulos específicos, geralmente entre 0 e 180 graus. Isso é ideal para controlar portas, braços mecânicos, alavancas, eixos ou sistemas que precisam de movimentos precisos e controlados.",
+
+servo_desc2: "Na plataforma, o controle do servo é feito em dois passos: primeiro usamos o bloco <strong>Iniciar servo motor</strong> para definir o pino de conexão e o nome do servo, e depois usamos o bloco <strong>Mover servo</strong> para indicar o ângulo desejado. É possível usar nomes personalizados (como servo1, servo2 etc.), permitindo o controle de múltiplos servos no mesmo projeto.",
+
+servo_desc3: "A <strong>Amado Board</strong> possui um local específico para conectar servo motores: os pinos <strong>D15</strong> e <strong>D16</strong> estão identificados como <code>SERVO A</code> e <code>SERVO B</code>, respectivamente. Ao lado desses pinos, existe um conjunto de 3 pinos rotulados como <code>3.3V</code>, <code>VS</code> e <code>5V</code>. Para que o servo receba energia corretamente, é necessário <strong>fazer um jumper conectando o pino VS ao pino 5V</strong>. Isso garante que o pino de sinal tenha energia para movimentar o servo com estabilidade.",
+
+servo_desc4: "Os servos costumam ter fios com cores padrão: <strong>marrom</strong> (GND), <strong>vermelho</strong> (VCC) e <strong>amarelo</strong> (sinal de dados). A placa já possui o espaço correto para encaixe direto desses três pinos, facilitando a instalação.",
+
+servo_basic_title: "Exemplo 1: controle de posições fixas",
+servo_basic_desc: "Este exemplo movimenta o servo para três posições fixas: 0°, 90° e 180°, com um pequeno intervalo entre os movimentos. É ideal para demonstrar o funcionamento básico do servo e como controlar ângulos diretamente.",
+servo_basic_steps: "O que esse programa faz?",
+servo_basic_step1: "Inicializa o servo no pino D15.",
+servo_basic_step2: "Move o servo para o ângulo 0°, espera 1 segundo.",
+servo_basic_step3: "Move para 90°, depois para 180°, com pausas entre cada posição.",
+servo_basic_step4: "O ciclo se repete continuamente.",
+
+servo_smooth_title: "Exemplo 2: movimento contínuo com laço",
+servo_smooth_desc: "Neste exemplo usamos um <strong>laço for</strong> para movimentar suavemente o servo de 0° até 180° e voltar. Isso cria um movimento fluido e contínuo, útil para simulações de radar, varredura ou movimentos controlados em braço robótico.",
+servo_smooth_steps: "O que esse programa faz?",
+servo_smooth_step1: "Inicializa o servo e entra em um loop contínuo.",
+servo_smooth_step2: "Usa um laço para mover de 0° a 180°, esperando 10 ms a cada passo.",
+servo_smooth_step3: "Após uma pausa, repete o movimento de 180° a 0°.",
+
+servo_ultra_title: "Exemplo 3: controle por sensor ultrassônico",
+servo_ultra_desc: "Aqui combinamos o servo com um <strong>sensor ultrassônico</strong> para simular uma <strong>porta automática</strong> ou cancela de shopping. Se a distância for menor que 100mm, o servo abre a porta (ângulo 90°). Caso contrário, ela permanece fechada (ângulo 0°).",
+servo_ultra_tip: "A comparação é feita com o bloco <code>se</code> que pode ser expandido com a opção <code>senão</code>, ativada pela engrenagem do bloco. A operação <code><</code> usada na condição está disponível na categoria <strong>Matemática → Lógica</strong>.",
+servo_ultra_steps: "O que esse programa faz?",
+servo_ultra_step1: "Inicializa o servo e o sensor ultrassônico.",
+servo_ultra_step2: "Lê a distância continuamente (em milímetros).",
+servo_ultra_step3: "Se a distância for menor que 100 mm, o servo se move para 90°.",
+servo_ultra_step4: "Caso contrário, o servo volta para 0°.",
+servo_ultra_step5: "A leitura é feita a cada 150 ms.",
+
+// Seção Motor DC
+motor_title: "Motor DC",
+motor_desc1: "Os motores DC (corrente contínua) são muito utilizados em projetos de robótica para movimentar carrinhos, braços mecânicos, esteiras, entre outros. Eles permitem controle de rotação e sentido através de sinais digitais.",
+motor_desc2: "Na plataforma, controlamos o motor DC usando três pinos: <strong>PWM</strong> para a potência (velocidade) e <strong>DIR1</strong> e <strong>DIR2</strong> para a direção. O bloco <code>Iniciar motor DC</code> permite selecionar os pinos e dar um <strong>nome personalizado</strong> ao motor, como motor1, motor2, etc. Isso permite controlar vários motores de forma independente.",
+motor_desc3: "A <strong>Amado Board</strong> já possui um espaço físico apropriado com bornes de parafuso azuis nas laterais da placa, facilitando a ligação de até dois motores diretamente. Esses bornes estão conectados aos pinos PWM, DIR1 e DIR2 da placa.",
+motor_desc4: "A velocidade do motor é controlada com valores entre <code>0</code> (desligado) e <code>1023</code> (máxima potência). A direção é definida com o bloco de direção: <code>1</code> para frente, <code>2</code> para trás, e <code>0</code> para parada. Também há o bloco <strong>Parar motor</strong> que pode ser usado para interromper o movimento a qualquer momento.",
+
+motor_example_title: "Exemplo: motor alternando direção",
+motor_example_desc: "O exemplo abaixo demonstra o uso básico do motor DC alternando sua direção. O motor gira para um lado por alguns segundos, para, depois gira para o outro lado.",
+motor_example_steps: "O que esse programa faz?",
+motor_example_step1: "Inicializa o motor usando pinos PWM, DIR1 e DIR2.",
+motor_example_step2: "Define a potência máxima (1023) e gira o motor para frente (direção 1).",
+motor_example_step3: "Após 2 segundos, para o motor, espera mais 2 segundos.",
+motor_example_step4: "Gira o motor na direção oposta (direção 2), espera 2 segundos e para novamente.",
+motor_example_step5: "O ciclo se repete continuamente.",
+motor_extra_note: "Além de testes básicos, o controle de motores DC é essencial em projetos de robótica como robôs seguidores de linha ou robôs que desviam de obstáculos. Nestes casos, sensores determinam o comportamento dos motores, permitindo que o robô se mova de forma autônoma conforme o ambiente.",
+
+//Seção buzzer
+buzzer_title: "Campainha (Buzzer)",
+
+buzzer_intro1: "A campainha, também conhecida como buzzer, é um atuador que emite sons simples ou melodias. Pode ser utilizada para alarmes, avisos sonoros, confirmações de eventos ou até mesmo para tocar músicas temáticas. A Amado Board já possui um buzzer integrado conectado ao pino D4, que pode ser usado diretamente.",
+
+buzzer_libraries_title: "Instalação das bibliotecas",
+buzzer_libraries_desc: "Para que os blocos de sons e músicas funcionem corretamente, é necessário instalar duas bibliotecas:",
+buzzer_verify_library: "Após clicar no botão “Instalar biblioteca”, você pode verificar a instalação pela mensagem no console: Instalação da biblioteca rtttl concluída.",
+buzzer_verify_file: "Também é possível confirmar a presença da biblioteca abrindo a aba Arquivos. Clique duas vezes no botão de atualizar e verifique se o arquivo rtttl.py e songs.py aparece listado na memória da placa.",
+
+buzzer_block_freq_title: "1. Reproduzir som por frequência",
+buzzer_block_freq_desc: "Este bloco permite gerar um som especificando uma frequência (em Hertz) e uma duração (em segundos). Por exemplo, 1000 Hz gera um som agudo. Se você usar 0 ou -1 como tempo, o som será contínuo até que outro comando seja executado.",
+
+buzzer_block_note_title: "2. Reproduzir som por nota musical",
+buzzer_block_note_desc: "Neste bloco, você pode escolher uma nota musical (como D3, B1 etc.) e definir por quantos segundos ela será reproduzida. Isso é ideal para criar melodias simples manualmente.",
+
+buzzer_block_music_title: "3. Reproduzir música pronta",
+buzzer_block_music_desc: "Com este bloco, você pode escolher músicas temáticas pré-definidas, como Super Mario, Star Wars ou Picaxe. Basta selecionar o nome da música na lista.",
+
+buzzer_block_user_title: "Observação: músicas criadas pelo usuário",
+buzzer_block_user_desc: "Existe ainda um bloco chamado “Reproduzir buzzer no pino com melodia”. Esse bloco será usado em uma seção própria dedicada à criação de músicas personalizadas, usando a aba Música da plataforma. Não abordaremos esse recurso aqui.",
+
+
 }

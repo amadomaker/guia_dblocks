@@ -434,4 +434,87 @@ sensor_rfid_step4: "Even when no card is present, the status and tag type are sh
 sensor_rfid_step5: "We add a 500-millisecond delay to avoid very fast repetitions.",
 sensor_rfid_console_desc: "Below you can see how the results appear in the platform console, showing the status, tag type, and UID when a card is detected.",
 
+// Actuators Page
+// Actuator Section
+actuator_section_title: "Actuators",
+actuator_introduction: "Actuators in Robotics",
+actuator_intro1: "Actuators are devices that receive commands from a system and perform a physical action in the real world. They convert electrical signals into motion, sound, light, heat, or other forms of response.",
+actuator_intro2: "In robotics and automation, actuators are essential for interacting with the environment, enabling you to turn on lights, control motors, open valves, sound buzzers, among others.",
+actuator_intro3: "On the platform, actuator blocks are available in the <strong>Outputs and Actuators</strong> category. Each type of actuator will have its own blocks with specific commands.",
+
+// Relay Module Section
+relay_title: "Relay Module",
+relay_desc1: "The relay is a component that works like an electronically controlled switch. It allows turning high-power devices (such as lamps, fans, or appliances) on or off using a digital signal from the board.",
+relay_desc2: "In the relay block, you can choose the pin to which it is connected and the desired command: <strong>on</strong> or <strong>off</strong>. It is important to ensure the relay module is properly powered (usually 5V and GND), and that the connected load is isolated and securely attached for safety.\n\nImportant: many relay modules are activated with signal 0 (logic low). That means using the 'off' command in the block will activate the relay (turning the device on). Conversely, the 'on' command will deactivate the relay (turning the device off).",
+relay_example_title: "Example: turning on a lamp with delay",
+relay_example_desc: "In the example below, we use the relay block to simulate lamp control. When the program starts, the relay is activated (lamp turns on), and after 3 seconds, it turns off. This type of control can be used in applications like timers, presence simulation, or home automation.",
+relay_example_note: "This simple timer example could also be used within a <strong>condition</strong> (e.g., when detecting an RFID card, presence, time, etc.) to make automatic decisions in the program.",
+
+// Servo Motor Section
+servo_title: "Servo Motor",
+servo_desc1: "The servo motor is a commonly used actuator in robotics and automation projects. It allows positioning a shaft at specific angles, usually between 0 and 180 degrees. This is ideal for controlling doors, mechanical arms, levers, shafts, or systems requiring precise and controlled movements.",
+servo_desc2: "On the platform, servo control is done in two steps: first, use the <strong>Initialize Servo Motor</strong> block to define the connection pin and name of the servo, then use the <strong>Move Servo</strong> block to set the desired angle. You can use custom names (like servo1, servo2, etc.), allowing you to control multiple servos in the same project.",
+servo_desc3: "The <strong>Amado Board</strong> has specific spots for connecting servo motors: <strong>D15</strong> and <strong>D16</strong> are labeled as <code>SERVO A</code> and <code>SERVO B</code>, respectively. Next to these pins, there is a set of 3 labeled pins: <code>3.3V</code>, <code>VS</code>, and <code>5V</code>. To power the servo correctly, you must <strong>make a jumper between the VS pin and the 5V pin</strong>. This ensures the signal pin has enough power to operate the servo properly.",
+servo_desc4: "Servos typically have standard color-coded wires: <strong>brown</strong> (GND), <strong>red</strong> (VCC), and <strong>yellow</strong> (signal). The board already has the appropriate connector layout to plug these in directly, making installation easier.",
+
+servo_basic_title: "Example 1: control with fixed positions",
+servo_basic_desc: "This example moves the servo to three fixed positions: 0°, 90°, and 180°, with a short delay between movements. It’s ideal to demonstrate basic servo control and how to directly set angles.",
+servo_basic_steps: "What does this program do?",
+servo_basic_step1: "Initializes the servo on pin D15.",
+servo_basic_step2: "Moves the servo to 0°, waits 1 second.",
+servo_basic_step3: "Moves to 90°, then 180°, with delays between.",
+servo_basic_step4: "The cycle repeats continuously.",
+
+servo_smooth_title: "Example 2: continuous movement with loop",
+servo_smooth_desc: "In this example, a <strong>for loop</strong> is used to smoothly move the servo from 0° to 180° and back. This creates fluid, continuous motion useful for radar scanning or robotic arm movement.",
+servo_smooth_steps: "What does this program do?",
+servo_smooth_step1: "Initializes the servo and enters a continuous loop.",
+servo_smooth_step2: "Uses a loop to move from 0° to 180°, waiting 10 ms per step.",
+servo_smooth_step3: "After a short pause, repeats the motion from 180° to 0°.",
+
+servo_ultra_title: "Example 3: ultrasonic sensor control",
+servo_ultra_desc: "This example combines a servo with an <strong>ultrasonic sensor</strong> to simulate an <strong>automatic door</strong> or mall gate. If the distance is less than 100mm, the servo opens the door (90°). Otherwise, it stays closed (0°).",
+servo_ultra_tip: "The condition is checked with the <code>if</code> block, which can be expanded with the <code>else</code> option, enabled via the gear icon. The comparison <code><</code> is available in <strong>Mathematics → Logic</strong>.",
+servo_ultra_steps: "What does this program do?",
+servo_ultra_step1: "Initializes the servo and ultrasonic sensor.",
+servo_ultra_step2: "Continuously reads distance (in millimeters).",
+servo_ultra_step3: "If distance < 100mm, moves the servo to 90°.",
+servo_ultra_step4: "Otherwise, returns the servo to 0°.",
+servo_ultra_step5: "Reads data every 150 ms.",
+
+// DC Motor Section
+motor_title: "DC Motor",
+motor_desc1: "DC (Direct Current) motors are commonly used in robotics projects to move cars, arms, conveyor belts, and more. They allow direction and speed control via digital signals.",
+motor_desc2: "On the platform, we control the DC motor using three pins: <strong>PWM</strong> for power (speed), and <strong>DIR1</strong> and <strong>DIR2</strong> for direction. The <code>Initialize DC Motor</code> block lets you define the pins and assign a <strong>custom name</strong> (like motor1, motor2, etc.).",
+motor_desc3: "The <strong>Amado Board</strong> includes physical screw terminals on its sides for connecting up to two DC motors. These terminals are internally wired to the PWM, DIR1, and DIR2 pins of the board.",
+motor_desc4: "Motor speed is controlled by values from <code>0</code> (off) to <code>1023</code> (full power). Direction is controlled by the direction block: <code>1</code> for forward, <code>2</code> for reverse, and <code>0</code> to stop. There's also a <strong>Stop Motor</strong> block to halt movement anytime.",
+
+motor_example_title: "Example: alternating motor direction",
+motor_example_desc: "The example below demonstrates how to alternate a DC motor’s direction. It rotates one way for 2 seconds, stops, then rotates the other way.",
+motor_example_steps: "What does this program do?",
+motor_example_step1: "Initializes the motor using PWM, DIR1, and DIR2 pins.",
+motor_example_step2: "Sets max speed (1023) and moves forward (direction 1).",
+motor_example_step3: "After 2 seconds, stops the motor, waits 2 more seconds.",
+motor_example_step4: "Changes to reverse (direction 2), waits, then stops again.",
+motor_example_step5: "The loop repeats continuously.",
+motor_extra_note: "Beyond basic tests, DC motor control is key in robotics projects like line-following robots or obstacle-avoiding robots. In these cases, sensors define motor behavior so the robot can act autonomously based on the environment.",
+
+// Buzzer Section
+buzzer_title: "Buzzer",
+buzzer_intro1: "The buzzer is an actuator that emits simple tones or melodies. It’s used for alarms, notifications, confirmations, or playing themed music. The Amado Board includes a built-in buzzer on pin D4, ready for use.",
+buzzer_libraries_title: "Library Installation",
+buzzer_libraries_desc: "To use the buzzer blocks, install two libraries:",
+buzzer_verify_library: "After clicking the “Install Library” button, check the console for the message: Library rtttl installation complete.",
+buzzer_verify_file: "You can also confirm by opening the Files tab. Click the refresh button twice quickly and check for <code>rtttl.py</code> and <code>songs.py</code> in the memory list.",
+
+buzzer_block_freq_title: "1. Play sound by frequency",
+buzzer_block_freq_desc: "This block plays a tone at a specific frequency (in Hz) for a duration (in seconds). 1000 Hz is a high-pitched tone. Use 0 or -1 for continuous tone.",
+buzzer_block_note_title: "2. Play sound by musical note",
+buzzer_block_note_desc: "This block lets you pick a musical note (like D3 or B1) and duration. Great for building custom melodies.",
+buzzer_block_music_title: "3. Play preset music",
+buzzer_block_music_desc: "Choose from built-in themed songs like Super Mario, Star Wars, or Picaxe. Just select the title from the list.",
+buzzer_block_user_title: "Note: user-created melodies",
+buzzer_block_user_desc: "There's also a block called “Play buzzer on pin with melody.” This is used with the Music tab to run your own composed songs. It will be explained in a separate section.",
+
+
 };
