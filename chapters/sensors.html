@@ -181,12 +181,33 @@
         <p data-translate="sensor_rfid_desc4">
           Embora os pinos <code>RST</code> e <code>CS</code> possam ser conectados a outros pinos digitais (como D17, D21 ou D22), recomendamos seguir o exemplo para maior compatibilidade.
         </p>
+        
+        <p data-translate="rfid_libraries_desc">
+          Para que os blocos do leitor RFID RC522 funcionem corretamente, é necessário instalar a biblioteca <code>mfrc522</code>, que permite a comunicação e leitura de cartões RFID.
+        </p>
 
-        <img 
-          src="../assets/images/Sensors/leitura_RFID.png"
-          width="520px"
-          alt="Blocos de leitura do RFID"
-        />
+        <p data-translate="rfid_verify_library">
+          Após clicar no botão <strong>“Instalar biblioteca”</strong>, você pode verificar a instalação pela mensagem no console: <code>Instalação da biblioteca mfrc522 concluída.</code>
+        </p>
+        <img src="../assets/images/Sensors/rfid_console.png" width="550px" alt="Instalação da biblioteca no console para RFID" />
+
+        <p data-translate="rfid_verify_file">
+          Também é possível confirmar a presença da biblioteca abrindo a aba <strong>Arquivos</strong>. Clique duas vezes no botão de atualizar e verifique se o arquivo <code>mfrc522.py</code> aparece listado na memória da placa.
+        </p>
+      <img src="../assets/images/Sensors/rfid_gerenciador_arquivos.png" width="270px" alt="Verificando a presença da biblioteca do RFID" style="display: block; margin-bottom: 16px;" />
+
+      <p style="margin-bottom: 16px;">
+        Abaixo vemos um programa básico que faz a leitura de um cartão RFID e mostra os resultados no console.
+      </p>
+
+      <img 
+        src="../assets/images/Sensors/leitura_RFID.png"
+        width="520px"
+        alt="Blocos de leitura do RFID"
+        style="display: block;"
+      />
+
+
 
         <h4 data-translate="sensor_rfid_expl_title">Como funciona o exemplo acima?</h4>
         <ul>
