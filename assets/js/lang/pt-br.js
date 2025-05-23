@@ -392,6 +392,15 @@ sensor_title: "Sensores",
 sensor_section_title: "Sensores na Robótica",
 sensor_intro1: "Sensores são componentes que permitem que os robôs e sistemas embarcados percebam o ambiente ao seu redor. Eles captam informações como temperatura, luminosidade, distância, umidade, entre outros, convertendo esses dados em sinais que podem ser processados.",
 sensor_intro2: "Na plataforma, os blocos relacionados a sensores estão disponíveis na categoria <strong>Sensores</strong>.",
+
+// Seção Sensor Infravermelho
+sensor_ir_title: "Sensor Infravermelho (IR)",
+sensor_ir_desc1: "O sensor infravermelho (IR) é um componente digital simples e muito utilizado na robótica, especialmente em projetos como carrinhos seguidores de linha. Ele detecta a presença ou ausência de objetos com base no reflexo da luz infravermelha, retornando valores digitais: <strong>1</strong> quando não há reflexão e <strong>0</strong> quando detecta um objeto próximo.",
+sensor_ir_desc2: "Este sensor possui <strong>3 pinos</strong> (VCC, GND e Sinal) e pode ser facilmente conectado à <strong>Amado Board</strong> usando os pinos de entrada digital, como <code>D34</code>, <code>D35</code>, <code>D36</code> e <code>D39</code>. A placa já possui espaço apropriado para o encaixe direto, tornando a montagem rápida e prática.",
+sensor_ir_desc3: "Além de carrinhos seguidores de linha, o sensor IR pode ser usado em sistemas de contagem, barreiras de segurança, presença de objetos e outras aplicações onde a detecção simples de obstáculos é necessária.",
+sensor_ir_example_title: "Exemplo: leitura contínua do sensor IR",
+sensor_ir_steps: "O que esse programa faz?",
+
 //Sensor de temperatura e umidade
 sensor_dht_title: "Sensor de Temperatura e Umidade DHT11/22",
 sensor_dht_desc1: "O sensor DHT11/22 é utilizado para medir dois dados importantes do ambiente: <strong>temperatura</strong> e <strong>umidade relativa do ar</strong>. Ele é muito comum em projetos de automação, estações meteorológicas e controle ambiental.",
@@ -427,7 +436,10 @@ sensor_rfid_map5: "MISO = MISO no bloco = D19 / MISO na placa",
 sensor_rfid_map6: "RST = RST no bloco = D22 / SCL na placa",
 sensor_rfid_map7: "SDA (do módulo) deve ser conectado ao CS no bloco, recomendado usar D5 como na imagem.",
 sensor_rfid_desc4: "Embora os pinos RST e CS possam ser conectados a outros pinos digitais (como D17, D21 ou D22), recomendamos seguir o exemplo para maior compatibilidade.",
-
+rfid_libraries_desc: "Para que os blocos do leitor RFID RC522 funcionem corretamente, é necessário instalar a biblioteca <code>mfrc522</code>, que permite a comunicação e leitura de cartões RFID.",
+rfid_verify_library: "Após clicar no botão <strong>“Instalar biblioteca”</strong>, você pode verificar a instalação pela mensagem no console: <code>Instalação da biblioteca mfrc522 concluída.</code>",
+rfid_verify_file: "Também é possível confirmar a presença da biblioteca abrindo a aba <strong>Arquivos</strong>. Clique duas vezes no botão de atualizar e verifique se o arquivo <code>mfrc522.py</code> aparece listado na memória da placa.",
+sensor_rfid_desc6: "Abaixo vemos um programa básico que faz a leitura de um cartão RFID e mostra os resultados no console.",
 sensor_rfid_expl_title: "Como funciona o exemplo acima?",
 sensor_rfid_step1: "Inicializamos o módulo informando todos os pinos de conexão SPI.",
 sensor_rfid_step2: "Entramos em um loop contínuo que verifica constantemente se um cartão está presente.",

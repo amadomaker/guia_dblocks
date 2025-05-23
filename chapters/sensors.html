@@ -86,6 +86,7 @@
           <h3 data-translate="in_this_section">Nesta Seção</h3>
           <ul>
             <li><a href="#sensors-introduction" data-translate="sensor_section_title">Introdução</a></li>
+            <li><a href="#sensor-ir" data-translate="sensor_ir_title"></a></li>
             <li><a href="#sensor-dht" data-translate="sensor_dht_title"></a></li>
             <li><a href="#sensor-ultra" data-translate="sensor_ultra_title"></a></li>
             <li><a href="#sensor-rfid" data-translate="sensor_rfid_title"></a></li>
@@ -100,6 +101,37 @@
         <p data-translate="sensor_intro2">
           Na plataforma, os blocos relacionados a sensores estão disponíveis na categoria <strong>Sensores</strong>.
         </p>
+
+        <h2 id="sensor-ir" data-translate="sensor_ir_title">Sensor Infravermelho (IR)</h2>
+
+        <p data-translate="sensor_ir_desc1">
+          O sensor infravermelho (IR) é um componente digital simples e muito utilizado na robótica, especialmente em projetos como carrinhos seguidores de linha. Ele detecta a presença ou ausência de objetos com base no reflexo da luz infravermelha, retornando valores digitais: <strong>1</strong> quando não há reflexão e <strong>0</strong> quando detecta um objeto próximo.
+        </p>
+
+        <p data-translate="sensor_ir_desc2">
+          Este sensor possui <strong>3 pinos</strong> (VCC, GND e Sinal) e pode ser facilmente conectado à <strong>Amado Board</strong> usando os pinos de entrada digital, como <code>D35</code>, <code>D39</code>, <code>D36</code> e <code>D34</code>. A placa já possui espaço apropriado para o encaixe direto, tornando a montagem rápida e prática.
+        </p>
+
+        <p data-translate="sensor_ir_desc3">
+          Além de carrinhos seguidores de linha, o sensor IR pode ser usado em sistemas de contagem, barreiras de segurança, presença de objetos e outras aplicações onde a detecção simples de obstáculos é necessária.
+        </p>
+
+        <h3 data-translate="sensor_ir_example_title">Exemplo: leitura contínua do sensor IR</h3>
+
+        <img 
+          src="../assets/images/Sensors/sensor_ir.png"
+          width="550px"
+          alt="Leitura do sensor infravermelho"
+        />
+
+        <h4 data-translate="sensor_ir_steps" style="margin-top: 16px;">O que esse programa faz?</h4>
+        <ul>
+          <li>Lê continuamente o valor digital do pino <code>D35</code> onde o sensor IR está conectado.</li>
+          <li>Armazena esse valor na variável <code>valor_sensor</code>.</li>
+          <li>Imprime o valor no console (0 ou 1), facilitando o monitoramento da leitura.</li>
+          <li>Aguarda 500 milissegundos antes de fazer a próxima leitura.</li>
+        </ul>
+
 
         <h2 id="sensor-dht" data-translate="sensor_dht_title">Sensor de Temperatura e Umidade DHT11/22</h2>
 
@@ -196,7 +228,7 @@
         </p>
       <img src="../assets/images/Sensors/rfid_gerenciador_arquivos.png" width="270px" alt="Verificando a presença da biblioteca do RFID" style="display: block; margin-bottom: 16px;" />
 
-      <p style="margin-bottom: 16px;">
+      <p data-translate="sensor_rfid_desc6" style="margin-bottom: 16px;">
         Abaixo vemos um programa básico que faz a leitura de um cartão RFID e mostra os resultados no console.
       </p>
 

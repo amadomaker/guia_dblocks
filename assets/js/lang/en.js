@@ -389,6 +389,20 @@ sensor_section_title: "Sensors in Robotics",
 sensor_intro1: "Sensors are components that allow robots and embedded systems to perceive their surroundings. They capture information such as temperature, light, distance, humidity, and more, converting this data into signals that can be processed.",
 sensor_intro2: "On the platform, blocks related to sensors are available in the <strong>Sensors</strong> category.",
 
+// IR Sensor Section
+sensor_ir_title: "Infrared Sensor (IR)",
+
+sensor_ir_desc1: "The infrared (IR) sensor is a simple digital component widely used in robotics, especially in projects such as line-following robots. It detects the presence or absence of objects based on infrared light reflection, returning digital values: <strong>1</strong> when there is no reflection and <strong>0</strong> when it detects a nearby object.",
+
+sensor_ir_desc2: "This sensor has <strong>3 pins</strong> (VCC, GND, and Signal) and can be easily connected to the <strong>Amado Board</strong> using the digital input pins such as <code>D35</code>, <code>D39</code>, <code>D36</code>, and <code>D34</code>. The board already has a proper slot for direct connection, making the assembly quick and simple.",
+
+sensor_ir_desc3: "In addition to line-following robots, the IR sensor can be used in counting systems, safety barriers, object presence detection, and other applications where simple obstacle detection is needed.",
+
+sensor_ir_example_title: "Example: continuous reading of the IR sensor",
+
+sensor_ir_steps: "What does this program do?",
+
+
 // Temperature and Humidity Sensor
 sensor_dht_title: "Temperature and Humidity Sensor DHT11/22",
 sensor_dht_desc1: "The DHT11/22 sensor is used to measure two important environmental variables: <strong>temperature</strong> and <strong>relative humidity</strong>. It is commonly used in automation projects, weather stations, and environmental control.",
@@ -425,7 +439,10 @@ sensor_rfid_map5: "MISO = MISO in block = D19 / MISO on board",
 sensor_rfid_map6: "RST = RST in block = D22 / SCL on board",
 sensor_rfid_map7: "SDA (on module) should be connected to CS in the block, we recommend using D5 as in the image.",
 sensor_rfid_desc4: "Although the RST and CS pins can be connected to other digital pins (like D17, D21, or D22), we recommend following the example for better compatibility.",
-
+rfid_libraries_desc: "To ensure the RC522 RFID reader blocks function correctly, it is necessary to install the <code>mfrc522</code> library, which enables communication and reading of RFID cards.",
+rfid_verify_library: "After clicking the <strong>“Install library”</strong> button, you can verify the installation by checking the console message: <code>RFID library mfrc522 installed successfully.</code>",
+rfid_verify_file: "You can also confirm the presence of the library by opening the <strong>Files</strong> tab. Double-click the refresh button and check if the file <code>mfrc522.py</code> appears in the board's memory.",
+sensor_rfid_desc6: "Below we see a basic program that reads an RFID card and displays the results in the console.",
 sensor_rfid_expl_title: "How does the example above work?",
 sensor_rfid_step1: "We initialize the module by informing all SPI connection pins.",
 sensor_rfid_step2: "We enter a continuous loop that constantly checks if a card is present.",
