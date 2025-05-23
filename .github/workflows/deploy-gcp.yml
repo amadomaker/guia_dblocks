@@ -6,7 +6,6 @@ on:
             - staging
 jobs:
     deploy:
-        name: Deploy
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -15,3 +14,29 @@ jobs:
               uses: google-github-actions/auth@v2
               with:
                   credentials_json: ${{ secrets.GCP_SA_KEY }}
+            - name: Configurar Google Cloud SDK
+              uses: google-github-actions/setup-gcloud@v2
+            - name: Configurar Docker para Artifact Registry
+              run: gcloud auth configure-docker us-central1-docker.pkg.dev
+            - name: Definir variáveis de ambiente
+              run: |
+                if [[ "${{ github.base_ref }}" == "main" ]]; then
+                  echo "BRANCH=main" >> $GITHUB_ENV
+                  echo "SERVICE_NAME=guia_prod" >> $GITHUB_ENV
+                else
+                  echo "BRANCH=staging" >> $GITHUB_ENV
+                  echo "SERVICE_NAME=guia_staging" >> $GITHUB_ENV
+                fi
+            - name: Build da Imagem Docker
+              run: |
+                docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/aplication/${{ env.SERVICE_NAME }}:${{ github.sha }} .
+            - name: Deploy da Imagem Docker
+              run: |
+                docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/aplication/${{ env.SERVICE_NAME }}:${{ github.sha }}
+            - name: Deploy para o Cloud Run
+              run: |
+                gcloud run deploy ${{ env.SERVICE_NAME }} \
+                  --image us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/aplication/${{ env.SERVICE_NAME }}:${{ github.sha }} \
+                  --region us-central1 \
+                  --platform managed \
+                  --allow-unauthenticated
