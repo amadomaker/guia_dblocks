@@ -113,6 +113,9 @@ var MSG = {
   var_loop_print: "Variáveis, loops e impressão",
   var_loop_print_description:
     "Nesta seção, vamos aprender como trabalhar com variáveis, estruturas de controle e imprimir dados na tela.",
+  logic_and_math: "Lógica e matemática",
+  logic_and_math_description:
+    "Nesta seção, vamos aprender a utilizar operadores lógicos e matemáticos para criar programas mais complexos e interessantes.",
   digital_input_output: "Entrada e saída digital",
   digital_io_description:
     "Descubra como funcionam as entradas e saídas digitais no Dblocks, aprendendo a conectar sensores e atuadores para criar projetos interativos.",
