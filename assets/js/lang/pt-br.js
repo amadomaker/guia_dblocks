@@ -544,5 +544,35 @@ buzzer_block_music_desc: "Com este bloco, você pode escolher músicas temática
 buzzer_block_user_title: "Observação: músicas criadas pelo usuário",
 buzzer_block_user_desc: "Existe ainda um bloco chamado “Reproduzir buzzer no pino com melodia”. Esse bloco será usado em uma seção própria dedicada à criação de músicas personalizadas, usando a aba Música da plataforma. Não abordaremos esse recurso aqui.",
 
+//Página Display
+display_section_title: "Display OLED SSD1306",
+display_intro1: "O display OLED SSD1306 é uma tela de pequeno porte com comunicação I2C, muito utilizada em projetos de eletrônica e robótica para exibir informações como textos, valores de sensores ou mensagens do sistema.",
+display_intro2: "Na plataforma, os blocos para controle do display estão localizados na categoria Telas. Antes de utilizá-lo, é necessário instalar a biblioteca ssd1306 clicando no bloco Instalar biblioteca: ssd1306.",
+display_connection_info: "A Amado Board possui um espaço dedicado para conexão do display, identificado na própria placa com o nome OLED DISPLAY. Esse conector utiliza comunicação I2C, e os pinos correspondentes são: SDA no pino D21 e SCL no pino D22. Basta encaixar o módulo OLED no local correto e iniciar a comunicação com esses pinos no bloco de inicialização.",
+display_blocks_info: "Para que o texto ou valor apareça corretamente na tela, é fundamental seguir a ordem correta dos blocos: 1) limpar o display, 2) escrever o conteúdo (mensagem ou número) e 3) atualizar o display. O bloco de atualização envia de fato o conteúdo para o display, sem ele nada será mostrado.",
+
+display_example1_title: "Exemplo 1: Escrever texto fixo no display",
+display_example1_desc: "Neste exemplo, mostramos como posicionar um texto estático na tela usando os blocos adequados. Esse é o primeiro passo para qualquer projeto com o display.",
+display_example1_steps: "O que esse programa faz?",
+display_example1_step1: "Inicializa o display com os pinos corretos (I2C: 1, SCL: 22, SDA: 21).",
+display_example1_step2: "Limpa o display para garantir que não haja resíduos de texto anterior.",
+display_example1_step3: "Escreve o texto \"Hello\" na posição desejada da tela.",
+display_example1_step4: "Atualiza o display para que o texto apareça.",
+
+display_example3_title: "Exemplo 2: Atualizar valor com loop",
+display_example3_desc: "Este exemplo demonstra como criar um contador que é atualizado constantemente no display. Ideal para aprender a manipular variáveis visuais.",
+display_example3_steps: "O que esse programa faz?",
+display_example3_step1: "Inicializa o display.",
+display_example3_step2: "Cria uma variável que aumenta de valor a cada segundo.",
+display_example3_step3: "Limpa o display, exibe o valor da variável e atualiza a tela continuamente.",
+
+display_example4_title: "Exemplo 3: Mostrar valor do sensor LDR",
+display_example4_desc: "Aqui mostramos como integrar o display com sensores. Neste caso, exibimos o valor da luminosidade lido por um sensor LDR.",
+display_example4_steps: "O que esse programa faz?",
+display_example4_step1: "Inicializa o display e configura a leitura do sensor LDR.",
+display_example4_step2: "Lê continuamente o valor de luminosidade ambiente.",
+display_example4_step3: "Mostra o valor na tela, atualizando a cada 500 milissegundos.",
+
+
 
 }
