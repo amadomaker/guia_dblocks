@@ -24,6 +24,12 @@
   "url": "chapters/var_loop_print.html"
   },
   {
+  "title_key": "logic_and_math",
+  "image": "logic_and_math3.png",
+  "description_key": "logic_and_math_description",
+  "url": "chapters/logic_and_math.html"
+  },
+  {
     "title_key": "digital_input_output",
     "image": "InOutDigital/Digital.gif",
     "description_key": "digital_io_description",
@@ -39,13 +45,13 @@
     "title_key": "sensors",
     "image": "sensores.png",
     "description_key": "sensors_description",
-    "url": ""
+    "url": "chapters/sensors.html"
   },
   {
     "title_key": "actuators",
     "image": "atuadores.png",
     "description_key": "actuators_description",
-    "url": ""
+    "url": "chapters/actuators.html"
   },
   {
     "title_key": "music",

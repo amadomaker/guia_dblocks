@@ -383,6 +383,158 @@ loop_break_explanation: "En este ejemplo, contamos del 1 al 10 pero detenemos el
 
 var_loop_print_end: "Todos los resultados de los ejemplos anteriores pueden verse en la consola de la plataforma.",
 
+// Página de Sensores
+sensor_title: "Sensores",
+sensor_section_title: "Sensores en Robótica",
+sensor_intro1: "Los sensores son componentes que permiten a los robots y sistemas embebidos percibir el entorno que los rodea. Capturan información como temperatura, luz, distancia, humedad, entre otros, y convierten estos datos en señales que pueden ser procesadas.",
+sensor_intro2: "En la plataforma, los bloques relacionados con sensores están disponibles en la categoría <strong>Sensores</strong>.",
+
+// Sección Sensor Infrarrojo
+sensor_ir_title: "Sensor Infrarrojo (IR)",
+
+sensor_ir_desc1: "El sensor infrarrojo (IR) es un componente digital simple y muy utilizado en la robótica, especialmente en proyectos como robots seguidores de línea. Detecta la presencia o ausencia de objetos mediante la reflexión de luz infrarroja, devolviendo valores digitales: <strong>1</strong> cuando no hay reflexión y <strong>0</strong> cuando detecta un objeto cercano.",
+
+sensor_ir_desc2: "Este sensor tiene <strong>3 pines</strong> (VCC, GND y Señal) y puede conectarse fácilmente a la <strong>Amado Board</strong> utilizando los pines de entrada digital como <code>D35</code>, <code>D39</code>, <code>D36</code> y <code>D34</code>. La placa ya cuenta con un espacio adecuado para una conexión directa, facilitando el montaje.",
+
+sensor_ir_desc3: "Además de robots seguidores de línea, el sensor IR puede ser usado en sistemas de conteo, barreras de seguridad, detección de presencia de objetos y otras aplicaciones que requieren detección simple de obstáculos.",
+
+sensor_ir_example_title: "Ejemplo: lectura continua del sensor IR",
+
+sensor_ir_steps: "¿Qué hace este programa?",
+
+
+// Sensor de Temperatura y Humedad
+sensor_dht_title: "Sensor de Temperatura y Humedad DHT11/22",
+sensor_dht_desc1: "El sensor DHT11/22 se utiliza para medir dos variables ambientales importantes: <strong>temperatura</strong> y <strong>humedad relativa</strong>. Es muy común en proyectos de automatización, estaciones meteorológicas y control ambiental.",
+sensor_dht_desc2: "Para que el sensor funcione correctamente con la <strong>Amado Board</strong>, debe estar conectado a un <strong>pin digital</strong>. Recomendamos usar los pines D5, D15, D16, D17, D18, D19, D21, D22 o D23. En este ejemplo, usaremos el pin <code>D17</code>.",
+sensor_dht_desc3: "¿Cómo funciona el ejemplo anterior?",
+sensor_dht_step1: "Inicializamos el sensor DHT11/22 e indicamos el pin de conexión.",
+sensor_dht_step2: "Entramos en un bucle que se repite continuamente mientras el sistema esté encendido.",
+sensor_dht_step3: "En cada repetición, se actualizan y almacenan las lecturas de <strong>temperatura</strong> y <strong>humedad</strong> en variables.",
+sensor_dht_step4: "Estos valores se muestran en la consola usando el bloque <code>imprime</code>.",
+sensor_dht_step5: "Una pausa de 1 segundo entre lecturas es muy importante para asegurar el buen funcionamiento del sensor.",
+
+// Sensor Ultrasónico
+sensor_ultra_title: "Sensor de Distancia Ultrasónico HCSR04",
+sensor_ultra_desc1: "El sensor ultrasónico HCSR04 se utiliza para medir distancias con precisión utilizando ondas sonoras. Envía una señal sonora (trigger) y mide el tiempo hasta que el eco regresa tras rebotar en un objeto. Con base en este tiempo, se calcula la distancia.",
+sensor_ultra_desc2: "La <strong>Amado Board</strong> tiene un espacio específico para conectar este sensor directamente a los pines <code>D17</code> (trigger) y <code>D34</code> (echo), facilitando su uso en proyectos de robótica.",
+sensor_ultra_desc3: "¿Cómo funciona el ejemplo anterior?",
+sensor_ultra_step1: "Inicializamos el sensor especificando los pines trigger (D17) y echo (D34), además del tiempo de espera.",
+sensor_ultra_step2: "Usamos un <strong>bucle continuo</strong> para medir la distancia repetidamente.",
+sensor_ultra_step3: "En cada repetición, el valor de la distancia se almacena en una variable.",
+sensor_ultra_step4: "El valor se imprime en la consola para monitorear la lectura en tiempo real.",
+sensor_ultra_step5: "Agregamos una pausa de 500 milisegundos para evitar lecturas demasiado rápidas y asegurar la estabilidad.",
+sensor_ultra_note: "Nota: Las lecturas pueden variar, mostrando valores muy altos o incluso -1. Para mejorar la fiabilidad, implementa un filtro simple que descarte lecturas fuera del rango esperado.",
+
+// Módulo RFID
+sensor_rfid_title: "Lector RFID RC522",
+sensor_rfid_desc1: "El RFID (Identificación por Radiofrecuencia) es una tecnología usada para identificar objetos o personas mediante tarjetas o etiquetas que emiten señales. Es ampliamente utilizada en sistemas de acceso, control de asistencia y rastreo de activos.",
+sensor_rfid_desc2: "El módulo utilizado en este ejemplo es el RC522, que se comunica por SPI. Lee el UID (identificador único) de las tarjetas RFID y también puede acceder a la memoria interna de la tarjeta para leer y escribir datos.",
+sensor_rfid_desc3: "La conexión del módulo a la Amado Board debe seguir correctamente la asignación de pines. Algunos nombres coinciden, otros son distintos entre el módulo, el bloque y la placa. Aquí la correspondencia recomendada:",
+sensor_rfid_map1: "3.3V → 3.3V",
+sensor_rfid_map2: "GND → GND",
+sensor_rfid_map3: "SCK (módulo) = SCK en el bloque = D18 / CLK en la placa",
+sensor_rfid_map4: "MOSI = MOSI en el bloque = D23 / MOSI en la placa",
+sensor_rfid_map5: "MISO = MISO en el bloque = D19 / MISO en la placa",
+sensor_rfid_map6: "RST = RST en el bloque = D22 / SCL en la placa",
+sensor_rfid_map7: "SDA (del módulo) debe conectarse al CS en el bloque, se recomienda usar D5 como en la imagen.",
+sensor_rfid_desc4: "Aunque los pines RST y CS se pueden conectar a otros pines digitales (como D17, D21 o D22), se recomienda seguir el ejemplo para mayor compatibilidad.",
+rfid_libraries_desc: "Para que los bloques del lector RFID RC522 funcionen correctamente, es necesario instalar la biblioteca <code>mfrc522</code>, que permite la comunicación y lectura de tarjetas RFID.",
+rfid_verify_library: "Después de hacer clic en el botón <strong>“Instalar biblioteca”</strong>, puedes verificar la instalación mediante el mensaje en la consola: <code>Instalación de la biblioteca mfrc522 completada.</code>",
+rfid_verify_file: "También puedes confirmar la presencia de la biblioteca abriendo la pestaña <strong>Archivos</strong>. Haz doble clic en el botón de actualizar y verifica si el archivo <code>mfrc522.py</code> aparece listado en la memoria de la placa.",
+sensor_rfid_desc6: "A continuación, vemos un programa básico que lee una tarjeta RFID y muestra los resultados en la consola.",
+sensor_rfid_expl_title: "¿Cómo funciona el ejemplo anterior?",
+sensor_rfid_step1: "Inicializamos el módulo indicando todos los pines de conexión SPI.",
+sensor_rfid_step2: "Entramos en un bucle continuo que verifica constantemente si hay una tarjeta presente.",
+sensor_rfid_step3: "Si se detecta una tarjeta (estado = 0), se muestra un mensaje en la consola y se imprime el UID.",
+sensor_rfid_step4: "Incluso cuando no hay tarjeta, se muestran el estado y el tipo de etiqueta para facilitar el depurado.",
+sensor_rfid_step5: "Agregamos un retardo de 500 milisegundos para evitar repeticiones muy rápidas.",
+sensor_rfid_console_desc: "A continuación puedes ver cómo aparecen los resultados en la consola de la plataforma, mostrando el estado, tipo de etiqueta y UID cuando se detecta una tarjeta.",
+
+// Página de Actuadores
+// Sección de Actuadores
+actuator_section_title: "Actuadores",
+actuator_introduction: "Actuadores en la robótica",
+actuator_intro1: "Los actuadores son dispositivos que reciben comandos de un sistema y realizan una acción física en el mundo real. Transforman señales eléctricas en movimiento, sonido, luz, calor u otras formas de respuesta.",
+actuator_intro2: "En la robótica y la automatización, los actuadores son esenciales para interactuar con el entorno, permitiendo encender luces, activar motores, abrir válvulas, hacer sonar timbres, entre otros.",
+actuator_intro3: "En la plataforma, los bloques de actuadores están disponibles en la categoría <strong>Salidas y Actuadores</strong>. Cada tipo de actuador tendrá sus propios bloques con comandos específicos.",
+
+// Sección Módulo Relé
+relay_title: "Módulo Relé",
+relay_desc1: "El relé es un componente que funciona como un interruptor controlado electrónicamente. Permite encender o apagar dispositivos de mayor potencia (como lámparas, ventiladores o electrodomésticos) utilizando una señal digital de la placa.",
+relay_desc2: "En el bloque de relé, puedes elegir el pin al que está conectado y el comando deseado: <strong>encender</strong> o <strong>apagar</strong>. Es importante recordar que el módulo relé debe estar correctamente alimentado (generalmente con 5V y GND), y que la carga conectada debe estar aislada y bien conectada para mayor seguridad.\n\nImportante: muchos módulos relé se activan con señal 0 (nivel lógico bajo). Es decir, al usar el comando 'apagar' en el bloque, el relé se activará (encendiendo el dispositivo). Por el contrario, el comando 'encender' en el bloque desactivará el relé (apagando el dispositivo).",
+relay_example_title: "Ejemplo: encender una lámpara con retardo",
+relay_example_desc: "En el ejemplo siguiente, usamos el bloque de relé para simular el control de una lámpara. Al iniciar el programa, el relé se activa (simulando que la lámpara se enciende), y después de 3 segundos se apaga. Este tipo de control puede utilizarse en aplicaciones como temporizadores, simulación de presencia o automatización del hogar.",
+relay_example_note: "Este ejemplo simple de temporizador también podría utilizarse dentro de una <strong>condición</strong> (por ejemplo, al detectar una tarjeta RFID, presencia, horario, etc.) para tomar decisiones automáticas en el programa.",
+
+// Sección Servo Motor
+servo_title: "Servo Motor",
+servo_desc1: "El servo motor es un actuador muy utilizado en proyectos de robótica y automatización. Permite posicionar un eje en ángulos específicos, generalmente entre 0 y 180 grados. Es ideal para controlar puertas, brazos mecánicos, palancas, ejes u otros sistemas que requieren movimientos precisos y controlados.",
+servo_desc2: "En la plataforma, el control del servo se realiza en dos pasos: primero usamos el bloque <strong>Iniciar servo motor</strong> para definir el pin de conexión y el nombre del servo, y luego usamos el bloque <strong>Mover servo</strong> para indicar el ángulo deseado. Es posible utilizar nombres personalizados (como servo1, servo2, etc.), permitiendo el control de múltiples servos en un mismo proyecto.",
+servo_desc3: "La <strong>Amado Board</strong> posee un lugar específico para conectar servos: los pines <strong>D15</strong> y <strong>D16</strong> están identificados como <code>SERVO A</code> y <code>SERVO B</code> respectivamente. Junto a estos pines hay un conjunto de 3 pines rotulados como <code>3.3V</code>, <code>VS</code> y <code>5V</code>. Para que el servo reciba alimentación correctamente, es necesario <strong>hacer un puente entre el pin VS y el pin 5V</strong>. Esto asegura que el pin de señal tenga energía para mover el servo con estabilidad.",
+servo_desc4: "Los servos suelen tener cables con colores estándar: <strong>marrón</strong> (GND), <strong>rojo</strong> (VCC) y <strong>amarillo</strong> (señal). La placa ya posee el espacio adecuado para conectar estos tres pines directamente, facilitando la instalación.",
+
+servo_basic_title: "Ejemplo 1: control de posiciones fijas",
+servo_basic_desc: "Este ejemplo mueve el servo a tres posiciones fijas: 0°, 90° y 180°, con un pequeño intervalo entre los movimientos. Es ideal para demostrar el funcionamiento básico del servo y cómo controlar los ángulos directamente.",
+servo_basic_steps: "¿Qué hace este programa?",
+servo_basic_step1: "Inicializa el servo en el pin D15.",
+servo_basic_step2: "Mueve el servo al ángulo 0°, espera 1 segundo.",
+servo_basic_step3: "Mueve al ángulo 90°, luego a 180°, con pausas entre cada posición.",
+servo_basic_step4: "El ciclo se repite continuamente.",
+
+servo_smooth_title: "Ejemplo 2: movimiento continuo con bucle",
+servo_smooth_desc: "En este ejemplo usamos un <strong>bucle for</strong> para mover suavemente el servo de 0° a 180° y regresar. Esto crea un movimiento fluido y continuo, útil para simulaciones de radar, barridos o movimientos controlados en un brazo robótico.",
+servo_smooth_steps: "¿Qué hace este programa?",
+servo_smooth_step1: "Inicializa el servo y entra en un bucle continuo.",
+servo_smooth_step2: "Utiliza un bucle para moverse de 0° a 180°, esperando 10 ms en cada paso.",
+servo_smooth_step3: "Después de una pausa, repite el movimiento de 180° a 0°.",
+
+servo_ultra_title: "Ejemplo 3: control mediante sensor ultrasónico",
+servo_ultra_desc: "Aquí combinamos el servo con un <strong>sensor ultrasónico</strong> para simular una <strong>puerta automática</strong> o una barrera de estacionamiento. Si la distancia es menor a 100mm, el servo abre la puerta (ángulo 90°). En caso contrario, permanece cerrada (ángulo 0°).",
+servo_ultra_tip: "La comparación se realiza con el bloque <code>si</code>, que puede ampliarse con la opción <code>sino</code>, activada desde el engranaje del bloque. La operación <code><</code> utilizada está disponible en la categoría <strong>Matemáticas → Lógica</strong>.",
+servo_ultra_steps: "¿Qué hace este programa?",
+servo_ultra_step1: "Inicializa el servo y el sensor ultrasónico.",
+servo_ultra_step2: "Lee continuamente la distancia (en milímetros).",
+servo_ultra_step3: "Si la distancia es menor a 100 mm, el servo se mueve a 90°.",
+servo_ultra_step4: "En caso contrario, el servo vuelve a 0°.",
+servo_ultra_step5: "La lectura se realiza cada 150 ms.",
+
+// Sección Motor DC
+motor_title: "Motor DC",
+motor_desc1: "Los motores de corriente continua (DC) se utilizan ampliamente en proyectos de robótica para mover vehículos, brazos mecánicos, cintas transportadoras, entre otros. Permiten controlar la rotación y el sentido mediante señales digitales.",
+motor_desc2: "En la plataforma, controlamos el motor DC usando tres pines: <strong>PWM</strong> para la potencia (velocidad) y <strong>DIR1</strong> y <strong>DIR2</strong> para la dirección. El bloque <code>Iniciar motor DC</code> permite seleccionar los pines y dar un <strong>nombre personalizado</strong> al motor, como motor1, motor2, etc. Esto permite controlar múltiples motores de forma independiente.",
+motor_desc3: "La <strong>Amado Board</strong> ya cuenta con un espacio físico adecuado con bornes de tornillo azules en los laterales, facilitando la conexión directa de hasta dos motores. Estos bornes están conectados internamente a los pines PWM, DIR1 y DIR2.",
+motor_desc4: "La velocidad del motor se controla con valores entre <code>0</code> (apagado) y <code>1023</code> (potencia máxima). La dirección se define con el bloque de dirección: <code>1</code> hacia adelante, <code>2</code> hacia atrás y <code>0</code> para detener. También hay un bloque <strong>Detener motor</strong> que puede usarse en cualquier momento para detener el movimiento.",
+
+motor_example_title: "Ejemplo: motor alternando dirección",
+motor_example_desc: "El siguiente ejemplo demuestra el uso básico del motor DC alternando su dirección. El motor gira en un sentido por unos segundos, se detiene, luego gira en sentido contrario.",
+motor_example_steps: "¿Qué hace este programa?",
+motor_example_step1: "Inicializa el motor usando los pines PWM, DIR1 y DIR2.",
+motor_example_step2: "Configura la máxima potencia (1023) y gira el motor hacia adelante (dirección 1).",
+motor_example_step3: "Después de 2 segundos, detiene el motor y espera otros 2 segundos.",
+motor_example_step4: "Gira el motor en sentido contrario (dirección 2), espera y se detiene nuevamente.",
+motor_example_step5: "El ciclo se repite de forma continua.",
+motor_extra_note: "Además de pruebas básicas, el control de motores DC es fundamental en proyectos como robots seguidores de línea o que evitan obstáculos. En estos casos, los sensores determinan el comportamiento del motor, permitiendo que el robot se mueva de forma autónoma según el entorno.",
+
+// Sección Buzzer
+buzzer_title: "Zumbador (Buzzer)",
+buzzer_intro1: "El zumbador, también conocido como buzzer, es un actuador que emite sonidos simples o melodías. Se puede utilizar para alarmas, alertas, confirmaciones o incluso para reproducir música temática. La placa Amado Board incluye un buzzer integrado en el pin D4, listo para usarse.",
+buzzer_libraries_title: "Instalación de bibliotecas",
+buzzer_libraries_desc: "Para que los bloques de sonido y música funcionen correctamente, es necesario instalar dos bibliotecas:",
+buzzer_verify_library: "Después de hacer clic en “Instalar biblioteca”, puedes verificar la instalación en la consola: Instalación de la biblioteca rtttl finalizada.",
+buzzer_verify_file: "También puedes confirmar la presencia de la biblioteca desde la pestaña Archivos. Haz doble clic en el botón de actualizar y verifica si aparecen los archivos <code>rtttl.py</code> y <code>songs.py</code>.",
+
+buzzer_block_freq_title: "1. Reproducir sonido por frecuencia",
+buzzer_block_freq_desc: "Este bloque reproduce un sonido con una frecuencia específica (en Hz) durante un tiempo determinado (en segundos). Por ejemplo, 1000 Hz genera un tono agudo. Usar 0 o -1 hace que el sonido sea continuo.",
+
+buzzer_block_note_title: "2. Reproducir sonido por nota musical",
+buzzer_block_note_desc: "En este bloque puedes seleccionar una nota musical (como D3 o B1) y definir la duración en segundos. Ideal para crear melodías manualmente.",
+
+buzzer_block_music_title: "3. Reproducir música predefinida",
+buzzer_block_music_desc: "Puedes seleccionar canciones temáticas integradas como Super Mario, Star Wars o Picaxe. Solo elige el nombre desde la lista.",
+
+buzzer_block_user_title: "Nota: melodías creadas por el usuario",
+buzzer_block_user_desc: "Existe un bloque llamado “Reproducir buzzer en el pin con melodía”. Este bloque se usa junto con la pestaña Música para reproducir canciones compuestas por el usuario. Será explicado en una sección específica más adelante.",
 
 
 };

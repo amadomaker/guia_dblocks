@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="actuator_section_title">Atuadores</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/chapters.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="../assets/images/logo-dblocks.svg"
+        alt="Logo Dblocks"
+        class="logo-dblocks"
+      />
+
+      <nav>
+        <ul class="container-nav">
+          <li><a href="/" data-translate="home">Início</a></li>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container-button-lang">
+        <div class="container-lang">
+          <select id="languageMenu"></select>
+          <img
+            id="languageFlag"
+            alt="Language Flag"
+            style="width: 32px; height: 20px"
+          />
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
+          <li>
+            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
+          </li>
+          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main-chapters">
+      <aside class="container-chapters" id="sidebar">
+        <div class="header-chapters">
+          <h4 data-translate="in_this_section">Seções</h4>
+          <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
+        </div>
+        <div id="chapters-list"></div>
+      </aside>
+
+      <section class="content">
+        <h1 data-translate="actuator_section_title"></h1>
+
+        <div class="chapter-index">
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
+          <ul>
+            <li><a href="#actuator-introduction" data-translate="actuator_introduction">Introdução</a></li>
+            <li><a href="#module-rele" data-translate="relay_title"></a></li>
+            <li><a href="#servo-motor" data-translate="servo_title"></a></li>
+            <li><a href="#motor-dc" data-translate="motor_title"></a></li>
+            <li><a href="#buzzer" data-translate="buzzer_title"></a></li>
+          </ul>
+        </div>
+
+        <h2 id="actuator-introduction" data-translate="actuator_introduction">Atuadores</h2>
+
+        <p data-translate="actuator_intro1">
+          Atuadores são dispositivos que recebem comandos de um sistema e realizam uma ação física no mundo real. Eles transformam sinais elétricos em movimento, som, luz, calor ou outras formas de resposta. 
+        </p>
+
+        <p data-translate="actuator_intro2">
+          Na robótica e na automação, os atuadores são essenciais para interagir com o ambiente, permitindo acender lâmpadas, acionar motores, abrir válvulas, tocar buzinas, entre outros.
+        </p>
+
+        <p data-translate="actuator_intro3">
+          Na plataforma, os blocos de atuadores estão disponíveis na categoria <strong>Saídas e Atuadores</strong>. Cada tipo de atuador terá seus próprios blocos com comandos específicos.
+        </p>
+
+        <h2 id="module-rele" data-translate="relay_title">Módulo Relé</h2>
+
+        <p data-translate="relay_desc1">
+          O relé é um componente que funciona como um interruptor controlado eletronicamente. Ele permite ligar ou desligar dispositivos de maior potência (como lâmpadas, ventiladores ou eletrodomésticos) usando um sinal digital da placa.
+        </p>
+
+        <p data-translate="relay_desc2">
+          No bloco do relé, você pode escolher o pino ao qual ele está conectado e o comando desejado: <strong>ligar</strong> ou <strong>desligar</strong>. É importante lembrar que o módulo relé deve ser alimentado corretamente (geralmente com 5V e GND), e que a carga conectada precisa estar isolada e bem conectada para segurança.<br><br>
+          <strong>Importante:</strong> muitos módulos relé são acionados com sinal <code>0</code> (nível lógico baixo). Ou seja, ao usar o comando <code>desligar</code> no bloco, o relé será ativado (ligando o dispositivo). Já o comando <code>ligar</code> no bloco desativa o relé (desligando o dispositivo).
+        </p>
+
+
+        <img 
+          src="../assets/images/Actuators/rele_bloco.png"
+          width="380px"
+          alt="Bloco de controle do relé"
+        />
+
+        <h4 data-translate="relay_example_title">Exemplo: ligar uma lâmpada com atraso</h4>
+
+        <p data-translate="relay_example_desc">
+          No exemplo abaixo, usamos o bloco de relé para simular o controle de uma lâmpada. Ao iniciar o programa, o relé é ligado (simulando a lâmpada acendendo), e após 3 segundos ele é desligado. Esse tipo de controle pode ser usado em aplicações como temporizadores, simulação de presença ou automação residencial.
+        </p>
+
+      <img 
+        src="../assets/images/Actuators/rele_temporizador.png"
+        width="500px"
+        alt="Exemplo de controle temporizado com relé"
+      />
+
+      <p data-translate="relay_example_note">
+        Esse exemplo simples de temporizador também poderia ser usado dentro de uma <strong>condição</strong> (por exemplo, ao detectar um cartão RFID, presença, horário, etc.) para tomar decisões automáticas no programa.
+      </p>
+      <h2 id="servo-motor" data-translate="servo_title">Servo Motor</h2>
+
+      <p data-translate="servo_desc1">
+        O servo motor é um atuador muito utilizado em projetos de robótica e automação. Ele permite posicionar um eixo em ângulos específicos, geralmente entre 0 e 180 graus. Isso é ideal para controlar portas, braços mecânicos, alavancas, eixos ou sistemas que precisam de movimentos precisos e controlados.
+      </p>
+
+      <p data-translate="servo_desc2">
+        Na plataforma, o controle do servo é feito em dois passos: primeiro usamos o bloco <strong>Iniciar servo motor</strong> para definir o pino de conexão e o nome do servo, e depois usamos o bloco <strong>Mover servo</strong> para indicar o ângulo desejado. É possível usar nomes personalizados (como servo1, servo2 etc.), permitindo o controle de múltiplos servos no mesmo projeto.
+      </p>
+
+      <p data-translate="servo_desc3">
+        A <strong>Amado Board</strong> possui um local específico para conectar servo motores: os pinos <strong>D15</strong> e <strong>D16</strong> estão identificados como <code>SERVO A</code> e <code>SERVO B</code>, respectivamente. Ao lado desses pinos, existe um conjunto de 3 pinos com as etiquetas <code>3.3V</code>, <code>VS</code> e <code>5V</code>.
+      </p>
+
+      <p data-translate="servo_desc4">
+        Os servos costumam ter fios com cores padrão: <strong>marrom</strong> (GND), <strong>vermelho</strong> (VCC) e <strong>amarelo</strong> (sinal de dados). A placa já possui o espaço correto para encaixe direto desses três pinos, facilitando a instalação.
+      </p>
+
+      <img 
+        src="../assets/images/Actuators/servo_blocos.png" 
+        width="450px" 
+        alt="Blocos básicos de controle do servo"
+      />
+
+      <h3 data-translate="servo_basic_title">Exemplo 1: controle de posições fixas</h3>
+
+      <p data-translate="servo_basic_desc">
+        Este exemplo movimenta o servo para três posições fixas: 0°, 90° e 180°, com um pequeno intervalo entre os movimentos. É ideal para demonstrar o funcionamento básico do servo e como controlar ângulos diretamente.
+      </p>
+
+      <img 
+        src="../assets/images/Actuators/servo_exemplo_basico.png" 
+        width="480px" 
+        alt="Exemplo simples de controle do servo motor"
+      />
+
+      <h4 style="margin-top: 20px;" data-translate="servo_basic_steps">O que esse programa faz?</h4>
+      <ul style="margin-bottom: 30px;">
+        <li data-translate="servo_basic_step1">Inicializa o servo no pino D15.</li>
+        <li data-translate="servo_basic_step2">Move o servo para o ângulo 0°, espera 1 segundo.</li>
+        <li data-translate="servo_basic_step3">Move para 90°, depois para 180°, com pausas entre cada posição.</li>
+        <li data-translate="servo_basic_step4">O ciclo se repete continuamente.</li>
+      </ul>
+
+      <h3 data-translate="servo_smooth_title">Exemplo 2: movimento contínuo com laço</h3>
+
+      <p data-translate="servo_smooth_desc">
+        Neste exemplo usamos um <strong>laço for</strong> para movimentar suavemente o servo de 0° até 180° e voltar. Isso cria um movimento fluido e contínuo, útil para simulações de radar, varredura ou movimentos controlados em braço robótico.
+      </p>
+
+      <img 
+        src="../assets/images/Actuators/servo_laco_for.png" 
+        width="500px" 
+        alt="Movimento contínuo de servo com loop"
+      />
+
+      <h4 style="margin-top: 20px;" data-translate="servo_smooth_steps">O que esse programa faz?</h4>
+      <ul style="margin-bottom: 30px;">
+        <li data-translate="servo_smooth_step1">Inicializa o servo e entra em um loop contínuo.</li>
+        <li data-translate="servo_smooth_step2">Usa um laço para mover de 0° a 180°, esperando 10 ms a cada passo.</li>
+        <li data-translate="servo_smooth_step3">Após uma pausa, repete o movimento de 180° a 0°.</li>
+      </ul>
+
+      <h3 data-translate="servo_ultra_title">Exemplo 3: controle por sensor ultrassônico</h3>
+
+      <p data-translate="servo_ultra_desc">
+        Aqui combinamos o servo com um <strong>sensor ultrassônico</strong> para simular uma <strong>porta automática</strong> ou cancela de shopping. Se a distância for menor que 100mm, o servo abre a porta (ângulo 90°). Caso contrário, ela permanece fechada (ângulo 0°).
+      </p>
+
+      <p data-translate="servo_ultra_tip">
+        A comparação é feita com o bloco <code>se</code> que pode ser expandido com a opção <code>senão</code>, ativada pela engrenagem do bloco. A operação <code>&lt;</code> usada na condição está disponível na categoria <strong>Matemática → Lógica</strong>.
+      </p>
+
+      <img 
+        src="../assets/images/Actuators/servo_ultrassonico.png" 
+        width="520px" 
+        alt="Servo controlado por sensor de distância"
+      />
+
+      <h4 style="margin-top: 20px;" data-translate="servo_ultra_steps">O que esse programa faz?</h4>
+      <ul style="margin-bottom: 30px;">
+        <li data-translate="servo_ultra_step1">Inicializa o servo e o sensor ultrassônico.</li>
+        <li data-translate="servo_ultra_step2">Lê a distância continuamente (em milímetros).</li>
+        <li data-translate="servo_ultra_step3">Se a distância for menor que 100 mm, o servo se move para 90°.</li>
+        <li data-translate="servo_ultra_step4">Caso contrário, o servo volta para 0°.</li>
+        <li data-translate="servo_ultra_step5">A leitura é feita a cada 150 ms.</li>
+      </ul>
+
+      <h2 id="motor-dc" data-translate="motor_title">Motor DC</h2>
+
+      <p data-translate="motor_desc1">
+        Os motores DC (corrente contínua) são muito utilizados em projetos de robótica para movimentar carrinhos, braços mecânicos, esteiras, entre outros. Eles permitem controle de rotação e sentido através de sinais digitais.
+      </p>
+
+      <p data-translate="motor_desc2">
+        Na plataforma, controlamos o motor DC usando três pinos: <strong>PWM</strong> para a potência (velocidade) e <strong>DIR1</strong> e <strong>DIR2</strong> para a direção. O bloco <code>Iniciar motor DC</code> permite selecionar os pinos e dar um <strong>nome personalizado</strong> ao motor, como motor1, motor2, etc. Isso permite controlar vários motores de forma independente.
+      </p>
+
+      <p data-translate="motor_desc3">
+        A <strong>Amado Board</strong> já possui um espaço físico apropriado com bornes de parafuso azuis nas laterais da placa, facilitando a ligação de até dois motores diretamente. Esses bornes estão conectados aos pinos PWM, DIR1 e DIR2 da placa.
+      </p>
+
+      <p data-translate="motor_desc4">
+        A velocidade do motor é controlada com valores entre <code>0</code> (desligado) e <code>1023</code> (máxima potência). A direção é definida com o bloco de direção: <code>1</code> para frente, <code>2</code> para trás, e <code>0</code> para parada. Também há o bloco <strong>Parar motor</strong> que pode ser usado para interromper o movimento a qualquer momento.
+      </p>
+
+      <img 
+        src="../assets/images/Actuators/motor_blocos.png" 
+        width="450px" 
+        alt="Blocos de controle do motor DC"
+      />
+
+      <h3 data-translate="motor_example_title">Exemplo: motor alternando direção</h3>
+
+      <p data-translate="motor_example_desc">
+        O exemplo abaixo demonstra o uso básico do motor DC alternando sua direção. O motor gira para um lado por alguns segundos, para, depois gira para o outro lado. Esse tipo de controle é útil em esteiras, robôs com rodas, mecanismos de movimentação ou estruturas que precisam inverter o movimento regularmente.
+      </p>
+
+      <img 
+        src="../assets/images/Actuators/motor_frente_tras.png" 
+        width="480px" 
+        alt="Exemplo de motor DC alternando direção"
+      />
+
+      <h4 style="margin-top: 20px;" data-translate="motor_example_steps">O que esse programa faz?</h4>
+      <ul style="margin-bottom: 30px;">
+        <li data-translate="motor_example_step1">Inicializa o motor usando pinos PWM, DIR1 e DIR2.</li>
+        <li data-translate="motor_example_step2">Define a potência máxima (1023) e gira o motor para frente (direção 1).</li>
+        <li data-translate="motor_example_step3">Após 2 segundos, para o motor, espera mais 2 segundos.</li>
+        <li data-translate="motor_example_step4">Gira o motor na direção oposta (direção 2), espera 2 segundos e para novamente.</li>
+        <li data-translate="motor_example_step5">O ciclo se repete continuamente.</li>
+      </ul>
+      <p data-translate="motor_extra_note" style="margin-top: 10px;">
+        Além de testes básicos, o controle de motores DC é essencial em projetos de robótica como <strong>robôs seguidores de linha</strong> ou <strong>robôs que desviam de obstáculos</strong>. Nestes casos, sensores determinam o comportamento dos motores, permitindo que o robô se mova de forma autônoma conforme o ambiente.
+      </p>
+
+      <h2 id="buzzer" data-translate="buzzer_title">Campainha (Buzzer)</h2>
+
+      <p data-translate="buzzer_intro1">
+        A campainha, também conhecida como <strong>buzzer</strong>, é um atuador que emite sons simples ou melodias. Pode ser utilizada para alarmes, avisos sonoros, confirmações de eventos ou até mesmo para tocar músicas temáticas. A <strong>Amado Board</strong> já possui um buzzer integrado conectado ao pino <code>D4</code>, que pode ser usado diretamente.
+      </p>
+
+      <h3 data-translate="buzzer_libraries_title">Instalação das bibliotecas</h3>
+      <p data-translate="buzzer_libraries_desc">
+        Para que os blocos de sons e músicas funcionem corretamente, é necessário instalar duas bibliotecas:
+      </p>
+      <ul>
+        <li><code>rtttl</code>: usada para reprodução de frequências e notas musicais.</li>
+        <li><code>songs</code>: permite executar músicas prontas como Super Mario e Star Wars.</li>
+      </ul>
+
+      <p data-translate="buzzer_verify_library">
+        Após clicar no botão <strong>“Instalar biblioteca”</strong>, você pode verificar a instalação pela mensagem no console: <code>Instalação da biblioteca rtttl concluída.</code>
+      </p>
+      <img src="../assets/images/Actuators/buzzer_console.png" width="550px" alt="Instalação da biblioteca no console" />
+
+      <p data-translate="buzzer_verify_file">
+        Também é possível confirmar a presença da biblioteca abrindo a aba <strong>Arquivos</strong>. Clique duas vezes no botão de atualizar e verifique se o arquivo <code>rtttl.py e songs.py</code> aparece listado na memória da placa.
+      </p>
+      <img src="../assets/images/Actuators/buzzer_gerenciador_arquivos.png" width="270px" alt="Verificando a presença da biblioteca" />
+
+      <h3 data-translate="buzzer_block_freq_title">1. Reproduzir som por frequência</h3>
+      <p data-translate="buzzer_block_freq_desc">
+        Este bloco permite gerar um som especificando uma <strong>frequência</strong> (em Hertz) e uma <strong>duração</strong> (em segundos). Por exemplo, 1000 Hz gera um som agudo. Se você usar <code>0</code> ou <code>-1</code> como tempo, o som será contínuo até que outro comando seja executado.
+      </p>
+      <img src="../assets/images/Actuators/buzzer_frequencia.png" width="510px" alt="Exemplo de reprodução por frequência" />
+
+      <h3 data-translate="buzzer_block_note_title">2. Reproduzir som por nota musical</h3>
+      <p data-translate="buzzer_block_note_desc">
+        Neste bloco, você pode escolher uma <strong>nota musical</strong> (como D3, B1 etc.) e definir por quantos segundos ela será reproduzida. Isso é ideal para criar melodias simples manualmente.
+      </p>
+      <img src="../assets/images/Actuators/buzzer_notas.png" width="510px" alt="Exemplo de reprodução por nota" />
+
+      <h3 data-translate="buzzer_block_music_title">3. Reproduzir música pronta</h3>
+      <p data-translate="buzzer_block_music_desc">
+        Com este bloco, você pode escolher músicas temáticas pré-definidas, como <strong>Super Mario</strong>, <strong>Star Wars</strong> ou <strong>Picaxe</strong>. Basta selecionar o nome da música na lista.
+      </p>
+      <img src="../assets/images/Actuators/buzzer_musica.png" width="430px" alt="Exemplo de reprodução de música" />
+
+      <h3 data-translate="buzzer_block_user_title">Observação: músicas criadas pelo usuário</h3>
+      <p data-translate="buzzer_block_user_desc">
+        Existe ainda um bloco chamado <strong>“Reproduzir buzzer no pino com melodia”</strong>. Esse bloco será usado em uma seção própria dedicada à criação de músicas personalizadas, usando a aba <strong>Música</strong> da plataforma. Não abordaremos esse recurso aqui.
+      </p>
+
+      </section>
+    </main>
+
+    <script src="../assets/js/lang/translation.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/chapters.js"></script>
+  </body>
+</html>
