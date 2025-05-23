@@ -1,7 +1,9 @@
 name: Deploy no GCP
 
 on:
-    workflow_dispatch:
+    push:
+        branches:
+            - staging
 jobs:
     deploy:
         name: Deploy
@@ -12,4 +14,4 @@ jobs:
             - name: Autenticate to GCP
               uses: google-github-actions/auth@v2
               with:
-                  credentials: ${{ secrets.GCP_SA_KEY }}
+                  credentials_json: ${{ secrets.GCP_SA_KEY }}
