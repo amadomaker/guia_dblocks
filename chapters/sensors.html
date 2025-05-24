@@ -18,12 +18,38 @@
       <nav>
         <ul class="container-nav">
           <li><a href="/" data-translate="home">Início</a></li>
-           
-          <li>
-            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
-          </li>
-          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
 
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
         </ul>
       </nav>
 
@@ -46,12 +72,37 @@
 
       <div class="mobile-menu" id="mobile-menu">
         <ul>
-           
           <li>
-            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
           </li>
-          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
-
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
         </ul>
       </div>
     </header>
@@ -71,185 +122,334 @@
         <div class="chapter-index">
           <h3 data-translate="in_this_section">Nesta Seção</h3>
           <ul>
-            <li><a href="#sensors-introduction" data-translate="sensor_section_title">Introdução</a></li>
+            <li>
+              <a
+                href="#sensors-introduction"
+                data-translate="sensor_section_title"
+                >Introdução</a
+              >
+            </li>
             <li><a href="#sensor-ir" data-translate="sensor_ir_title"></a></li>
-            <li><a href="#sensor-dht" data-translate="sensor_dht_title"></a></li>
-            <li><a href="#sensor-ultra" data-translate="sensor_ultra_title"></a></li>
-            <li><a href="#sensor-rfid" data-translate="sensor_rfid_title"></a></li>
+            <li>
+              <a href="#sensor-dht" data-translate="sensor_dht_title"></a>
+            </li>
+            <li>
+              <a href="#sensor-ultra" data-translate="sensor_ultra_title"></a>
+            </li>
+            <li>
+              <a href="#sensor-rfid" data-translate="sensor_rfid_title"></a>
+            </li>
           </ul>
         </div>
 
-        <h2 id="sensors-introduction" data-translate="sensor_section_title">Sensores na Robótica</h2>
+        <h2 id="sensors-introduction" data-translate="sensor_section_title">
+          Sensores na Robótica
+        </h2>
         <p data-translate="sensor_intro1">
-          Sensores são componentes que permitem que os robôs e sistemas embarcados percebam o ambiente ao seu redor. Eles captam informações como temperatura, luminosidade, distância, umidade, entre outros, convertendo esses dados em sinais que podem ser processados.
+          Sensores são componentes que permitem que os robôs e sistemas
+          embarcados percebam o ambiente ao seu redor. Eles captam informações
+          como temperatura, luminosidade, distância, umidade, entre outros,
+          convertendo esses dados em sinais que podem ser processados.
         </p>
 
         <p data-translate="sensor_intro2">
-          Na plataforma, os blocos relacionados a sensores estão disponíveis na categoria <strong>Sensores</strong>.
+          Na plataforma, os blocos relacionados a sensores estão disponíveis na
+          categoria <strong>Sensores</strong>.
         </p>
 
-        <h2 id="sensor-ir" data-translate="sensor_ir_title">Sensor Infravermelho (IR)</h2>
+        <h2 id="sensor-ir" data-translate="sensor_ir_title">
+          Sensor Infravermelho (IR)
+        </h2>
 
         <p data-translate="sensor_ir_desc1">
-          O sensor infravermelho (IR) é um componente digital simples e muito utilizado na robótica, especialmente em projetos como carrinhos seguidores de linha. Ele detecta a presença ou ausência de objetos com base no reflexo da luz infravermelha, retornando valores digitais: <strong>1</strong> quando não há reflexão e <strong>0</strong> quando detecta um objeto próximo.
+          O sensor infravermelho (IR) é um componente digital simples e muito
+          utilizado na robótica, especialmente em projetos como carrinhos
+          seguidores de linha. Ele detecta a presença ou ausência de objetos com
+          base no reflexo da luz infravermelha, retornando valores digitais:
+          <strong>1</strong> quando não há reflexão e <strong>0</strong> quando
+          detecta um objeto próximo.
         </p>
 
         <p data-translate="sensor_ir_desc2">
-          Este sensor possui <strong>3 pinos</strong> (VCC, GND e Sinal) e pode ser facilmente conectado à <strong>Amado Board</strong> usando os pinos de entrada digital, como <code>D35</code>, <code>D39</code>, <code>D36</code> e <code>D34</code>. A placa já possui espaço apropriado para o encaixe direto, tornando a montagem rápida e prática.
+          Este sensor possui <strong>3 pinos</strong> (VCC, GND e Sinal) e pode
+          ser facilmente conectado à <strong>Amado Board</strong> usando os
+          pinos de entrada digital, como <code>D35</code>, <code>D39</code>,
+          <code>D36</code> e <code>D34</code>. A placa já possui espaço
+          apropriado para o encaixe direto, tornando a montagem rápida e
+          prática.
         </p>
 
         <p data-translate="sensor_ir_desc3">
-          Além de carrinhos seguidores de linha, o sensor IR pode ser usado em sistemas de contagem, barreiras de segurança, presença de objetos e outras aplicações onde a detecção simples de obstáculos é necessária.
+          Além de carrinhos seguidores de linha, o sensor IR pode ser usado em
+          sistemas de contagem, barreiras de segurança, presença de objetos e
+          outras aplicações onde a detecção simples de obstáculos é necessária.
         </p>
 
-        <h3 data-translate="sensor_ir_example_title">Exemplo: leitura contínua do sensor IR</h3>
+        <h3 data-translate="sensor_ir_example_title">
+          Exemplo: leitura contínua do sensor IR
+        </h3>
 
-        <img 
+        <img
           src="../assets/images/Sensors/sensor_ir.png"
           width="550px"
           alt="Leitura do sensor infravermelho"
         />
 
-        <h4 data-translate="sensor_ir_steps" style="margin-top: 16px;">O que esse programa faz?</h4>
+        <h4 data-translate="sensor_ir_steps" style="margin-top: 16px">
+          O que esse programa faz?
+        </h4>
         <ul>
-          <li>Lê continuamente o valor digital do pino <code>D35</code> onde o sensor IR está conectado.</li>
+          <li>
+            Lê continuamente o valor digital do pino <code>D35</code> onde o
+            sensor IR está conectado.
+          </li>
           <li>Armazena esse valor na variável <code>valor_sensor</code>.</li>
-          <li>Imprime o valor no console (0 ou 1), facilitando o monitoramento da leitura.</li>
+          <li>
+            Imprime o valor no console (0 ou 1), facilitando o monitoramento da
+            leitura.
+          </li>
           <li>Aguarda 500 milissegundos antes de fazer a próxima leitura.</li>
         </ul>
 
-
-        <h2 id="sensor-dht" data-translate="sensor_dht_title">Sensor de Temperatura e Umidade DHT11/22</h2>
+        <h2 id="sensor-dht" data-translate="sensor_dht_title">
+          Sensor de Temperatura e Umidade DHT11/22
+        </h2>
 
         <p data-translate="sensor_dht_desc1">
-          O sensor DHT11/22 é utilizado para medir dois dados importantes do ambiente: <strong>temperatura</strong> e <strong>umidade relativa do ar</strong>. Ele é muito comum em projetos de automação, estações meteorológicas e controle ambiental.
+          O sensor DHT11/22 é utilizado para medir dois dados importantes do
+          ambiente: <strong>temperatura</strong> e
+          <strong>umidade relativa do ar</strong>. Ele é muito comum em projetos
+          de automação, estações meteorológicas e controle ambiental.
         </p>
 
         <p data-translate="sensor_dht_desc2">
-          Para que o sensor funcione corretamente na <strong>Amado Board</strong>, ele deve estar conectado a um <strong>pino digital</strong>. Recomendamos usar os pinos D5, D15, D16, D17, D18, D19, D21, D22 ou D23. Neste exemplo, vamos utilizar o pino <code>D17</code>.
+          Para que o sensor funcione corretamente na
+          <strong>Amado Board</strong>, ele deve estar conectado a um
+          <strong>pino digital</strong>. Recomendamos usar os pinos D5, D15,
+          D16, D17, D18, D19, D21, D22 ou D23. Neste exemplo, vamos utilizar o
+          pino <code>D17</code>.
         </p>
 
-        <img 
+        <img
           src="../assets/images/Sensors/temperatura_umidade.png"
           width="500px"
           alt="Blocos de leitura de temperatura e umidade com DHT"
         />
 
-        <h4 data-translate="sensor_dht_desc3">Como funciona o exemplo acima?</h4>
+        <h4 data-translate="sensor_dht_desc3">
+          Como funciona o exemplo acima?
+        </h4>
         <ul>
-          <li data-translate="sensor_dht_step1">Inicializamos o sensor DHT11/22 e indicamos o pino de conexão.</li>
-          <li data-translate="sensor_dht_step2">Entramos em um loop que repete continuamente enquanto o sistema estiver ligado.</li>
-          <li data-translate="sensor_dht_step3">A cada repetição, a leitura da <strong>temperatura</strong> e da <strong>umidade</strong> é atualizada e armazenada em variáveis.</li>
-          <li data-translate="sensor_dht_step4">Esses valores são exibidos no console usando o bloco <code>imprime</code>.</li>
-          <li data-translate="sensor_dht_step5">Uma pausa de 1 segundo entre as leituras é muito importante para garantir o bom funcionamento do sensor.</li>
+          <li data-translate="sensor_dht_step1">
+            Inicializamos o sensor DHT11/22 e indicamos o pino de conexão.
+          </li>
+          <li data-translate="sensor_dht_step2">
+            Entramos em um loop que repete continuamente enquanto o sistema
+            estiver ligado.
+          </li>
+          <li data-translate="sensor_dht_step3">
+            A cada repetição, a leitura da <strong>temperatura</strong> e da
+            <strong>umidade</strong> é atualizada e armazenada em variáveis.
+          </li>
+          <li data-translate="sensor_dht_step4">
+            Esses valores são exibidos no console usando o bloco
+            <code>imprime</code>.
+          </li>
+          <li data-translate="sensor_dht_step5">
+            Uma pausa de 1 segundo entre as leituras é muito importante para
+            garantir o bom funcionamento do sensor.
+          </li>
         </ul>
 
-        <h2 id="sensor-ultra" data-translate="sensor_ultra_title">Sensor de Distância Ultrassônico HCSR04</h2>
+        <h2 id="sensor-ultra" data-translate="sensor_ultra_title">
+          Sensor de Distância Ultrassônico HCSR04
+        </h2>
 
         <p data-translate="sensor_ultra_desc1">
-          O sensor ultrassônico HCSR04 é utilizado para medir distâncias com precisão, usando ondas de som. Ele envia um sinal sonoro (trigger) e mede o tempo até que o eco (echo) retorne após bater em um objeto. Com base nesse tempo, calcula-se a distância.
+          O sensor ultrassônico HCSR04 é utilizado para medir distâncias com
+          precisão, usando ondas de som. Ele envia um sinal sonoro (trigger) e
+          mede o tempo até que o eco (echo) retorne após bater em um objeto. Com
+          base nesse tempo, calcula-se a distância.
         </p>
 
         <p data-translate="sensor_ultra_desc2">
-          Na <strong>Amado Board</strong>, já existe um espaço próprio para encaixar esse sensor diretamente nos pinos <code>D17</code> (trigger) e <code>D34</code> (echo), facilitando sua conexão e uso em projetos de robótica.
+          Na <strong>Amado Board</strong>, já existe um espaço próprio para
+          encaixar esse sensor diretamente nos pinos <code>D17</code> (trigger)
+          e <code>D34</code> (echo), facilitando sua conexão e uso em projetos
+          de robótica.
         </p>
 
-        <img 
+        <img
           src="../assets/images/Sensors/sensor_ultrassonico.png"
           width="500px"
           alt="Exemplo de uso do sensor ultrassônico com blocos"
         />
 
-        <h4 data-translate="sensor_ultra_desc3">Como funciona o exemplo acima?</h4>
+        <h4 data-translate="sensor_ultra_desc3">
+          Como funciona o exemplo acima?
+        </h4>
         <ul>
-          <li data-translate="sensor_ultra_step1">Inicializamos o sensor especificando os pinos de trigger (D17) e echo (D34), além do tempo limite para a leitura.</li>
-          <li data-translate="sensor_ultra_step2">Usamos um <strong>loop contínuo</strong> para medir a distância constantemente.</li>
-          <li data-translate="sensor_ultra_step3">A cada repetição, armazenamos o valor da distância em uma variável.</li>
-          <li data-translate="sensor_ultra_step4">O valor é impresso no console para que possamos acompanhar a medição em tempo real.</li>
-          <li data-translate="sensor_ultra_step5">Adicionamos uma pausa de 500 milissegundos para evitar leituras muito rápidas e garantir a estabilidade do sensor.</li>
+          <li data-translate="sensor_ultra_step1">
+            Inicializamos o sensor especificando os pinos de trigger (D17) e
+            echo (D34), além do tempo limite para a leitura.
+          </li>
+          <li data-translate="sensor_ultra_step2">
+            Usamos um <strong>loop contínuo</strong> para medir a distância
+            constantemente.
+          </li>
+          <li data-translate="sensor_ultra_step3">
+            A cada repetição, armazenamos o valor da distância em uma variável.
+          </li>
+          <li data-translate="sensor_ultra_step4">
+            O valor é impresso no console para que possamos acompanhar a medição
+            em tempo real.
+          </li>
+          <li data-translate="sensor_ultra_step5">
+            Adicionamos uma pausa de 500 milissegundos para evitar leituras
+            muito rápidas e garantir a estabilidade do sensor.
+          </li>
         </ul>
-        <p data-translate="sensor_ultra_note" style="margin-top: 20px;">
-          Observação: as leituras podem sofrer oscilações, apresentando valores muito altos ou até mesmo -1. Para melhorar a confiabilidade, implemente um filtro simples que descarte leituras fora da faixa esperada.
+        <p data-translate="sensor_ultra_note" style="margin-top: 20px">
+          Observação: as leituras podem sofrer oscilações, apresentando valores
+          muito altos ou até mesmo -1. Para melhorar a confiabilidade,
+          implemente um filtro simples que descarte leituras fora da faixa
+          esperada.
         </p>
 
-        <h2 id="sensor-rfid" data-translate="sensor_rfid_title">Leitor RFID RC522</h2>
+        <h2 id="sensor-rfid" data-translate="sensor_rfid_title">
+          Leitor RFID RC522
+        </h2>
 
         <p data-translate="sensor_rfid_desc1">
-          O RFID (Identificação por Rádio Frequência) é uma tecnologia usada para identificar objetos ou pessoas através de cartões ou tags que emitem sinais. É muito utilizada em sistemas de acesso, controle de presença e rastreamento de ativos.
+          O RFID (Identificação por Rádio Frequência) é uma tecnologia usada
+          para identificar objetos ou pessoas através de cartões ou tags que
+          emitem sinais. É muito utilizada em sistemas de acesso, controle de
+          presença e rastreamento de ativos.
         </p>
 
         <p data-translate="sensor_rfid_desc2">
-          O módulo utilizado neste exemplo é o <strong>RC522</strong>, que funciona por meio de comunicação SPI. Ele lê o UID (código único) de cartões RFID e pode também acessar a memória interna do cartão para leitura e escrita de dados.
+          O módulo utilizado neste exemplo é o <strong>RC522</strong>, que
+          funciona por meio de comunicação SPI. Ele lê o UID (código único) de
+          cartões RFID e pode também acessar a memória interna do cartão para
+          leitura e escrita de dados.
         </p>
 
         <p data-translate="sensor_rfid_desc3">
-          A ligação do módulo à <strong>Amado Board</strong> deve seguir corretamente os nomes dos pinos. Alguns nomes são iguais, outros mudam entre o módulo, o bloco e a placa. Veja a correspondência recomendada:
+          A ligação do módulo à <strong>Amado Board</strong> deve seguir
+          corretamente os nomes dos pinos. Alguns nomes são iguais, outros mudam
+          entre o módulo, o bloco e a placa. Veja a correspondência recomendada:
         </p>
 
         <ul>
-          <li data-translate="sensor_rfid_map1"><strong>3.3V</strong> → 3.3V</li>
+          <li data-translate="sensor_rfid_map1">
+            <strong>3.3V</strong> → 3.3V
+          </li>
           <li data-translate="sensor_rfid_map2"><strong>GND</strong> → GND</li>
-          <li data-translate="sensor_rfid_map3"><strong>SCK (módulo)</strong> = <code>SCK</code> no bloco = <code>D18 / CLK</code> na placa</li>
-          <li data-translate="sensor_rfid_map4"><strong>MOSI</strong> = <code>MOSI</code> no bloco = <code>D23 / MOSI</code> na placa</li>
-          <li data-translate="sensor_rfid_map5"><strong>MISO</strong> = <code>MISO</code> no bloco = <code>D19 / MISO</code> na placa</li>
-          <li data-translate="sensor_rfid_map6"><strong>RST</strong> = <code>RST</code> no bloco = <code>D22 / SCL</code> na placa</li>
-          <li data-translate="sensor_rfid_map7"><strong>SDA</strong> (do módulo) deve ser conectado ao <code>CS</code> no bloco, recomendado usar <code>D5</code> como na imagem.</li>
+          <li data-translate="sensor_rfid_map3">
+            <strong>SCK (módulo)</strong> = <code>SCK</code> no bloco =
+            <code>D18 / CLK</code> na placa
+          </li>
+          <li data-translate="sensor_rfid_map4">
+            <strong>MOSI</strong> = <code>MOSI</code> no bloco =
+            <code>D23 / MOSI</code> na placa
+          </li>
+          <li data-translate="sensor_rfid_map5">
+            <strong>MISO</strong> = <code>MISO</code> no bloco =
+            <code>D19 / MISO</code> na placa
+          </li>
+          <li data-translate="sensor_rfid_map6">
+            <strong>RST</strong> = <code>RST</code> no bloco =
+            <code>D22 / SCL</code> na placa
+          </li>
+          <li data-translate="sensor_rfid_map7">
+            <strong>SDA</strong> (do módulo) deve ser conectado ao
+            <code>CS</code> no bloco, recomendado usar <code>D5</code> como na
+            imagem.
+          </li>
         </ul>
 
         <p data-translate="sensor_rfid_desc4">
-          Embora os pinos <code>RST</code> e <code>CS</code> possam ser conectados a outros pinos digitais (como D17, D21 ou D22), recomendamos seguir o exemplo para maior compatibilidade.
+          Embora os pinos <code>RST</code> e <code>CS</code> possam ser
+          conectados a outros pinos digitais (como D17, D21 ou D22),
+          recomendamos seguir o exemplo para maior compatibilidade.
         </p>
-        
+
         <p data-translate="rfid_libraries_desc">
-          Para que os blocos do leitor RFID RC522 funcionem corretamente, é necessário instalar a biblioteca <code>mfrc522</code>, que permite a comunicação e leitura de cartões RFID.
+          Para que os blocos do leitor RFID RC522 funcionem corretamente, é
+          necessário instalar a biblioteca <code>mfrc522</code>, que permite a
+          comunicação e leitura de cartões RFID.
         </p>
 
         <p data-translate="rfid_verify_library">
-          Após clicar no botão <strong>“Instalar biblioteca”</strong>, você pode verificar a instalação pela mensagem no console: <code>Instalação da biblioteca mfrc522 concluída.</code>
+          Após clicar no botão <strong>“Instalar biblioteca”</strong>, você pode
+          verificar a instalação pela mensagem no console:
+          <code>Instalação da biblioteca mfrc522 concluída.</code>
         </p>
-        <img src="../assets/images/Sensors/rfid_console.png" width="550px" alt="Instalação da biblioteca no console para RFID" />
+        <img
+          src="../assets/images/Sensors/rfid_console.png"
+          width="550px"
+          alt="Instalação da biblioteca no console para RFID"
+        />
 
         <p data-translate="rfid_verify_file">
-          Também é possível confirmar a presença da biblioteca abrindo a aba <strong>Arquivos</strong>. Clique duas vezes no botão de atualizar e verifique se o arquivo <code>mfrc522.py</code> aparece listado na memória da placa.
+          Também é possível confirmar a presença da biblioteca abrindo a aba
+          <strong>Arquivos</strong>. Clique duas vezes no botão de atualizar e
+          verifique se o arquivo <code>mfrc522.py</code> aparece listado na
+          memória da placa.
         </p>
-      <img src="../assets/images/Sensors/rfid_gerenciador_arquivos.png" width="270px" alt="Verificando a presença da biblioteca do RFID" style="display: block; margin-bottom: 16px;" />
+        <img
+          src="../assets/images/Sensors/rfid_gerenciador_arquivos.png"
+          width="270px"
+          alt="Verificando a presença da biblioteca do RFID"
+          style="display: block; margin-bottom: 16px"
+        />
 
-      <p data-translate="sensor_rfid_desc6" style="margin-bottom: 16px;">
-        Abaixo vemos um programa básico que faz a leitura de um cartão RFID e mostra os resultados no console.
-      </p>
+        <p data-translate="sensor_rfid_desc6" style="margin-bottom: 16px">
+          Abaixo vemos um programa básico que faz a leitura de um cartão RFID e
+          mostra os resultados no console.
+        </p>
 
-      <img 
-        src="../assets/images/Sensors/leitura_RFID.png"
-        width="520px"
-        alt="Blocos de leitura do RFID"
-        style="display: block;"
-      />
+        <img
+          src="../assets/images/Sensors/leitura_RFID.png"
+          width="520px"
+          alt="Blocos de leitura do RFID"
+          style="display: block"
+        />
 
-
-
-        <h4 data-translate="sensor_rfid_expl_title">Como funciona o exemplo acima?</h4>
+        <h4 data-translate="sensor_rfid_expl_title">
+          Como funciona o exemplo acima?
+        </h4>
         <ul>
-          <li data-translate="sensor_rfid_step1">Inicializamos o módulo informando todos os pinos de conexão SPI.</li>
-          <li data-translate="sensor_rfid_step2">Entramos em um <strong>loop contínuo</strong> que verifica constantemente se um cartão está presente.</li>
-          <li data-translate="sensor_rfid_step3">Se um cartão for detectado (status = 0), uma mensagem será exibida no console e o UID será lido e impresso.</li>
-          <li data-translate="sensor_rfid_step4">Mesmo quando não há cartão, as informações de status e tipo da tag são mostradas para facilitar o debug.</li>
-          <li data-translate="sensor_rfid_step5">Adicionamos um delay de 500 milissegundos para evitar repetições muito rápidas.</li>
+          <li data-translate="sensor_rfid_step1">
+            Inicializamos o módulo informando todos os pinos de conexão SPI.
+          </li>
+          <li data-translate="sensor_rfid_step2">
+            Entramos em um <strong>loop contínuo</strong> que verifica
+            constantemente se um cartão está presente.
+          </li>
+          <li data-translate="sensor_rfid_step3">
+            Se um cartão for detectado (status = 0), uma mensagem será exibida
+            no console e o UID será lido e impresso.
+          </li>
+          <li data-translate="sensor_rfid_step4">
+            Mesmo quando não há cartão, as informações de status e tipo da tag
+            são mostradas para facilitar o debug.
+          </li>
+          <li data-translate="sensor_rfid_step5">
+            Adicionamos um delay de 500 milissegundos para evitar repetições
+            muito rápidas.
+          </li>
         </ul>
-        <p data-translate="sensor_rfid_console_desc" style="margin-top: 20px;">
-          Abaixo você pode ver como os resultados aparecem no console da plataforma, mostrando o status, tipo de tag e o UID quando um cartão é detectado.
+        <p data-translate="sensor_rfid_console_desc" style="margin-top: 20px">
+          Abaixo você pode ver como os resultados aparecem no console da
+          plataforma, mostrando o status, tipo de tag e o UID quando um cartão é
+          detectado.
         </p>
-        <img 
+        <img
           src="../assets/images/Sensors/console_RFID.png"
           width="350px"
           alt="Leitura do cartão RFID no console"
         />
-
-
-
-
-
-
-
       </section>
     </main>
 

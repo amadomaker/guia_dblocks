@@ -18,12 +18,38 @@
       <nav>
         <ul class="container-nav">
           <li><a href="/" data-translate="home">Início</a></li>
-           
-          <li>
-            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
-          </li>
-          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
 
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
         </ul>
       </nav>
 
@@ -46,12 +72,37 @@
 
       <div class="mobile-menu" id="mobile-menu">
         <ul>
-           
           <li>
-            <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
           </li>
-          <li><a target="_blank" href="https://dblocks.com.br" data-translate="dblocks">Dblocks</a></li>
-
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
         </ul>
       </div>
     </header>
@@ -66,77 +117,177 @@
       </aside>
 
       <section class="content">
+        <div class="chapter-index">
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
+          <ul>
+            <li>
+              <a href="#display_oled" data-translate="display_section_title"
+                >Display OLED SSD1306</a
+              >
+            </li>
+            <li>
+              <a
+                href="#display_example1"
+                data-translate="display_example1_title"
+                >Exemplo 1: Escrever texto fixo no display</a
+              >
+            </li>
+            <li>
+              <a
+                href="#display_example3"
+                data-translate="display_example3_title"
+                >Exemplo 2: Atualizar valor com loop</a
+              >
+            </li>
+            <li>
+              <a
+                href="#display_example4"
+                data-translate="display_example4_title"
+                >Exemplo 3: Mostrar valor do sensor LDR</a
+              >
+            </li>
+          </ul>
+        </div>
 
-      <div class="chapter-index">
-        <h3 data-translate="in_this_section">Nesta Seção</h3>
+        <h2
+          class="chapter-index"
+          id="display_oled"
+          data-translate="display_section_title"
+        >
+          Display OLED SSD1306
+        </h2>
+
+        <p data-translate="display_intro1">
+          O display OLED SSD1306 é uma tela de pequeno porte com comunicação
+          I2C, muito utilizada em projetos de eletrônica e robótica para exibir
+          informações como textos, valores de sensores ou mensagens do sistema.
+        </p>
+
+        <p data-translate="display_intro2">
+          Na plataforma, os blocos para controle do display estão localizados na
+          categoria <strong>Telas</strong>. Antes de utilizá-lo, é necessário
+          instalar a biblioteca <code>ssd1306</code> clicando no bloco
+          <strong>Instalar biblioteca: ssd1306</strong>.
+        </p>
+
+        <p data-translate="display_connection_info">
+          A <strong>Amado Board</strong> possui um espaço dedicado para conexão
+          do display, identificado na própria placa com o nome
+          <code>OLED DISPLAY</code>. Esse conector utiliza comunicação I2C, e os
+          pinos correspondentes são: <strong>SDA no pino D21</strong> e
+          <strong>SCL no pino D22</strong>. Basta encaixar o módulo OLED no
+          local correto e iniciar a comunicação com esses pinos no bloco de
+          inicialização.
+        </p>
+
+        <img
+          src="../assets/images/Display/display_blocos.png"
+          width="420px"
+          alt="Blocos para controle do display OLED"
+        />
+
+        <p data-translate="display_blocks_info">
+          Para que o texto ou valor apareça corretamente na tela, é fundamental
+          seguir a ordem correta dos blocos:
+          <strong>1) limpar o display</strong>,
+          <strong>2) escrever o conteúdo</strong> (mensagem ou número) e
+          <strong>3) atualizar o display</strong>. O bloco de atualização envia
+          de fato o conteúdo para o display, sem ele nada será mostrado.
+        </p>
+
+        <h3 id="display_example1" data-translate="display_example1_title">
+          Exemplo 1: Escrever texto fixo no display
+        </h3>
+        <p data-translate="display_example1_desc">
+          Neste exemplo, mostramos como posicionar um texto estático na tela
+          usando os blocos adequados. Esse é o primeiro passo para qualquer
+          projeto com o display.
+        </p>
+        <img
+          src="../assets/images/Display/display_text.png"
+          width="420px"
+          alt="Blocos para controle do display OLED"
+        />
+
+        <p>
+          <strong data-translate="display_example1_steps"
+            >O que esse programa faz?</strong
+          >
+        </p>
         <ul>
-          <li><a href="#display_oled" data-translate="display_section_title">Display OLED SSD1306</a></li>
-          <li><a href="#display_example1" data-translate="display_example1_title">Exemplo 1: Escrever texto fixo no display</a></li>
-          <li><a href="#display_example3" data-translate="display_example3_title">Exemplo 2: Atualizar valor com loop</a></li>
-          <li><a href="#display_example4" data-translate="display_example4_title">Exemplo 3: Mostrar valor do sensor LDR</a></li>
+          <li data-translate="display_example1_step1">
+            Inicializa o display com os pinos corretos (I2C: 1, SCL: 22, SDA:
+            21).
+          </li>
+          <li data-translate="display_example1_step2">
+            Limpa o display para garantir que não haja resíduos de texto
+            anterior.
+          </li>
+          <li data-translate="display_example1_step3">
+            Escreve o texto "Hello" na posição desejada da tela.
+          </li>
+          <li data-translate="display_example1_step4">
+            Atualiza o display para que o texto apareça.
+          </li>
         </ul>
-      </div>
 
-      <h2 class="chapter-index" id="display_oled" data-translate="display_section_title">Display OLED SSD1306</h2>
+        <h3 id="display_example3" data-translate="display_example3_title">
+          Exemplo 2: Atualizar valor com loop
+        </h3>
+        <p data-translate="display_example3_desc">
+          Este exemplo demonstra como criar um contador que é atualizado
+          constantemente no display. Ideal para aprender a manipular variáveis
+          visuais.
+        </p>
+        <img
+          src="../assets/images/Display/display_contador.png"
+          width="420px"
+          alt="Blocos para controle do display OLED"
+        />
+        <p>
+          <strong data-translate="display_example3_steps"
+            >O que esse programa faz?</strong
+          >
+        </p>
+        <ul>
+          <li data-translate="display_example3_step1">Inicializa o display.</li>
+          <li data-translate="display_example3_step2">
+            Cria uma variável que aumenta de valor a cada segundo.
+          </li>
+          <li data-translate="display_example3_step3">
+            Limpa o display, exibe o valor da variável e atualiza a tela
+            continuamente.
+          </li>
+        </ul>
 
-      <p data-translate="display_intro1">
-        O display OLED SSD1306 é uma tela de pequeno porte com comunicação I2C, muito utilizada em projetos de eletrônica e robótica para exibir informações como textos, valores de sensores ou mensagens do sistema.
-      </p>
-
-      <p data-translate="display_intro2">
-        Na plataforma, os blocos para controle do display estão localizados na categoria <strong>Telas</strong>. Antes de utilizá-lo, é necessário instalar a biblioteca <code>ssd1306</code> clicando no bloco <strong>Instalar biblioteca: ssd1306</strong>.
-      </p>
-
-      <p data-translate="display_connection_info">
-        A <strong>Amado Board</strong> possui um espaço dedicado para conexão do display, identificado na própria placa com o nome <code>OLED DISPLAY</code>. Esse conector utiliza comunicação I2C, e os pinos correspondentes são: <strong>SDA no pino D21</strong> e <strong>SCL no pino D22</strong>. Basta encaixar o módulo OLED no local correto e iniciar a comunicação com esses pinos no bloco de inicialização.
-      </p>
-
-      <img src="../assets/images/Display/display_blocos.png" width="420px" alt="Blocos para controle do display OLED" />
-
-      <p data-translate="display_blocks_info">
-        Para que o texto ou valor apareça corretamente na tela, é fundamental seguir a ordem correta dos blocos: <strong>1) limpar o display</strong>, <strong>2) escrever o conteúdo</strong> (mensagem ou número) e <strong>3) atualizar o display</strong>. O bloco de atualização envia de fato o conteúdo para o display, sem ele nada será mostrado.
-      </p>
- 
-      <h3 id="display_example1" data-translate="display_example1_title">Exemplo 1: Escrever texto fixo no display</h3>
-      <p data-translate="display_example1_desc">
-        Neste exemplo, mostramos como posicionar um texto estático na tela usando os blocos adequados. Esse é o primeiro passo para qualquer projeto com o display.
-      </p>
-      <img src="../assets/images/Display/display_text.png" width="420px" alt="Blocos para controle do display OLED" />
-
-      <p><strong data-translate="display_example1_steps">O que esse programa faz?</strong></p>
-      <ul>
-        <li data-translate="display_example1_step1">Inicializa o display com os pinos corretos (I2C: 1, SCL: 22, SDA: 21).</li>
-        <li data-translate="display_example1_step2">Limpa o display para garantir que não haja resíduos de texto anterior.</li>
-        <li data-translate="display_example1_step3">Escreve o texto "Hello" na posição desejada da tela.</li>
-        <li data-translate="display_example1_step4">Atualiza o display para que o texto apareça.</li>
-      </ul>
-
-      <h3 id="display_example3" data-translate="display_example3_title">Exemplo 2: Atualizar valor com loop</h3>
-      <p data-translate="display_example3_desc">
-        Este exemplo demonstra como criar um contador que é atualizado constantemente no display. Ideal para aprender a manipular variáveis visuais.
-      </p>
-      <img src="../assets/images/Display/display_contador.png" width="420px" alt="Blocos para controle do display OLED" />
-      <p><strong data-translate="display_example3_steps">O que esse programa faz?</strong></p>
-      <ul>
-        <li data-translate="display_example3_step1">Inicializa o display.</li>
-        <li data-translate="display_example3_step2">Cria uma variável que aumenta de valor a cada segundo.</li>
-        <li data-translate="display_example3_step3">Limpa o display, exibe o valor da variável e atualiza a tela continuamente.</li>
-      </ul>
-
-      <h3 id="display_example4" data-translate="display_example4_title">Exemplo 3: Mostrar valor do sensor LDR</h3>
-      <p data-translate="display_example4_desc">
-        Aqui mostramos como integrar o display com sensores. Neste caso, exibimos o valor da luminosidade lido por um sensor LDR.
-      </p>
-      <img src="../assets/images/Display/display_ldr.png" width="420px" alt="Blocos para controle do display OLED" />
-      <p><strong data-translate="display_example4_steps">O que esse programa faz?</strong></p>
-      <ul>
-        <li data-translate="display_example4_step1">Inicializa o display e configura a leitura do sensor LDR.</li>
-        <li data-translate="display_example4_step2">Lê continuamente o valor de luminosidade ambiente.</li>
-        <li data-translate="display_example4_step3">Mostra o valor na tela, atualizando a cada 500 milissegundos.</li>
-      </ul>
-
-
-
+        <h3 id="display_example4" data-translate="display_example4_title">
+          Exemplo 3: Mostrar valor do sensor LDR
+        </h3>
+        <p data-translate="display_example4_desc">
+          Aqui mostramos como integrar o display com sensores. Neste caso,
+          exibimos o valor da luminosidade lido por um sensor LDR.
+        </p>
+        <img
+          src="../assets/images/Display/display_ldr.png"
+          width="420px"
+          alt="Blocos para controle do display OLED"
+        />
+        <p>
+          <strong data-translate="display_example4_steps"
+            >O que esse programa faz?</strong
+          >
+        </p>
+        <ul>
+          <li data-translate="display_example4_step1">
+            Inicializa o display e configura a leitura do sensor LDR.
+          </li>
+          <li data-translate="display_example4_step2">
+            Lê continuamente o valor de luminosidade ambiente.
+          </li>
+          <li data-translate="display_example4_step3">
+            Mostra o valor na tela, atualizando a cada 500 milissegundos.
+          </li>
+        </ul>
       </section>
     </main>
 
