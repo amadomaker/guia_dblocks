@@ -7,7 +7,7 @@ const loadDOMCards = async (query = "") => {
   try {
     const response = await fetch(DATA_URL);
     if (!response.ok) throw new Error("Erro ao carregar os dados.");
-    
+
     const cards = await response.json();
     const containerCards = document.getElementById("container-cards");
 
@@ -21,7 +21,9 @@ const loadDOMCards = async (query = "") => {
     cards.forEach((cardData, index) => {
       const chapterNumber = index + 1;
       const lowerCaseQuery = query.toLowerCase().trim();
-      const titleMatch = MSG[cardData.title_key].toLowerCase().includes(lowerCaseQuery);
+      const titleMatch = MSG[cardData.title_key]
+        .toLowerCase()
+        .includes(lowerCaseQuery);
       const chapterMatch = chapterNumber.toString().includes(lowerCaseQuery);
 
       if (query && !titleMatch && !chapterMatch) return;
@@ -32,13 +34,19 @@ const loadDOMCards = async (query = "") => {
       card.setAttribute("data-chapter", chapterNumber.toString());
 
       card.innerHTML = `
-        <img src="${IMAGE_PATH}/${cardData.image}" alt="${MSG[cardData.title_key]}" class="card-image" />
+        <img src="${IMAGE_PATH}/${cardData.image}" alt="${
+        MSG[cardData.title_key]
+      }" class="card-image" />
         <div class="card-content">
           <h3 data-translate="${cardData.title_key}" class="card-title"></h3>
           <p data-translate="${cardData.description_key}" class="card-text"></p>
           <a href="./${cardData.url}" class="card-link">Ler mais →</a>
         </div>
       `;
+
+      card.addEventListener("click", () => {
+        window.location.href = `./${cardData.url}`;
+      });
 
       containerCards.appendChild(card);
     });
