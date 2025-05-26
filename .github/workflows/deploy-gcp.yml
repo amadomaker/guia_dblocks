@@ -1,11 +1,14 @@
 name: Deploy no GCP
 
 on:
-    push:
-        branches:
-            - staging
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+      - staging
 jobs:
     deploy:
+        if: ${{ github.event.pull_request.merged == true }}
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
