@@ -604,4 +604,19 @@ logic_math_example3_step4: "Senão, imprime \"Ambiente confortável\".",
 logic_math_example3_console: "Os resultados das decisões são mostrados no console, permitindo acompanhar o comportamento lógico do programa.",
 logic_math_example3_tip: "Você pode alterar os valores das variáveis de temperatura e umidade para observar como o comportamento do programa muda. Isso ajuda a entender melhor o uso de condições combinadas e operadores lógicos em situações reais.",
 
+//Página música
+music_section_title: "Música",
+music_section_intro: "Nesta seção, vamos aprender a utilizar a aba Música da plataforma para compor melodias personalizadas de forma visual, por meio de um piano roll interativo. Essas melodias podem ser testadas e posteriormente utilizadas em blocos com o buzzer.",
+music_features_intro: "A interface possui diversos controles úteis:",
+music_editor_info: "O piano roll funciona da seguinte forma: as colunas representam o tempo, e as linhas representam notas musicais. Você pode selecionar uma nota por coluna. Se pular uma coluna, aquele instante de tempo será um silêncio.",
+
+music_example1_title: "Exemplo: Criando a melodia \"Do-Re-Mi-Fa-Sol-La-Si\"",
+music_example1_desc: "Vamos criar uma melodia simples usando as notas musicais básicas.",
+
+music_example2_title: "Tocando a melodia com o buzzer",
+music_example2_desc: "Após salvar a melodia, vá até a aba Blocos. Em Saídas e Atuadores → Campainha (Buzzer), você encontrará o bloco Reproduzir buzzer no pino. Ao selecionar a melodia criada, você poderá reproduzi-la usando o buzzer da placa.",
+
+music_extra_info_title: "Dicas adicionais",
+music_extra_info: "Se você clicar com o botão direito do mouse sobre o bloco de melodia, verá opções úteis como Excluir ou Exportar aquela melodia individualmente.",
+
 }
