@@ -22,10 +22,10 @@ jobs:
               run: |
                 if [[ "${{ github.base_ref }}" == "main" ]]; then
                   echo "BRANCH=main" >> $GITHUB_ENV
-                  echo "SERVICE_NAME=guia_prod" >> $GITHUB_ENV
+                  echo "SERVICE_NAME=guia-prod" >> $GITHUB_ENV
                 else
                   echo "BRANCH=staging" >> $GITHUB_ENV
-                  echo "SERVICE_NAME=guia_staging" >> $GITHUB_ENV
+                  echo "SERVICE_NAME=guia-staging" >> $GITHUB_ENV
                 fi
             - name: Build da Imagem Docker
               run: |
