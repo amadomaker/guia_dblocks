@@ -110,6 +110,8 @@ var MSG = {
     "Learn how to install the necessary drivers and set up the AmadoBoard with MicroPython to start developing your projects.",
   var_loop_print: "Variables, loops, and printing",
   var_loop_print_description: "In this section, we will learn how to work with variables, control structures, and print data to the screen.",
+  logic_and_math: "Logic and Math",
+  logic_and_math_description: "In this section, we will learn how to use logical and mathematical operators to create more complex and interesting programs.",
 
   digital_input_output: "Digital Input and Output",
   digital_io_description:
@@ -533,5 +535,63 @@ buzzer_block_music_desc: "Choose from built-in themed songs like Super Mario, St
 buzzer_block_user_title: "Note: user-created melodies",
 buzzer_block_user_desc: "There's also a block called “Play buzzer on pin with melody.” This is used with the Music tab to run your own composed songs. It will be explained in a separate section.",
 
+display_section_title: "OLED SSD1306 Display",
+display_intro1: "The OLED SSD1306 display is a small screen with I2C communication, widely used in electronics and robotics projects to show information such as text, sensor values, or system messages.",
+display_intro2: "On the platform, the blocks for controlling the display are found in the Screens category. Before using it, you must install the ssd1306 library by clicking the Install library: ssd1306 block.",
+display_connection_info: "The Amado Board has a dedicated slot for connecting the display, identified on the board as OLED DISPLAY. This connector uses I2C communication, with SDA on pin D21 and SCL on pin D22. Just plug the OLED module into the correct place and start communication using those pins in the initialization block.",
+display_blocks_info: "For the text or value to appear correctly on the screen, it is essential to follow the correct block sequence: 1) clear the display, 2) write the content (message or number), and 3) update the display. The update block actually sends the content to the screen; without it, nothing will be shown.",
+
+display_example1_title: "Example 1: Display fixed text on screen",
+display_example1_desc: "In this example, we show how to position a static text on the screen using the appropriate blocks. This is the first step in any display project.",
+display_example1_steps: "What does this program do?",
+display_example1_step1: "Initializes the display with the correct pins (I2C: 1, SCL: 22, SDA: 21).",
+display_example1_step2: "Clears the display to ensure there are no previous text residues.",
+display_example1_step3: "Writes the text \"Hello\" at the desired position on the screen.",
+display_example1_step4: "Updates the display so the text appears.",
+
+display_example3_title: "Example 2: Update value using a loop",
+display_example3_desc: "This example demonstrates how to create a counter that is constantly updated on the display. Great for learning how to visually manage variables.",
+display_example3_steps: "What does this program do?",
+display_example3_step1: "Initializes the display.",
+display_example3_step2: "Creates a variable that increases in value every second.",
+display_example3_step3: "Clears the display, shows the variable value, and continuously updates the screen.",
+
+display_example4_title: "Example 3: Display LDR sensor value",
+display_example4_desc: "Here we show how to integrate the display with sensors. In this case, we display the brightness value read by an LDR sensor.",
+display_example4_steps: "What does this program do?",
+display_example4_step1: "Initializes the display and sets up the LDR sensor reading.",
+display_example4_step2: "Continuously reads the ambient brightness value.",
+display_example4_step3: "Displays the value on the screen, updating every 500 milliseconds.",
+
+// Logic and Math
+logic_math_intro_title: "Logic and Math",
+logic_math_intro1: "Logic and math blocks are fundamental in programming. They allow you to create conditions, perform calculations, compare values, and make decisions. They are present in virtually all types of projects — from sensor readings to motor control and rule-based actions.",
+logic_math_intro2: "The Math category contains operations such as addition, subtraction, multiplication, division, rounding, square root, sine, value mapping, and more. The Logic category offers comparators (such as =, <, >), logical operators (AND, OR), and decision blocks like if, else, and else if.",
+
+logic_math_example1_title: "Example 1: Check if a fixed number is greater than 10",
+logic_math_example1_desc: "In this example, we use the if and else blocks to check if a fixed value is greater than 10. The decision block (if) allows commands to run only when a condition is true. The comparison is made using the > operator.",
+logic_math_example1_steps: "What does this program do?",
+logic_math_example1_step1: "Creates a variable with the value 15.",
+logic_math_example1_step2: "Checks if the number is greater than 10.",
+logic_math_example1_step3: "If true, prints 'Greater than 10'; otherwise, prints 'Less than or equal to 10'.",
+logic_math_example1_console: "The test results are displayed in the platform's console. To view, click the Console tab at the top of the screen after running the program.",
+
+logic_math_example2_title: "Example 2: Convert analog value to percentage",
+logic_math_example2_desc: "In this example, we ask the user to enter a numeric value in the console to simulate a sensor reading. Then, we use the map block from the Math category, which converts a value from one range to another. This block is very useful in robotics projects to transform sensor readings (such as light, distance, or temperature) into more understandable scales like percentages. This helps in making decisions or displaying data to the user.",
+logic_math_example2_steps: "What does this program do?",
+logic_math_example2_step1: "Asks the user to enter a numeric value to simulate an analog reading.",
+logic_math_example2_step2: "Converts the value to a percentage using the map block.",
+logic_math_example2_step3: "Prints the converted value (in %) to the console.",
+logic_math_example2_console: "The number is entered directly in the console, located at the top of the screen. The converted value is then displayed for real-time monitoring.",
+
+logic_math_example3_title: "Example 3: Ventilation control using AND, OR, and else",
+logic_math_example3_desc: "In this example, we simulate the logic of a smart ventilation system that considers both temperature and humidity levels. We use logical operators AND and OR along with conditional blocks if and else if to define the system behavior based on values.",
+logic_math_example3_steps: "What does this program do?",
+logic_math_example3_step1: "Creates two variables with fixed values for temperature and humidity.",
+logic_math_example3_step2: "If temperature > 30 AND humidity > 70, prints 'Turn on fan and dehumidifier'.",
+logic_math_example3_step3: "Else if temperature > 30 OR humidity > 70, prints 'Turn on fan only'.",
+logic_math_example3_step4: "Else, prints 'Comfortable environment'.",
+logic_math_example3_console: "The decision results are shown in the console, allowing you to follow the logical behavior of the program.",
+logic_math_example3_tip: "You can change the values of the temperature and humidity variables to see how the program's behavior changes. This helps better understand the use of combined conditions and logical operators in real scenarios.",
 
 };

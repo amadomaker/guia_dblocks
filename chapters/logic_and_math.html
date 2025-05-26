@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-translate="di_title"></title>
+    <title data-translate="logic_math_intro_title"></title>
     <link rel="stylesheet" href="../assets/css/global.css" />
     <link rel="stylesheet" href="../assets/css/chapters.css" />
   </head>
@@ -80,8 +80,110 @@
       </aside>
 
       <section class="content">
+      <h1 data-translate="logic_math_intro_title"></h1>
+      <div class="chapter-index">
+        <h3 data-translate="in_this_section">Nesta Seção</h3>
+        <ul>
+          <li><a href="#logic-math-intro" data-translate="logic_math_intro_title">Introdução</a></li>
+          <li><a href="#logic-math-example1" data-translate="logic_math_example1_title"></a></li>
+          <li><a href="#logic-math-example2" data-translate="logic_math_example2_title"></a></li>
+          <li><a href="#logic-math-example3" data-translate="logic_math_example3_title"></a></li>
+        </ul>
+      </div>
+
+      <h2 id="logic-math-intro" data-translate="logic_math_intro_title">Lógica e Matemática</h2>
+
+      <p data-translate="logic_math_intro1">
+        Os blocos de lógica e matemática são fundamentais na programação. Eles permitem criar condições, realizar cálculos, comparar valores e tomar decisões. Estão presentes em praticamente todos os tipos de projeto — desde a leitura de sensores, até o controle de motores e execução de ações com base em regras.
+      </p>
+
+      <p data-translate="logic_math_intro2">
+        A categoria <strong>Matemática</strong> contém operações como soma, subtração, multiplicação, divisão, arredondamento, raiz quadrada, seno, mapeamento de valores, entre outros. Já a categoria <strong>Lógica</strong> oferece comparadores (como <code>=</code>, <code><</code>, <code>></code>), operadores lógicos (<code>E</code>, <code>OU</code>), e blocos de decisão como <code>se</code>, <code>senão</code> e <code>senão se</code>.
+      </p>
+
+      <img src="../assets/images/Logic_math/logic_blocs.png" width="200px" alt="Blocos de lógica disponíveis" />
+      <img src="../assets/images/Logic_math/operators_blocs.png" width="310px" alt="Blocos de operadores matemáticos" style="margin-left: 20px;" />
+
+      <h3 id="logic-math-example1" data-translate="logic_math_example1_title">Exemplo 1: Verificar se um número fixo é maior que 10</h3>
+      <p data-translate="logic_math_example1_desc">
+        Neste exemplo usamos os blocos <code>se</code> e <code>senão</code> para verificar se um valor fixo é maior que 10. O bloco de decisão (se) permite executar comandos apenas quando uma condição é verdadeira. A comparação é feita com o operador matemático <code>></code>.
+      </p>
+      <p>
+        Este tipo de estrutura é muito comum em projetos de robótica — por exemplo, verificar se um sensor detectou um obstáculo para acionar ou parar um motor.
+      </p>
+      <img src="../assets/images/Logic_math/logic_exemple1.png" width="400px" alt="Exemplo de lógica e matemática" />
+
+      <p data-translate="logic_math_example1_steps"><strong>O que esse programa faz?</strong></p>
+      <ul>
+        <li data-translate="logic_math_example1_step1">Cria uma variável com o valor 15.</li>
+        <li data-translate="logic_math_example1_step2">Compara se o número é maior que 10.</li>
+        <li data-translate="logic_math_example1_step3">Se verdadeiro, imprime "Maior que 10", caso contrário imprime "Menor ou igual a 10".</li>
+      </ul>
+
+      <p style="margin-top: 20px;">
+        A estrutura <code>se → senão se → senão</code> é criada clicando na engrenagem do bloco “se”. Com isso é possível criar condições múltiplas e tomar decisões mais completas. Isso é comum em projetos como robôs seguidores de linha, controle climático ou decisões baseadas em mais de um sensor.
+      </p>
+      <p data-translate="logic_math_example1_console">
+        Os resultados do teste são exibidos no <strong>console</strong> da plataforma. Para visualizar, clique na aba <strong>Console</strong> no canto superior da tela após executar o programa.
+      </p>
+
+      <h3 id="logic-math-example2" data-translate="logic_math_example2_title">
+        Exemplo 2: Converter valor analógico em porcentagem
+      </h3>
+
+      <p data-translate="logic_math_example2_desc">
+        Neste exemplo, pedimos ao usuário que digite um valor numérico no console para simular a leitura de um sensor. Em seguida, usamos o bloco <code>mapear</code> da categoria Matemática para converter esse valor (de 0 a 4095, por exemplo) em uma porcentagem entre 0 e 100.
+      </p>
+      <img src="../assets/images/Logic_math/logic_exemple2.png" width="700px" alt="Exemplo de lógica e matemática" />
 
 
+      <p data-translate="logic_math_example2_steps"><strong>O que esse programa faz?</strong></p>
+      <ul>
+        <li data-translate="logic_math_example2_step1">
+          Pede ao usuário um valor numérico para simular uma leitura analógica.
+        </li>
+        <li data-translate="logic_math_example2_step2">
+          Converte esse valor para uma porcentagem usando o bloco <code>mapear</code>.
+        </li>
+        <li data-translate="logic_math_example2_step3">
+          Imprime o valor original e o valor convertido (em %) no console.
+        </li>
+      </ul>
+
+      <p data-translate="logic_math_example2_console" style="margin-top: 15px;">
+        O número é digitado diretamente no <strong>console</strong>, localizado na parte superior da tela. O valor convertido será exibido em seguida para acompanhamento da conversão em tempo real.
+      </p>
+
+
+
+      <h3 id="logic-math-example3" data-translate="logic_math_example3_title">
+        Exemplo 3: Controle de ventilação com “E”, “OU” e senão
+      </h3>
+
+      <p data-translate="logic_math_example3_desc">
+        Neste exemplo, simulamos a lógica de um sistema de ventilação inteligente que considera tanto a temperatura quanto a umidade do ambiente. Usamos operadores lógicos <code>E</code> e <code>OU</code> junto com blocos condicionais <code>se</code> e <code>senão se</code> para definir o comportamento do sistema com base nos valores.
+      </p>
+
+      <p>
+        Essa estrutura condicional é bastante útil em sistemas embarcados para automação, onde diferentes sensores devem ser combinados para decidir a ativação de dispositivos como ventiladores, exaustores ou alertas.
+      </p>
+      <img src="../assets/images/Logic_math/logic_exemple3.png" width="700px" alt="Exemplo de lógica e matemática" />
+
+
+      <p data-translate="logic_math_example3_steps"><strong>O que esse programa faz?</strong></p>
+      <ul>
+        <li data-translate="logic_math_example3_step1">Cria duas variáveis com valores fixos para temperatura e umidade.</li>
+        <li data-translate="logic_math_example3_step2">Se temperatura > 30 <strong>E</strong> umidade > 70, imprime "Ativar ventilador e desumidificador".</li>
+        <li data-translate="logic_math_example3_step3">Senão se temperatura > 30 <strong>OU</strong> umidade > 70, imprime "Ativar apenas ventilador".</li>
+        <li data-translate="logic_math_example3_step4">Senão, imprime "Ambiente confortável".</li>
+      </ul>
+
+      <p data-translate="logic_math_example3_console" style="margin-top: 15px;">
+        Os resultados das decisões são mostrados no console, permitindo acompanhar o comportamento lógico do programa.
+      </p>
+      <p data-translate="logic_math_example3_tip">
+        Você pode alterar os valores das variáveis de temperatura e umidade para observar como o comportamento do programa muda. Isso ajuda a entender melhor o uso de condições combinadas e operadores lógicos em situações reais.
+      </p>
 
       </section>
     </main>

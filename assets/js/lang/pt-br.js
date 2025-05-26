@@ -573,6 +573,35 @@ display_example4_step1: "Inicializa o display e configura a leitura do sensor LD
 display_example4_step2: "Lê continuamente o valor de luminosidade ambiente.",
 display_example4_step3: "Mostra o valor na tela, atualizando a cada 500 milissegundos.",
 
+//Página Lógica e Matemática
+logic_math_intro_title: "Lógica e Matemática",
+logic_math_intro1: "Os blocos de lógica e matemática são fundamentais na programação. Eles permitem criar condições, realizar cálculos, comparar valores e tomar decisões. Estão presentes em praticamente todos os tipos de projeto — desde a leitura de sensores, até o controle de motores e execução de ações com base em regras.",
+logic_math_intro2: "A categoria Matemática contém operações como soma, subtração, multiplicação, divisão, arredondamento, raiz quadrada, seno, mapeamento de valores, entre outros. Já a categoria Lógica oferece comparadores (como =, <, >), operadores lógicos (E, OU), e blocos de decisão como se, senão e senão se.",
 
+logic_math_example1_title: "Exemplo 1: Verificar se um número fixo é maior que 10",
+logic_math_example1_desc: "Neste exemplo usamos os blocos se e senão para verificar se um valor fixo é maior que 10. O bloco de decisão (se) permite executar comandos apenas quando uma condição é verdadeira. A comparação é feita com o operador matemático >.",
+logic_math_example1_steps: "O que esse programa faz?",
+logic_math_example1_step1: "Cria uma variável com o valor 15.",
+logic_math_example1_step2: "Compara se o número é maior que 10.",
+logic_math_example1_step3: "Se verdadeiro, imprime 'Maior que 10', caso contrário imprime 'Menor ou igual a 10'.",
+logic_math_example1_console: "Os resultados do teste são exibidos no console da plataforma. Para visualizar, clique na aba Console no canto superior da tela após executar o programa.",
+
+logic_math_example2_title: "Exemplo 2: Converter valor analógico em porcentagem",
+logic_math_example2_desc: "Neste exemplo, pedimos ao usuário que digite um valor numérico no console para simular a leitura de um sensor. Em seguida, usamos o bloco mapear da categoria Matemática, que serve para converter um valor de um intervalo para outro. Esse bloco é muito útil em projetos de robótica para transformar leituras de sensores (como luminosidade, distância ou temperatura) em escalas mais compreensíveis, como porcentagens. Isso facilita a tomada de decisões ou a exibição de dados ao usuário.",
+logic_math_example2_steps: "O que esse programa faz?",
+logic_math_example2_step1: "Pede ao usuário um valor numérico para simular uma leitura analógica.",
+logic_math_example2_step2: "Converte esse valor para uma porcentagem usando o bloco mapear.",
+logic_math_example2_step3: "Imprime o valor convertido (em %) no console.",
+logic_math_example2_console: "O número é digitado diretamente no console, localizado na parte superior da tela. O valor convertido será exibido em seguida para acompanhamento da conversão em tempo real.",
+
+logic_math_example3_title: "Exemplo 3: Controle de ventilação com “E”, “OU” e senão",
+logic_math_example3_desc: "Neste exemplo, simulamos a lógica de um sistema de ventilação inteligente que considera tanto a temperatura quanto a umidade do ambiente. Usamos operadores lógicos E e OU junto com blocos condicionais se e senão se para definir o comportamento do sistema com base nos valores.",
+logic_math_example3_steps: "O que esse programa faz?",
+logic_math_example3_step1: "Cria duas variáveis com valores fixos para temperatura e umidade.",
+logic_math_example3_step2: "Se temperatura > 30 E umidade > 70, imprime \"Ativar ventilador e desumidificador\".",
+logic_math_example3_step3: "Senão se temperatura > 30 OU umidade > 70, imprime \"Ativar apenas ventilador\".",
+logic_math_example3_step4: "Senão, imprime \"Ambiente confortável\".",
+logic_math_example3_console: "Os resultados das decisões são mostrados no console, permitindo acompanhar o comportamento lógico do programa.",
+logic_math_example3_tip: "Você pode alterar os valores das variáveis de temperatura e umidade para observar como o comportamento do programa muda. Isso ajuda a entender melhor o uso de condições combinadas e operadores lógicos em situações reais.",
 
 }

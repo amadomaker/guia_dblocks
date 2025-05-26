@@ -110,6 +110,8 @@ var MSG = {
     "Aprende cómo instalar los controladores necesarios y configurar la AmadoBoard con MicroPython para comenzar a desarrollar tus proyectos.",
   var_loop_print: "Variables, bucles e impresión",
   var_loop_print_description: "En esta sección, aprenderemos a trabajar con variables, estructuras de control e imprimir datos en pantalla.",
+  logic_and_math: "Lógica y Matemáticas",
+  logic_and_math_description: "En esta sección, aprenderemos a utilizar operadores lógicos y matemáticos para crear programas más complejos e interesantes.",
 
   digital_input_output: "Entrada y salida digital",
   digital_io_description:
@@ -536,5 +538,63 @@ buzzer_block_music_desc: "Puedes seleccionar canciones temáticas integradas com
 buzzer_block_user_title: "Nota: melodías creadas por el usuario",
 buzzer_block_user_desc: "Existe un bloque llamado “Reproducir buzzer en el pin con melodía”. Este bloque se usa junto con la pestaña Música para reproducir canciones compuestas por el usuario. Será explicado en una sección específica más adelante.",
 
+display_section_title: "Pantalla OLED SSD1306",
+display_intro1: "La pantalla OLED SSD1306 es una pantalla pequeña con comunicación I2C, muy utilizada en proyectos de electrónica y robótica para mostrar información como textos, valores de sensores o mensajes del sistema.",
+display_intro2: "En la plataforma, los bloques para controlar la pantalla se encuentran en la categoría Pantallas. Antes de usarla, es necesario instalar la biblioteca ssd1306 haciendo clic en el bloque Instalar biblioteca: ssd1306.",
+display_connection_info: "La placa Amado tiene un espacio dedicado para conectar la pantalla, identificado en la propia placa con el nombre OLED DISPLAY. Este conector utiliza comunicación I2C, y los pines correspondientes son: SDA en el pin D21 y SCL en el pin D22. Simplemente conecta el módulo OLED en el lugar correcto e inicia la comunicación con esos pines en el bloque de inicialización.",
+display_blocks_info: "Para que el texto o valor aparezca correctamente en la pantalla, es fundamental seguir el orden correcto de los bloques: 1) limpiar la pantalla, 2) escribir el contenido (mensaje o número) y 3) actualizar la pantalla. El bloque de actualización realmente envía el contenido a la pantalla; sin él, no se mostrará nada.",
+
+display_example1_title: "Ejemplo 1: Escribir texto fijo en la pantalla",
+display_example1_desc: "En este ejemplo mostramos cómo posicionar un texto estático en la pantalla usando los bloques adecuados. Este es el primer paso para cualquier proyecto con pantalla.",
+display_example1_steps: "¿Qué hace este programa?",
+display_example1_step1: "Inicializa la pantalla con los pines correctos (I2C: 1, SCL: 22, SDA: 21).",
+display_example1_step2: "Limpia la pantalla para asegurarse de que no haya restos de texto anterior.",
+display_example1_step3: "Escribe el texto \"Hello\" en la posición deseada de la pantalla.",
+display_example1_step4: "Actualiza la pantalla para que aparezca el texto.",
+
+display_example3_title: "Ejemplo 2: Actualizar valor con bucle",
+display_example3_desc: "Este ejemplo demuestra cómo crear un contador que se actualiza constantemente en la pantalla. Ideal para aprender a manipular variables visuales.",
+display_example3_steps: "¿Qué hace este programa?",
+display_example3_step1: "Inicializa la pantalla.",
+display_example3_step2: "Crea una variable que incrementa su valor cada segundo.",
+display_example3_step3: "Limpia la pantalla, muestra el valor de la variable y actualiza la pantalla continuamente.",
+
+display_example4_title: "Ejemplo 3: Mostrar valor del sensor LDR",
+display_example4_desc: "Aquí mostramos cómo integrar la pantalla con sensores. En este caso, mostramos el valor de luminosidad leído por un sensor LDR.",
+display_example4_steps: "¿Qué hace este programa?",
+display_example4_step1: "Inicializa la pantalla y configura la lectura del sensor LDR.",
+display_example4_step2: "Lee continuamente el valor de luminosidad ambiental.",
+display_example4_step3: "Muestra el valor en la pantalla, actualizando cada 500 milisegundos.",
+
+// Sección Lógica y Matemáticas'
+logic_math_intro_title: "Lógica y Matemáticas",
+logic_math_intro1: "Los bloques de lógica y matemáticas son fundamentales en la programación. Permiten crear condiciones, realizar cálculos, comparar valores y tomar decisiones. Están presentes en prácticamente todo tipo de proyecto — desde lecturas de sensores hasta control de motores y ejecución de acciones basadas en reglas.",
+logic_math_intro2: "La categoría Matemáticas contiene operaciones como suma, resta, multiplicación, división, redondeo, raíz cuadrada, seno, mapeo de valores, entre otros. La categoría Lógica ofrece comparadores (como =, <, >), operadores lógicos (Y, O) y bloques de decisión como si, sino y sino si.",
+
+logic_math_example1_title: "Ejemplo 1: Verificar si un número fijo es mayor que 10",
+logic_math_example1_desc: "En este ejemplo usamos los bloques si y sino para verificar si un valor fijo es mayor que 10. El bloque de decisión (si) permite ejecutar comandos solo cuando una condición es verdadera. La comparación se hace con el operador >.",
+logic_math_example1_steps: "¿Qué hace este programa?",
+logic_math_example1_step1: "Crea una variable con el valor 15.",
+logic_math_example1_step2: "Verifica si el número es mayor que 10.",
+logic_math_example1_step3: "Si es verdadero, imprime 'Mayor que 10'; de lo contrario, imprime 'Menor o igual a 10'.",
+logic_math_example1_console: "Los resultados de la prueba se muestran en la consola de la plataforma. Para visualizarla, haz clic en la pestaña Consola en la parte superior de la pantalla después de ejecutar el programa.",
+
+logic_math_example2_title: "Ejemplo 2: Convertir valor analógico en porcentaje",
+logic_math_example2_desc: "En este ejemplo, pedimos al usuario que ingrese un valor numérico en la consola para simular la lectura de un sensor. Luego usamos el bloque mapear de la categoría Matemáticas, que sirve para convertir un valor de un rango a otro. Este bloque es muy útil en proyectos de robótica para transformar lecturas de sensores (como luz, distancia o temperatura) en escalas más comprensibles, como porcentajes. Esto facilita la toma de decisiones o la visualización de datos para el usuario.",
+logic_math_example2_steps: "¿Qué hace este programa?",
+logic_math_example2_step1: "Pide al usuario un valor numérico para simular una lectura analógica.",
+logic_math_example2_step2: "Convierte este valor en un porcentaje usando el bloque mapear.",
+logic_math_example2_step3: "Imprime el valor convertido (en %) en la consola.",
+logic_math_example2_console: "El número se ingresa directamente en la consola, ubicada en la parte superior de la pantalla. El valor convertido se muestra a continuación para su seguimiento en tiempo real.",
+
+logic_math_example3_title: "Ejemplo 3: Control de ventilación con Y, O y sino",
+logic_math_example3_desc: "En este ejemplo simulamos la lógica de un sistema de ventilación inteligente que considera tanto la temperatura como la humedad del ambiente. Usamos los operadores lógicos Y y O junto con los bloques condicionales si y sino si para definir el comportamiento del sistema según los valores.",
+logic_math_example3_steps: "¿Qué hace este programa?",
+logic_math_example3_step1: "Crea dos variables con valores fijos para temperatura y humedad.",
+logic_math_example3_step2: "Si temperatura > 30 Y humedad > 70, imprime 'Activar ventilador y deshumidificador'.",
+logic_math_example3_step3: "Sino si temperatura > 30 O humedad > 70, imprime 'Activar solo el ventilador'.",
+logic_math_example3_step4: "De lo contrario, imprime 'Ambiente confortable'.",
+logic_math_example3_console: "Los resultados de las decisiones se muestran en la consola, lo que permite seguir el comportamiento lógico del programa.",
+logic_math_example3_tip: "Puedes cambiar los valores de las variables de temperatura y humedad para observar cómo cambia el comportamiento del programa. Esto ayuda a comprender mejor el uso de condiciones combinadas y operadores lógicos en situaciones reales.",
 
 };
