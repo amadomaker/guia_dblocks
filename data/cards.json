@@ -57,19 +57,19 @@
     "title_key": "music",
     "image": "musica.png",
     "description_key": "music_description",
-    "url": ""
+    "url": "chapters/music.html"
   },
   {
     "title_key": "display",
     "image": "display.png",
     "description_key": "display_description",
-    "url": ""
+    "url": "chapters/display.html"
   },
   {
     "title_key": "resources_and_features",
     "image": "recursos.png",
     "description_key": "resources_description",
-    "url": ""
+    "url": "chapters/resources_and_features.html"
   }
 
 ]
