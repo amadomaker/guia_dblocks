@@ -597,4 +597,29 @@ logic_math_example3_step4: "De lo contrario, imprime 'Ambiente confortable'.",
 logic_math_example3_console: "Los resultados de las decisiones se muestran en la consola, lo que permite seguir el comportamiento lógico del programa.",
 logic_math_example3_tip: "Puedes cambiar los valores de las variables de temperatura y humedad para observar cómo cambia el comportamiento del programa. Esto ayuda a comprender mejor el uso de condiciones combinadas y operadores lógicos en situaciones reales.",
 
+
+
+//Pagina musica
+music_section_title: "Música",
+music_section_intro: "En esta sección, aprenderemos a usar la pestaña Música de la plataforma para componer melodías personalizadas de forma visual mediante un piano roll interactivo. Estas melodías se pueden probar y luego usar en bloques con el zumbador.",
+music_features_intro: "La interfaz cuenta con varios controles útiles:",
+music_editor_info: "El piano roll funciona de la siguiente manera: las columnas representan el tiempo y las filas representan las notas musicales. Puedes seleccionar una nota por columna. Si omites una columna, ese momento será un silencio.",
+
+music_example1_title: "Ejemplo: Creando la melodía \"Do-Re-Mi-Fa-Sol-La-Si\"",
+music_example1_desc: "Vamos a crear una melodía simple utilizando las notas musicales básicas.",
+
+music_example2_title: "Reproducir la melodía con el zumbador",
+music_example2_desc: "Después de guardar la melodía, ve a la pestaña Bloques. En Salidas y Actuadores → Zumbador, encontrarás el bloque Reproducir zumbador en el pin. Al seleccionar la melodía creada, podrás reproducirla con el zumbador de la placa.",
+
+music_extra_info_title: "Consejos adicionales",
+music_extra_info: "Si haces clic derecho sobre el bloque de melodía, verás opciones útiles como Eliminar o Exportar esa melodía individualmente.",
+
+music_example3_title: "Ejemplo: Melodía “Cumpleaños Feliz”",
+music_example3_desc: "En este ejemplo, creamos una versión simple de la melodía “Cumpleaños Feliz” utilizando el editor de música de la plataforma. Es una excelente forma de practicar composición, trabajar con ritmos y probar la reproducción con el zumbador.",
+music_example3_notes: "Las notas utilizadas, en orden, son: C4, C4, D4, C4, F4, E4 / C4, C4, D4, C4, G4, F4. Cada grupo representa una frase musical, y puedes continuar creando las siguientes partes de la canción de la misma manera.",
+music_example3_bpm: "Ten en cuenta que el BPM fue ajustado a 130, lo que hace que la melodía sea un poco más rápida. Puedes probar diferentes valores de BPM para ajustar la velocidad según tu preferencia.",
+music_example3_tips: "Este tipo de ejercicio ayuda a comprender cómo el tiempo y las pausas influyen en la ejecución de la melodía. También permite practicar la organización de las notas en el piano roll y explorar posibilidades creativas.",
+
+music_section_intro_title: "Introducción"
+
 };

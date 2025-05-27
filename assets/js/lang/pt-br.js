@@ -619,4 +619,11 @@ music_example2_desc: "Após salvar a melodia, vá até a aba Blocos. Em Saídas 
 music_extra_info_title: "Dicas adicionais",
 music_extra_info: "Se você clicar com o botão direito do mouse sobre o bloco de melodia, verá opções úteis como Excluir ou Exportar aquela melodia individualmente.",
 
+music_example3_title: "Exemplo: Melodia “Parabéns pra Você”",
+music_example3_desc: "Neste exemplo, criamos uma versão simples da melodia “Parabéns pra Você” usando o editor de música da plataforma. Esta é uma boa forma de praticar a composição, trabalhar com ritmos e testar a reprodução com o buzzer.",
+music_example3_notes: "As notas utilizadas, na ordem, são: C4, C4, D4, C4, F4, E4 / C4, C4, D4, C4, G4, F4. Cada grupo representa uma frase musical, e você pode continuar criando as próximas partes da música da mesma forma.",
+music_example3_bpm: "Note que o BPM foi ajustado para 130, o que torna a música um pouco mais acelerada. Você pode experimentar diferentes valores de BPM para adaptar a velocidade da melodia conforme sua preferência.",
+music_example3_tips: "Este tipo de exercício ajuda a entender como o tempo e as pausas influenciam na execução da música. Também permite praticar a organização das notas no piano roll e explorar possibilidades criativas.",
+
+music_section_intro_title: "Introdução"
 }

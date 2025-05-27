@@ -594,4 +594,28 @@ logic_math_example3_step4: "Else, prints 'Comfortable environment'.",
 logic_math_example3_console: "The decision results are shown in the console, allowing you to follow the logical behavior of the program.",
 logic_math_example3_tip: "You can change the values of the temperature and humidity variables to see how the program's behavior changes. This helps better understand the use of combined conditions and logical operators in real scenarios.",
 
+
+//Page Music
+music_section_title: "Music",
+music_section_intro: "In this section, we will learn how to use the platform's Music tab to compose custom melodies visually through an interactive piano roll. These melodies can be tested and later used in blocks with the buzzer.",
+music_features_intro: "The interface has several useful controls:",
+music_editor_info: "The piano roll works as follows: the columns represent time, and the rows represent musical notes. You can select one note per column. If you skip a column, that moment will be silent.",
+
+music_example1_title: "Example: Creating the melody \"Do-Re-Mi-Fa-Sol-La-Si\"",
+music_example1_desc: "Let's create a simple melody using basic musical notes.",
+
+music_example2_title: "Playing the melody with the buzzer",
+music_example2_desc: "After saving the melody, go to the Blocks tab. In Outputs and Actuators → Buzzer, you will find the block Play buzzer on pin. By selecting the created melody, you can play it using the buzzer on the board.",
+
+music_extra_info_title: "Additional tips",
+music_extra_info: "If you right-click on the melody block, you will see useful options such as Delete or Export that individual melody.",
+
+music_example3_title: "Example: “Happy Birthday” Melody",
+music_example3_desc: "In this example, we create a simple version of the 'Happy Birthday' melody using the platform’s music editor. This is a great way to practice composition, work with rhythm, and test playback with the buzzer.",
+music_example3_notes: "The notes used, in order, are: C4, C4, D4, C4, F4, E4 / C4, C4, D4, C4, G4, F4. Each group represents a musical phrase, and you can continue composing the next parts of the song in the same way.",
+music_example3_bpm: "Note that the BPM was set to 130, which makes the song a bit faster. You can try different BPM values to adjust the melody speed as you prefer.",
+music_example3_tips: "This type of exercise helps you understand how timing and pauses affect music playback. It also allows you to practice organizing notes on the piano roll and explore creative possibilities.",
+
+music_section_intro_title: "Introduction"
+
 };
