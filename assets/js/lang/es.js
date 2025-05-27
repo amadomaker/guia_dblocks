@@ -620,6 +620,51 @@ music_example3_notes: "Las notas utilizadas, en orden, son: C4, C4, D4, C4, F4, 
 music_example3_bpm: "Ten en cuenta que el BPM fue ajustado a 130, lo que hace que la melodía sea un poco más rápida. Puedes probar diferentes valores de BPM para ajustar la velocidad según tu preferencia.",
 music_example3_tips: "Este tipo de ejercicio ayuda a comprender cómo el tiempo y las pausas influyen en la ejecución de la melodía. También permite practicar la organización de las notas en el piano roll y explorar posibilidades creativas.",
 
-music_section_intro_title: "Introducción"
+music_section_intro_title: "Introducción",
+
+
+//Pagina recursos y funcionalidades
+resources_section_title: "Recursos y Funcionalidades",
+resources_intro: "En esta sección presentaremos algunas funciones adicionales de la plataforma que pueden facilitar el uso y la organización de tus proyectos. Estos detalles a menudo pasan desapercibidos, pero hacen que la experiencia con el entorno sea aún más eficiente.",
+
+resources_project_block_title: "Bloque de Datos del Proyecto",
+resources_project_block_desc: "Siempre que se crea un nuevo proyecto, el bloque Datos del proyecto aparece automáticamente. Es muy útil, ya que permite rellenar el nombre del autor, el ID del proyecto (si está integrado con IoT) y una descripción personalizada. Esta descripción se utiliza como nombre del archivo al exportar el proyecto, facilitando su identificación en la computadora.",
+resources_project_block_info: "También puedes encontrar este bloque en la categoría Funciones → Bipes e insertarlo manualmente en el proyecto si es necesario.",
+
+resources_mult_projects_title: "Trabajar con múltiples proyectos",
+resources_mult_projects_desc: "En la parte superior de la plataforma hay un botón de usuario (icono de perfil). Al hacer clic, se abre un panel lateral con las opciones de gestión de proyectos.",
+resources_mult_projects_usage: "Puedes crear varios proyectos haciendo clic en el botón + y cambiar entre ellos rápidamente. Esta función es excelente para organizar diferentes tareas, borradores o versiones de código.",
+resources_mult_projects_lang_title: "Idioma de la plataforma",
+resources_mult_projects_lang: "En este panel también puedes cambiar el idioma de la interfaz, eligiendo entre Portugués, Inglés o Español. Esta opción aparece en la parte inferior del panel.",
+
+resources_topbar_title: "Otros botones de la barra superior",
+resources_topbar_desc: "Además de la gestión de proyectos, la barra superior incluye varios otros botones útiles:",
+resources_topbar_item_python: "<strong>Python (icono)</strong>: abre directamente la página de instalación de MicroPython para tu placa.",
+resources_topbar_item_download: "<strong>Descargar</strong>: descarga el código del proyecto en formato <code>.xml</code>.",
+resources_topbar_item_upload: "<strong>Subir</strong>: permite cargar un archivo <code>.xml</code> guardado previamente.",
+resources_topbar_item_connect: "<strong>Conectar</strong>: botón con símbolo USB para conectar la placa a la plataforma.",
+resources_topbar_item_play: "<strong>Reproducir</strong>: ejecuta el programa cargado en la placa.",
+
+resources_save_title: "Guardar el programa en la placa (main.py)",
+resources_save_intro: "Una de las funcionalidades más importantes de la plataforma es la posibilidad de guardar el programa directamente en la memoria de la placa, permitiendo que se ejecute automáticamente cada vez que la placa sea encendida. Esto se hace guardando el código con el nombre main.py.",
+resources_save_context: "Para ello, es necesario utilizar la pestaña Archivos, que funciona como un gestor de archivos interno de la placa. Esta función es un diferencial de la plataforma, ya que permite guardar, editar, eliminar y ejecutar archivos directamente desde la memoria interna del dispositivo.",
+resources_save_steps: "Sigue los pasos a continuación para guardar tu programa como 'main.py':",
+resources_save_check: "Después de guardar, haz doble clic en el botón de actualizar para ver la lista de archivos de la placa. Verás el nuevo archivo main.py con la etiqueta run at boot, indicando que será el programa que se ejecutará automáticamente al encender la placa.",
+resources_save_edit: "Además de guardar, es posible editar o eliminar archivos directamente desde esta pestaña. Para eliminar el main.py, simplemente haz clic en el icono de la papelera junto al nombre del archivo.",
+resources_save_tip: "Nota importante",
+resources_save_note: "En algunos casos, el programa puede seguir ejecutándose incluso después de hacer clic en Detener. Si esto ocurre, haz clic en el icono de desconexión, presiona el botón de reinicio en la placa y vuelve a conectarla. El icono de reproducción debería volver a aparecer, y podrás acceder nuevamente a la memoria de la placa.",
+resources_save_note2: "Este comportamiento es común cuando deseas eliminar el archivo <code>main.py</code> o volver al uso normal con la plataforma. Siempre que finalices un proyecto y quieras usarlo con una fuente de energía externa, guárdalo como <code>main.py</code>.",
+
+resources_save_step1: "Asegúrate de que la <strong>placa esté conectada</strong> y <strong>no se esté ejecutando ningún programa</strong> (el botón <code>Play</code> debe estar visible).",
+resources_save_step2: "Accede a la pestaña <strong>Archivos</strong>.",
+resources_save_step3: "En la sección \"Bloques para código\", haz clic en <code>code.bipes.py</code> para ver tu programa.",
+resources_save_step4: "Cambia el nombre del archivo haciendo clic sobre <strong>code.bipes.py</strong> en la parte superior del editor y renómbralo a <code>main.py</code>.",
+resources_save_step5: "Haz clic en <strong>Guardar una copia</strong>.",
+
+resources_save_step1: "Asegúrate de que la <strong>placa esté conectada</strong> y que <strong>ningún programa esté en ejecución</strong> (el botón <code>Play</code> debe estar visible).",
+resources_save_step2: "Accede a la pestaña <strong>Archivos</strong>.",
+resources_save_step3: "En la sección \"Bloques a código\", haz clic en <code>code.bipes.py</code> para ver tu programa.",
+resources_save_step4: "Cambia el nombre del archivo haciendo clic sobre <strong>code.bipes.py</strong> en la parte superior del editor y renómbralo como <code>main.py</code>.",
+resources_save_step5: "Haz clic en <strong>Guardar una copia</strong>.",
 
 };

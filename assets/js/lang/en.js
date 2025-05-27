@@ -616,6 +616,51 @@ music_example3_notes: "The notes used, in order, are: C4, C4, D4, C4, F4, E4 / C
 music_example3_bpm: "Note that the BPM was set to 130, which makes the song a bit faster. You can try different BPM values to adjust the melody speed as you prefer.",
 music_example3_tips: "This type of exercise helps you understand how timing and pauses affect music playback. It also allows you to practice organizing notes on the piano roll and explore creative possibilities.",
 
-music_section_intro_title: "Introduction"
+music_section_intro_title: "Introduction",
+
+//Page Resources and features
+
+resources_section_title: "Resources and Features",
+resources_intro: "In this section, we will present some extra features of the platform that can facilitate the use and organization of your projects. These details are often overlooked, but they make the experience with the environment even more efficient.",
+
+resources_project_block_title: "Project Data Block",
+resources_project_block_desc: "Whenever a new project is created, the Project Data block appears automatically. It is very useful as it allows you to fill in the author's name, the project ID (if integrated with IoT), and a custom description. This description is used as the filename when you export the project, making it easier to identify on your computer.",
+resources_project_block_info: "You can also find this block under Functions → Bipes and manually insert it into your project if needed.",
+
+resources_mult_projects_title: "Working with multiple projects",
+resources_mult_projects_desc: "At the top of the platform there is a user button (profile icon). Clicking on it opens a side panel with project management options.",
+resources_mult_projects_usage: "You can create multiple projects by clicking the + button and switch between them quickly. This feature is great for organizing different tasks, drafts, or code versions.",
+resources_mult_projects_lang_title: "Platform language",
+resources_mult_projects_lang: "In this panel, you can also change the interface language, choosing between Portuguese, English, or Spanish. This option appears at the bottom of the panel.",
+
+resources_topbar_title: "Other top bar buttons",
+resources_topbar_desc: "In addition to project management, the top bar includes several other useful buttons:",
+resources_topbar_item_python: "<strong>Python (icon)</strong>: opens the MicroPython installation page for your board.",
+resources_topbar_item_download: "<strong>Download</strong>: downloads the project code in <code>.xml</code> format.",
+resources_topbar_item_upload: "<strong>Upload</strong>: allows loading a previously saved <code>.xml</code> file.",
+resources_topbar_item_connect: "<strong>Connect</strong>: USB icon button to connect the board to the platform.",
+resources_topbar_item_play: "<strong>Play</strong>: runs the program loaded on the board.",
+
+resources_save_title: "Save the program to the board (main.py)",
+resources_save_intro: "One of the most important features of the platform is the ability to save the program directly to the board's memory, allowing it to run automatically whenever the board is powered on. This is done by saving the code with the name main.py.",
+resources_save_context: "To do this, you need to use the Files tab, which works as an internal file manager for the board. This feature is a differential of the platform, as it allows you to save, edit, delete, and run files directly from the device’s internal memory.",
+resources_save_steps: "Follow the steps below to save your program as 'main.py':",
+resources_save_check: "After saving, double-click the refresh button to update the board’s file list. You will see the new main.py file with the run at boot label, indicating that this will be the program automatically executed when the board is powered on.",
+resources_save_edit: "In addition to saving, you can edit or delete files directly from this tab. To delete main.py, simply click the trash icon next to the file name.",
+resources_save_tip: "Important note",
+resources_save_note: "In some cases, the program may continue running even after clicking Stop. If this happens, click the disconnect icon, press the board’s reset button, and reconnect. The play icon should reappear, allowing you to access the board’s memory again.",
+resources_save_note2: "This behavior is common when you want to delete <code>main.py</code> or return to normal usage with the platform. Whenever you finish a project and want to use it with an external power source, save it as <code>main.py</code>.",
+
+resources_save_step1: "Make sure the <strong>board is connected</strong> and <strong>no program is running</strong> (the <code>Play</code> button must be visible).",
+resources_save_step2: "Go to the <strong>Files</strong> tab.",
+resources_save_step3: "In the \"Blocks for code\" section, click <code>code.bipes.py</code> to view your program.",
+resources_save_step4: "Rename the file by clicking on <strong>code.bipes.py</strong> at the top of the editor and changing it to <code>main.py</code>.",
+resources_save_step5: "Click <strong>Save a copy</strong>.",
+
+resources_save_step1: "Make sure the <strong>board is connected</strong> and <strong>no program is running</strong> (the <code>Play</code> button must be visible).",
+resources_save_step2: "Access the <strong>Files</strong> tab.",
+resources_save_step3: "In the \"Blocks to code\" section, click <code>code.bipes.py</code> to view your program.",
+resources_save_step4: "Rename the file by clicking <strong>code.bipes.py</strong> at the top of the editor and changing it to <code>main.py</code>.",
+resources_save_step5: "Click <strong>Save a copy</strong>.",
 
 };
