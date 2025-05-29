@@ -110,6 +110,8 @@ var MSG = {
     "Learn how to install the necessary drivers and set up the AmadoBoard with MicroPython to start developing your projects.",
   var_loop_print: "Variables, loops, and printing",
   var_loop_print_description: "In this section, we will learn how to work with variables, control structures, and print data to the screen.",
+  logic_and_math: "Logic and Math",
+  logic_and_math_description: "In this section, we will learn how to use logical and mathematical operators to create more complex and interesting programs.",
 
   digital_input_output: "Digital Input and Output",
   digital_io_description:
@@ -533,5 +535,132 @@ buzzer_block_music_desc: "Choose from built-in themed songs like Super Mario, St
 buzzer_block_user_title: "Note: user-created melodies",
 buzzer_block_user_desc: "There's also a block called “Play buzzer on pin with melody.” This is used with the Music tab to run your own composed songs. It will be explained in a separate section.",
 
+display_section_title: "OLED SSD1306 Display",
+display_intro1: "The OLED SSD1306 display is a small screen with I2C communication, widely used in electronics and robotics projects to show information such as text, sensor values, or system messages.",
+display_intro2: "On the platform, the blocks for controlling the display are found in the Screens category. Before using it, you must install the ssd1306 library by clicking the Install library: ssd1306 block.",
+display_connection_info: "The Amado Board has a dedicated slot for connecting the display, identified on the board as OLED DISPLAY. This connector uses I2C communication, with SDA on pin D21 and SCL on pin D22. Just plug the OLED module into the correct place and start communication using those pins in the initialization block.",
+display_blocks_info: "For the text or value to appear correctly on the screen, it is essential to follow the correct block sequence: 1) clear the display, 2) write the content (message or number), and 3) update the display. The update block actually sends the content to the screen; without it, nothing will be shown.",
+
+display_example1_title: "Example 1: Display fixed text on screen",
+display_example1_desc: "In this example, we show how to position a static text on the screen using the appropriate blocks. This is the first step in any display project.",
+display_example1_steps: "What does this program do?",
+display_example1_step1: "Initializes the display with the correct pins (I2C: 1, SCL: 22, SDA: 21).",
+display_example1_step2: "Clears the display to ensure there are no previous text residues.",
+display_example1_step3: "Writes the text \"Hello\" at the desired position on the screen.",
+display_example1_step4: "Updates the display so the text appears.",
+
+display_example3_title: "Example 2: Update value using a loop",
+display_example3_desc: "This example demonstrates how to create a counter that is constantly updated on the display. Great for learning how to visually manage variables.",
+display_example3_steps: "What does this program do?",
+display_example3_step1: "Initializes the display.",
+display_example3_step2: "Creates a variable that increases in value every second.",
+display_example3_step3: "Clears the display, shows the variable value, and continuously updates the screen.",
+
+display_example4_title: "Example 3: Display LDR sensor value",
+display_example4_desc: "Here we show how to integrate the display with sensors. In this case, we display the brightness value read by an LDR sensor.",
+display_example4_steps: "What does this program do?",
+display_example4_step1: "Initializes the display and sets up the LDR sensor reading.",
+display_example4_step2: "Continuously reads the ambient brightness value.",
+display_example4_step3: "Displays the value on the screen, updating every 500 milliseconds.",
+
+// Logic and Math
+logic_math_intro_title: "Logic and Math",
+logic_math_intro1: "Logic and math blocks are fundamental in programming. They allow you to create conditions, perform calculations, compare values, and make decisions. They are present in virtually all types of projects — from sensor readings to motor control and rule-based actions.",
+logic_math_intro2: "The Math category contains operations such as addition, subtraction, multiplication, division, rounding, square root, sine, value mapping, and more. The Logic category offers comparators (such as =, <, >), logical operators (AND, OR), and decision blocks like if, else, and else if.",
+
+logic_math_example1_title: "Example 1: Check if a fixed number is greater than 10",
+logic_math_example1_desc: "In this example, we use the if and else blocks to check if a fixed value is greater than 10. The decision block (if) allows commands to run only when a condition is true. The comparison is made using the > operator.",
+logic_math_example1_steps: "What does this program do?",
+logic_math_example1_step1: "Creates a variable with the value 15.",
+logic_math_example1_step2: "Checks if the number is greater than 10.",
+logic_math_example1_step3: "If true, prints 'Greater than 10'; otherwise, prints 'Less than or equal to 10'.",
+logic_math_example1_console: "The test results are displayed in the platform's console. To view, click the Console tab at the top of the screen after running the program.",
+
+logic_math_example2_title: "Example 2: Convert analog value to percentage",
+logic_math_example2_desc: "In this example, we ask the user to enter a numeric value in the console to simulate a sensor reading. Then, we use the map block from the Math category, which converts a value from one range to another. This block is very useful in robotics projects to transform sensor readings (such as light, distance, or temperature) into more understandable scales like percentages. This helps in making decisions or displaying data to the user.",
+logic_math_example2_steps: "What does this program do?",
+logic_math_example2_step1: "Asks the user to enter a numeric value to simulate an analog reading.",
+logic_math_example2_step2: "Converts the value to a percentage using the map block.",
+logic_math_example2_step3: "Prints the converted value (in %) to the console.",
+logic_math_example2_console: "The number is entered directly in the console, located at the top of the screen. The converted value is then displayed for real-time monitoring.",
+
+logic_math_example3_title: "Example 3: Ventilation control using AND, OR, and else",
+logic_math_example3_desc: "In this example, we simulate the logic of a smart ventilation system that considers both temperature and humidity levels. We use logical operators AND and OR along with conditional blocks if and else if to define the system behavior based on values.",
+logic_math_example3_steps: "What does this program do?",
+logic_math_example3_step1: "Creates two variables with fixed values for temperature and humidity.",
+logic_math_example3_step2: "If temperature > 30 AND humidity > 70, prints 'Turn on fan and dehumidifier'.",
+logic_math_example3_step3: "Else if temperature > 30 OR humidity > 70, prints 'Turn on fan only'.",
+logic_math_example3_step4: "Else, prints 'Comfortable environment'.",
+logic_math_example3_console: "The decision results are shown in the console, allowing you to follow the logical behavior of the program.",
+logic_math_example3_tip: "You can change the values of the temperature and humidity variables to see how the program's behavior changes. This helps better understand the use of combined conditions and logical operators in real scenarios.",
+
+
+//Page Music
+music_section_title: "Music",
+music_section_intro: "In this section, we will learn how to use the platform's Music tab to compose custom melodies visually through an interactive piano roll. These melodies can be tested and later used in blocks with the buzzer.",
+music_features_intro: "The interface has several useful controls:",
+music_editor_info: "The piano roll works as follows: the columns represent time, and the rows represent musical notes. You can select one note per column. If you skip a column, that moment will be silent.",
+
+music_example1_title: "Example: Creating the melody \"Do-Re-Mi-Fa-Sol-La-Si\"",
+music_example1_desc: "Let's create a simple melody using basic musical notes.",
+
+music_example2_title: "Playing the melody with the buzzer",
+music_example2_desc: "After saving the melody, go to the Blocks tab. In Outputs and Actuators → Buzzer, you will find the block Play buzzer on pin. By selecting the created melody, you can play it using the buzzer on the board.",
+
+music_extra_info_title: "Additional tips",
+music_extra_info: "If you right-click on the melody block, you will see useful options such as Delete or Export that individual melody.",
+
+music_example3_title: "Example: “Happy Birthday” Melody",
+music_example3_desc: "In this example, we create a simple version of the 'Happy Birthday' melody using the platform’s music editor. This is a great way to practice composition, work with rhythm, and test playback with the buzzer.",
+music_example3_notes: "The notes used, in order, are: C4, C4, D4, C4, F4, E4 / C4, C4, D4, C4, G4, F4. Each group represents a musical phrase, and you can continue composing the next parts of the song in the same way.",
+music_example3_bpm: "Note that the BPM was set to 130, which makes the song a bit faster. You can try different BPM values to adjust the melody speed as you prefer.",
+music_example3_tips: "This type of exercise helps you understand how timing and pauses affect music playback. It also allows you to practice organizing notes on the piano roll and explore creative possibilities.",
+
+music_section_intro_title: "Introduction",
+
+//Page Resources and features
+
+resources_section_title: "Resources and Features",
+resources_intro: "In this section, we will present some extra features of the platform that can facilitate the use and organization of your projects. These details are often overlooked, but they make the experience with the environment even more efficient.",
+
+resources_project_block_title: "Project Data Block",
+resources_project_block_desc: "Whenever a new project is created, the Project Data block appears automatically. It is very useful as it allows you to fill in the author's name, the project ID (if integrated with IoT), and a custom description. This description is used as the filename when you export the project, making it easier to identify on your computer.",
+resources_project_block_info: "You can also find this block under Functions → Bipes and manually insert it into your project if needed.",
+
+resources_mult_projects_title: "Working with multiple projects",
+resources_mult_projects_desc: "At the top of the platform there is a user button (profile icon). Clicking on it opens a side panel with project management options.",
+resources_mult_projects_usage: "You can create multiple projects by clicking the + button and switch between them quickly. This feature is great for organizing different tasks, drafts, or code versions.",
+resources_mult_projects_lang_title: "Platform language",
+resources_mult_projects_lang: "In this panel, you can also change the interface language, choosing between Portuguese, English, or Spanish. This option appears at the bottom of the panel.",
+
+resources_topbar_title: "Other top bar buttons",
+resources_topbar_desc: "In addition to project management, the top bar includes several other useful buttons:",
+resources_topbar_item_python: "<strong>Python (icon)</strong>: opens the MicroPython installation page for your board.",
+resources_topbar_item_download: "<strong>Download</strong>: downloads the project code in <code>.xml</code> format.",
+resources_topbar_item_upload: "<strong>Upload</strong>: allows loading a previously saved <code>.xml</code> file.",
+resources_topbar_item_connect: "<strong>Connect</strong>: USB icon button to connect the board to the platform.",
+resources_topbar_item_play: "<strong>Play</strong>: runs the program loaded on the board.",
+
+resources_save_title: "Save the program to the board (main.py)",
+resources_save_intro: "One of the most important features of the platform is the ability to save the program directly to the board's memory, allowing it to run automatically whenever the board is powered on. This is done by saving the code with the name main.py.",
+resources_save_context: "To do this, you need to use the Files tab, which works as an internal file manager for the board. This feature is a differential of the platform, as it allows you to save, edit, delete, and run files directly from the device’s internal memory.",
+resources_save_steps: "Follow the steps below to save your program as 'main.py':",
+resources_save_check: "After saving, double-click the refresh button to update the board’s file list. You will see the new main.py file with the run at boot label, indicating that this will be the program automatically executed when the board is powered on.",
+resources_save_edit: "In addition to saving, you can edit or delete files directly from this tab. To delete main.py, simply click the trash icon next to the file name.",
+resources_save_tip: "Important note",
+resources_save_note: "In some cases, the program may continue running even after clicking Stop. If this happens, click the disconnect icon, press the board’s reset button, and reconnect. The play icon should reappear, allowing you to access the board’s memory again.",
+resources_save_note2: "This behavior is common when you want to delete <code>main.py</code> or return to normal usage with the platform. Whenever you finish a project and want to use it with an external power source, save it as <code>main.py</code>.",
+
+resources_save_step1: "Make sure the <strong>board is connected</strong> and <strong>no program is running</strong> (the <code>Play</code> button must be visible).",
+resources_save_step2: "Go to the <strong>Files</strong> tab.",
+resources_save_step3: "In the \"Blocks for code\" section, click <code>code.bipes.py</code> to view your program.",
+resources_save_step4: "Rename the file by clicking on <strong>code.bipes.py</strong> at the top of the editor and changing it to <code>main.py</code>.",
+resources_save_step5: "Click <strong>Save a copy</strong>.",
+
+resources_save_step1: "Make sure the <strong>board is connected</strong> and <strong>no program is running</strong> (the <code>Play</code> button must be visible).",
+resources_save_step2: "Access the <strong>Files</strong> tab.",
+resources_save_step3: "In the \"Blocks to code\" section, click <code>code.bipes.py</code> to view your program.",
+resources_save_step4: "Rename the file by clicking <strong>code.bipes.py</strong> at the top of the editor and changing it to <code>main.py</code>.",
+resources_save_step5: "Click <strong>Save a copy</strong>.",
 
 };

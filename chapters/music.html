@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-translate="di_title"></title>
+    <title data-translate="music"></title>
     <link rel="stylesheet" href="../assets/css/global.css" />
     <link rel="stylesheet" href="../assets/css/chapters.css" />
   </head>
@@ -80,6 +80,111 @@
       </aside>
 
       <section class="content">
+
+      <h1 data-translate="music_section_title"></h1>
+      <div class="chapter-index">
+        <h3 data-translate="in_this_section">Nesta Seção</h3>
+        <ul>
+          <li><a href="#music-section-intro" data-translate="music_section_intro_title">Introdução</a></li>
+          <li><a href="#music-example1" data-translate="music_example1_title"></a></li>
+          <li><a href="#music-example2" data-translate="music_example2_title"></a></li>
+          <li><a href="#music-extra-info" data-translate="music_extra_info_title"></a></li>
+          <li><a href="#music-example3" data-translate="music_example3_title"></a></li>
+        </ul>
+      </div>
+
+
+      <h2 id="music-section-intro" data-translate="music_section_title">Música</h2>
+
+      <p data-translate="music_section_intro">
+        Nesta seção, vamos aprender a utilizar a aba <strong>Música</strong> da plataforma para compor melodias personalizadas de forma visual, por meio de um piano roll interativo. Essas melodias podem ser testadas e posteriormente utilizadas em blocos com o buzzer.
+      </p>
+
+      <img src="../assets/images/Music/music.png" width="100%" alt="Interface da aba Música" />
+
+      <p data-translate="music_features_intro">
+        A interface possui diversos controles úteis:
+      </p>
+      <ul>
+        <li><strong>Lixeira</strong>: limpa toda a melodia atual.</li>
+        <li><strong>Salvar melodia</strong>: salva a melodia atual, que ficará disponível no bloco “Reproduzir buzzer com melodia”.</li>
+        <li><strong>Play</strong>: executa a melodia criada para escutá-la diretamente na plataforma.</li>
+        <li><strong>Pausa</strong>: pausa a reprodução da melodia.</li>
+        <li><strong>BPM</strong>: define a velocidade da melodia. O padrão é 120, mas você pode ajustar conforme necessário.</li>
+        <li><strong>Baixar</strong>: exporta a melodia como arquivo <code>.json</code>.</li>
+        <li><strong>Importar</strong>: permite carregar um arquivo <code>.json</code> com uma melodia salva anteriormente.</li>
+      </ul>
+
+      <p data-translate="music_editor_info" style="margin-top: 15px;">
+        O piano roll funciona da seguinte forma: as <strong>colunas representam o tempo</strong>, e as <strong>linhas representam notas musicais</strong>. Você pode selecionar uma nota por coluna. Se pular uma coluna, aquele instante de tempo será um silêncio.
+      </p>
+
+      <!-- Passo 1 -->
+      <h3 id="music-example1" data-translate="music_example1_title">Exemplo: Criando a melodia "Do-Re-Mi-Fa-Sol-La-Si"</h3>
+      <p data-translate="music_example1_desc">
+        Vamos criar uma melodia simples usando as notas musicais básicas.
+      </p>
+
+      <img src="../assets/images/Music/music_step1.png" width="500px" alt="Selecionando notas da melodia" />
+
+      <p>
+        Depois de configurar a sequência da melodia, clique em <strong>Play</strong> para ouvi-la. Você verá uma <strong>linha vermelha</strong> se deslocando da esquerda para a direita, indicando o progresso da execução.
+      </p>
+
+      <img src="../assets/images/Music/music_play.png" width="400px" alt="Linha vermelha tocando a melodia" />
+
+      <p>
+        Se estiver satisfeito com o resultado, clique em <strong>Salvar melodia</strong> e digite um nome (como <code>do-re-mi</code>) na janela que será exibida.
+      </p>
+
+      <img src="../assets/images/Music/music_step2.png" width="300px" alt="Janela para salvar melodia" />
+
+      <p>
+        Você pode continuar editando a melodia ou adicionar novos trechos depois. Também é possível exportar a melodia usando o botão de <strong>Exportar</strong>, gerando um arquivo <code>.json</code> que pode ser compartilhado ou salvo. Use <strong>Importar</strong> para abrir uma melodia existente.
+      </p>
+
+      <!-- Passo 2 -->
+      <h3 id="music-example2" data-translate="music_example2_title">Tocando a melodia com o buzzer</h3>
+      <p data-translate="music_example2_desc">
+        Após salvar a melodia, acesse a aba <strong>Blocos</strong>. Em <strong>Saídas e Atuadores &rarr; Campainha (Buzzer)</strong>, selecione o bloco <code>Reproduzir buzzer no pino</code>. Nele, você pode escolher a melodia salva para reprodução.
+      </p>
+
+      <img src="../assets/images/Music/music_step3.png" width="500px" alt="Bloco para tocar melodia salva" />
+
+      <p>
+        No exemplo acima, usamos o pino <code>D4 / BUZZER</code>, pois o buzzer já está integrado à placa Amado Board nesse pino. Contudo, é possível utilizar buzzers externos em outros pinos, bastando selecionar o pino correspondente no bloco.
+      </p>
+
+      <p>
+        Após conectar o bloco no programa e clicar em <strong>Play</strong>, o buzzer executará a melodia criada. Você pode compor melodias mais longas e usar vários blocos em sequência para tocar trechos diferentes ou organizar a execução de partes da música.
+      </p>
+
+      <!-- Dica Final -->
+      <h3 data-translate="music_extra_info_title">Dicas adicionais</h3>
+      <p id="music-extra-info" data-translate="music_extra_info">
+        Se você clicar com o botão direito do mouse sobre o bloco de melodia, verá opções úteis como <strong>Excluir</strong> ou <strong>Exportar</strong> aquela melodia individualmente.
+      </p>
+
+      <img src="../assets/images/Music/music_info_block.png" width="450px" alt="Exportar ou excluir uma melodia" />
+
+      <h3 id="music-example3" data-translate="music_example3_title">Exemplo: Melodia “Parabéns pra Você”</h3>
+      <p data-translate="music_example3_desc">
+        Neste exemplo, criamos uma versão simples da melodia “Parabéns pra Você” usando o editor de música da plataforma. Esta é uma boa forma de praticar a composição, trabalhar com ritmos e testar a reprodução com o buzzer.
+      </p>
+
+      <img src="../assets/images/Music/music_parabens.png" width="100%" alt="Melodia parabéns pra você no piano roll" />
+
+      <p data-translate="music_example3_notes">
+        As notas utilizadas, na ordem, são: C4, C4, D4, C4, F4, E4 / C4, C4, D4, C4, G4, F4. Cada grupo representa uma frase musical, e você pode continuar criando as próximas partes da música da mesma forma.
+      </p>
+
+      <p data-translate="music_example3_bpm">
+        Note que o BPM foi ajustado para <strong>130</strong>, o que torna a música um pouco mais acelerada. Você pode experimentar diferentes valores de BPM para adaptar a velocidade da melodia conforme sua preferência.
+      </p>
+
+      <p data-translate="music_example3_tips">
+        Este tipo de exercício ajuda a entender como o tempo e as pausas influenciam na execução da música. Também permite praticar a organização das notas no piano roll e explorar possibilidades criativas.
+      </p>
 
 
 

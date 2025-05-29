@@ -573,6 +573,102 @@ display_example4_step1: "Inicializa o display e configura a leitura do sensor LD
 display_example4_step2: "Lê continuamente o valor de luminosidade ambiente.",
 display_example4_step3: "Mostra o valor na tela, atualizando a cada 500 milissegundos.",
 
+//Página Lógica e Matemática
+logic_math_intro_title: "Lógica e Matemática",
+logic_math_intro1: "Os blocos de lógica e matemática são fundamentais na programação. Eles permitem criar condições, realizar cálculos, comparar valores e tomar decisões. Estão presentes em praticamente todos os tipos de projeto — desde a leitura de sensores, até o controle de motores e execução de ações com base em regras.",
+logic_math_intro2: "A categoria Matemática contém operações como soma, subtração, multiplicação, divisão, arredondamento, raiz quadrada, seno, mapeamento de valores, entre outros. Já a categoria Lógica oferece comparadores (como =, <, >), operadores lógicos (E, OU), e blocos de decisão como se, senão e senão se.",
 
+logic_math_example1_title: "Exemplo 1: Verificar se um número fixo é maior que 10",
+logic_math_example1_desc: "Neste exemplo usamos os blocos se e senão para verificar se um valor fixo é maior que 10. O bloco de decisão (se) permite executar comandos apenas quando uma condição é verdadeira. A comparação é feita com o operador matemático >.",
+logic_math_example1_steps: "O que esse programa faz?",
+logic_math_example1_step1: "Cria uma variável com o valor 15.",
+logic_math_example1_step2: "Compara se o número é maior que 10.",
+logic_math_example1_step3: "Se verdadeiro, imprime 'Maior que 10', caso contrário imprime 'Menor ou igual a 10'.",
+logic_math_example1_console: "Os resultados do teste são exibidos no console da plataforma. Para visualizar, clique na aba Console no canto superior da tela após executar o programa.",
+
+logic_math_example2_title: "Exemplo 2: Converter valor analógico em porcentagem",
+logic_math_example2_desc: "Neste exemplo, pedimos ao usuário que digite um valor numérico no console para simular a leitura de um sensor. Em seguida, usamos o bloco mapear da categoria Matemática, que serve para converter um valor de um intervalo para outro. Esse bloco é muito útil em projetos de robótica para transformar leituras de sensores (como luminosidade, distância ou temperatura) em escalas mais compreensíveis, como porcentagens. Isso facilita a tomada de decisões ou a exibição de dados ao usuário.",
+logic_math_example2_steps: "O que esse programa faz?",
+logic_math_example2_step1: "Pede ao usuário um valor numérico para simular uma leitura analógica.",
+logic_math_example2_step2: "Converte esse valor para uma porcentagem usando o bloco mapear.",
+logic_math_example2_step3: "Imprime o valor convertido (em %) no console.",
+logic_math_example2_console: "O número é digitado diretamente no console, localizado na parte superior da tela. O valor convertido será exibido em seguida para acompanhamento da conversão em tempo real.",
+
+logic_math_example3_title: "Exemplo 3: Controle de ventilação com “E”, “OU” e senão",
+logic_math_example3_desc: "Neste exemplo, simulamos a lógica de um sistema de ventilação inteligente que considera tanto a temperatura quanto a umidade do ambiente. Usamos operadores lógicos E e OU junto com blocos condicionais se e senão se para definir o comportamento do sistema com base nos valores.",
+logic_math_example3_steps: "O que esse programa faz?",
+logic_math_example3_step1: "Cria duas variáveis com valores fixos para temperatura e umidade.",
+logic_math_example3_step2: "Se temperatura > 30 E umidade > 70, imprime \"Ativar ventilador e desumidificador\".",
+logic_math_example3_step3: "Senão se temperatura > 30 OU umidade > 70, imprime \"Ativar apenas ventilador\".",
+logic_math_example3_step4: "Senão, imprime \"Ambiente confortável\".",
+logic_math_example3_console: "Os resultados das decisões são mostrados no console, permitindo acompanhar o comportamento lógico do programa.",
+logic_math_example3_tip: "Você pode alterar os valores das variáveis de temperatura e umidade para observar como o comportamento do programa muda. Isso ajuda a entender melhor o uso de condições combinadas e operadores lógicos em situações reais.",
+
+//Página música
+music_section_title: "Música",
+music_section_intro: "Nesta seção, vamos aprender a utilizar a aba Música da plataforma para compor melodias personalizadas de forma visual, por meio de um piano roll interativo. Essas melodias podem ser testadas e posteriormente utilizadas em blocos com o buzzer.",
+music_features_intro: "A interface possui diversos controles úteis:",
+music_editor_info: "O piano roll funciona da seguinte forma: as colunas representam o tempo, e as linhas representam notas musicais. Você pode selecionar uma nota por coluna. Se pular uma coluna, aquele instante de tempo será um silêncio.",
+
+music_example1_title: "Exemplo: Criando a melodia \"Do-Re-Mi-Fa-Sol-La-Si\"",
+music_example1_desc: "Vamos criar uma melodia simples usando as notas musicais básicas.",
+
+music_example2_title: "Tocando a melodia com o buzzer",
+music_example2_desc: "Após salvar a melodia, vá até a aba Blocos. Em Saídas e Atuadores → Campainha (Buzzer), você encontrará o bloco Reproduzir buzzer no pino. Ao selecionar a melodia criada, você poderá reproduzi-la usando o buzzer da placa.",
+
+music_extra_info_title: "Dicas adicionais",
+music_extra_info: "Se você clicar com o botão direito do mouse sobre o bloco de melodia, verá opções úteis como Excluir ou Exportar aquela melodia individualmente.",
+
+music_example3_title: "Exemplo: Melodia “Parabéns pra Você”",
+music_example3_desc: "Neste exemplo, criamos uma versão simples da melodia “Parabéns pra Você” usando o editor de música da plataforma. Esta é uma boa forma de praticar a composição, trabalhar com ritmos e testar a reprodução com o buzzer.",
+music_example3_notes: "As notas utilizadas, na ordem, são: C4, C4, D4, C4, F4, E4 / C4, C4, D4, C4, G4, F4. Cada grupo representa uma frase musical, e você pode continuar criando as próximas partes da música da mesma forma.",
+music_example3_bpm: "Note que o BPM foi ajustado para 130, o que torna a música um pouco mais acelerada. Você pode experimentar diferentes valores de BPM para adaptar a velocidade da melodia conforme sua preferência.",
+music_example3_tips: "Este tipo de exercício ajuda a entender como o tempo e as pausas influenciam na execução da música. Também permite praticar a organização das notas no piano roll e explorar possibilidades criativas.",
+
+music_section_intro_title: "Introdução",
+
+
+// Página Recursos e Funcionalidades
+resources_section_title: "Recursos e Funcionalidades",
+resources_intro: "Nesta seção vamos apresentar alguns recursos extras da plataforma que podem facilitar o uso e organização dos seus projetos. Esses detalhes muitas vezes passam despercebidos, mas tornam a experiência com o ambiente ainda mais eficiente.",
+
+resources_project_block_title: "Bloco de Dados do Projeto",
+resources_project_block_desc: "Sempre que um novo projeto é criado, o bloco Dados do projeto aparece automaticamente. Ele é muito útil, pois permite preencher o nome do autor, o ID do projeto (caso esteja integrado com IoT) e uma descrição personalizada. Essa descrição é usada como nome do arquivo quando você exporta o projeto, facilitando sua identificação no computador.",
+resources_project_block_info: "Você também pode encontrar esse bloco na categoria Funções → Bipes e inseri-lo manualmente no projeto, caso necessário.",
+
+resources_mult_projects_title: "Trabalhar com múltiplos projetos",
+resources_mult_projects_desc: "Na parte superior da plataforma há um botão de usuário (ícone de perfil). Ao clicar nele, um painel lateral se abre com as opções de gerenciamento de projetos.",
+resources_mult_projects_usage: "É possível criar vários projetos clicando no botão + e alternar entre eles rapidamente. Essa funcionalidade é excelente para organizar diferentes tarefas, rascunhos ou versões de código.",
+resources_mult_projects_lang_title: "Idioma da plataforma",
+resources_mult_projects_lang: "Ainda nesse painel, você pode alterar o idioma da interface, escolhendo entre Português, Inglês ou Espanhol. Essa opção aparece na parte inferior do painel.",
+
+resources_topbar_title: "Outros botões da barra superior",
+resources_topbar_desc: "Além do gerenciamento de projetos, a barra superior conta com outros botões muito úteis:",
+resources_topbar_item_python: "<strong>Python (ícone)</strong>: abre diretamente a página de instalação do MicroPython para sua placa.",
+resources_topbar_item_download: "<strong>Download</strong>: baixa o código do projeto no formato <code>.xml</code>.",
+resources_topbar_item_upload: "<strong>Upload</strong>: permite carregar um arquivo <code>.xml</code> salvo anteriormente.",
+resources_topbar_item_connect: "<strong>Conectar</strong>: botão com símbolo USB para conexão da placa com a plataforma.",
+resources_topbar_item_play: "<strong>Play</strong>: executa o programa carregado na placa.",
+
+resources_save_title: "Salvar o programa na placa (main.py)",
+resources_save_intro: "Uma das funcionalidades mais importantes da plataforma é a possibilidade de salvar o programa diretamente na memória da placa, permitindo que ele seja executado automaticamente sempre que a placa for ligada. Isso é feito ao salvar o código com o nome main.py.",
+resources_save_context: "Para isso, é necessário utilizar a aba Arquivos, que funciona como um gerenciador de arquivos interno da placa. Esse recurso é um diferencial da plataforma, pois permite salvar, editar, apagar e executar arquivos diretamente da memória interna do dispositivo.",
+resources_save_steps: "Siga os passos abaixo para salvar seu programa como 'main.py':",
+resources_save_check: "Após salvar, De dois cliques no botão refresh para atualizar a lista de arquivos da placa. Você verá o novo arquivo main.py com o rótulo run at boot, indicando que esse será o programa executado automaticamente ao ligar a placa.",
+resources_save_edit: "Além de salvar, é possível editar ou excluir arquivos diretamente por essa aba. Para excluir o main.py por exemplo, basta clicar no ícone da lixeira ao lado do nome do arquivo.",
+resources_save_tip: "Observação importante",
+resources_save_note: "Em alguns casos, o programa pode continuar rodando mesmo após clicar em Stop. Se isso acontecer, clique no ícone de desconectar, pressione o botão de reset na placa e conecte novamente. O ícone de play deve reaparecer e você poderá acessar a memória da placa normalmente.",
+resources_save_note2: "Esse comportamento é comum quando você deseja apagar o <code>main.py</code> ou voltar ao uso normal com a plataforma. Sempre que finalizar um projeto e quiser utilizá-lo com uma fonte externa de energia, salve como <code>main.py</code>.",
+resources_save_step1: "Certifique-se de que a <strong>placa esteja conectada</strong> e <strong>nenhum programa esteja em execução</strong> (o botão <code>Play</code> precisa estar visível).",
+resources_save_step2: "Acesse a aba <strong>Arquivos</strong>.",
+resources_save_step3: "Na seção \"Blocos para código\", clique em <code>code.bipes.py</code> para visualizar seu programa.",
+resources_save_step4: "Altere o nome do arquivo clicando sobre <strong>code.bipes.py</strong> no topo do editor e renomeie para <code>main.py</code>.",
+resources_save_step5: "Clique em <strong>Salvar uma cópia</strong>.",
+
+resources_save_step1: "Certifique-se de que a <strong>placa esteja conectada</strong> e <strong>nenhum programa esteja em execução</strong> (o botão <code>Play</code> precisa estar visível).",
+resources_save_step2: "Acesse a aba <strong>Arquivos</strong>.",
+resources_save_step3: "Na seção \"Blocos para código\", clique em <code>code.bipes.py</code> para visualizar seu programa.",
+resources_save_step4: "Altere o nome do arquivo clicando sobre <strong>code.bipes.py</strong> no topo do editor e renomeie para <code>main.py</code>.",
+resources_save_step5: "Clique em <strong>Salvar uma cópia</strong>.",
 
 }
