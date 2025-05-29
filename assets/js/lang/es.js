@@ -110,6 +110,8 @@ var MSG = {
     "Aprende cómo instalar los controladores necesarios y configurar la AmadoBoard con MicroPython para comenzar a desarrollar tus proyectos.",
   var_loop_print: "Variables, bucles e impresión",
   var_loop_print_description: "En esta sección, aprenderemos a trabajar con variables, estructuras de control e imprimir datos en pantalla.",
+  logic_and_math: "Lógica y Matemáticas",
+  logic_and_math_description: "En esta sección, aprenderemos a utilizar operadores lógicos y matemáticos para crear programas más complejos e interesantes.",
 
   digital_input_output: "Entrada y salida digital",
   digital_io_description:
@@ -536,5 +538,133 @@ buzzer_block_music_desc: "Puedes seleccionar canciones temáticas integradas com
 buzzer_block_user_title: "Nota: melodías creadas por el usuario",
 buzzer_block_user_desc: "Existe un bloque llamado “Reproducir buzzer en el pin con melodía”. Este bloque se usa junto con la pestaña Música para reproducir canciones compuestas por el usuario. Será explicado en una sección específica más adelante.",
 
+display_section_title: "Pantalla OLED SSD1306",
+display_intro1: "La pantalla OLED SSD1306 es una pantalla pequeña con comunicación I2C, muy utilizada en proyectos de electrónica y robótica para mostrar información como textos, valores de sensores o mensajes del sistema.",
+display_intro2: "En la plataforma, los bloques para controlar la pantalla se encuentran en la categoría Pantallas. Antes de usarla, es necesario instalar la biblioteca ssd1306 haciendo clic en el bloque Instalar biblioteca: ssd1306.",
+display_connection_info: "La placa Amado tiene un espacio dedicado para conectar la pantalla, identificado en la propia placa con el nombre OLED DISPLAY. Este conector utiliza comunicación I2C, y los pines correspondientes son: SDA en el pin D21 y SCL en el pin D22. Simplemente conecta el módulo OLED en el lugar correcto e inicia la comunicación con esos pines en el bloque de inicialización.",
+display_blocks_info: "Para que el texto o valor aparezca correctamente en la pantalla, es fundamental seguir el orden correcto de los bloques: 1) limpiar la pantalla, 2) escribir el contenido (mensaje o número) y 3) actualizar la pantalla. El bloque de actualización realmente envía el contenido a la pantalla; sin él, no se mostrará nada.",
+
+display_example1_title: "Ejemplo 1: Escribir texto fijo en la pantalla",
+display_example1_desc: "En este ejemplo mostramos cómo posicionar un texto estático en la pantalla usando los bloques adecuados. Este es el primer paso para cualquier proyecto con pantalla.",
+display_example1_steps: "¿Qué hace este programa?",
+display_example1_step1: "Inicializa la pantalla con los pines correctos (I2C: 1, SCL: 22, SDA: 21).",
+display_example1_step2: "Limpia la pantalla para asegurarse de que no haya restos de texto anterior.",
+display_example1_step3: "Escribe el texto \"Hello\" en la posición deseada de la pantalla.",
+display_example1_step4: "Actualiza la pantalla para que aparezca el texto.",
+
+display_example3_title: "Ejemplo 2: Actualizar valor con bucle",
+display_example3_desc: "Este ejemplo demuestra cómo crear un contador que se actualiza constantemente en la pantalla. Ideal para aprender a manipular variables visuales.",
+display_example3_steps: "¿Qué hace este programa?",
+display_example3_step1: "Inicializa la pantalla.",
+display_example3_step2: "Crea una variable que incrementa su valor cada segundo.",
+display_example3_step3: "Limpia la pantalla, muestra el valor de la variable y actualiza la pantalla continuamente.",
+
+display_example4_title: "Ejemplo 3: Mostrar valor del sensor LDR",
+display_example4_desc: "Aquí mostramos cómo integrar la pantalla con sensores. En este caso, mostramos el valor de luminosidad leído por un sensor LDR.",
+display_example4_steps: "¿Qué hace este programa?",
+display_example4_step1: "Inicializa la pantalla y configura la lectura del sensor LDR.",
+display_example4_step2: "Lee continuamente el valor de luminosidad ambiental.",
+display_example4_step3: "Muestra el valor en la pantalla, actualizando cada 500 milisegundos.",
+
+// Sección Lógica y Matemáticas'
+logic_math_intro_title: "Lógica y Matemáticas",
+logic_math_intro1: "Los bloques de lógica y matemáticas son fundamentales en la programación. Permiten crear condiciones, realizar cálculos, comparar valores y tomar decisiones. Están presentes en prácticamente todo tipo de proyecto — desde lecturas de sensores hasta control de motores y ejecución de acciones basadas en reglas.",
+logic_math_intro2: "La categoría Matemáticas contiene operaciones como suma, resta, multiplicación, división, redondeo, raíz cuadrada, seno, mapeo de valores, entre otros. La categoría Lógica ofrece comparadores (como =, <, >), operadores lógicos (Y, O) y bloques de decisión como si, sino y sino si.",
+
+logic_math_example1_title: "Ejemplo 1: Verificar si un número fijo es mayor que 10",
+logic_math_example1_desc: "En este ejemplo usamos los bloques si y sino para verificar si un valor fijo es mayor que 10. El bloque de decisión (si) permite ejecutar comandos solo cuando una condición es verdadera. La comparación se hace con el operador >.",
+logic_math_example1_steps: "¿Qué hace este programa?",
+logic_math_example1_step1: "Crea una variable con el valor 15.",
+logic_math_example1_step2: "Verifica si el número es mayor que 10.",
+logic_math_example1_step3: "Si es verdadero, imprime 'Mayor que 10'; de lo contrario, imprime 'Menor o igual a 10'.",
+logic_math_example1_console: "Los resultados de la prueba se muestran en la consola de la plataforma. Para visualizarla, haz clic en la pestaña Consola en la parte superior de la pantalla después de ejecutar el programa.",
+
+logic_math_example2_title: "Ejemplo 2: Convertir valor analógico en porcentaje",
+logic_math_example2_desc: "En este ejemplo, pedimos al usuario que ingrese un valor numérico en la consola para simular la lectura de un sensor. Luego usamos el bloque mapear de la categoría Matemáticas, que sirve para convertir un valor de un rango a otro. Este bloque es muy útil en proyectos de robótica para transformar lecturas de sensores (como luz, distancia o temperatura) en escalas más comprensibles, como porcentajes. Esto facilita la toma de decisiones o la visualización de datos para el usuario.",
+logic_math_example2_steps: "¿Qué hace este programa?",
+logic_math_example2_step1: "Pide al usuario un valor numérico para simular una lectura analógica.",
+logic_math_example2_step2: "Convierte este valor en un porcentaje usando el bloque mapear.",
+logic_math_example2_step3: "Imprime el valor convertido (en %) en la consola.",
+logic_math_example2_console: "El número se ingresa directamente en la consola, ubicada en la parte superior de la pantalla. El valor convertido se muestra a continuación para su seguimiento en tiempo real.",
+
+logic_math_example3_title: "Ejemplo 3: Control de ventilación con Y, O y sino",
+logic_math_example3_desc: "En este ejemplo simulamos la lógica de un sistema de ventilación inteligente que considera tanto la temperatura como la humedad del ambiente. Usamos los operadores lógicos Y y O junto con los bloques condicionales si y sino si para definir el comportamiento del sistema según los valores.",
+logic_math_example3_steps: "¿Qué hace este programa?",
+logic_math_example3_step1: "Crea dos variables con valores fijos para temperatura y humedad.",
+logic_math_example3_step2: "Si temperatura > 30 Y humedad > 70, imprime 'Activar ventilador y deshumidificador'.",
+logic_math_example3_step3: "Sino si temperatura > 30 O humedad > 70, imprime 'Activar solo el ventilador'.",
+logic_math_example3_step4: "De lo contrario, imprime 'Ambiente confortable'.",
+logic_math_example3_console: "Los resultados de las decisiones se muestran en la consola, lo que permite seguir el comportamiento lógico del programa.",
+logic_math_example3_tip: "Puedes cambiar los valores de las variables de temperatura y humedad para observar cómo cambia el comportamiento del programa. Esto ayuda a comprender mejor el uso de condiciones combinadas y operadores lógicos en situaciones reales.",
+
+
+
+//Pagina musica
+music_section_title: "Música",
+music_section_intro: "En esta sección, aprenderemos a usar la pestaña Música de la plataforma para componer melodías personalizadas de forma visual mediante un piano roll interactivo. Estas melodías se pueden probar y luego usar en bloques con el zumbador.",
+music_features_intro: "La interfaz cuenta con varios controles útiles:",
+music_editor_info: "El piano roll funciona de la siguiente manera: las columnas representan el tiempo y las filas representan las notas musicales. Puedes seleccionar una nota por columna. Si omites una columna, ese momento será un silencio.",
+
+music_example1_title: "Ejemplo: Creando la melodía \"Do-Re-Mi-Fa-Sol-La-Si\"",
+music_example1_desc: "Vamos a crear una melodía simple utilizando las notas musicales básicas.",
+
+music_example2_title: "Reproducir la melodía con el zumbador",
+music_example2_desc: "Después de guardar la melodía, ve a la pestaña Bloques. En Salidas y Actuadores → Zumbador, encontrarás el bloque Reproducir zumbador en el pin. Al seleccionar la melodía creada, podrás reproducirla con el zumbador de la placa.",
+
+music_extra_info_title: "Consejos adicionales",
+music_extra_info: "Si haces clic derecho sobre el bloque de melodía, verás opciones útiles como Eliminar o Exportar esa melodía individualmente.",
+
+music_example3_title: "Ejemplo: Melodía “Cumpleaños Feliz”",
+music_example3_desc: "En este ejemplo, creamos una versión simple de la melodía “Cumpleaños Feliz” utilizando el editor de música de la plataforma. Es una excelente forma de practicar composición, trabajar con ritmos y probar la reproducción con el zumbador.",
+music_example3_notes: "Las notas utilizadas, en orden, son: C4, C4, D4, C4, F4, E4 / C4, C4, D4, C4, G4, F4. Cada grupo representa una frase musical, y puedes continuar creando las siguientes partes de la canción de la misma manera.",
+music_example3_bpm: "Ten en cuenta que el BPM fue ajustado a 130, lo que hace que la melodía sea un poco más rápida. Puedes probar diferentes valores de BPM para ajustar la velocidad según tu preferencia.",
+music_example3_tips: "Este tipo de ejercicio ayuda a comprender cómo el tiempo y las pausas influyen en la ejecución de la melodía. También permite practicar la organización de las notas en el piano roll y explorar posibilidades creativas.",
+
+music_section_intro_title: "Introducción",
+
+
+//Pagina recursos y funcionalidades
+resources_section_title: "Recursos y Funcionalidades",
+resources_intro: "En esta sección presentaremos algunas funciones adicionales de la plataforma que pueden facilitar el uso y la organización de tus proyectos. Estos detalles a menudo pasan desapercibidos, pero hacen que la experiencia con el entorno sea aún más eficiente.",
+
+resources_project_block_title: "Bloque de Datos del Proyecto",
+resources_project_block_desc: "Siempre que se crea un nuevo proyecto, el bloque Datos del proyecto aparece automáticamente. Es muy útil, ya que permite rellenar el nombre del autor, el ID del proyecto (si está integrado con IoT) y una descripción personalizada. Esta descripción se utiliza como nombre del archivo al exportar el proyecto, facilitando su identificación en la computadora.",
+resources_project_block_info: "También puedes encontrar este bloque en la categoría Funciones → Bipes e insertarlo manualmente en el proyecto si es necesario.",
+
+resources_mult_projects_title: "Trabajar con múltiples proyectos",
+resources_mult_projects_desc: "En la parte superior de la plataforma hay un botón de usuario (icono de perfil). Al hacer clic, se abre un panel lateral con las opciones de gestión de proyectos.",
+resources_mult_projects_usage: "Puedes crear varios proyectos haciendo clic en el botón + y cambiar entre ellos rápidamente. Esta función es excelente para organizar diferentes tareas, borradores o versiones de código.",
+resources_mult_projects_lang_title: "Idioma de la plataforma",
+resources_mult_projects_lang: "En este panel también puedes cambiar el idioma de la interfaz, eligiendo entre Portugués, Inglés o Español. Esta opción aparece en la parte inferior del panel.",
+
+resources_topbar_title: "Otros botones de la barra superior",
+resources_topbar_desc: "Además de la gestión de proyectos, la barra superior incluye varios otros botones útiles:",
+resources_topbar_item_python: "<strong>Python (icono)</strong>: abre directamente la página de instalación de MicroPython para tu placa.",
+resources_topbar_item_download: "<strong>Descargar</strong>: descarga el código del proyecto en formato <code>.xml</code>.",
+resources_topbar_item_upload: "<strong>Subir</strong>: permite cargar un archivo <code>.xml</code> guardado previamente.",
+resources_topbar_item_connect: "<strong>Conectar</strong>: botón con símbolo USB para conectar la placa a la plataforma.",
+resources_topbar_item_play: "<strong>Reproducir</strong>: ejecuta el programa cargado en la placa.",
+
+resources_save_title: "Guardar el programa en la placa (main.py)",
+resources_save_intro: "Una de las funcionalidades más importantes de la plataforma es la posibilidad de guardar el programa directamente en la memoria de la placa, permitiendo que se ejecute automáticamente cada vez que la placa sea encendida. Esto se hace guardando el código con el nombre main.py.",
+resources_save_context: "Para ello, es necesario utilizar la pestaña Archivos, que funciona como un gestor de archivos interno de la placa. Esta función es un diferencial de la plataforma, ya que permite guardar, editar, eliminar y ejecutar archivos directamente desde la memoria interna del dispositivo.",
+resources_save_steps: "Sigue los pasos a continuación para guardar tu programa como 'main.py':",
+resources_save_check: "Después de guardar, haz doble clic en el botón de actualizar para ver la lista de archivos de la placa. Verás el nuevo archivo main.py con la etiqueta run at boot, indicando que será el programa que se ejecutará automáticamente al encender la placa.",
+resources_save_edit: "Además de guardar, es posible editar o eliminar archivos directamente desde esta pestaña. Para eliminar el main.py, simplemente haz clic en el icono de la papelera junto al nombre del archivo.",
+resources_save_tip: "Nota importante",
+resources_save_note: "En algunos casos, el programa puede seguir ejecutándose incluso después de hacer clic en Detener. Si esto ocurre, haz clic en el icono de desconexión, presiona el botón de reinicio en la placa y vuelve a conectarla. El icono de reproducción debería volver a aparecer, y podrás acceder nuevamente a la memoria de la placa.",
+resources_save_note2: "Este comportamiento es común cuando deseas eliminar el archivo <code>main.py</code> o volver al uso normal con la plataforma. Siempre que finalices un proyecto y quieras usarlo con una fuente de energía externa, guárdalo como <code>main.py</code>.",
+
+resources_save_step1: "Asegúrate de que la <strong>placa esté conectada</strong> y <strong>no se esté ejecutando ningún programa</strong> (el botón <code>Play</code> debe estar visible).",
+resources_save_step2: "Accede a la pestaña <strong>Archivos</strong>.",
+resources_save_step3: "En la sección \"Bloques para código\", haz clic en <code>code.bipes.py</code> para ver tu programa.",
+resources_save_step4: "Cambia el nombre del archivo haciendo clic sobre <strong>code.bipes.py</strong> en la parte superior del editor y renómbralo a <code>main.py</code>.",
+resources_save_step5: "Haz clic en <strong>Guardar una copia</strong>.",
+
+resources_save_step1: "Asegúrate de que la <strong>placa esté conectada</strong> y que <strong>ningún programa esté en ejecución</strong> (el botón <code>Play</code> debe estar visible).",
+resources_save_step2: "Accede a la pestaña <strong>Archivos</strong>.",
+resources_save_step3: "En la sección \"Bloques a código\", haz clic en <code>code.bipes.py</code> para ver tu programa.",
+resources_save_step4: "Cambia el nombre del archivo haciendo clic sobre <strong>code.bipes.py</strong> en la parte superior del editor y renómbralo como <code>main.py</code>.",
+resources_save_step5: "Haz clic en <strong>Guardar una copia</strong>.",
 
 };
