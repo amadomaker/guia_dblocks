@@ -292,6 +292,18 @@ di_out8: "After that, the LED is turned off with the <code>set output pin to fal
 di_out9: "Again, the program waits for <strong>500 milliseconds</strong>.",
 di_out10: "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests.",
 
+//Pushbutton
+di_in17: "Example with pushbutton",
+di_in18: "Now let’s look at an example using a pushbutton connected to pin D39 on the Amado Board. The goal is to detect when the button is pressed or released.",
+di_in19: "In the circuit above, one terminal of the button is connected to GND through a resistor (usually 1kΩ or 10kΩ), another is connected to 5V, and the third to pin D39.",
+di_in20: "The following program reads the button and prints its state to the console:",
+di_in21: "The 'read digital input' block reads pin D39 without enabling pull-up, since the circuit uses a physical pull-down.",
+di_in22: "The value read is stored in the variable valorBotao.",
+di_in23: "The program prints this value to the console every 500 milliseconds.",
+di_in24: "When the button is released, the value read will be 0 (because the pin is grounded through the resistor).",
+di_in25: "When the button is pressed, the value read will be 1 (the pin is connected to 5V).",
+di_in26: "Tip: it’s possible to invert this logic by moving the resistor from GND to the 5V pin. In that case, the value read will be 1 when released and 0 when pressed.",
+
 
 // Page inOutAnalog
 an_introduction_title: "Introduction",

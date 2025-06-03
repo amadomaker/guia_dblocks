@@ -293,6 +293,18 @@ di_out8: "Luego, el LED se apaga con el comando <code>ajustar pin de salida a fa
 di_out9: "Una vez más, el programa espera <strong>500 milisegundos</strong>.",
 di_out10: "Esto hace que el LED parpadee continuamente con un intervalo de medio segundo entre encenderse y apagarse. Este tipo de control es muy útil en sistemas de señalización, notificaciones visuales o pruebas simples del funcionamiento de los pines.",
 
+//Pushbutton
+di_in17: "Ejemplo con botón (pushbutton)",
+di_in18: "Ahora veamos un ejemplo utilizando un botón pulsador conectado al pin D39 de la placa Amado. El objetivo es detectar cuándo se presiona o se suelta el botón.",
+di_in19: "En el circuito de arriba, un terminal del botón está conectado a GND a través de una resistencia (generalmente de 1kΩ o 10kΩ), otro al pin de 5V y el tercero al pin D39.",
+di_in20: "A continuación, el programa realiza la lectura del botón e imprime su estado en la consola:",
+di_in21: "El bloque 'leer entrada digital' lee el pin D39 sin activar pull-up, ya que el circuito utiliza una resistencia de pull-down física.",
+di_in22: "El valor leído se almacena en la variable valorBotao.",
+di_in23: "El programa imprime este valor en la consola cada 500 milisegundos.",
+di_in24: "Cuando el botón está suelto, el valor leído será 0 (porque el pin está conectado a tierra mediante la resistencia).",
+di_in25: "Cuando se presiona el botón, el valor leído será 1 (el pin se conecta a 5V).",
+di_in26: "Consejo: es posible invertir esta lógica cambiando la resistencia del GND al pin de 5V. En ese caso, el valor leído será 1 cuando esté suelto y 0 cuando esté presionado.",
+
 // Página inOutAnalog
 an_introduction_title: "Introducción",
 an_intro1: "En proyectos electrónicos, las <strong>entradas y salidas analógicas</strong> permiten trabajar con señales que varían de forma continua. A diferencia de las señales digitales, que solo tienen dos estados (0 o 1), las señales analógicas pueden representar un rango de valores, lo que las hace ideales para medir magnitudes como la luz, la temperatura o controlar la intensidad de un LED.",
