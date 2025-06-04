@@ -52,7 +52,7 @@
   box-shadow: 0px 4px 15px 0px rgba(129, 129, 129, 0.049);
   transition: transform 0.2s, box-shadow 0.2s;
   border-radius: 8px;
-  height: 70px;
+  height: 150px;
   overflow: hidden;
 }
 
