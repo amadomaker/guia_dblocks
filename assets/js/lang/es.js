@@ -109,7 +109,8 @@ var MSG = {
   environment_description:
     "Aprende cómo instalar los controladores necesarios y configurar la AmadoBoard con MicroPython para comenzar a desarrollar tus proyectos.",
   var_loop_print: "Variables, bucles e impresión",
-  var_loop_print_description: "En esta sección, aprenderemos a trabajar con variables, estructuras de control e imprimir datos en pantalla.",
+  var_loop_print_description:
+    "En esta sección, aprenderemos a trabajar con variables, estructuras de control e imprimir datos en pantalla.",
 
   digital_input_output: "Entrada y salida digital",
   digital_io_description:
@@ -222,319 +223,535 @@ var MSG = {
   ab_extra_components_text:
     "Estos componentes permiten explorar conceptos de electrónica y programación, integrando teoría y práctica.",
 
-    // Página "Preparando el entorno"
+  // Página "Preparando el entorno"
 
-preparing_environment: "Preparando el entorno",
-en_first_step: "Primeros pasos",
-en_introduction_text: "Primero necesitamos instalar un controlador para que la computadora/portátil reconozca la placa a través de la conexión por cable microUSB. Descarga el controlador CP210x desde el enlace a continuación:",
-en_install_driver: "Instalar controlador",
-en_found_download: "Busca la opción de descarga o transferencia y descarga la versión indicada a continuación:",
-en_info_micropython: "Para programar la placa Amado board en Dblocks necesitamos instalar MicroPython, y lo haremos mediante el enlace a continuación para facilitar la instalación.",
-en_install_micropython: "Instalar MicroPython",
-en_info_micropython_page: "<span style='color:red;'>En la página de instalación hay un video tutorial que enseña todo el proceso</span>. El sitio es muy simple e intuitivo: solo haz clic en conectar, selecciona el puerto USB como se muestra en la imagen de abajo e instala MicroPython. Este proceso puede tardar unos 2 minutos o más.",
-en_acessing_plataform_title: "Accediendo a la plataforma",
-en_acessing_plataform_info1: "En la barra de búsqueda escribe Dblocks y accede al primer sitio, o entra directamente en: dblocks.com.br",
-en_acessing_plataform_info2: "En la página principal haz clic en el botón “comienza a programar”. A continuación, aparecerá un mensaje de bienvenida con algunas informaciones. Si ya instalaste MicroPython puedes cerrar el mensaje, tu placa ya está lista para usar; de lo contrario, haz clic en “Instalador de MicroPython” y sigue el proceso.",
-en_useful_information: "Información útil",
-en_inf_toolbox: "En el lado izquierdo se encuentra la caja de herramientas con los bloques disponibles para usar",
-en_inf_workspace: "El área central se llama espacio de trabajo (workspace) y es donde colocaremos nuestros bloques.",
-en_info_steel_bar: "En la parte superior derecha hay algunos botones, como el de conectar la placa y el de ejecutar el programa.",
-en_info_extra: "**Nota: También es posible descargar y recargar el programa para usarlo cuando quieras o en otra computadora.",
-en_first_project_title: "Primer proyecto: Parpadear un LED infinitamente",
-en_first_project_step1: "Primero haz clic en Control, luego en Bucles y selecciona el bloque 'repetir mientras'. Colócalo donde desees.",
-en_first_project_step2: "Luego haz clic en Variables, Booleanas y selecciona el bloque 'Verdadero'. Encájalo dentro del bloque anterior como muestra la imagen abajo:",
-en_first_project_step3: "En este punto ya tenemos nuestro bucle, que es responsable por ejecutar repetidamente nuestro programa – en este caso, hacer que el LED parpadee infinitamente.",
-en_first_project_step4: "El siguiente paso es usar los bloques responsables de encender y apagar el LED, que se encuentran en la categoría Pines de entrada/salida. Busca el bloque 'ajustar pin de salida' y colócalo dentro del bucle. Deberás añadir este bloque dos veces: uno para encender y otro para apagar. En el segundo bloque selecciona la opción falso en 'a'.",
-en_first_project_step5: "También usaremos una pausa para que el LED permanezca encendido y apagado durante un intervalo de tiempo. Busca el bloque 'esperar' en Control, dentro de la categoría Temporización. Coloca los bloques como muestra la imagen abajo.",
-en_first_project_step6: "Ahora que ya montamos el programa, haz clic en el botón de conectar en la parte superior derecha, selecciona el puerto (placa) conectado a tu computadora y haz clic en conectar.",
-en_first_project_step7: "Una vez hecho, verás el ícono de esta forma indicando que la placa Amado está conectada a la plataforma.",
-en_first_project_step8: "Ahora solo haz clic en el botón de ejecutar el programa y verás el LED incorporado en la placa parpadeando en intervalos de 1 segundo.",
-en_first_project_step9: "Observaciones: Es posible ejecutar y pausar el programa cuantas veces quieras haciendo clic en el mismo botón.",
-en_first_project_step10: "¡Felicidades! Acabas de crear tu primer programa usando la placa Amado en la plataforma Dblocks.",
+  preparing_environment: "Preparando el entorno",
+  en_first_step: "Primeros pasos",
+  en_introduction_text:
+    "Primero necesitamos instalar un controlador para que la computadora/portátil reconozca la placa a través de la conexión por cable microUSB. Descarga el controlador CP210x desde el enlace a continuación:",
+  en_install_driver: "Instalar controlador",
+  en_found_download:
+    "Busca la opción de descarga o transferencia y descarga la versión indicada a continuación:",
+  en_info_micropython:
+    "Para programar la placa Amado board en Dblocks necesitamos instalar MicroPython, y lo haremos mediante el enlace a continuación para facilitar la instalación.",
+  en_install_micropython: "Instalar MicroPython",
+  en_info_micropython_page:
+    "<span style='color:red;'>En la página de instalación hay un video tutorial que enseña todo el proceso</span>. El sitio es muy simple e intuitivo: solo haz clic en conectar, selecciona el puerto USB como se muestra en la imagen de abajo e instala MicroPython. Este proceso puede tardar unos 2 minutos o más.",
+  en_acessing_plataform_title: "Accediendo a la plataforma",
+  en_acessing_plataform_info1:
+    "En la barra de búsqueda escribe Dblocks y accede al primer sitio, o entra directamente en: dblocks.com.br",
+  en_acessing_plataform_info2:
+    "En la página principal haz clic en el botón “comienza a programar”. A continuación, aparecerá un mensaje de bienvenida con algunas informaciones. Si ya instalaste MicroPython puedes cerrar el mensaje, tu placa ya está lista para usar; de lo contrario, haz clic en “Instalador de MicroPython” y sigue el proceso.",
+  en_useful_information: "Información útil",
+  en_inf_toolbox:
+    "En el lado izquierdo se encuentra la caja de herramientas con los bloques disponibles para usar",
+  en_inf_workspace:
+    "El área central se llama espacio de trabajo (workspace) y es donde colocaremos nuestros bloques.",
+  en_info_steel_bar:
+    "En la parte superior derecha hay algunos botones, como el de conectar la placa y el de ejecutar el programa.",
+  en_info_extra:
+    "**Nota: También es posible descargar y recargar el programa para usarlo cuando quieras o en otra computadora.",
+  en_first_project_title: "Primer proyecto: Parpadear un LED infinitamente",
+  en_first_project_step1:
+    "Primero haz clic en Control, luego en Bucles y selecciona el bloque 'repetir mientras'. Colócalo donde desees.",
+  en_first_project_step2:
+    "Luego haz clic en Variables, Booleanas y selecciona el bloque 'Verdadero'. Encájalo dentro del bloque anterior como muestra la imagen abajo:",
+  en_first_project_step3:
+    "En este punto ya tenemos nuestro bucle, que es responsable por ejecutar repetidamente nuestro programa – en este caso, hacer que el LED parpadee infinitamente.",
+  en_first_project_step4:
+    "El siguiente paso es usar los bloques responsables de encender y apagar el LED, que se encuentran en la categoría Pines de entrada/salida. Busca el bloque 'ajustar pin de salida' y colócalo dentro del bucle. Deberás añadir este bloque dos veces: uno para encender y otro para apagar. En el segundo bloque selecciona la opción falso en 'a'.",
+  en_first_project_step5:
+    "También usaremos una pausa para que el LED permanezca encendido y apagado durante un intervalo de tiempo. Busca el bloque 'esperar' en Control, dentro de la categoría Temporización. Coloca los bloques como muestra la imagen abajo.",
+  en_first_project_step6:
+    "Ahora que ya montamos el programa, haz clic en el botón de conectar en la parte superior derecha, selecciona el puerto (placa) conectado a tu computadora y haz clic en conectar.",
+  en_first_project_step7:
+    "Una vez hecho, verás el ícono de esta forma indicando que la placa Amado está conectada a la plataforma.",
+  en_first_project_step8:
+    "Ahora solo haz clic en el botón de ejecutar el programa y verás el LED incorporado en la placa parpadeando en intervalos de 1 segundo.",
+  en_first_project_step9:
+    "Observaciones: Es posible ejecutar y pausar el programa cuantas veces quieras haciendo clic en el mismo botón.",
+  en_first_project_step10:
+    "¡Felicidades! Acabas de crear tu primer programa usando la placa Amado en la plataforma Dblocks.",
 
-//Página inOutDigital
-di_introduction_title: "Introducción",
-di_intro1: 'En sistemas electrónicos y de automatización, las <strong>entradas digitales</strong> son señales que el dispositivo recibe del entorno. Estas señales representan estados binarios — generalmente "encendido" o "apagado" (1 o 0). Algunos ejemplos comunes son botones, sensores de presencia e interruptores.',
-di_intro2: "Las <strong>salidas digitales</strong>, por otro lado, son señales que el dispositivo envía para actuar sobre el entorno, también en forma binaria. Con ellas, es posible controlar LEDs, relés, motores y otros componentes que operan en dos estados (encendido/apagado).",
-di_intro3: "Estos conceptos son fundamentales en proyectos de automatización, donde los sensores informan el estado del entorno y los actuadores responden de acuerdo con la lógica definida.",
-di_intro4: "A continuación, veremos cómo utilizar entradas y salidas digitales en la práctica de forma sencilla e intuitiva.",
+  //Página inOutDigital
+  di_introduction_title: "Introducción",
+  di_intro1:
+    'En sistemas electrónicos y de automatización, las <strong>entradas digitales</strong> son señales que el dispositivo recibe del entorno. Estas señales representan estados binarios — generalmente "encendido" o "apagado" (1 o 0). Algunos ejemplos comunes son botones, sensores de presencia e interruptores.',
+  di_intro2:
+    "Las <strong>salidas digitales</strong>, por otro lado, son señales que el dispositivo envía para actuar sobre el entorno, también en forma binaria. Con ellas, es posible controlar LEDs, relés, motores y otros componentes que operan en dos estados (encendido/apagado).",
+  di_intro3:
+    "Estos conceptos son fundamentales en proyectos de automatización, donde los sensores informan el estado del entorno y los actuadores responden de acuerdo con la lógica definida.",
+  di_intro4:
+    "A continuación, veremos cómo utilizar entradas y salidas digitales en la práctica de forma sencilla e intuitiva.",
 
-//Entrada digital
-di_in_title: "Entrada Digital",
-di_in1: "Un ejemplo práctico de entrada digital se puede realizar con la plataforma <strong>dBlocks</strong> y la <strong>Amado Board</strong>.",
-di_in2: "En la imagen a continuación, tenemos un programa que realiza la lectura continua de un pin digital de la placa:",
-di_in3: "¿Qué hace este programa?",
-di_in4: "<strong>Mientras el programa esté en ejecución</strong>, ejecuta repetidamente las instrucciones dentro del bloque <code>repetir mientras verdadero</code>.",
-di_in5: "Lee el <strong>estado lógico</strong> (0 o 1) del pin <strong>D16 / SERVO B</strong> usando el comando <code>leer entrada digital</code>.",
-di_in6: "El valor leído se <strong>almacena en la variable <code>x</code></strong>.",
-di_in7: "Luego, el programa <strong>imprime en la consola</strong> un mensaje como: <code>Valor de x: 1</code> o <code>Valor de x: 0</code>.",
-di_in8: "El programa <strong>espera 500 milisegundos</strong> antes de repetir la lectura.",
-di_in9: "Montaje del hardware",
-di_in10: "Para probar este código en la práctica, puedes utilizar un <strong>jumper</strong> conectado al pin <code>D16</code> de la Amado Board. Cambia este jumper entre <strong>GND</strong> (0V) y <strong>3.3V</strong>, simulando así una señal digital:",
-di_in11: "Cuando el jumper está en <strong>GND</strong>, el valor leído será <code>0</code>.",
-di_in12: "Cuando el jumper está en <strong>3.3V</strong>, el valor leído será <code>1</code>.",
-di_in13: "Esto demuestra claramente el funcionamiento de una entrada digital, mostrando cómo la placa interpreta dos estados distintos y cómo esto puede visualizarse en la consola.",
-di_in14: "Visualización de los resultados en la consola",
-di_in15: "La plataforma dBlocks cuenta con una consola que permite seguir, en tiempo real, el resultado de las lecturas realizadas por los bloques. En el siguiente ejemplo, vemos el valor de la variable <code>x</code> imprimiéndose continuamente:",
-di_in16: "A medida que el jumper se alterna entre GND y 3.3V, el valor de <code>x</code> cambia entre <strong>0</strong> y <strong>1</strong>, y esto se refleja inmediatamente en la consola. Esta es una forma eficiente y clara de probar y depurar la lógica de tu proyecto.",
+  //Entrada digital
+  di_in_title: "Entrada Digital",
+  di_in1:
+    "Un ejemplo práctico de entrada digital se puede realizar con la plataforma <strong>dBlocks</strong> y la <strong>Amado Board</strong>.",
+  di_in2:
+    "En la imagen a continuación, tenemos un programa que realiza la lectura continua de un pin digital de la placa:",
+  di_in3: "¿Qué hace este programa?",
+  di_in4:
+    "<strong>Mientras el programa esté en ejecución</strong>, ejecuta repetidamente las instrucciones dentro del bloque <code>repetir mientras verdadero</code>.",
+  di_in5:
+    "Lee el <strong>estado lógico</strong> (0 o 1) del pin <strong>D16 / SERVO B</strong> usando el comando <code>leer entrada digital</code>.",
+  di_in6:
+    "El valor leído se <strong>almacena en la variable <code>x</code></strong>.",
+  di_in7:
+    "Luego, el programa <strong>imprime en la consola</strong> un mensaje como: <code>Valor de x: 1</code> o <code>Valor de x: 0</code>.",
+  di_in8:
+    "El programa <strong>espera 500 milisegundos</strong> antes de repetir la lectura.",
+  di_in9: "Montaje del hardware",
+  di_in10:
+    "Para probar este código en la práctica, puedes utilizar un <strong>jumper</strong> conectado al pin <code>D16</code> de la Amado Board. Cambia este jumper entre <strong>GND</strong> (0V) y <strong>3.3V</strong>, simulando así una señal digital:",
+  di_in11:
+    "Cuando el jumper está en <strong>GND</strong>, el valor leído será <code>0</code>.",
+  di_in12:
+    "Cuando el jumper está en <strong>3.3V</strong>, el valor leído será <code>1</code>.",
+  di_in13:
+    "Esto demuestra claramente el funcionamiento de una entrada digital, mostrando cómo la placa interpreta dos estados distintos y cómo esto puede visualizarse en la consola.",
+  di_in14: "Visualización de los resultados en la consola",
+  di_in15:
+    "La plataforma dBlocks cuenta con una consola que permite seguir, en tiempo real, el resultado de las lecturas realizadas por los bloques. En el siguiente ejemplo, vemos el valor de la variable <code>x</code> imprimiéndose continuamente:",
+  di_in16:
+    "A medida que el jumper se alterna entre GND y 3.3V, el valor de <code>x</code> cambia entre <strong>0</strong> y <strong>1</strong>, y esto se refleja inmediatamente en la consola. Esta es una forma eficiente y clara de probar y depurar la lógica de tu proyecto.",
 
-//Salida Digital
-di_out_title: "Salida Digital",
-di_out1: 'Las salidas digitales permiten que la placa controle dispositivos externos enviando señales del tipo "encendido" o "apagado". Un ejemplo clásico es el control de un LED.',
-di_out2: "A continuación, tenemos un ejemplo donde el LED azul conectado al pin <code>D2</code> de la <strong>Amado Board</strong> parpadea continuamente:",
-di_out3: "¿Qué hace este programa?",
-di_out4: "El bloque <code>repetir mientras verdadero</code> garantiza que el programa se ejecute en bucle.",
-di_out5: "El pin <code>D2 / LED AZUL</code> se configura como salida digital.",
-di_out6: "Primero, el LED se enciende con el comando <code>ajustar pin de salida a verdadero</code>.",
-di_out7: "El programa espera <strong>500 milisegundos</strong>.",
-di_out8: "Luego, el LED se apaga con el comando <code>ajustar pin de salida a falso</code>.",
-di_out9: "Una vez más, el programa espera <strong>500 milisegundos</strong>.",
-di_out10: "Esto hace que el LED parpadee continuamente con un intervalo de medio segundo entre encenderse y apagarse. Este tipo de control es muy útil en sistemas de señalización, notificaciones visuales o pruebas simples del funcionamiento de los pines.",
+  //Salida Digital
+  di_out_title: "Salida Digital",
+  di_out1:
+    'Las salidas digitales permiten que la placa controle dispositivos externos enviando señales del tipo "encendido" o "apagado". Un ejemplo clásico es el control de un LED.',
+  di_out2:
+    "A continuación, tenemos un ejemplo donde el LED azul conectado al pin <code>D2</code> de la <strong>Amado Board</strong> parpadea continuamente:",
+  di_out3: "¿Qué hace este programa?",
+  di_out4:
+    "El bloque <code>repetir mientras verdadero</code> garantiza que el programa se ejecute en bucle.",
+  di_out5:
+    "El pin <code>D2 / LED AZUL</code> se configura como salida digital.",
+  di_out6:
+    "Primero, el LED se enciende con el comando <code>ajustar pin de salida a verdadero</code>.",
+  di_out7: "El programa espera <strong>500 milisegundos</strong>.",
+  di_out8:
+    "Luego, el LED se apaga con el comando <code>ajustar pin de salida a falso</code>.",
+  di_out9: "Una vez más, el programa espera <strong>500 milisegundos</strong>.",
+  di_out10:
+    "Esto hace que el LED parpadee continuamente con un intervalo de medio segundo entre encenderse y apagarse. Este tipo de control es muy útil en sistemas de señalización, notificaciones visuales o pruebas simples del funcionamiento de los pines.",
 
-// Página inOutAnalog
-an_introduction_title: "Introducción",
-an_intro1: "En proyectos electrónicos, las <strong>entradas y salidas analógicas</strong> permiten trabajar con señales que varían de forma continua. A diferencia de las señales digitales, que solo tienen dos estados (0 o 1), las señales analógicas pueden representar un rango de valores, lo que las hace ideales para medir magnitudes como la luz, la temperatura o controlar la intensidad de un LED.",
-an_intro2: "En este ejemplo, utilizaremos el sensor de luz <strong>LDR</strong> que ya viene incorporado en la <strong>Amado Board</strong> como entrada analógica. Para la salida, ajustaremos el brillo del LED integrado usando una señal PWM.",
-an_intro3: "Estas funciones son útiles en proyectos que requieren detectar variaciones del entorno o controlar dispositivos con mayor precisión.",
+  // Página inOutAnalog
+  an_introduction_title: "Introducción",
+  an_intro1:
+    "En proyectos electrónicos, las <strong>entradas y salidas analógicas</strong> permiten trabajar con señales que varían de forma continua. A diferencia de las señales digitales, que solo tienen dos estados (0 o 1), las señales analógicas pueden representar un rango de valores, lo que las hace ideales para medir magnitudes como la luz, la temperatura o controlar la intensidad de un LED.",
+  an_intro2:
+    "En este ejemplo, utilizaremos el sensor de luz <strong>LDR</strong> que ya viene incorporado en la <strong>Amado Board</strong> como entrada analógica. Para la salida, ajustaremos el brillo del LED integrado usando una señal PWM.",
+  an_intro3:
+    "Estas funciones son útiles en proyectos que requieren detectar variaciones del entorno o controlar dispositivos con mayor precisión.",
 
-// Entrada Analógica
-an_in_title: "Entrada Analógica",
-an_in1: "Vamos a leer el sensor de luz LDR de la placa conectando un jumper desde el terminal del LDR hasta el pin <code>39</code>, que es una entrada analógica.",
-an_in2: "El siguiente programa lee continuamente el valor de luminosidad captado por el sensor y lo almacena en una variable:",
-an_in3: "¿Qué hace este programa?",
-an_in4: "Dentro del bloque <code>repetir mientras verdadero</code>, ejecuta repetidamente las instrucciones.",
-an_in5: "El pin <code>39</code> se lee con el comando <code>leer entrada analógica</code>.",
-an_in6: "El valor leído se almacena en la variable <code>valor_ldr</code>.",
-an_in7: "Este valor se imprime en la consola para su monitoreo en tiempo real.",
-an_in8: "Hay una pausa de <strong>500 milisegundos</strong> antes de la siguiente lectura.",
-an_in9: "Visualización de resultados",
-an_in10: "Con cada variación en la luz ambiente, también cambia el valor de la variable <code>valor_ldr</code>. Esto puede observarse en la consola de la plataforma:",
-an_in11: "Cuanto más claro esté el entorno, mayor será el valor leído. En ambientes oscuros, el valor disminuye. Esto demuestra cómo la señal analógica representa una magnitud física de forma continua.",
+  // Entrada Analógica
+  an_in_title: "Entrada Analógica",
+  an_in1:
+    "Vamos a leer el sensor de luz LDR de la placa conectando un jumper desde el terminal del LDR hasta el pin <code>39</code>, que es una entrada analógica.",
+  an_in2:
+    "El siguiente programa lee continuamente el valor de luminosidad captado por el sensor y lo almacena en una variable:",
+  an_in3: "¿Qué hace este programa?",
+  an_in4:
+    "Dentro del bloque <code>repetir mientras verdadero</code>, ejecuta repetidamente las instrucciones.",
+  an_in5:
+    "El pin <code>39</code> se lee con el comando <code>leer entrada analógica</code>.",
+  an_in6: "El valor leído se almacena en la variable <code>valor_ldr</code>.",
+  an_in7:
+    "Este valor se imprime en la consola para su monitoreo en tiempo real.",
+  an_in8:
+    "Hay una pausa de <strong>500 milisegundos</strong> antes de la siguiente lectura.",
+  an_in9: "Visualización de resultados",
+  an_in10:
+    "Con cada variación en la luz ambiente, también cambia el valor de la variable <code>valor_ldr</code>. Esto puede observarse en la consola de la plataforma:",
+  an_in11:
+    "Cuanto más claro esté el entorno, mayor será el valor leído. En ambientes oscuros, el valor disminuye. Esto demuestra cómo la señal analógica representa una magnitud física de forma continua.",
 
-// Salida Analógica
-an_out_title: "Salida Analógica",
-an_out1: "Para controlar la intensidad de un LED, utilizamos una técnica llamada <strong>PWM (modulación por ancho de pulso)</strong>. En la práctica, simula una señal analógica en un pin digital.",
-an_out2: "A continuación, vemos un ejemplo usando el bloque PWM para controlar el LED azul integrado de la <strong>Amado Board</strong> conectado al pin <code>D2</code>:",
-an_out3: "¿Qué hace este programa?",
-an_out4: "El bloque <code>PWM</code> se usa dentro de un bucle continuo <code>repetir mientras verdadero</code>.",
-an_out5: "Configura el <strong>pin D2 / LED AZUL</strong> como salida con señal PWM.",
-an_out6: "La <strong>frecuencia</strong> se configuró en <code>100 Hz</code>, lo que indica cuántos ciclos por segundo se envía la señal.",
-an_out7: "El <strong>ciclo de trabajo</strong> se estableció en <code>512</code>, lo que representa un 50% de intensidad (en una escala de 0 a 1023).",
-an_out8: "Cambiando el valor del ciclo de trabajo puedes controlar el brillo del LED. Valores bajos reducen el brillo y valores altos lo aumentan. También puedes modificar la frecuencia para observar cómo afectan las diferentes tasas a la suavidad de la luz.",
-an_out9: "Este enfoque es muy útil en proyectos como reguladores de luz, controladores de velocidad de motores o cualquier aplicación donde la salida necesite variar en lugar de solo encenderse o apagarse.",
+  // Salida Analógica
+  an_out_title: "Salida Analógica",
+  an_out1:
+    "Para controlar la intensidad de un LED, utilizamos una técnica llamada <strong>PWM (modulación por ancho de pulso)</strong>. En la práctica, simula una señal analógica en un pin digital.",
+  an_out2:
+    "A continuación, vemos un ejemplo usando el bloque PWM para controlar el LED azul integrado de la <strong>Amado Board</strong> conectado al pin <code>D2</code>:",
+  an_out3: "¿Qué hace este programa?",
+  an_out4:
+    "El bloque <code>PWM</code> se usa dentro de un bucle continuo <code>repetir mientras verdadero</code>.",
+  an_out5:
+    "Configura el <strong>pin D2 / LED AZUL</strong> como salida con señal PWM.",
+  an_out6:
+    "La <strong>frecuencia</strong> se configuró en <code>100 Hz</code>, lo que indica cuántos ciclos por segundo se envía la señal.",
+  an_out7:
+    "El <strong>ciclo de trabajo</strong> se estableció en <code>512</code>, lo que representa un 50% de intensidad (en una escala de 0 a 1023).",
+  an_out8:
+    "Cambiando el valor del ciclo de trabajo puedes controlar el brillo del LED. Valores bajos reducen el brillo y valores altos lo aumentan. También puedes modificar la frecuencia para observar cómo afectan las diferentes tasas a la suavidad de la luz.",
+  an_out9:
+    "Este enfoque es muy útil en proyectos como reguladores de luz, controladores de velocidad de motores o cualquier aplicación donde la salida necesite variar en lugar de solo encenderse o apagarse.",
 
-// Página Variables, Bucles e Impresión - Sección de Variables
-var_section_title: "Variables",
-var_intro1: "En programación, las <strong>variables</strong> se utilizan para almacenar valores que pueden cambiar con el tiempo. Son esenciales para guardar información, realizar cálculos, controlar sensores o incluso imprimir mensajes en la consola.",
-var_intro2: "Para crear una variable, ve a la categoría <strong>Variables</strong> en el menú lateral y haz clic en <strong>Crear variable...</strong>. Elige un nombre claro y significativo para evitar errores y facilitar la comprensión del programa.",
-var_intro3: "Una vez creada, tu variable aparecerá en <strong>Variables creadas</strong> y podrás usarla en bloques para definir, cambiar o acceder a su valor.",
-var_intro4: "Existen diferentes tipos de variables disponibles:",
-var_type_bool: "<strong>Booleanas</strong>: representan verdadero o falso. Útiles para verificaciones o condiciones.",
-var_type_num: "<strong>Numéricas</strong>: almacenan números enteros, decimales o aleatorios. Comunes en lecturas de sensores y cálculos.",
-var_type_text: "<strong>Texto</strong>: almacenan frases o palabras. Ideales para mostrar mensajes o nombres.",
-var_type_list: "<strong>Listas</strong>: almacenan múltiples valores en una sola variable. Muy útiles para organizar datos.",
-var_use_robotics: "En robótica, las variables se usan ampliamente para almacenar lecturas de sensores como temperatura, distancia, luz, entre otros. Esto permite tomar decisiones o ajustar comportamientos según los datos del entorno.",
-var_examples_title: "Ejemplos de tipos de variables",
-var_list_title: "Variables de Lista",
-var_text_title: "Variables de Texto",
-var_num_title: "Variables Numéricas",
-var_bool_title: "Variables Booleanas",
-var_print_example_title: "Ejemplo práctico: uso de variables e impresión",
-var_print_example_desc: "En el siguiente ejemplo, creamos dos variables: una de texto llamada <code>nombre</code> y otra numérica llamada <code>valor</code>. Luego usamos el bloque <strong>imprime</strong> (en Funciones → Texto) para mostrar sus valores en la consola.",
-var_print_console_desc: "El resultado aparece en la consola como muestra la imagen. Esta función es muy útil para observar valores durante la ejecución del programa.",
+  // Página Variables, Bucles e Impresión - Sección de Variables
+  var_section_title: "Variables",
+  var_intro1:
+    "En programación, las <strong>variables</strong> se utilizan para almacenar valores que pueden cambiar con el tiempo. Son esenciales para guardar información, realizar cálculos, controlar sensores o incluso imprimir mensajes en la consola.",
+  var_intro2:
+    "Para crear una variable, ve a la categoría <strong>Variables</strong> en el menú lateral y haz clic en <strong>Crear variable...</strong>. Elige un nombre claro y significativo para evitar errores y facilitar la comprensión del programa.",
+  var_intro3:
+    "Una vez creada, tu variable aparecerá en <strong>Variables creadas</strong> y podrás usarla en bloques para definir, cambiar o acceder a su valor.",
+  var_intro4: "Existen diferentes tipos de variables disponibles:",
+  var_type_bool:
+    "<strong>Booleanas</strong>: representan verdadero o falso. Útiles para verificaciones o condiciones.",
+  var_type_num:
+    "<strong>Numéricas</strong>: almacenan números enteros, decimales o aleatorios. Comunes en lecturas de sensores y cálculos.",
+  var_type_text:
+    "<strong>Texto</strong>: almacenan frases o palabras. Ideales para mostrar mensajes o nombres.",
+  var_type_list:
+    "<strong>Listas</strong>: almacenan múltiples valores en una sola variable. Muy útiles para organizar datos.",
+  var_use_robotics:
+    "En robótica, las variables se usan ampliamente para almacenar lecturas de sensores como temperatura, distancia, luz, entre otros. Esto permite tomar decisiones o ajustar comportamientos según los datos del entorno.",
+  var_examples_title: "Ejemplos de tipos de variables",
+  var_list_title: "Variables de Lista",
+  var_text_title: "Variables de Texto",
+  var_num_title: "Variables Numéricas",
+  var_bool_title: "Variables Booleanas",
+  var_print_example_title: "Ejemplo práctico: uso de variables e impresión",
+  var_print_example_desc:
+    "En el siguiente ejemplo, creamos dos variables: una de texto llamada <code>nombre</code> y otra numérica llamada <code>valor</code>. Luego usamos el bloque <strong>imprime</strong> (en Funciones → Texto) para mostrar sus valores en la consola.",
+  var_print_console_desc:
+    "El resultado aparece en la consola como muestra la imagen. Esta función es muy útil para observar valores durante la ejecución del programa.",
 
-// Sección de Impresión
-print_section_title: 'Impresión con el bloque "imprime"',
-print_intro1: "La función de <strong>impresión</strong> permite monitorear los valores durante la ejecución del programa. Esto es útil para verificar si los datos de sensores o variables son correctos.",
-print_intro2: "Para usarla, ve a la categoría <strong>Funciones → Texto</strong> y selecciona el bloque <code>imprime</code>. Puede usarse para mostrar texto fijo o valores de variables.",
-print_ex1: "Ejemplo 1: imprimir un mensaje fijo",
-print_ex2: "Ejemplo 2: imprimir el valor de una variable",
-print_ex3: "Ejemplo 3: imprimir dentro de un bucle",
-print_console_output: "El resultado del último ejemplo aparece en la consola de la plataforma, mostrando la cuenta del 1 al 10:",
+  // Sección de Impresión
+  print_section_title: 'Impresión con el bloque "imprime"',
+  print_intro1:
+    "La función de <strong>impresión</strong> permite monitorear los valores durante la ejecución del programa. Esto es útil para verificar si los datos de sensores o variables son correctos.",
+  print_intro2:
+    "Para usarla, ve a la categoría <strong>Funciones → Texto</strong> y selecciona el bloque <code>imprime</code>. Puede usarse para mostrar texto fijo o valores de variables.",
+  print_ex1: "Ejemplo 1: imprimir un mensaje fijo",
+  print_ex2: "Ejemplo 2: imprimir el valor de una variable",
+  print_ex3: "Ejemplo 3: imprimir dentro de un bucle",
+  print_console_output:
+    "El resultado del último ejemplo aparece en la consola de la plataforma, mostrando la cuenta del 1 al 10:",
 
-// Sección de Bucles
-loop_section_title: "Bucles de repetición",
-loop_intro1: "Los bucles son estructuras que permiten ejecutar un mismo conjunto de instrucciones varias veces. Son útiles para automatizar tareas repetitivas como contar, mostrar mensajes o manipular listas.",
-loop_intro2: "En la plataforma, los bloques de bucle están en la categoría <strong>Control</strong> y ofrecen varios tipos con diferentes propósitos.",
+  // Sección de Bucles
+  loop_section_title: "Bucles de repetición",
+  loop_intro1:
+    "Los bucles son estructuras que permiten ejecutar un mismo conjunto de instrucciones varias veces. Son útiles para automatizar tareas repetitivas como contar, mostrar mensajes o manipular listas.",
+  loop_intro2:
+    "En la plataforma, los bloques de bucle están en la categoría <strong>Control</strong> y ofrecen varios tipos con diferentes propósitos.",
 
-loop_repeat_times_title: "1. Repetición con número fijo",
-loop_repeat_times_desc: "El bloque <code>repite X veces</code> ejecuta un conjunto de instrucciones un número determinado de veces. Ideal para contar o repetir acciones simples.",
-loop_repeat_times_explanation: "En este ejemplo, usamos una variable <code>contador</code> para contar hasta 5. En cada repetición, se imprime el valor actual.",
+  loop_repeat_times_title: "1. Repetición con número fijo",
+  loop_repeat_times_desc:
+    "El bloque <code>repite X veces</code> ejecuta un conjunto de instrucciones un número determinado de veces. Ideal para contar o repetir acciones simples.",
+  loop_repeat_times_explanation:
+    "En este ejemplo, usamos una variable <code>contador</code> para contar hasta 5. En cada repetición, se imprime el valor actual.",
 
-loop_forever_title: "2. Repite mientras verdadero",
-loop_forever_desc: "El bloque <code>repite mientras verdadero</code> ejecuta las instrucciones continuamente, sin detenerse. Es muy usado en proyectos de robótica donde el programa debe funcionar todo el tiempo que el sistema esté encendido.",
-loop_forever_explanation: "En este ejemplo, la variable <code>contador</code> se incrementa cada segundo y su valor se imprime repetidamente en la consola.",
+  loop_forever_title: "2. Repite mientras verdadero",
+  loop_forever_desc:
+    "El bloque <code>repite mientras verdadero</code> ejecuta las instrucciones continuamente, sin detenerse. Es muy usado en proyectos de robótica donde el programa debe funcionar todo el tiempo que el sistema esté encendido.",
+  loop_forever_explanation:
+    "En este ejemplo, la variable <code>contador</code> se incrementa cada segundo y su valor se imprime repetidamente en la consola.",
 
-loop_repeat_while_title: "3. Repetición mientras se cumpla una condición",
-loop_repeat_while_desc: "El bloque <code>repite mientras</code> ejecuta instrucciones mientras la condición definida sea verdadera.",
-loop_repeat_while_explanation: "En este ejemplo, la variable <code>numero</code> se incrementa hasta llegar a 5. El bucle termina cuando la condición <code>numero < 5</code> deja de cumplirse.",
+  loop_repeat_while_title: "3. Repetición mientras se cumpla una condición",
+  loop_repeat_while_desc:
+    "El bloque <code>repite mientras</code> ejecuta instrucciones mientras la condición definida sea verdadera.",
+  loop_repeat_while_explanation:
+    "En este ejemplo, la variable <code>numero</code> se incrementa hasta llegar a 5. El bucle termina cuando la condición <code>numero < 5</code> deja de cumplirse.",
 
-loop_count_title: "4. Bucle con contador personalizado",
-loop_count_desc: "El bloque <code>contar con i desde X hasta Y por Z</code> permite controlar el valor inicial, final y el incremento.",
-loop_count_explanation: "En este ejemplo, imprimimos la tabla del 2 multiplicando el valor de <code>i</code> en cada repetición.",
+  loop_count_title: "4. Bucle con contador personalizado",
+  loop_count_desc:
+    "El bloque <code>contar con i desde X hasta Y por Z</code> permite controlar el valor inicial, final y el incremento.",
+  loop_count_explanation:
+    "En este ejemplo, imprimimos la tabla del 2 multiplicando el valor de <code>i</code> en cada repetición.",
 
-loop_for_each_title: "5. Repetición para cada elemento de una lista",
-loop_for_each_desc: "El bloque <code>para cada elemento en la lista</code> recorre todos los elementos. Ideal para procesar o mostrar información.",
-loop_for_each_explanation: "Aquí tenemos una lista de nombres. El bucle imprime un nombre en cada vuelta hasta que se terminen.",
+  loop_for_each_title: "5. Repetición para cada elemento de una lista",
+  loop_for_each_desc:
+    "El bloque <code>para cada elemento en la lista</code> recorre todos los elementos. Ideal para procesar o mostrar información.",
+  loop_for_each_explanation:
+    "Aquí tenemos una lista de nombres. El bucle imprime un nombre en cada vuelta hasta que se terminen.",
 
-loop_break_title: "6. Interrumpir el bucle con una condición",
-loop_break_desc: "El bloque <code>termina el bucle</code> permite detener la ejecución antes de que se complete.",
-loop_break_explanation: "En este ejemplo, contamos del 1 al 10 pero detenemos el bucle cuando el valor alcanza 6.",
+  loop_break_title: "6. Interrumpir el bucle con una condición",
+  loop_break_desc:
+    "El bloque <code>termina el bucle</code> permite detener la ejecución antes de que se complete.",
+  loop_break_explanation:
+    "En este ejemplo, contamos del 1 al 10 pero detenemos el bucle cuando el valor alcanza 6.",
 
-var_loop_print_end: "Todos los resultados de los ejemplos anteriores pueden verse en la consola de la plataforma.",
+  var_loop_print_end:
+    "Todos los resultados de los ejemplos anteriores pueden verse en la consola de la plataforma.",
 
-// Página de Sensores
-sensor_title: "Sensores",
-sensor_section_title: "Sensores en Robótica",
-sensor_intro1: "Los sensores son componentes que permiten a los robots y sistemas embebidos percibir el entorno que los rodea. Capturan información como temperatura, luz, distancia, humedad, entre otros, y convierten estos datos en señales que pueden ser procesadas.",
-sensor_intro2: "En la plataforma, los bloques relacionados con sensores están disponibles en la categoría <strong>Sensores</strong>.",
+  // Página de Sensores
+  sensor_title: "Sensores",
+  sensor_section_title: "Sensores en Robótica",
+  sensor_intro1:
+    "Los sensores son componentes que permiten a los robots y sistemas embebidos percibir el entorno que los rodea. Capturan información como temperatura, luz, distancia, humedad, entre otros, y convierten estos datos en señales que pueden ser procesadas.",
+  sensor_intro2:
+    "En la plataforma, los bloques relacionados con sensores están disponibles en la categoría <strong>Sensores</strong>.",
 
-// Sección Sensor Infrarrojo
-sensor_ir_title: "Sensor Infrarrojo (IR)",
+  // Sección Sensor Infrarrojo
+  sensor_ir_title: "Sensor Infrarrojo (IR)",
 
-sensor_ir_desc1: "El sensor infrarrojo (IR) es un componente digital simple y muy utilizado en la robótica, especialmente en proyectos como robots seguidores de línea. Detecta la presencia o ausencia de objetos mediante la reflexión de luz infrarroja, devolviendo valores digitales: <strong>1</strong> cuando no hay reflexión y <strong>0</strong> cuando detecta un objeto cercano.",
+  sensor_ir_desc1:
+    "El sensor infrarrojo (IR) es un componente digital simple y muy utilizado en la robótica, especialmente en proyectos como robots seguidores de línea. Detecta la presencia o ausencia de objetos mediante la reflexión de luz infrarroja, devolviendo valores digitales: <strong>1</strong> cuando no hay reflexión y <strong>0</strong> cuando detecta un objeto cercano.",
 
-sensor_ir_desc2: "Este sensor tiene <strong>3 pines</strong> (VCC, GND y Señal) y puede conectarse fácilmente a la <strong>Amado Board</strong> utilizando los pines de entrada digital como <code>D35</code>, <code>D39</code>, <code>D36</code> y <code>D34</code>. La placa ya cuenta con un espacio adecuado para una conexión directa, facilitando el montaje.",
+  sensor_ir_desc2:
+    "Este sensor tiene <strong>3 pines</strong> (VCC, GND y Señal) y puede conectarse fácilmente a la <strong>Amado Board</strong> utilizando los pines de entrada digital como <code>D35</code>, <code>D39</code>, <code>D36</code> y <code>D34</code>. La placa ya cuenta con un espacio adecuado para una conexión directa, facilitando el montaje.",
 
-sensor_ir_desc3: "Además de robots seguidores de línea, el sensor IR puede ser usado en sistemas de conteo, barreras de seguridad, detección de presencia de objetos y otras aplicaciones que requieren detección simple de obstáculos.",
+  sensor_ir_desc3:
+    "Además de robots seguidores de línea, el sensor IR puede ser usado en sistemas de conteo, barreras de seguridad, detección de presencia de objetos y otras aplicaciones que requieren detección simple de obstáculos.",
 
-sensor_ir_example_title: "Ejemplo: lectura continua del sensor IR",
+  sensor_ir_example_title: "Ejemplo: lectura continua del sensor IR",
 
-sensor_ir_steps: "¿Qué hace este programa?",
+  sensor_ir_steps: "¿Qué hace este programa?",
 
+  // Sensor de Temperatura y Humedad
+  sensor_dht_title: "Sensor de Temperatura y Humedad DHT11/22",
+  sensor_dht_desc1:
+    "El sensor DHT11/22 se utiliza para medir dos variables ambientales importantes: <strong>temperatura</strong> y <strong>humedad relativa</strong>. Es muy común en proyectos de automatización, estaciones meteorológicas y control ambiental.",
+  sensor_dht_desc2:
+    "Para que el sensor funcione correctamente con la <strong>Amado Board</strong>, debe estar conectado a un <strong>pin digital</strong>. Recomendamos usar los pines D5, D15, D16, D17, D18, D19, D21, D22 o D23. En este ejemplo, usaremos el pin <code>D17</code>.",
+  sensor_dht_desc3: "¿Cómo funciona el ejemplo anterior?",
+  sensor_dht_step1:
+    "Inicializamos el sensor DHT11/22 e indicamos el pin de conexión.",
+  sensor_dht_step2:
+    "Entramos en un bucle que se repite continuamente mientras el sistema esté encendido.",
+  sensor_dht_step3:
+    "En cada repetición, se actualizan y almacenan las lecturas de <strong>temperatura</strong> y <strong>humedad</strong> en variables.",
+  sensor_dht_step4:
+    "Estos valores se muestran en la consola usando el bloque <code>imprime</code>.",
+  sensor_dht_step5:
+    "Una pausa de 1 segundo entre lecturas es muy importante para asegurar el buen funcionamiento del sensor.",
 
-// Sensor de Temperatura y Humedad
-sensor_dht_title: "Sensor de Temperatura y Humedad DHT11/22",
-sensor_dht_desc1: "El sensor DHT11/22 se utiliza para medir dos variables ambientales importantes: <strong>temperatura</strong> y <strong>humedad relativa</strong>. Es muy común en proyectos de automatización, estaciones meteorológicas y control ambiental.",
-sensor_dht_desc2: "Para que el sensor funcione correctamente con la <strong>Amado Board</strong>, debe estar conectado a un <strong>pin digital</strong>. Recomendamos usar los pines D5, D15, D16, D17, D18, D19, D21, D22 o D23. En este ejemplo, usaremos el pin <code>D17</code>.",
-sensor_dht_desc3: "¿Cómo funciona el ejemplo anterior?",
-sensor_dht_step1: "Inicializamos el sensor DHT11/22 e indicamos el pin de conexión.",
-sensor_dht_step2: "Entramos en un bucle que se repite continuamente mientras el sistema esté encendido.",
-sensor_dht_step3: "En cada repetición, se actualizan y almacenan las lecturas de <strong>temperatura</strong> y <strong>humedad</strong> en variables.",
-sensor_dht_step4: "Estos valores se muestran en la consola usando el bloque <code>imprime</code>.",
-sensor_dht_step5: "Una pausa de 1 segundo entre lecturas es muy importante para asegurar el buen funcionamiento del sensor.",
+  // Sensor Ultrasónico
+  sensor_ultra_title: "Sensor de Distancia Ultrasónico HCSR04",
+  sensor_ultra_desc1:
+    "El sensor ultrasónico HCSR04 se utiliza para medir distancias con precisión utilizando ondas sonoras. Envía una señal sonora (trigger) y mide el tiempo hasta que el eco regresa tras rebotar en un objeto. Con base en este tiempo, se calcula la distancia.",
+  sensor_ultra_desc2:
+    "La <strong>Amado Board</strong> tiene un espacio específico para conectar este sensor directamente a los pines <code>D17</code> (trigger) y <code>D34</code> (echo), facilitando su uso en proyectos de robótica.",
+  sensor_ultra_desc3: "¿Cómo funciona el ejemplo anterior?",
+  sensor_ultra_step1:
+    "Inicializamos el sensor especificando los pines trigger (D17) y echo (D34), además del tiempo de espera.",
+  sensor_ultra_step2:
+    "Usamos un <strong>bucle continuo</strong> para medir la distancia repetidamente.",
+  sensor_ultra_step3:
+    "En cada repetición, el valor de la distancia se almacena en una variable.",
+  sensor_ultra_step4:
+    "El valor se imprime en la consola para monitorear la lectura en tiempo real.",
+  sensor_ultra_step5:
+    "Agregamos una pausa de 500 milisegundos para evitar lecturas demasiado rápidas y asegurar la estabilidad.",
+  sensor_ultra_note:
+    "Nota: Las lecturas pueden variar, mostrando valores muy altos o incluso -1. Para mejorar la fiabilidad, implementa un filtro simple que descarte lecturas fuera del rango esperado.",
 
-// Sensor Ultrasónico
-sensor_ultra_title: "Sensor de Distancia Ultrasónico HCSR04",
-sensor_ultra_desc1: "El sensor ultrasónico HCSR04 se utiliza para medir distancias con precisión utilizando ondas sonoras. Envía una señal sonora (trigger) y mide el tiempo hasta que el eco regresa tras rebotar en un objeto. Con base en este tiempo, se calcula la distancia.",
-sensor_ultra_desc2: "La <strong>Amado Board</strong> tiene un espacio específico para conectar este sensor directamente a los pines <code>D17</code> (trigger) y <code>D34</code> (echo), facilitando su uso en proyectos de robótica.",
-sensor_ultra_desc3: "¿Cómo funciona el ejemplo anterior?",
-sensor_ultra_step1: "Inicializamos el sensor especificando los pines trigger (D17) y echo (D34), además del tiempo de espera.",
-sensor_ultra_step2: "Usamos un <strong>bucle continuo</strong> para medir la distancia repetidamente.",
-sensor_ultra_step3: "En cada repetición, el valor de la distancia se almacena en una variable.",
-sensor_ultra_step4: "El valor se imprime en la consola para monitorear la lectura en tiempo real.",
-sensor_ultra_step5: "Agregamos una pausa de 500 milisegundos para evitar lecturas demasiado rápidas y asegurar la estabilidad.",
-sensor_ultra_note: "Nota: Las lecturas pueden variar, mostrando valores muy altos o incluso -1. Para mejorar la fiabilidad, implementa un filtro simple que descarte lecturas fuera del rango esperado.",
+  // Módulo RFID
+  sensor_rfid_title: "Lector RFID RC522",
+  sensor_rfid_desc1:
+    "El RFID (Identificación por Radiofrecuencia) es una tecnología usada para identificar objetos o personas mediante tarjetas o etiquetas que emiten señales. Es ampliamente utilizada en sistemas de acceso, control de asistencia y rastreo de activos.",
+  sensor_rfid_desc2:
+    "El módulo utilizado en este ejemplo es el RC522, que se comunica por SPI. Lee el UID (identificador único) de las tarjetas RFID y también puede acceder a la memoria interna de la tarjeta para leer y escribir datos.",
+  sensor_rfid_desc3:
+    "La conexión del módulo a la Amado Board debe seguir correctamente la asignación de pines. Algunos nombres coinciden, otros son distintos entre el módulo, el bloque y la placa. Aquí la correspondencia recomendada:",
+  sensor_rfid_map1: "3.3V → 3.3V",
+  sensor_rfid_map2: "GND → GND",
+  sensor_rfid_map3: "SCK (módulo) = SCK en el bloque = D18 / CLK en la placa",
+  sensor_rfid_map4: "MOSI = MOSI en el bloque = D23 / MOSI en la placa",
+  sensor_rfid_map5: "MISO = MISO en el bloque = D19 / MISO en la placa",
+  sensor_rfid_map6: "RST = RST en el bloque = D22 / SCL en la placa",
+  sensor_rfid_map7:
+    "SDA (del módulo) debe conectarse al CS en el bloque, se recomienda usar D5 como en la imagen.",
+  sensor_rfid_desc4:
+    "Aunque los pines RST y CS se pueden conectar a otros pines digitales (como D17, D21 o D22), se recomienda seguir el ejemplo para mayor compatibilidad.",
+  rfid_libraries_desc:
+    "Para que los bloques del lector RFID RC522 funcionen correctamente, es necesario instalar la biblioteca <code>mfrc522</code>, que permite la comunicación y lectura de tarjetas RFID.",
+  rfid_verify_library:
+    "Después de hacer clic en el botón <strong>“Instalar biblioteca”</strong>, puedes verificar la instalación mediante el mensaje en la consola: <code>Instalación de la biblioteca mfrc522 completada.</code>",
+  rfid_verify_file:
+    "También puedes confirmar la presencia de la biblioteca abriendo la pestaña <strong>Archivos</strong>. Haz doble clic en el botón de actualizar y verifica si el archivo <code>mfrc522.py</code> aparece listado en la memoria de la placa.",
+  sensor_rfid_desc6:
+    "A continuación, vemos un programa básico que lee una tarjeta RFID y muestra los resultados en la consola.",
+  sensor_rfid_expl_title: "¿Cómo funciona el ejemplo anterior?",
+  sensor_rfid_step1:
+    "Inicializamos el módulo indicando todos los pines de conexión SPI.",
+  sensor_rfid_step2:
+    "Entramos en un bucle continuo que verifica constantemente si hay una tarjeta presente.",
+  sensor_rfid_step3:
+    "Si se detecta una tarjeta (estado = 0), se muestra un mensaje en la consola y se imprime el UID.",
+  sensor_rfid_step4:
+    "Incluso cuando no hay tarjeta, se muestran el estado y el tipo de etiqueta para facilitar el depurado.",
+  sensor_rfid_step5:
+    "Agregamos un retardo de 500 milisegundos para evitar repeticiones muy rápidas.",
+  sensor_rfid_console_desc:
+    "A continuación puedes ver cómo aparecen los resultados en la consola de la plataforma, mostrando el estado, tipo de etiqueta y UID cuando se detecta una tarjeta.",
 
-// Módulo RFID
-sensor_rfid_title: "Lector RFID RC522",
-sensor_rfid_desc1: "El RFID (Identificación por Radiofrecuencia) es una tecnología usada para identificar objetos o personas mediante tarjetas o etiquetas que emiten señales. Es ampliamente utilizada en sistemas de acceso, control de asistencia y rastreo de activos.",
-sensor_rfid_desc2: "El módulo utilizado en este ejemplo es el RC522, que se comunica por SPI. Lee el UID (identificador único) de las tarjetas RFID y también puede acceder a la memoria interna de la tarjeta para leer y escribir datos.",
-sensor_rfid_desc3: "La conexión del módulo a la Amado Board debe seguir correctamente la asignación de pines. Algunos nombres coinciden, otros son distintos entre el módulo, el bloque y la placa. Aquí la correspondencia recomendada:",
-sensor_rfid_map1: "3.3V → 3.3V",
-sensor_rfid_map2: "GND → GND",
-sensor_rfid_map3: "SCK (módulo) = SCK en el bloque = D18 / CLK en la placa",
-sensor_rfid_map4: "MOSI = MOSI en el bloque = D23 / MOSI en la placa",
-sensor_rfid_map5: "MISO = MISO en el bloque = D19 / MISO en la placa",
-sensor_rfid_map6: "RST = RST en el bloque = D22 / SCL en la placa",
-sensor_rfid_map7: "SDA (del módulo) debe conectarse al CS en el bloque, se recomienda usar D5 como en la imagen.",
-sensor_rfid_desc4: "Aunque los pines RST y CS se pueden conectar a otros pines digitales (como D17, D21 o D22), se recomienda seguir el ejemplo para mayor compatibilidad.",
-rfid_libraries_desc: "Para que los bloques del lector RFID RC522 funcionen correctamente, es necesario instalar la biblioteca <code>mfrc522</code>, que permite la comunicación y lectura de tarjetas RFID.",
-rfid_verify_library: "Después de hacer clic en el botón <strong>“Instalar biblioteca”</strong>, puedes verificar la instalación mediante el mensaje en la consola: <code>Instalación de la biblioteca mfrc522 completada.</code>",
-rfid_verify_file: "También puedes confirmar la presencia de la biblioteca abriendo la pestaña <strong>Archivos</strong>. Haz doble clic en el botón de actualizar y verifica si el archivo <code>mfrc522.py</code> aparece listado en la memoria de la placa.",
-sensor_rfid_desc6: "A continuación, vemos un programa básico que lee una tarjeta RFID y muestra los resultados en la consola.",
-sensor_rfid_expl_title: "¿Cómo funciona el ejemplo anterior?",
-sensor_rfid_step1: "Inicializamos el módulo indicando todos los pines de conexión SPI.",
-sensor_rfid_step2: "Entramos en un bucle continuo que verifica constantemente si hay una tarjeta presente.",
-sensor_rfid_step3: "Si se detecta una tarjeta (estado = 0), se muestra un mensaje en la consola y se imprime el UID.",
-sensor_rfid_step4: "Incluso cuando no hay tarjeta, se muestran el estado y el tipo de etiqueta para facilitar el depurado.",
-sensor_rfid_step5: "Agregamos un retardo de 500 milisegundos para evitar repeticiones muy rápidas.",
-sensor_rfid_console_desc: "A continuación puedes ver cómo aparecen los resultados en la consola de la plataforma, mostrando el estado, tipo de etiqueta y UID cuando se detecta una tarjeta.",
+  // Página de Actuadores
+  // Sección de Actuadores
+  actuator_section_title: "Actuadores",
+  actuator_introduction: "Actuadores en la robótica",
+  actuator_intro1:
+    "Los actuadores son dispositivos que reciben comandos de un sistema y realizan una acción física en el mundo real. Transforman señales eléctricas en movimiento, sonido, luz, calor u otras formas de respuesta.",
+  actuator_intro2:
+    "En la robótica y la automatización, los actuadores son esenciales para interactuar con el entorno, permitiendo encender luces, activar motores, abrir válvulas, hacer sonar timbres, entre otros.",
+  actuator_intro3:
+    "En la plataforma, los bloques de actuadores están disponibles en la categoría <strong>Salidas y Actuadores</strong>. Cada tipo de actuador tendrá sus propios bloques con comandos específicos.",
 
-// Página de Actuadores
-// Sección de Actuadores
-actuator_section_title: "Actuadores",
-actuator_introduction: "Actuadores en la robótica",
-actuator_intro1: "Los actuadores son dispositivos que reciben comandos de un sistema y realizan una acción física en el mundo real. Transforman señales eléctricas en movimiento, sonido, luz, calor u otras formas de respuesta.",
-actuator_intro2: "En la robótica y la automatización, los actuadores son esenciales para interactuar con el entorno, permitiendo encender luces, activar motores, abrir válvulas, hacer sonar timbres, entre otros.",
-actuator_intro3: "En la plataforma, los bloques de actuadores están disponibles en la categoría <strong>Salidas y Actuadores</strong>. Cada tipo de actuador tendrá sus propios bloques con comandos específicos.",
+  // Sección Módulo Relé
+  relay_title: "Módulo Relé",
+  relay_desc1:
+    "El relé es un componente que funciona como un interruptor controlado electrónicamente. Permite encender o apagar dispositivos de mayor potencia (como lámparas, ventiladores o electrodomésticos) utilizando una señal digital de la placa.",
+  relay_desc2:
+    "En el bloque de relé, puedes elegir el pin al que está conectado y el comando deseado: <strong>encender</strong> o <strong>apagar</strong>. Es importante recordar que el módulo relé debe estar correctamente alimentado (generalmente con 5V y GND), y que la carga conectada debe estar aislada y bien conectada para mayor seguridad.\n\nImportante: muchos módulos relé se activan con señal 0 (nivel lógico bajo). Es decir, al usar el comando 'apagar' en el bloque, el relé se activará (encendiendo el dispositivo). Por el contrario, el comando 'encender' en el bloque desactivará el relé (apagando el dispositivo).",
+  relay_example_title: "Ejemplo: encender una lámpara con retardo",
+  relay_example_desc:
+    "En el ejemplo siguiente, usamos el bloque de relé para simular el control de una lámpara. Al iniciar el programa, el relé se activa (simulando que la lámpara se enciende), y después de 3 segundos se apaga. Este tipo de control puede utilizarse en aplicaciones como temporizadores, simulación de presencia o automatización del hogar.",
+  relay_example_note:
+    "Este ejemplo simple de temporizador también podría utilizarse dentro de una <strong>condición</strong> (por ejemplo, al detectar una tarjeta RFID, presencia, horario, etc.) para tomar decisiones automáticas en el programa.",
 
-// Sección Módulo Relé
-relay_title: "Módulo Relé",
-relay_desc1: "El relé es un componente que funciona como un interruptor controlado electrónicamente. Permite encender o apagar dispositivos de mayor potencia (como lámparas, ventiladores o electrodomésticos) utilizando una señal digital de la placa.",
-relay_desc2: "En el bloque de relé, puedes elegir el pin al que está conectado y el comando deseado: <strong>encender</strong> o <strong>apagar</strong>. Es importante recordar que el módulo relé debe estar correctamente alimentado (generalmente con 5V y GND), y que la carga conectada debe estar aislada y bien conectada para mayor seguridad.\n\nImportante: muchos módulos relé se activan con señal 0 (nivel lógico bajo). Es decir, al usar el comando 'apagar' en el bloque, el relé se activará (encendiendo el dispositivo). Por el contrario, el comando 'encender' en el bloque desactivará el relé (apagando el dispositivo).",
-relay_example_title: "Ejemplo: encender una lámpara con retardo",
-relay_example_desc: "En el ejemplo siguiente, usamos el bloque de relé para simular el control de una lámpara. Al iniciar el programa, el relé se activa (simulando que la lámpara se enciende), y después de 3 segundos se apaga. Este tipo de control puede utilizarse en aplicaciones como temporizadores, simulación de presencia o automatización del hogar.",
-relay_example_note: "Este ejemplo simple de temporizador también podría utilizarse dentro de una <strong>condición</strong> (por ejemplo, al detectar una tarjeta RFID, presencia, horario, etc.) para tomar decisiones automáticas en el programa.",
+  // Sección Servo Motor
+  servo_title: "Servo Motor",
+  servo_desc1:
+    "El servo motor es un actuador muy utilizado en proyectos de robótica y automatización. Permite posicionar un eje en ángulos específicos, generalmente entre 0 y 180 grados. Es ideal para controlar puertas, brazos mecánicos, palancas, ejes u otros sistemas que requieren movimientos precisos y controlados.",
+  servo_desc2:
+    "En la plataforma, el control del servo se realiza en dos pasos: primero usamos el bloque <strong>Iniciar servo motor</strong> para definir el pin de conexión y el nombre del servo, y luego usamos el bloque <strong>Mover servo</strong> para indicar el ángulo deseado. Es posible utilizar nombres personalizados (como servo1, servo2, etc.), permitiendo el control de múltiples servos en un mismo proyecto.",
+  servo_desc3:
+    "La <strong>Amado Board</strong> posee un lugar específico para conectar servos: los pines <strong>D15</strong> y <strong>D16</strong> están identificados como <code>SERVO A</code> y <code>SERVO B</code> respectivamente. Junto a estos pines hay un conjunto de 3 pines rotulados como <code>3.3V</code>, <code>VS</code> y <code>5V</code>. Para que el servo reciba alimentación correctamente, es necesario <strong>hacer un puente entre el pin VS y el pin 5V</strong>. Esto asegura que el pin de señal tenga energía para mover el servo con estabilidad.",
+  servo_desc4:
+    "Los servos suelen tener cables con colores estándar: <strong>marrón</strong> (GND), <strong>rojo</strong> (VCC) y <strong>amarillo</strong> (señal). La placa ya posee el espacio adecuado para conectar estos tres pines directamente, facilitando la instalación.",
 
-// Sección Servo Motor
-servo_title: "Servo Motor",
-servo_desc1: "El servo motor es un actuador muy utilizado en proyectos de robótica y automatización. Permite posicionar un eje en ángulos específicos, generalmente entre 0 y 180 grados. Es ideal para controlar puertas, brazos mecánicos, palancas, ejes u otros sistemas que requieren movimientos precisos y controlados.",
-servo_desc2: "En la plataforma, el control del servo se realiza en dos pasos: primero usamos el bloque <strong>Iniciar servo motor</strong> para definir el pin de conexión y el nombre del servo, y luego usamos el bloque <strong>Mover servo</strong> para indicar el ángulo deseado. Es posible utilizar nombres personalizados (como servo1, servo2, etc.), permitiendo el control de múltiples servos en un mismo proyecto.",
-servo_desc3: "La <strong>Amado Board</strong> posee un lugar específico para conectar servos: los pines <strong>D15</strong> y <strong>D16</strong> están identificados como <code>SERVO A</code> y <code>SERVO B</code> respectivamente. Junto a estos pines hay un conjunto de 3 pines rotulados como <code>3.3V</code>, <code>VS</code> y <code>5V</code>. Para que el servo reciba alimentación correctamente, es necesario <strong>hacer un puente entre el pin VS y el pin 5V</strong>. Esto asegura que el pin de señal tenga energía para mover el servo con estabilidad.",
-servo_desc4: "Los servos suelen tener cables con colores estándar: <strong>marrón</strong> (GND), <strong>rojo</strong> (VCC) y <strong>amarillo</strong> (señal). La placa ya posee el espacio adecuado para conectar estos tres pines directamente, facilitando la instalación.",
+  servo_basic_title: "Ejemplo 1: control de posiciones fijas",
+  servo_basic_desc:
+    "Este ejemplo mueve el servo a tres posiciones fijas: 0°, 90° y 180°, con un pequeño intervalo entre los movimientos. Es ideal para demostrar el funcionamiento básico del servo y cómo controlar los ángulos directamente.",
+  servo_basic_steps: "¿Qué hace este programa?",
+  servo_basic_step1: "Inicializa el servo en el pin D15.",
+  servo_basic_step2: "Mueve el servo al ángulo 0°, espera 1 segundo.",
+  servo_basic_step3:
+    "Mueve al ángulo 90°, luego a 180°, con pausas entre cada posición.",
+  servo_basic_step4: "El ciclo se repite continuamente.",
 
-servo_basic_title: "Ejemplo 1: control de posiciones fijas",
-servo_basic_desc: "Este ejemplo mueve el servo a tres posiciones fijas: 0°, 90° y 180°, con un pequeño intervalo entre los movimientos. Es ideal para demostrar el funcionamiento básico del servo y cómo controlar los ángulos directamente.",
-servo_basic_steps: "¿Qué hace este programa?",
-servo_basic_step1: "Inicializa el servo en el pin D15.",
-servo_basic_step2: "Mueve el servo al ángulo 0°, espera 1 segundo.",
-servo_basic_step3: "Mueve al ángulo 90°, luego a 180°, con pausas entre cada posición.",
-servo_basic_step4: "El ciclo se repite continuamente.",
+  servo_smooth_title: "Ejemplo 2: movimiento continuo con bucle",
+  servo_smooth_desc:
+    "En este ejemplo usamos un <strong>bucle for</strong> para mover suavemente el servo de 0° a 180° y regresar. Esto crea un movimiento fluido y continuo, útil para simulaciones de radar, barridos o movimientos controlados en un brazo robótico.",
+  servo_smooth_steps: "¿Qué hace este programa?",
+  servo_smooth_step1: "Inicializa el servo y entra en un bucle continuo.",
+  servo_smooth_step2:
+    "Utiliza un bucle para moverse de 0° a 180°, esperando 10 ms en cada paso.",
+  servo_smooth_step3:
+    "Después de una pausa, repite el movimiento de 180° a 0°.",
 
-servo_smooth_title: "Ejemplo 2: movimiento continuo con bucle",
-servo_smooth_desc: "En este ejemplo usamos un <strong>bucle for</strong> para mover suavemente el servo de 0° a 180° y regresar. Esto crea un movimiento fluido y continuo, útil para simulaciones de radar, barridos o movimientos controlados en un brazo robótico.",
-servo_smooth_steps: "¿Qué hace este programa?",
-servo_smooth_step1: "Inicializa el servo y entra en un bucle continuo.",
-servo_smooth_step2: "Utiliza un bucle para moverse de 0° a 180°, esperando 10 ms en cada paso.",
-servo_smooth_step3: "Después de una pausa, repite el movimiento de 180° a 0°.",
+  servo_ultra_title: "Ejemplo 3: control mediante sensor ultrasónico",
+  servo_ultra_desc:
+    "Aquí combinamos el servo con un <strong>sensor ultrasónico</strong> para simular una <strong>puerta automática</strong> o una barrera de estacionamiento. Si la distancia es menor a 100mm, el servo abre la puerta (ángulo 90°). En caso contrario, permanece cerrada (ángulo 0°).",
+  servo_ultra_tip:
+    "La comparación se realiza con el bloque <code>si</code>, que puede ampliarse con la opción <code>sino</code>, activada desde el engranaje del bloque. La operación <code><</code> utilizada está disponible en la categoría <strong>Matemáticas → Lógica</strong>.",
+  servo_ultra_steps: "¿Qué hace este programa?",
+  servo_ultra_step1: "Inicializa el servo y el sensor ultrasónico.",
+  servo_ultra_step2: "Lee continuamente la distancia (en milímetros).",
+  servo_ultra_step3:
+    "Si la distancia es menor a 100 mm, el servo se mueve a 90°.",
+  servo_ultra_step4: "En caso contrario, el servo vuelve a 0°.",
+  servo_ultra_step5: "La lectura se realiza cada 150 ms.",
 
-servo_ultra_title: "Ejemplo 3: control mediante sensor ultrasónico",
-servo_ultra_desc: "Aquí combinamos el servo con un <strong>sensor ultrasónico</strong> para simular una <strong>puerta automática</strong> o una barrera de estacionamiento. Si la distancia es menor a 100mm, el servo abre la puerta (ángulo 90°). En caso contrario, permanece cerrada (ángulo 0°).",
-servo_ultra_tip: "La comparación se realiza con el bloque <code>si</code>, que puede ampliarse con la opción <code>sino</code>, activada desde el engranaje del bloque. La operación <code><</code> utilizada está disponible en la categoría <strong>Matemáticas → Lógica</strong>.",
-servo_ultra_steps: "¿Qué hace este programa?",
-servo_ultra_step1: "Inicializa el servo y el sensor ultrasónico.",
-servo_ultra_step2: "Lee continuamente la distancia (en milímetros).",
-servo_ultra_step3: "Si la distancia es menor a 100 mm, el servo se mueve a 90°.",
-servo_ultra_step4: "En caso contrario, el servo vuelve a 0°.",
-servo_ultra_step5: "La lectura se realiza cada 150 ms.",
+  // Sección Motor DC
+  motor_title: "Motor DC",
+  motor_desc1:
+    "Los motores de corriente continua (DC) se utilizan ampliamente en proyectos de robótica para mover vehículos, brazos mecánicos, cintas transportadoras, entre otros. Permiten controlar la rotación y el sentido mediante señales digitales.",
+  motor_desc2:
+    "En la plataforma, controlamos el motor DC usando tres pines: <strong>PWM</strong> para la potencia (velocidad) y <strong>DIR1</strong> y <strong>DIR2</strong> para la dirección. El bloque <code>Iniciar motor DC</code> permite seleccionar los pines y dar un <strong>nombre personalizado</strong> al motor, como motor1, motor2, etc. Esto permite controlar múltiples motores de forma independiente.",
+  motor_desc3:
+    "La <strong>Amado Board</strong> ya cuenta con un espacio físico adecuado con bornes de tornillo azules en los laterales, facilitando la conexión directa de hasta dos motores. Estos bornes están conectados internamente a los pines PWM, DIR1 y DIR2.",
+  motor_desc4:
+    "La velocidad del motor se controla con valores entre <code>0</code> (apagado) y <code>1023</code> (potencia máxima). La dirección se define con el bloque de dirección: <code>1</code> hacia adelante, <code>2</code> hacia atrás y <code>0</code> para detener. También hay un bloque <strong>Detener motor</strong> que puede usarse en cualquier momento para detener el movimiento.",
 
-// Sección Motor DC
-motor_title: "Motor DC",
-motor_desc1: "Los motores de corriente continua (DC) se utilizan ampliamente en proyectos de robótica para mover vehículos, brazos mecánicos, cintas transportadoras, entre otros. Permiten controlar la rotación y el sentido mediante señales digitales.",
-motor_desc2: "En la plataforma, controlamos el motor DC usando tres pines: <strong>PWM</strong> para la potencia (velocidad) y <strong>DIR1</strong> y <strong>DIR2</strong> para la dirección. El bloque <code>Iniciar motor DC</code> permite seleccionar los pines y dar un <strong>nombre personalizado</strong> al motor, como motor1, motor2, etc. Esto permite controlar múltiples motores de forma independiente.",
-motor_desc3: "La <strong>Amado Board</strong> ya cuenta con un espacio físico adecuado con bornes de tornillo azules en los laterales, facilitando la conexión directa de hasta dos motores. Estos bornes están conectados internamente a los pines PWM, DIR1 y DIR2.",
-motor_desc4: "La velocidad del motor se controla con valores entre <code>0</code> (apagado) y <code>1023</code> (potencia máxima). La dirección se define con el bloque de dirección: <code>1</code> hacia adelante, <code>2</code> hacia atrás y <code>0</code> para detener. También hay un bloque <strong>Detener motor</strong> que puede usarse en cualquier momento para detener el movimiento.",
+  motor_example_title: "Ejemplo: motor alternando dirección",
+  motor_example_desc:
+    "El siguiente ejemplo demuestra el uso básico del motor DC alternando su dirección. El motor gira en un sentido por unos segundos, se detiene, luego gira en sentido contrario.",
+  motor_example_steps: "¿Qué hace este programa?",
+  motor_example_step1: "Inicializa el motor usando los pines PWM, DIR1 y DIR2.",
+  motor_example_step2:
+    "Configura la máxima potencia (1023) y gira el motor hacia adelante (dirección 1).",
+  motor_example_step3:
+    "Después de 2 segundos, detiene el motor y espera otros 2 segundos.",
+  motor_example_step4:
+    "Gira el motor en sentido contrario (dirección 2), espera y se detiene nuevamente.",
+  motor_example_step5: "El ciclo se repite de forma continua.",
+  motor_extra_note:
+    "Además de pruebas básicas, el control de motores DC es fundamental en proyectos como robots seguidores de línea o que evitan obstáculos. En estos casos, los sensores determinan el comportamiento del motor, permitiendo que el robot se mueva de forma autónoma según el entorno.",
 
-motor_example_title: "Ejemplo: motor alternando dirección",
-motor_example_desc: "El siguiente ejemplo demuestra el uso básico del motor DC alternando su dirección. El motor gira en un sentido por unos segundos, se detiene, luego gira en sentido contrario.",
-motor_example_steps: "¿Qué hace este programa?",
-motor_example_step1: "Inicializa el motor usando los pines PWM, DIR1 y DIR2.",
-motor_example_step2: "Configura la máxima potencia (1023) y gira el motor hacia adelante (dirección 1).",
-motor_example_step3: "Después de 2 segundos, detiene el motor y espera otros 2 segundos.",
-motor_example_step4: "Gira el motor en sentido contrario (dirección 2), espera y se detiene nuevamente.",
-motor_example_step5: "El ciclo se repite de forma continua.",
-motor_extra_note: "Además de pruebas básicas, el control de motores DC es fundamental en proyectos como robots seguidores de línea o que evitan obstáculos. En estos casos, los sensores determinan el comportamiento del motor, permitiendo que el robot se mueva de forma autónoma según el entorno.",
+  // Sección Buzzer
+  buzzer_title: "Zumbador (Buzzer)",
+  buzzer_intro1:
+    "El zumbador, también conocido como buzzer, es un actuador que emite sonidos simples o melodías. Se puede utilizar para alarmas, alertas, confirmaciones o incluso para reproducir música temática. La placa Amado Board incluye un buzzer integrado en el pin D4, listo para usarse.",
+  buzzer_libraries_title: "Instalación de bibliotecas",
+  buzzer_libraries_desc:
+    "Para que los bloques de sonido y música funcionen correctamente, es necesario instalar dos bibliotecas:",
+  buzzer_verify_library:
+    "Después de hacer clic en “Instalar biblioteca”, puedes verificar la instalación en la consola: Instalación de la biblioteca rtttl finalizada.",
+  buzzer_verify_file:
+    "También puedes confirmar la presencia de la biblioteca desde la pestaña Archivos. Haz doble clic en el botón de actualizar y verifica si aparecen los archivos <code>rtttl.py</code> y <code>songs.py</code>.",
 
-// Sección Buzzer
-buzzer_title: "Zumbador (Buzzer)",
-buzzer_intro1: "El zumbador, también conocido como buzzer, es un actuador que emite sonidos simples o melodías. Se puede utilizar para alarmas, alertas, confirmaciones o incluso para reproducir música temática. La placa Amado Board incluye un buzzer integrado en el pin D4, listo para usarse.",
-buzzer_libraries_title: "Instalación de bibliotecas",
-buzzer_libraries_desc: "Para que los bloques de sonido y música funcionen correctamente, es necesario instalar dos bibliotecas:",
-buzzer_verify_library: "Después de hacer clic en “Instalar biblioteca”, puedes verificar la instalación en la consola: Instalación de la biblioteca rtttl finalizada.",
-buzzer_verify_file: "También puedes confirmar la presencia de la biblioteca desde la pestaña Archivos. Haz doble clic en el botón de actualizar y verifica si aparecen los archivos <code>rtttl.py</code> y <code>songs.py</code>.",
+  buzzer_block_freq_title: "1. Reproducir sonido por frecuencia",
+  buzzer_block_freq_desc:
+    "Este bloque reproduce un sonido con una frecuencia específica (en Hz) durante un tiempo determinado (en segundos). Por ejemplo, 1000 Hz genera un tono agudo. Usar 0 o -1 hace que el sonido sea continuo.",
 
-buzzer_block_freq_title: "1. Reproducir sonido por frecuencia",
-buzzer_block_freq_desc: "Este bloque reproduce un sonido con una frecuencia específica (en Hz) durante un tiempo determinado (en segundos). Por ejemplo, 1000 Hz genera un tono agudo. Usar 0 o -1 hace que el sonido sea continuo.",
+  buzzer_block_note_title: "2. Reproducir sonido por nota musical",
+  buzzer_block_note_desc:
+    "En este bloque puedes seleccionar una nota musical (como D3 o B1) y definir la duración en segundos. Ideal para crear melodías manualmente.",
 
-buzzer_block_note_title: "2. Reproducir sonido por nota musical",
-buzzer_block_note_desc: "En este bloque puedes seleccionar una nota musical (como D3 o B1) y definir la duración en segundos. Ideal para crear melodías manualmente.",
+  buzzer_block_music_title: "3. Reproducir música predefinida",
+  buzzer_block_music_desc:
+    "Puedes seleccionar canciones temáticas integradas como Super Mario, Star Wars o Picaxe. Solo elige el nombre desde la lista.",
 
-buzzer_block_music_title: "3. Reproducir música predefinida",
-buzzer_block_music_desc: "Puedes seleccionar canciones temáticas integradas como Super Mario, Star Wars o Picaxe. Solo elige el nombre desde la lista.",
+  buzzer_block_user_title: "Nota: melodías creadas por el usuario",
+  buzzer_block_user_desc:
+    "Existe un bloque llamado “Reproducir buzzer en el pin con melodía”. Este bloque se usa junto con la pestaña Música para reproducir canciones compuestas por el usuario. Será explicado en una sección específica más adelante.",
 
-buzzer_block_user_title: "Nota: melodías creadas por el usuario",
-buzzer_block_user_desc: "Existe un bloque llamado “Reproducir buzzer en el pin con melodía”. Este bloque se usa junto con la pestaña Música para reproducir canciones compuestas por el usuario. Será explicado en una sección específica más adelante.",
-
-
+  kw_introduction: "introducción",
+  kw_beginners: "principiantes",
+  kw_block_programming: "programación en bloques",
+  kw_dblocks_basics: "dblocks básico",
+  kw_interactive_projects: "proyectos interactivos",
+  kw_amadoboard: "amadoboard",
+  kw_hardware: "hardware",
+  kw_board_features: "características de la placa",
+  kw_esp32_board: "placa esp32",
+  kw_pinout: "pinout",
+  kw_environment_setup: "configuración de entorno",
+  kw_drivers: "controladores",
+  kw_micropython_install: "instalar micropython",
+  kw_amadoboard_config: "configuración amadoboard",
+  kw_variables: "variables",
+  kw_loops: "bucles",
+  kw_print_console: "imprimir en consola",
+  kw_control_structures: "estructuras de control",
+  kw_programming_fundamentals: "fundamentos de programación",
+  kw_logic_operators: "operadores lógicos",
+  kw_math_operators: "operadores matemáticos",
+  kw_boolean_logic: "lógica booleana",
+  kw_conditional_statements: "declaraciones condicionales",
+  kw_digital_io: "e/s digital",
+  kw_digital_input: "entrada digital",
+  kw_digital_output: "salida digital",
+  kw_gpio: "gpio",
+  kw_led_control: "control de led",
+  kw_analog_io: "e/s analógica",
+  kw_analog_input: "entrada analógica",
+  kw_analog_output: "salida analógica",
+  kw_adc: "adc",
+  kw_pwm_control: "control pwm",
+  kw_sensors_dblocks: "sensores dblocks",
+  kw_data_collection: "recolección de datos",
+  kw_environment_monitoring: "monitoreo ambiental",
+  kw_sensor_integration: "integración de sensor",
+  kw_ldr: "ldr",
+  kw_dht11: "dht11",
+  kw_actuators_dblocks: "actuadores dblocks",
+  kw_device_control: "control de dispositivo",
+  kw_motors_control: "control de motor",
+  kw_servo_motor: "servomotor",
+  kw_relay_module: "módulo relé",
+  kw_music_dblocks: "música dblocks",
+  kw_sound_programming: "programación de sonido",
+  kw_melody_composition: "composición de melodía",
+  kw_buzzer_control: "control de zumbador",
+  kw_display_dblocks: "pantalla dblocks",
+  kw_oled_display: "pantalla oled",
+  kw_text_on_display: "texto en pantalla",
+  kw_show_sensor_data: "mostrar datos de sensor",
+  kw_dblocks_resources: "recursos dblocks",
+  kw_dblocks_features: "funcionalidades dblocks",
+  kw_advanced_features: "características avanzadas",
+  kw_project_development: "desarrollo de proyecto",
 };

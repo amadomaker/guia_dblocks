@@ -109,7 +109,8 @@ var MSG = {
   environment_description:
     "Learn how to install the necessary drivers and set up the AmadoBoard with MicroPython to start developing your projects.",
   var_loop_print: "Variables, loops, and printing",
-  var_loop_print_description: "In this section, we will learn how to work with variables, control structures, and print data to the screen.",
+  var_loop_print_description:
+    "In this section, we will learn how to work with variables, control structures, and print data to the screen.",
 
   digital_input_output: "Digital Input and Output",
   digital_io_description:
@@ -223,315 +224,525 @@ var MSG = {
 
   // Page "Preparing the environment"
 
-preparing_environment: "Preparing the environment",
-en_first_step: "First steps",
-en_introduction_text: "First, we need to install a driver so the computer/laptop can recognize the board through the micro-USB cable connection. Download the CP210x driver using the link below:",
-en_install_driver: "Install driver",
-en_found_download: "Look for download or transfer and download the version indicated below:",
-en_info_micropython: "To program the Amado board on Dblocks, we need to install MicroPython. We'll do this through the link below to simplify the process.",
-en_install_micropython: "Install MicroPython",
-en_info_micropython_page: "<span style='color:red;'>The installation page contains a tutorial video explaining the entire process</span>. The site is very simple and intuitive – just click connect, select the USB port as shown in the image below, and install MicroPython. This process can take 2 minutes or more.",
-en_acessing_plataform_title: "Accessing the platform",
-en_acessing_plataform_info1: "In the search bar, look for Dblocks and access the first site, or go directly to: dblocks.com.br",
-en_acessing_plataform_info2: "On the homepage, click the 'start programming' button. A welcome message will appear with some information. If you’ve already installed MicroPython, you can close the message – your board is ready to use. If not, click on 'MicroPython Installer' and follow the process.",
-en_useful_information: "Useful information",
-en_inf_toolbox: "On the left side, there is the toolbox with the blocks available for use",
-en_inf_workspace: "The central area is called the workspace, where we place our blocks.",
-en_info_steel_bar: "In the top right, there are some buttons like the one to connect your board and the one to run the program.",
-en_info_extra: "**Note: You can also download and reload the program to use it later or on another computer.",
-en_first_project_title: "First project: Blink a LED infinitely",
-en_first_project_step1: "First, click on Control, then on Loops, and select the 'repeat while' block. Position it as you like.",
-en_first_project_step2: "Then click on Variables, Booleans, and select the 'True' block. Snap it into the previous block as shown in the image below:",
-en_first_project_step3: "At this point, we have our loop, which is responsible for repeatedly executing our program – in this case, making the LED blink infinitely.",
-en_first_project_step4: "The next step is to use the blocks responsible for turning the LED on and off. These can be found in the Input/Output Pins category. Look for the 'set output pin' block and place it inside the loop. We'll need to add this block twice – once to turn the LED on and once to turn it off. For the second block, select the 'false' option in 'to'.",
-en_first_project_step5: "We’ll also use a pause to keep the LED on and off for a time interval. Look for the 'wait' block under Control, in the Timing category. Position the blocks as shown in the image below.",
-en_first_project_step6: "Now that we’ve built the program, click the connect button in the top right corner, select the connected port (board) from your computer, and click connect.",
-en_first_project_step7: "Once done, you'll see the icon indicating that the Amado board is connected to the platform.",
-en_first_project_step8: "Now just click the button to run the program, and you’ll see the onboard LED blinking at 1-second intervals.",
-en_first_project_step9: "Notes: You can run and pause the program as many times as you like by clicking the same button.",
-en_first_project_step10: "Congratulations! You've just created your first program using the Amado board on the Dblocks platform.",
+  preparing_environment: "Preparing the environment",
+  en_first_step: "First steps",
+  en_introduction_text:
+    "First, we need to install a driver so the computer/laptop can recognize the board through the micro-USB cable connection. Download the CP210x driver using the link below:",
+  en_install_driver: "Install driver",
+  en_found_download:
+    "Look for download or transfer and download the version indicated below:",
+  en_info_micropython:
+    "To program the Amado board on Dblocks, we need to install MicroPython. We'll do this through the link below to simplify the process.",
+  en_install_micropython: "Install MicroPython",
+  en_info_micropython_page:
+    "<span style='color:red;'>The installation page contains a tutorial video explaining the entire process</span>. The site is very simple and intuitive – just click connect, select the USB port as shown in the image below, and install MicroPython. This process can take 2 minutes or more.",
+  en_acessing_plataform_title: "Accessing the platform",
+  en_acessing_plataform_info1:
+    "In the search bar, look for Dblocks and access the first site, or go directly to: dblocks.com.br",
+  en_acessing_plataform_info2:
+    "On the homepage, click the 'start programming' button. A welcome message will appear with some information. If you’ve already installed MicroPython, you can close the message – your board is ready to use. If not, click on 'MicroPython Installer' and follow the process.",
+  en_useful_information: "Useful information",
+  en_inf_toolbox:
+    "On the left side, there is the toolbox with the blocks available for use",
+  en_inf_workspace:
+    "The central area is called the workspace, where we place our blocks.",
+  en_info_steel_bar:
+    "In the top right, there are some buttons like the one to connect your board and the one to run the program.",
+  en_info_extra:
+    "**Note: You can also download and reload the program to use it later or on another computer.",
+  en_first_project_title: "First project: Blink a LED infinitely",
+  en_first_project_step1:
+    "First, click on Control, then on Loops, and select the 'repeat while' block. Position it as you like.",
+  en_first_project_step2:
+    "Then click on Variables, Booleans, and select the 'True' block. Snap it into the previous block as shown in the image below:",
+  en_first_project_step3:
+    "At this point, we have our loop, which is responsible for repeatedly executing our program – in this case, making the LED blink infinitely.",
+  en_first_project_step4:
+    "The next step is to use the blocks responsible for turning the LED on and off. These can be found in the Input/Output Pins category. Look for the 'set output pin' block and place it inside the loop. We'll need to add this block twice – once to turn the LED on and once to turn it off. For the second block, select the 'false' option in 'to'.",
+  en_first_project_step5:
+    "We’ll also use a pause to keep the LED on and off for a time interval. Look for the 'wait' block under Control, in the Timing category. Position the blocks as shown in the image below.",
+  en_first_project_step6:
+    "Now that we’ve built the program, click the connect button in the top right corner, select the connected port (board) from your computer, and click connect.",
+  en_first_project_step7:
+    "Once done, you'll see the icon indicating that the Amado board is connected to the platform.",
+  en_first_project_step8:
+    "Now just click the button to run the program, and you’ll see the onboard LED blinking at 1-second intervals.",
+  en_first_project_step9:
+    "Notes: You can run and pause the program as many times as you like by clicking the same button.",
+  en_first_project_step10:
+    "Congratulations! You've just created your first program using the Amado board on the Dblocks platform.",
 
-//Page inOutDigital
-di_introduction_title: "Introduction",
-di_intro1: 'In electronic and automation systems, <strong>digital inputs</strong> are signals that the device receives from the environment. These signals represent binary states — usually "on" or "off" (1 or 0). Common examples include buttons, presence sensors, and switches.',
-di_intro2: "<strong>Digital outputs</strong>, on the other hand, are signals that the device sends to act on the environment, also in binary form. With them, it's possible to control LEDs, relays, motors, and other components that operate in two states (on/off).",
-di_intro3: "These concepts are fundamental in automation projects, where sensors report the state of the environment and actuators respond according to the defined logic.",
-di_intro4: "Next, we'll see how to use digital inputs and outputs in practice in a simple and intuitive way.",
+  //Page inOutDigital
+  di_introduction_title: "Introduction",
+  di_intro1:
+    'In electronic and automation systems, <strong>digital inputs</strong> are signals that the device receives from the environment. These signals represent binary states — usually "on" or "off" (1 or 0). Common examples include buttons, presence sensors, and switches.',
+  di_intro2:
+    "<strong>Digital outputs</strong>, on the other hand, are signals that the device sends to act on the environment, also in binary form. With them, it's possible to control LEDs, relays, motors, and other components that operate in two states (on/off).",
+  di_intro3:
+    "These concepts are fundamental in automation projects, where sensors report the state of the environment and actuators respond according to the defined logic.",
+  di_intro4:
+    "Next, we'll see how to use digital inputs and outputs in practice in a simple and intuitive way.",
 
-//Digital input
-di_in_title: "Digital Input",
-di_in1: "A practical example of a digital input can be created using the <strong>dBlocks</strong> platform and the <strong>Amado Board</strong>.",
-di_in2: "In the image below, we have a program that continuously reads a digital pin from the board:",
-di_in3: "What does this program do?",
-di_in4: "<strong>While the program is running</strong>, it repeatedly executes the instructions inside the <code>repeat while true</code> block.",
-di_in5: "It <strong>reads the logic state</strong> (0 or 1) of the <strong>D16 / SERVO B</strong> pin using the <code>read digital input</code> command.",
-di_in6: "The value read is <strong>stored in the <code>x</code> variable</strong>.",
-di_in7: "Then, the program <strong>prints to the console</strong> a message like: <code>Value of x: 1</code> or <code>Value of x: 0</code>.",
-di_in8: "The program then <strong>waits 500 milliseconds</strong> before repeating the reading.",
-di_in9: "Hardware setup",
-di_in10: "To test this code in practice, you can use a <strong>jumper</strong> connected to the <code>D16</code> pin of the Amado Board. Toggle this jumper between <strong>GND</strong> (0V) and <strong>3.3V</strong>, thus simulating a digital signal:",
-di_in11: "When the jumper is connected to <strong>GND</strong>, the value read will be <code>0</code>.",
-di_in12: "When the jumper is connected to <strong>3.3V</strong>, the value read will be <code>1</code>.",
-di_in13: "This clearly demonstrates the operation of a digital input, showing how the board interprets two distinct states and how this can be visualized on the console.",
-di_in14: "Visualizing the results in the console",
-di_in15: "The dBlocks platform has a console that allows you to monitor, in real time, the results of the readings performed by the blocks. In the example below, we see the value of the <code>x</code> variable being printed continuously:",
-di_in16: "As the jumper is switched between GND and 3.3V, the value of <code>x</code> changes between <strong>0</strong> and <strong>1</strong>, and this is immediately reflected in the console. This is an efficient and clear way to test and debug your project's logic.",
+  //Digital input
+  di_in_title: "Digital Input",
+  di_in1:
+    "A practical example of a digital input can be created using the <strong>dBlocks</strong> platform and the <strong>Amado Board</strong>.",
+  di_in2:
+    "In the image below, we have a program that continuously reads a digital pin from the board:",
+  di_in3: "What does this program do?",
+  di_in4:
+    "<strong>While the program is running</strong>, it repeatedly executes the instructions inside the <code>repeat while true</code> block.",
+  di_in5:
+    "It <strong>reads the logic state</strong> (0 or 1) of the <strong>D16 / SERVO B</strong> pin using the <code>read digital input</code> command.",
+  di_in6:
+    "The value read is <strong>stored in the <code>x</code> variable</strong>.",
+  di_in7:
+    "Then, the program <strong>prints to the console</strong> a message like: <code>Value of x: 1</code> or <code>Value of x: 0</code>.",
+  di_in8:
+    "The program then <strong>waits 500 milliseconds</strong> before repeating the reading.",
+  di_in9: "Hardware setup",
+  di_in10:
+    "To test this code in practice, you can use a <strong>jumper</strong> connected to the <code>D16</code> pin of the Amado Board. Toggle this jumper between <strong>GND</strong> (0V) and <strong>3.3V</strong>, thus simulating a digital signal:",
+  di_in11:
+    "When the jumper is connected to <strong>GND</strong>, the value read will be <code>0</code>.",
+  di_in12:
+    "When the jumper is connected to <strong>3.3V</strong>, the value read will be <code>1</code>.",
+  di_in13:
+    "This clearly demonstrates the operation of a digital input, showing how the board interprets two distinct states and how this can be visualized on the console.",
+  di_in14: "Visualizing the results in the console",
+  di_in15:
+    "The dBlocks platform has a console that allows you to monitor, in real time, the results of the readings performed by the blocks. In the example below, we see the value of the <code>x</code> variable being printed continuously:",
+  di_in16:
+    "As the jumper is switched between GND and 3.3V, the value of <code>x</code> changes between <strong>0</strong> and <strong>1</strong>, and this is immediately reflected in the console. This is an efficient and clear way to test and debug your project's logic.",
 
-//Digital output
-di_out_title: "Digital Output",
-di_out1: 'Digital outputs allow the board to control external devices by sending "on" or "off" type signals. A classic example is controlling an LED.',
-di_out2: "Below we have an example where the blue LED connected to pin <code>D2</code> of the <strong>Amado Board</strong> blinks continuously:",
-di_out3: "What does this program do?",
-di_out4: "The <code>repeat while true</code> block ensures the program keeps running in a loop.",
-di_out5: "The <code>D2 / BLUE LED</code> pin is configured as a digital output.",
-di_out6: "First, the LED is turned on with the <code>set output pin to true</code> command.",
-di_out7: "The program then waits for <strong>500 milliseconds</strong>.",
-di_out8: "After that, the LED is turned off with the <code>set output pin to false</code> command.",
-di_out9: "Again, the program waits for <strong>500 milliseconds</strong>.",
-di_out10: "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests.",
+  //Digital output
+  di_out_title: "Digital Output",
+  di_out1:
+    'Digital outputs allow the board to control external devices by sending "on" or "off" type signals. A classic example is controlling an LED.',
+  di_out2:
+    "Below we have an example where the blue LED connected to pin <code>D2</code> of the <strong>Amado Board</strong> blinks continuously:",
+  di_out3: "What does this program do?",
+  di_out4:
+    "The <code>repeat while true</code> block ensures the program keeps running in a loop.",
+  di_out5:
+    "The <code>D2 / BLUE LED</code> pin is configured as a digital output.",
+  di_out6:
+    "First, the LED is turned on with the <code>set output pin to true</code> command.",
+  di_out7: "The program then waits for <strong>500 milliseconds</strong>.",
+  di_out8:
+    "After that, the LED is turned off with the <code>set output pin to false</code> command.",
+  di_out9: "Again, the program waits for <strong>500 milliseconds</strong>.",
+  di_out10:
+    "This makes the LED blink continuously with a half-second interval between turning on and off. This type of control is very useful in signaling systems, visual notifications, or simple pin functionality tests.",
+
+  // Page inOutAnalog
+  an_introduction_title: "Introduction",
+  an_intro1:
+    "In electronic projects, <strong>analog inputs and outputs</strong> allow working with signals that vary continuously. Unlike digital signals, which have only two states (0 or 1), analog signals can represent a range of values, making them ideal for measuring things like light, temperature, or controlling LED intensity.",
+  an_intro2:
+    "In this example, we’ll use the <strong>LDR light sensor</strong> already built into the <strong>Amado Board</strong> as an analog input. For the output, we’ll adjust the brightness of the onboard LED using a PWM signal.",
+  an_intro3:
+    "These features are useful in projects that need to detect environmental changes or control devices with more precision.",
+
+  // Analog Input
+  an_in_title: "Analog Input",
+  an_in1:
+    "We’ll read the onboard LDR light sensor by connecting a jumper from the LDR terminal to pin <code>39</code>, which is an analog input.",
+  an_in2:
+    "The following program continuously reads the light intensity captured by the sensor and stores it in a variable:",
+  an_in3: "What does this program do?",
+  an_in4:
+    "Inside the <code>repeat while true</code> block, it repeatedly executes the instructions.",
+  an_in5:
+    "Pin <code>39</code> is read using the <code>read analog input</code> command.",
+  an_in6: "The value read is stored in the variable <code>valor_ldr</code>.",
+  an_in7: "This value is printed to the console for real-time monitoring.",
+  an_in8:
+    "There is a pause of <strong>500 milliseconds</strong> before the next reading.",
+  an_in9: "Viewing the results",
+  an_in10:
+    "As ambient light changes, the value of the <code>valor_ldr</code> variable also changes. This can be seen in the platform’s console:",
+  an_in11:
+    "The brighter the environment, the higher the value read. In darker settings, the value decreases. This shows how the analog signal continuously represents a physical quantity.",
+
+  // Analog Output
+  an_out_title: "Analog Output",
+  an_out1:
+    "To control the brightness of an LED, we use a technique called <strong>PWM (pulse-width modulation)</strong>. In practice, it simulates an analog signal on a digital pin.",
+  an_out2:
+    "Below is an example using the PWM block to control the onboard blue LED of the <strong>Amado Board</strong> connected to pin <code>D2</code>:",
+  an_out3: "What does this program do?",
+  an_out4:
+    "The <code>PWM</code> block is used inside a continuous <code>repeat while true</code> loop.",
+  an_out5: "It sets <strong>pin D2 / BLUE LED</strong> as a PWM output.",
+  an_out6:
+    "The <strong>frequency</strong> is set to <code>100 Hz</code>, indicating how many cycles per second the signal is sent.",
+  an_out7:
+    "The <strong>duty cycle</strong> is set to <code>512</code>, which represents 50% intensity (on a scale from 0 to 1023).",
+  an_out8:
+    "By changing the duty cycle value, you can control the LED’s brightness. Lower values make the LED dimmer, and higher values increase brightness. The frequency can also be adjusted to test how different rates affect the smoothness of the light.",
+  an_out9:
+    "This approach is very useful in projects like dimmers, motor speed controllers, or any application where the output needs to vary instead of just switching on or off.",
+
+  // Variables, Loops and Print - Variables Section
+  var_section_title: "Variables",
+  var_intro1:
+    "In programming, <strong>variables</strong> are used to store values that may change over time. They are essential for storing information, performing calculations, controlling sensors, or even printing messages to the console.",
+  var_intro2:
+    "To create a variable, go to the <strong>Variables</strong> category in the side menu and click <strong>Create variable...</strong>. Choose a clear and meaningful name to avoid errors and make the program easier to understand.",
+  var_intro3:
+    "Once created, your variable will appear in <strong>Created Variables</strong> and can be used in blocks to set, change, or access its value.",
+  var_intro4: "There are different types of variables available:",
+  var_type_bool:
+    "<strong>Booleans</strong>: represent true or false. Useful for checks or conditions.",
+  var_type_num:
+    "<strong>Numerical</strong>: store integers, decimals, or random numbers, common in sensor readings and calculations.",
+  var_type_text:
+    "<strong>Text</strong>: store phrases or words, ideal for showing messages or names.",
+  var_type_list:
+    "<strong>Lists</strong>: store multiple values in a single variable. Very useful for organizing data.",
+  var_use_robotics:
+    "In robotics, variables are widely used to store sensor readings such as temperature, distance, light, and more. This allows the system to make decisions or adjust behaviors based on environmental data.",
+  var_examples_title: "Examples of variable types",
+  var_list_title: "List Variables",
+  var_text_title: "Text Variables",
+  var_num_title: "Numerical Variables",
+  var_bool_title: "Boolean Variables",
+  var_print_example_title: "Practical example: using variables and print",
+  var_print_example_desc:
+    "In the example below, we create two variables: a text one called <code>name</code> and a numerical one called <code>value</code>. Then we use the <strong>print</strong> block, found in the Functions → Text category, to show the values in the console.",
+  var_print_console_desc:
+    "The result appears in the console as shown in the image below. This is very useful to monitor sensor values during program execution.",
+
+  // Print Section
+  print_section_title: 'Printing with the "print" block',
+  print_intro1:
+    "The <strong>print</strong> function allows you to monitor values during program execution. This is useful for checking if sensor data or variables are correct.",
+  print_intro2:
+    "To use it, go to the <strong>Functions → Text</strong> category and select the <code>print</code> block. It can be used to show plain text or variable values.",
+  print_ex1: "Example 1: print a fixed message",
+  print_ex2: "Example 2: print the value of a variable",
+  print_ex3: "Example 3: print inside a loop",
+  print_console_output:
+    "The result of the last example appears in the platform console, showing a count from 1 to 10:",
+
+  // Loop Section
+  loop_section_title: "Repetition Loops",
+  loop_intro1:
+    "Loops are structures that allow executing the same set of commands multiple times. They are useful for automating repetitive tasks such as counting, displaying messages, or handling lists.",
+  loop_intro2:
+    "On the platform, repetition blocks are available in the <strong>Control</strong> category and include different types of loops for various purposes.",
+
+  loop_repeat_times_title: "1. Repeat a fixed number of times",
+  loop_repeat_times_desc:
+    "The <code>repeat X times</code> block runs the set of commands a specific number of times. Ideal for simple counts or repeated actions.",
+  loop_repeat_times_explanation:
+    "In this example, we use a <code>counter</code> variable to count up to 5. On each repetition, we print the current value.",
+
+  loop_forever_title: "2. Repeat while true",
+  loop_forever_desc:
+    "The <code>repeat while true</code> block executes the commands continuously, without stopping. It is widely used in robotics projects where the program must run as long as the system is on.",
+  loop_forever_explanation:
+    "In this example, the <code>counter</code> variable is incremented every second, and its value is printed to the console repeatedly.",
+
+  loop_repeat_while_title: "3. Repeat while a condition is true",
+  loop_repeat_while_desc:
+    "The <code>repeat while</code> block keeps executing the commands as long as the defined condition is true.",
+  loop_repeat_while_explanation:
+    "In this example, the <code>number</code> variable is incremented until it reaches 5. The loop stops when the condition <code>number < 5</code> is no longer true.",
+
+  loop_count_title: "4. Loop with custom counter",
+  loop_count_desc:
+    "The <code>count with i from X to Y by Z</code> block gives more control over the repetition, including start, end, and step values.",
+  loop_count_explanation:
+    "In this example, we print the multiplication table of 2, multiplying the value of <code>i</code> in each repetition.",
+
+  loop_for_each_title: "5. Loop through each item in a list",
+  loop_for_each_desc:
+    "The <code>for each item in list</code> block iterates through all elements in a list. Ideal for displaying or processing data.",
+  loop_for_each_explanation:
+    "Here we have a list of names. The loop prints one name at a time until all are displayed.",
+
+  loop_break_title: "6. Break the loop with a condition",
+  loop_break_desc:
+    "The <code>break loop</code> block allows stopping the loop execution before it finishes all repetitions.",
+  loop_break_explanation:
+    "In this example, we count from 1 to 10, but break the loop when the counter reaches 6.",
+
+  var_loop_print_end:
+    "All the results from the examples above can be seen in the platform console.",
+
+  // Sensors Page
+  sensor_title: "Sensors",
+  sensor_section_title: "Sensors in Robotics",
+  sensor_intro1:
+    "Sensors are components that allow robots and embedded systems to perceive their surroundings. They capture information such as temperature, light, distance, humidity, and more, converting this data into signals that can be processed.",
+  sensor_intro2:
+    "On the platform, blocks related to sensors are available in the <strong>Sensors</strong> category.",
+
+  // IR Sensor Section
+  sensor_ir_title: "Infrared Sensor (IR)",
+
+  sensor_ir_desc1:
+    "The infrared (IR) sensor is a simple digital component widely used in robotics, especially in projects such as line-following robots. It detects the presence or absence of objects based on infrared light reflection, returning digital values: <strong>1</strong> when there is no reflection and <strong>0</strong> when it detects a nearby object.",
+
+  sensor_ir_desc2:
+    "This sensor has <strong>3 pins</strong> (VCC, GND, and Signal) and can be easily connected to the <strong>Amado Board</strong> using the digital input pins such as <code>D35</code>, <code>D39</code>, <code>D36</code>, and <code>D34</code>. The board already has a proper slot for direct connection, making the assembly quick and simple.",
+
+  sensor_ir_desc3:
+    "In addition to line-following robots, the IR sensor can be used in counting systems, safety barriers, object presence detection, and other applications where simple obstacle detection is needed.",
+
+  sensor_ir_example_title: "Example: continuous reading of the IR sensor",
+
+  sensor_ir_steps: "What does this program do?",
+
+  // Temperature and Humidity Sensor
+  sensor_dht_title: "Temperature and Humidity Sensor DHT11/22",
+  sensor_dht_desc1:
+    "The DHT11/22 sensor is used to measure two important environmental variables: <strong>temperature</strong> and <strong>relative humidity</strong>. It is commonly used in automation projects, weather stations, and environmental control.",
+  sensor_dht_desc2:
+    "For the sensor to work properly with the <strong>Amado Board</strong>, it must be connected to a <strong>digital pin</strong>. We recommend using pins D5, D15, D16, D17, D18, D19, D21, D22, or D23. In this example, we’ll use pin <code>D17</code>.",
+  sensor_dht_desc3: "How does the example above work?",
+  sensor_dht_step1:
+    "We initialize the DHT11/22 sensor and specify the connection pin.",
+  sensor_dht_step2:
+    "We enter a loop that continuously repeats while the system is powered.",
+  sensor_dht_step3:
+    "In each loop, the <strong>temperature</strong> and <strong>humidity</strong> readings are updated and stored in variables.",
+  sensor_dht_step4:
+    "These values are displayed in the console using the <code>print</code> block.",
+  sensor_dht_step5:
+    "A 1-second pause between readings is very important to ensure proper sensor operation.",
+
+  // Ultrasonic Sensor
+  sensor_ultra_title: "Ultrasonic Distance Sensor HCSR04",
+  sensor_ultra_desc1:
+    "The HCSR04 ultrasonic sensor is used to measure distances accurately using sound waves. It sends a sound signal (trigger) and measures the time until the echo returns after bouncing off an object. Based on this time, the distance is calculated.",
+  sensor_ultra_desc2:
+    "The <strong>Amado Board</strong> has a dedicated space to connect this sensor directly to pins <code>D17</code> (trigger) and <code>D34</code> (echo), making its use in robotics projects easier.",
+  sensor_ultra_desc3: "How does the example above work?",
+  sensor_ultra_step1:
+    "We initialize the sensor by specifying the trigger (D17) and echo (D34) pins, along with a timeout.",
+  sensor_ultra_step2:
+    "We use a <strong>continuous loop</strong> to measure distance repeatedly.",
+  sensor_ultra_step3:
+    "On each repetition, the measured distance is stored in a variable.",
+  sensor_ultra_step4:
+    "The value is printed to the console to monitor real-time readings.",
+  sensor_ultra_step5:
+    "We add a 500-millisecond pause to avoid overly rapid readings and ensure stability.",
+  sensor_ultra_note:
+    "Note: Readings may vary, showing very high values or even -1. To improve reliability, implement a simple filter to discard readings outside the expected range.",
+
+  // RFID Module
+  sensor_rfid_title: "RFID Reader RC522",
+  sensor_rfid_desc1:
+    "RFID (Radio Frequency Identification) is a technology used to identify objects or people through cards or tags that emit signals. It is widely used in access control, attendance systems, and asset tracking.",
+  sensor_rfid_desc2:
+    "The module used in this example is the RC522, which communicates via SPI. It reads the UID (unique ID) of RFID cards and can also access the internal memory of the card for reading and writing data.",
+  sensor_rfid_desc3:
+    "The connection of the module to the Amado Board must follow the correct pin mapping. Some pin names are the same, while others differ between the module, the block, and the board. See the recommended mapping:",
+  sensor_rfid_map1: "3.3V → 3.3V",
+  sensor_rfid_map2: "GND → GND",
+  sensor_rfid_map3: "SCK (module) = SCK in block = D18 / CLK on board",
+  sensor_rfid_map4: "MOSI = MOSI in block = D23 / MOSI on board",
+  sensor_rfid_map5: "MISO = MISO in block = D19 / MISO on board",
+  sensor_rfid_map6: "RST = RST in block = D22 / SCL on board",
+  sensor_rfid_map7:
+    "SDA (on module) should be connected to CS in the block, we recommend using D5 as in the image.",
+  sensor_rfid_desc4:
+    "Although the RST and CS pins can be connected to other digital pins (like D17, D21, or D22), we recommend following the example for better compatibility.",
+  rfid_libraries_desc:
+    "To ensure the RC522 RFID reader blocks function correctly, it is necessary to install the <code>mfrc522</code> library, which enables communication and reading of RFID cards.",
+  rfid_verify_library:
+    "After clicking the <strong>“Install library”</strong> button, you can verify the installation by checking the console message: <code>RFID library mfrc522 installed successfully.</code>",
+  rfid_verify_file:
+    "You can also confirm the presence of the library by opening the <strong>Files</strong> tab. Double-click the refresh button and check if the file <code>mfrc522.py</code> appears in the board's memory.",
+  sensor_rfid_desc6:
+    "Below we see a basic program that reads an RFID card and displays the results in the console.",
+  sensor_rfid_expl_title: "How does the example above work?",
+  sensor_rfid_step1:
+    "We initialize the module by informing all SPI connection pins.",
+  sensor_rfid_step2:
+    "We enter a continuous loop that constantly checks if a card is present.",
+  sensor_rfid_step3:
+    "If a card is detected (status = 0), a message is printed in the console and the UID is read and shown.",
+  sensor_rfid_step4:
+    "Even when no card is present, the status and tag type are shown to help with debugging.",
+  sensor_rfid_step5:
+    "We add a 500-millisecond delay to avoid very fast repetitions.",
+  sensor_rfid_console_desc:
+    "Below you can see how the results appear in the platform console, showing the status, tag type, and UID when a card is detected.",
+
+  // Actuators Page
+  // Actuator Section
+  actuator_section_title: "Actuators",
+  actuator_introduction: "Actuators in Robotics",
+  actuator_intro1:
+    "Actuators are devices that receive commands from a system and perform a physical action in the real world. They convert electrical signals into motion, sound, light, heat, or other forms of response.",
+  actuator_intro2:
+    "In robotics and automation, actuators are essential for interacting with the environment, enabling you to turn on lights, control motors, open valves, sound buzzers, among others.",
+  actuator_intro3:
+    "On the platform, actuator blocks are available in the <strong>Outputs and Actuators</strong> category. Each type of actuator will have its own blocks with specific commands.",
+
+  // Relay Module Section
+  relay_title: "Relay Module",
+  relay_desc1:
+    "The relay is a component that works like an electronically controlled switch. It allows turning high-power devices (such as lamps, fans, or appliances) on or off using a digital signal from the board.",
+  relay_desc2:
+    "In the relay block, you can choose the pin to which it is connected and the desired command: <strong>on</strong> or <strong>off</strong>. It is important to ensure the relay module is properly powered (usually 5V and GND), and that the connected load is isolated and securely attached for safety.\n\nImportant: many relay modules are activated with signal 0 (logic low). That means using the 'off' command in the block will activate the relay (turning the device on). Conversely, the 'on' command will deactivate the relay (turning the device off).",
+  relay_example_title: "Example: turning on a lamp with delay",
+  relay_example_desc:
+    "In the example below, we use the relay block to simulate lamp control. When the program starts, the relay is activated (lamp turns on), and after 3 seconds, it turns off. This type of control can be used in applications like timers, presence simulation, or home automation.",
+  relay_example_note:
+    "This simple timer example could also be used within a <strong>condition</strong> (e.g., when detecting an RFID card, presence, time, etc.) to make automatic decisions in the program.",
+
+  // Servo Motor Section
+  servo_title: "Servo Motor",
+  servo_desc1:
+    "The servo motor is a commonly used actuator in robotics and automation projects. It allows positioning a shaft at specific angles, usually between 0 and 180 degrees. This is ideal for controlling doors, mechanical arms, levers, shafts, or systems requiring precise and controlled movements.",
+  servo_desc2:
+    "On the platform, servo control is done in two steps: first, use the <strong>Initialize Servo Motor</strong> block to define the connection pin and name of the servo, then use the <strong>Move Servo</strong> block to set the desired angle. You can use custom names (like servo1, servo2, etc.), allowing you to control multiple servos in the same project.",
+  servo_desc3:
+    "The <strong>Amado Board</strong> has specific spots for connecting servo motors: <strong>D15</strong> and <strong>D16</strong> are labeled as <code>SERVO A</code> and <code>SERVO B</code>, respectively. Next to these pins, there is a set of 3 labeled pins: <code>3.3V</code>, <code>VS</code>, and <code>5V</code>. To power the servo correctly, you must <strong>make a jumper between the VS pin and the 5V pin</strong>. This ensures the signal pin has enough power to operate the servo properly.",
+  servo_desc4:
+    "Servos typically have standard color-coded wires: <strong>brown</strong> (GND), <strong>red</strong> (VCC), and <strong>yellow</strong> (signal). The board already has the appropriate connector layout to plug these in directly, making installation easier.",
+
+  servo_basic_title: "Example 1: control with fixed positions",
+  servo_basic_desc:
+    "This example moves the servo to three fixed positions: 0°, 90°, and 180°, with a short delay between movements. It’s ideal to demonstrate basic servo control and how to directly set angles.",
+  servo_basic_steps: "What does this program do?",
+  servo_basic_step1: "Initializes the servo on pin D15.",
+  servo_basic_step2: "Moves the servo to 0°, waits 1 second.",
+  servo_basic_step3: "Moves to 90°, then 180°, with delays between.",
+  servo_basic_step4: "The cycle repeats continuously.",
+
+  servo_smooth_title: "Example 2: continuous movement with loop",
+  servo_smooth_desc:
+    "In this example, a <strong>for loop</strong> is used to smoothly move the servo from 0° to 180° and back. This creates fluid, continuous motion useful for radar scanning or robotic arm movement.",
+  servo_smooth_steps: "What does this program do?",
+  servo_smooth_step1: "Initializes the servo and enters a continuous loop.",
+  servo_smooth_step2:
+    "Uses a loop to move from 0° to 180°, waiting 10 ms per step.",
+  servo_smooth_step3:
+    "After a short pause, repeats the motion from 180° to 0°.",
+
+  servo_ultra_title: "Example 3: ultrasonic sensor control",
+  servo_ultra_desc:
+    "This example combines a servo with an <strong>ultrasonic sensor</strong> to simulate an <strong>automatic door</strong> or mall gate. If the distance is less than 100mm, the servo opens the door (90°). Otherwise, it stays closed (0°).",
+  servo_ultra_tip:
+    "The condition is checked with the <code>if</code> block, which can be expanded with the <code>else</code> option, enabled via the gear icon. The comparison <code><</code> is available in <strong>Mathematics → Logic</strong>.",
+  servo_ultra_steps: "What does this program do?",
+  servo_ultra_step1: "Initializes the servo and ultrasonic sensor.",
+  servo_ultra_step2: "Continuously reads distance (in millimeters).",
+  servo_ultra_step3: "If distance < 100mm, moves the servo to 90°.",
+  servo_ultra_step4: "Otherwise, returns the servo to 0°.",
+  servo_ultra_step5: "Reads data every 150 ms.",
+
+  // DC Motor Section
+  motor_title: "DC Motor",
+  motor_desc1:
+    "DC (Direct Current) motors are commonly used in robotics projects to move cars, arms, conveyor belts, and more. They allow direction and speed control via digital signals.",
+  motor_desc2:
+    "On the platform, we control the DC motor using three pins: <strong>PWM</strong> for power (speed), and <strong>DIR1</strong> and <strong>DIR2</strong> for direction. The <code>Initialize DC Motor</code> block lets you define the pins and assign a <strong>custom name</strong> (like motor1, motor2, etc.).",
+  motor_desc3:
+    "The <strong>Amado Board</strong> includes physical screw terminals on its sides for connecting up to two DC motors. These terminals are internally wired to the PWM, DIR1, and DIR2 pins of the board.",
+  motor_desc4:
+    "Motor speed is controlled by values from <code>0</code> (off) to <code>1023</code> (full power). Direction is controlled by the direction block: <code>1</code> for forward, <code>2</code> for reverse, and <code>0</code> to stop. There's also a <strong>Stop Motor</strong> block to halt movement anytime.",
+
+  motor_example_title: "Example: alternating motor direction",
+  motor_example_desc:
+    "The example below demonstrates how to alternate a DC motor’s direction. It rotates one way for 2 seconds, stops, then rotates the other way.",
+  motor_example_steps: "What does this program do?",
+  motor_example_step1: "Initializes the motor using PWM, DIR1, and DIR2 pins.",
+  motor_example_step2: "Sets max speed (1023) and moves forward (direction 1).",
+  motor_example_step3:
+    "After 2 seconds, stops the motor, waits 2 more seconds.",
+  motor_example_step4:
+    "Changes to reverse (direction 2), waits, then stops again.",
+  motor_example_step5: "The loop repeats continuously.",
+  motor_extra_note:
+    "Beyond basic tests, DC motor control is key in robotics projects like line-following robots or obstacle-avoiding robots. In these cases, sensors define motor behavior so the robot can act autonomously based on the environment.",
+
+  // Buzzer Section
+  buzzer_title: "Buzzer",
+  buzzer_intro1:
+    "The buzzer is an actuator that emits simple tones or melodies. It’s used for alarms, notifications, confirmations, or playing themed music. The Amado Board includes a built-in buzzer on pin D4, ready for use.",
+  buzzer_libraries_title: "Library Installation",
+  buzzer_libraries_desc: "To use the buzzer blocks, install two libraries:",
+  buzzer_verify_library:
+    "After clicking the “Install Library” button, check the console for the message: Library rtttl installation complete.",
+  buzzer_verify_file:
+    "You can also confirm by opening the Files tab. Click the refresh button twice quickly and check for <code>rtttl.py</code> and <code>songs.py</code> in the memory list.",
+
+  buzzer_block_freq_title: "1. Play sound by frequency",
+  buzzer_block_freq_desc:
+    "This block plays a tone at a specific frequency (in Hz) for a duration (in seconds). 1000 Hz is a high-pitched tone. Use 0 or -1 for continuous tone.",
+  buzzer_block_note_title: "2. Play sound by musical note",
+  buzzer_block_note_desc:
+    "This block lets you pick a musical note (like D3 or B1) and duration. Great for building custom melodies.",
+  buzzer_block_music_title: "3. Play preset music",
+  buzzer_block_music_desc:
+    "Choose from built-in themed songs like Super Mario, Star Wars, or Picaxe. Just select the title from the list.",
+  buzzer_block_user_title: "Note: user-created melodies",
+  buzzer_block_user_desc:
+    "There's also a block called “Play buzzer on pin with melody.” This is used with the Music tab to run your own composed songs. It will be explained in a separate section.",
 
 
-// Page inOutAnalog
-an_introduction_title: "Introduction",
-an_intro1: "In electronic projects, <strong>analog inputs and outputs</strong> allow working with signals that vary continuously. Unlike digital signals, which have only two states (0 or 1), analog signals can represent a range of values, making them ideal for measuring things like light, temperature, or controlling LED intensity.",
-an_intro2: "In this example, we’ll use the <strong>LDR light sensor</strong> already built into the <strong>Amado Board</strong> as an analog input. For the output, we’ll adjust the brightness of the onboard LED using a PWM signal.",
-an_intro3: "These features are useful in projects that need to detect environmental changes or control devices with more precision.",
-
-// Analog Input
-an_in_title: "Analog Input",
-an_in1: "We’ll read the onboard LDR light sensor by connecting a jumper from the LDR terminal to pin <code>39</code>, which is an analog input.",
-an_in2: "The following program continuously reads the light intensity captured by the sensor and stores it in a variable:",
-an_in3: "What does this program do?",
-an_in4: "Inside the <code>repeat while true</code> block, it repeatedly executes the instructions.",
-an_in5: "Pin <code>39</code> is read using the <code>read analog input</code> command.",
-an_in6: "The value read is stored in the variable <code>valor_ldr</code>.",
-an_in7: "This value is printed to the console for real-time monitoring.",
-an_in8: "There is a pause of <strong>500 milliseconds</strong> before the next reading.",
-an_in9: "Viewing the results",
-an_in10: "As ambient light changes, the value of the <code>valor_ldr</code> variable also changes. This can be seen in the platform’s console:",
-an_in11: "The brighter the environment, the higher the value read. In darker settings, the value decreases. This shows how the analog signal continuously represents a physical quantity.",
-
-// Analog Output
-an_out_title: "Analog Output",
-an_out1: "To control the brightness of an LED, we use a technique called <strong>PWM (pulse-width modulation)</strong>. In practice, it simulates an analog signal on a digital pin.",
-an_out2: "Below is an example using the PWM block to control the onboard blue LED of the <strong>Amado Board</strong> connected to pin <code>D2</code>:",
-an_out3: "What does this program do?",
-an_out4: "The <code>PWM</code> block is used inside a continuous <code>repeat while true</code> loop.",
-an_out5: "It sets <strong>pin D2 / BLUE LED</strong> as a PWM output.",
-an_out6: "The <strong>frequency</strong> is set to <code>100 Hz</code>, indicating how many cycles per second the signal is sent.",
-an_out7: "The <strong>duty cycle</strong> is set to <code>512</code>, which represents 50% intensity (on a scale from 0 to 1023).",
-an_out8: "By changing the duty cycle value, you can control the LED’s brightness. Lower values make the LED dimmer, and higher values increase brightness. The frequency can also be adjusted to test how different rates affect the smoothness of the light.",
-an_out9: "This approach is very useful in projects like dimmers, motor speed controllers, or any application where the output needs to vary instead of just switching on or off.",
-
-// Variables, Loops and Print - Variables Section
-var_section_title: "Variables",
-var_intro1: "In programming, <strong>variables</strong> are used to store values that may change over time. They are essential for storing information, performing calculations, controlling sensors, or even printing messages to the console.",
-var_intro2: "To create a variable, go to the <strong>Variables</strong> category in the side menu and click <strong>Create variable...</strong>. Choose a clear and meaningful name to avoid errors and make the program easier to understand.",
-var_intro3: "Once created, your variable will appear in <strong>Created Variables</strong> and can be used in blocks to set, change, or access its value.",
-var_intro4: "There are different types of variables available:",
-var_type_bool: "<strong>Booleans</strong>: represent true or false. Useful for checks or conditions.",
-var_type_num: "<strong>Numerical</strong>: store integers, decimals, or random numbers, common in sensor readings and calculations.",
-var_type_text: "<strong>Text</strong>: store phrases or words, ideal for showing messages or names.",
-var_type_list: "<strong>Lists</strong>: store multiple values in a single variable. Very useful for organizing data.",
-var_use_robotics: "In robotics, variables are widely used to store sensor readings such as temperature, distance, light, and more. This allows the system to make decisions or adjust behaviors based on environmental data.",
-var_examples_title: "Examples of variable types",
-var_list_title: "List Variables",
-var_text_title: "Text Variables",
-var_num_title: "Numerical Variables",
-var_bool_title: "Boolean Variables",
-var_print_example_title: "Practical example: using variables and print",
-var_print_example_desc: "In the example below, we create two variables: a text one called <code>name</code> and a numerical one called <code>value</code>. Then we use the <strong>print</strong> block, found in the Functions → Text category, to show the values in the console.",
-var_print_console_desc: "The result appears in the console as shown in the image below. This is very useful to monitor sensor values during program execution.",
-
-// Print Section
-print_section_title: 'Printing with the "print" block',
-print_intro1: "The <strong>print</strong> function allows you to monitor values during program execution. This is useful for checking if sensor data or variables are correct.",
-print_intro2: "To use it, go to the <strong>Functions → Text</strong> category and select the <code>print</code> block. It can be used to show plain text or variable values.",
-print_ex1: "Example 1: print a fixed message",
-print_ex2: "Example 2: print the value of a variable",
-print_ex3: "Example 3: print inside a loop",
-print_console_output: "The result of the last example appears in the platform console, showing a count from 1 to 10:",
-
-// Loop Section
-loop_section_title: "Repetition Loops",
-loop_intro1: "Loops are structures that allow executing the same set of commands multiple times. They are useful for automating repetitive tasks such as counting, displaying messages, or handling lists.",
-loop_intro2: "On the platform, repetition blocks are available in the <strong>Control</strong> category and include different types of loops for various purposes.",
-
-loop_repeat_times_title: "1. Repeat a fixed number of times",
-loop_repeat_times_desc: "The <code>repeat X times</code> block runs the set of commands a specific number of times. Ideal for simple counts or repeated actions.",
-loop_repeat_times_explanation: "In this example, we use a <code>counter</code> variable to count up to 5. On each repetition, we print the current value.",
-
-loop_forever_title: "2. Repeat while true",
-loop_forever_desc: "The <code>repeat while true</code> block executes the commands continuously, without stopping. It is widely used in robotics projects where the program must run as long as the system is on.",
-loop_forever_explanation: "In this example, the <code>counter</code> variable is incremented every second, and its value is printed to the console repeatedly.",
-
-loop_repeat_while_title: "3. Repeat while a condition is true",
-loop_repeat_while_desc: "The <code>repeat while</code> block keeps executing the commands as long as the defined condition is true.",
-loop_repeat_while_explanation: "In this example, the <code>number</code> variable is incremented until it reaches 5. The loop stops when the condition <code>number < 5</code> is no longer true.",
-
-loop_count_title: "4. Loop with custom counter",
-loop_count_desc: "The <code>count with i from X to Y by Z</code> block gives more control over the repetition, including start, end, and step values.",
-loop_count_explanation: "In this example, we print the multiplication table of 2, multiplying the value of <code>i</code> in each repetition.",
-
-loop_for_each_title: "5. Loop through each item in a list",
-loop_for_each_desc: "The <code>for each item in list</code> block iterates through all elements in a list. Ideal for displaying or processing data.",
-loop_for_each_explanation: "Here we have a list of names. The loop prints one name at a time until all are displayed.",
-
-loop_break_title: "6. Break the loop with a condition",
-loop_break_desc: "The <code>break loop</code> block allows stopping the loop execution before it finishes all repetitions.",
-loop_break_explanation: "In this example, we count from 1 to 10, but break the loop when the counter reaches 6.",
-
-var_loop_print_end: "All the results from the examples above can be seen in the platform console.",
-
-// Sensors Page
-sensor_title: "Sensors",
-sensor_section_title: "Sensors in Robotics",
-sensor_intro1: "Sensors are components that allow robots and embedded systems to perceive their surroundings. They capture information such as temperature, light, distance, humidity, and more, converting this data into signals that can be processed.",
-sensor_intro2: "On the platform, blocks related to sensors are available in the <strong>Sensors</strong> category.",
-
-// IR Sensor Section
-sensor_ir_title: "Infrared Sensor (IR)",
-
-sensor_ir_desc1: "The infrared (IR) sensor is a simple digital component widely used in robotics, especially in projects such as line-following robots. It detects the presence or absence of objects based on infrared light reflection, returning digital values: <strong>1</strong> when there is no reflection and <strong>0</strong> when it detects a nearby object.",
-
-sensor_ir_desc2: "This sensor has <strong>3 pins</strong> (VCC, GND, and Signal) and can be easily connected to the <strong>Amado Board</strong> using the digital input pins such as <code>D35</code>, <code>D39</code>, <code>D36</code>, and <code>D34</code>. The board already has a proper slot for direct connection, making the assembly quick and simple.",
-
-sensor_ir_desc3: "In addition to line-following robots, the IR sensor can be used in counting systems, safety barriers, object presence detection, and other applications where simple obstacle detection is needed.",
-
-sensor_ir_example_title: "Example: continuous reading of the IR sensor",
-
-sensor_ir_steps: "What does this program do?",
-
-
-// Temperature and Humidity Sensor
-sensor_dht_title: "Temperature and Humidity Sensor DHT11/22",
-sensor_dht_desc1: "The DHT11/22 sensor is used to measure two important environmental variables: <strong>temperature</strong> and <strong>relative humidity</strong>. It is commonly used in automation projects, weather stations, and environmental control.",
-sensor_dht_desc2: "For the sensor to work properly with the <strong>Amado Board</strong>, it must be connected to a <strong>digital pin</strong>. We recommend using pins D5, D15, D16, D17, D18, D19, D21, D22, or D23. In this example, we’ll use pin <code>D17</code>.",
-sensor_dht_desc3: "How does the example above work?",
-sensor_dht_step1: "We initialize the DHT11/22 sensor and specify the connection pin.",
-sensor_dht_step2: "We enter a loop that continuously repeats while the system is powered.",
-sensor_dht_step3: "In each loop, the <strong>temperature</strong> and <strong>humidity</strong> readings are updated and stored in variables.",
-sensor_dht_step4: "These values are displayed in the console using the <code>print</code> block.",
-sensor_dht_step5: "A 1-second pause between readings is very important to ensure proper sensor operation.",
-
-// Ultrasonic Sensor
-sensor_ultra_title: "Ultrasonic Distance Sensor HCSR04",
-sensor_ultra_desc1: "The HCSR04 ultrasonic sensor is used to measure distances accurately using sound waves. It sends a sound signal (trigger) and measures the time until the echo returns after bouncing off an object. Based on this time, the distance is calculated.",
-sensor_ultra_desc2: "The <strong>Amado Board</strong> has a dedicated space to connect this sensor directly to pins <code>D17</code> (trigger) and <code>D34</code> (echo), making its use in robotics projects easier.",
-sensor_ultra_desc3: "How does the example above work?",
-sensor_ultra_step1: "We initialize the sensor by specifying the trigger (D17) and echo (D34) pins, along with a timeout.",
-sensor_ultra_step2: "We use a <strong>continuous loop</strong> to measure distance repeatedly.",
-sensor_ultra_step3: "On each repetition, the measured distance is stored in a variable.",
-sensor_ultra_step4: "The value is printed to the console to monitor real-time readings.",
-sensor_ultra_step5: "We add a 500-millisecond pause to avoid overly rapid readings and ensure stability.",
-sensor_ultra_note: "Note: Readings may vary, showing very high values or even -1. To improve reliability, implement a simple filter to discard readings outside the expected range.",
-
-// RFID Module
-sensor_rfid_title: "RFID Reader RC522",
-sensor_rfid_desc1: "RFID (Radio Frequency Identification) is a technology used to identify objects or people through cards or tags that emit signals. It is widely used in access control, attendance systems, and asset tracking.",
-sensor_rfid_desc2: "The module used in this example is the RC522, which communicates via SPI. It reads the UID (unique ID) of RFID cards and can also access the internal memory of the card for reading and writing data.",
-sensor_rfid_desc3: "The connection of the module to the Amado Board must follow the correct pin mapping. Some pin names are the same, while others differ between the module, the block, and the board. See the recommended mapping:",
-sensor_rfid_map1: "3.3V → 3.3V",
-sensor_rfid_map2: "GND → GND",
-sensor_rfid_map3: "SCK (module) = SCK in block = D18 / CLK on board",
-sensor_rfid_map4: "MOSI = MOSI in block = D23 / MOSI on board",
-sensor_rfid_map5: "MISO = MISO in block = D19 / MISO on board",
-sensor_rfid_map6: "RST = RST in block = D22 / SCL on board",
-sensor_rfid_map7: "SDA (on module) should be connected to CS in the block, we recommend using D5 as in the image.",
-sensor_rfid_desc4: "Although the RST and CS pins can be connected to other digital pins (like D17, D21, or D22), we recommend following the example for better compatibility.",
-rfid_libraries_desc: "To ensure the RC522 RFID reader blocks function correctly, it is necessary to install the <code>mfrc522</code> library, which enables communication and reading of RFID cards.",
-rfid_verify_library: "After clicking the <strong>“Install library”</strong> button, you can verify the installation by checking the console message: <code>RFID library mfrc522 installed successfully.</code>",
-rfid_verify_file: "You can also confirm the presence of the library by opening the <strong>Files</strong> tab. Double-click the refresh button and check if the file <code>mfrc522.py</code> appears in the board's memory.",
-sensor_rfid_desc6: "Below we see a basic program that reads an RFID card and displays the results in the console.",
-sensor_rfid_expl_title: "How does the example above work?",
-sensor_rfid_step1: "We initialize the module by informing all SPI connection pins.",
-sensor_rfid_step2: "We enter a continuous loop that constantly checks if a card is present.",
-sensor_rfid_step3: "If a card is detected (status = 0), a message is printed in the console and the UID is read and shown.",
-sensor_rfid_step4: "Even when no card is present, the status and tag type are shown to help with debugging.",
-sensor_rfid_step5: "We add a 500-millisecond delay to avoid very fast repetitions.",
-sensor_rfid_console_desc: "Below you can see how the results appear in the platform console, showing the status, tag type, and UID when a card is detected.",
-
-// Actuators Page
-// Actuator Section
-actuator_section_title: "Actuators",
-actuator_introduction: "Actuators in Robotics",
-actuator_intro1: "Actuators are devices that receive commands from a system and perform a physical action in the real world. They convert electrical signals into motion, sound, light, heat, or other forms of response.",
-actuator_intro2: "In robotics and automation, actuators are essential for interacting with the environment, enabling you to turn on lights, control motors, open valves, sound buzzers, among others.",
-actuator_intro3: "On the platform, actuator blocks are available in the <strong>Outputs and Actuators</strong> category. Each type of actuator will have its own blocks with specific commands.",
-
-// Relay Module Section
-relay_title: "Relay Module",
-relay_desc1: "The relay is a component that works like an electronically controlled switch. It allows turning high-power devices (such as lamps, fans, or appliances) on or off using a digital signal from the board.",
-relay_desc2: "In the relay block, you can choose the pin to which it is connected and the desired command: <strong>on</strong> or <strong>off</strong>. It is important to ensure the relay module is properly powered (usually 5V and GND), and that the connected load is isolated and securely attached for safety.\n\nImportant: many relay modules are activated with signal 0 (logic low). That means using the 'off' command in the block will activate the relay (turning the device on). Conversely, the 'on' command will deactivate the relay (turning the device off).",
-relay_example_title: "Example: turning on a lamp with delay",
-relay_example_desc: "In the example below, we use the relay block to simulate lamp control. When the program starts, the relay is activated (lamp turns on), and after 3 seconds, it turns off. This type of control can be used in applications like timers, presence simulation, or home automation.",
-relay_example_note: "This simple timer example could also be used within a <strong>condition</strong> (e.g., when detecting an RFID card, presence, time, etc.) to make automatic decisions in the program.",
-
-// Servo Motor Section
-servo_title: "Servo Motor",
-servo_desc1: "The servo motor is a commonly used actuator in robotics and automation projects. It allows positioning a shaft at specific angles, usually between 0 and 180 degrees. This is ideal for controlling doors, mechanical arms, levers, shafts, or systems requiring precise and controlled movements.",
-servo_desc2: "On the platform, servo control is done in two steps: first, use the <strong>Initialize Servo Motor</strong> block to define the connection pin and name of the servo, then use the <strong>Move Servo</strong> block to set the desired angle. You can use custom names (like servo1, servo2, etc.), allowing you to control multiple servos in the same project.",
-servo_desc3: "The <strong>Amado Board</strong> has specific spots for connecting servo motors: <strong>D15</strong> and <strong>D16</strong> are labeled as <code>SERVO A</code> and <code>SERVO B</code>, respectively. Next to these pins, there is a set of 3 labeled pins: <code>3.3V</code>, <code>VS</code>, and <code>5V</code>. To power the servo correctly, you must <strong>make a jumper between the VS pin and the 5V pin</strong>. This ensures the signal pin has enough power to operate the servo properly.",
-servo_desc4: "Servos typically have standard color-coded wires: <strong>brown</strong> (GND), <strong>red</strong> (VCC), and <strong>yellow</strong> (signal). The board already has the appropriate connector layout to plug these in directly, making installation easier.",
-
-servo_basic_title: "Example 1: control with fixed positions",
-servo_basic_desc: "This example moves the servo to three fixed positions: 0°, 90°, and 180°, with a short delay between movements. It’s ideal to demonstrate basic servo control and how to directly set angles.",
-servo_basic_steps: "What does this program do?",
-servo_basic_step1: "Initializes the servo on pin D15.",
-servo_basic_step2: "Moves the servo to 0°, waits 1 second.",
-servo_basic_step3: "Moves to 90°, then 180°, with delays between.",
-servo_basic_step4: "The cycle repeats continuously.",
-
-servo_smooth_title: "Example 2: continuous movement with loop",
-servo_smooth_desc: "In this example, a <strong>for loop</strong> is used to smoothly move the servo from 0° to 180° and back. This creates fluid, continuous motion useful for radar scanning or robotic arm movement.",
-servo_smooth_steps: "What does this program do?",
-servo_smooth_step1: "Initializes the servo and enters a continuous loop.",
-servo_smooth_step2: "Uses a loop to move from 0° to 180°, waiting 10 ms per step.",
-servo_smooth_step3: "After a short pause, repeats the motion from 180° to 0°.",
-
-servo_ultra_title: "Example 3: ultrasonic sensor control",
-servo_ultra_desc: "This example combines a servo with an <strong>ultrasonic sensor</strong> to simulate an <strong>automatic door</strong> or mall gate. If the distance is less than 100mm, the servo opens the door (90°). Otherwise, it stays closed (0°).",
-servo_ultra_tip: "The condition is checked with the <code>if</code> block, which can be expanded with the <code>else</code> option, enabled via the gear icon. The comparison <code><</code> is available in <strong>Mathematics → Logic</strong>.",
-servo_ultra_steps: "What does this program do?",
-servo_ultra_step1: "Initializes the servo and ultrasonic sensor.",
-servo_ultra_step2: "Continuously reads distance (in millimeters).",
-servo_ultra_step3: "If distance < 100mm, moves the servo to 90°.",
-servo_ultra_step4: "Otherwise, returns the servo to 0°.",
-servo_ultra_step5: "Reads data every 150 ms.",
-
-// DC Motor Section
-motor_title: "DC Motor",
-motor_desc1: "DC (Direct Current) motors are commonly used in robotics projects to move cars, arms, conveyor belts, and more. They allow direction and speed control via digital signals.",
-motor_desc2: "On the platform, we control the DC motor using three pins: <strong>PWM</strong> for power (speed), and <strong>DIR1</strong> and <strong>DIR2</strong> for direction. The <code>Initialize DC Motor</code> block lets you define the pins and assign a <strong>custom name</strong> (like motor1, motor2, etc.).",
-motor_desc3: "The <strong>Amado Board</strong> includes physical screw terminals on its sides for connecting up to two DC motors. These terminals are internally wired to the PWM, DIR1, and DIR2 pins of the board.",
-motor_desc4: "Motor speed is controlled by values from <code>0</code> (off) to <code>1023</code> (full power). Direction is controlled by the direction block: <code>1</code> for forward, <code>2</code> for reverse, and <code>0</code> to stop. There's also a <strong>Stop Motor</strong> block to halt movement anytime.",
-
-motor_example_title: "Example: alternating motor direction",
-motor_example_desc: "The example below demonstrates how to alternate a DC motor’s direction. It rotates one way for 2 seconds, stops, then rotates the other way.",
-motor_example_steps: "What does this program do?",
-motor_example_step1: "Initializes the motor using PWM, DIR1, and DIR2 pins.",
-motor_example_step2: "Sets max speed (1023) and moves forward (direction 1).",
-motor_example_step3: "After 2 seconds, stops the motor, waits 2 more seconds.",
-motor_example_step4: "Changes to reverse (direction 2), waits, then stops again.",
-motor_example_step5: "The loop repeats continuously.",
-motor_extra_note: "Beyond basic tests, DC motor control is key in robotics projects like line-following robots or obstacle-avoiding robots. In these cases, sensors define motor behavior so the robot can act autonomously based on the environment.",
-
-// Buzzer Section
-buzzer_title: "Buzzer",
-buzzer_intro1: "The buzzer is an actuator that emits simple tones or melodies. It’s used for alarms, notifications, confirmations, or playing themed music. The Amado Board includes a built-in buzzer on pin D4, ready for use.",
-buzzer_libraries_title: "Library Installation",
-buzzer_libraries_desc: "To use the buzzer blocks, install two libraries:",
-buzzer_verify_library: "After clicking the “Install Library” button, check the console for the message: Library rtttl installation complete.",
-buzzer_verify_file: "You can also confirm by opening the Files tab. Click the refresh button twice quickly and check for <code>rtttl.py</code> and <code>songs.py</code> in the memory list.",
-
-buzzer_block_freq_title: "1. Play sound by frequency",
-buzzer_block_freq_desc: "This block plays a tone at a specific frequency (in Hz) for a duration (in seconds). 1000 Hz is a high-pitched tone. Use 0 or -1 for continuous tone.",
-buzzer_block_note_title: "2. Play sound by musical note",
-buzzer_block_note_desc: "This block lets you pick a musical note (like D3 or B1) and duration. Great for building custom melodies.",
-buzzer_block_music_title: "3. Play preset music",
-buzzer_block_music_desc: "Choose from built-in themed songs like Super Mario, Star Wars, or Picaxe. Just select the title from the list.",
-buzzer_block_user_title: "Note: user-created melodies",
-buzzer_block_user_desc: "There's also a block called “Play buzzer on pin with melody.” This is used with the Music tab to run your own composed songs. It will be explained in a separate section.",
-
-
+  kw_introduction: "introduction",
+  kw_beginners: "beginners",
+  kw_block_programming: "block programming",
+  kw_dblocks_basics: "dblocks basics",
+  kw_interactive_projects: "interactive projects",
+  kw_amadoboard: "amadoboard",
+  kw_hardware: "hardware",
+  kw_board_features: "board features",
+  kw_esp32_board: "esp32 board",
+  kw_pinout: "pinout",
+  kw_environment_setup: "environment setup",
+  kw_drivers: "drivers",
+  kw_micropython_install: "micropython install",
+  kw_amadoboard_config: "amadoboard configuration",
+  kw_variables: "variables",
+  kw_loops: "loops",
+  kw_print_console: "print to console",
+  kw_control_structures: "control structures",
+  kw_programming_fundamentals: "programming fundamentals",
+  kw_logic_operators: "logical operators",
+  kw_math_operators: "math operators",
+  kw_boolean_logic: "boolean logic",
+  kw_conditional_statements: "conditional statements",
+  kw_digital_io: "digital i/o",
+  kw_digital_input: "digital input",
+  kw_digital_output: "digital output",
+  kw_gpio: "gpio",
+  kw_led_control: "led control",
+  kw_analog_io: "analog i/o",
+  kw_analog_input: "analog input",
+  kw_analog_output: "analog output",
+  kw_adc: "adc",
+  kw_pwm_control: "pwm control",
+  kw_sensors_dblocks: "dblocks sensors",
+  kw_data_collection: "data collection",
+  kw_environment_monitoring: "environment monitoring",
+  kw_sensor_integration: "sensor integration",
+  kw_ldr: "ldr",
+  kw_dht11: "dht11",
+  kw_actuators_dblocks: "dblocks actuators",
+  kw_device_control: "device control",
+  kw_motors_control: "motor control",
+  kw_servo_motor: "servo motor",
+  kw_relay_module: "relay module",
+  kw_music_dblocks: "dblocks music",
+  kw_sound_programming: "sound programming",
+  kw_melody_composition: "melody composition",
+  kw_buzzer_control: "buzzer control",
+  kw_display_dblocks: "dblocks display",
+  kw_oled_display: "oled display",
+  kw_text_on_display: "text on display",
+  kw_show_sensor_data: "show sensor data",
+  kw_dblocks_resources: "dblocks resources",
+  kw_dblocks_features: "dblocks features",
+  kw_advanced_features: "advanced features",
+  kw_project_development: "project development",
 };
