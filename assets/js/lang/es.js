@@ -9,7 +9,7 @@ var MSG = {
 
   // Main Content
   introduction_to_dblocks: "Introducción a Dblocks",
-  in_this_section: "En Esta Sección",
+  in_this_section: "secciones",
   sections: "Secciones",
   overview: "Visión General",
   what_is_dblocks: "¿Qué es Dblocks?",
