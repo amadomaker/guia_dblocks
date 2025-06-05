@@ -3,73 +3,152 @@
     "title_key": "introduction_to_dblocks",
     "image": "introducao.png",
     "description_key": "introduction_description",
-    "url": "chapters/introduction.html"
+    "url": "chapters/introduction.html",
+    "keyword_keys": [
+      "kw_introduction",
+      "kw_beginners",
+      "kw_block_programming",
+      "kw_dblocks_basics",
+      "kw_interactive_projects"
+    ]
   },
   {
     "title_key": "knowing_amado_board",
     "image": "amadoboard-legendas.svg",
     "description_key": "amado_board_description",
-    "url": "chapters/amadoboard.html"
+    "url": "chapters/amadoboard.html",
+    "keyword_keys": [
+      "kw_amadoboard",
+      "kw_hardware",
+      "kw_board_features",
+      "kw_esp32_board",
+      "kw_pinout"
+    ]
   },
   {
     "title_key": "preparing_environment",
     "image": "logo-micropython3.png",
     "description_key": "environment_description",
-    "url": "chapters/environment.html"
+    "url": "chapters/environment.html",
+    "keyword_keys": [
+      "kw_environment_setup",
+      "kw_drivers",
+      "kw_micropython_install",
+      "kw_amadoboard_config"
+    ]
   },
   {
-  "title_key": "var_loop_print",
-  "image": "var_loop_print.png",
-  "description_key": "var_loop_print_description",
-  "url": "chapters/var_loop_print.html"
+    "title_key": "var_loop_print",
+    "image": "var_loop_print.png",
+    "description_key": "var_loop_print_description",
+    "url": "chapters/var_loop_print.html",
+    "keyword_keys": [
+      "kw_variables",
+      "kw_loops",
+      "kw_print_console",
+      "kw_control_structures",
+      "kw_programming_fundamentals"
+    ]
   },
   {
-  "title_key": "logic_and_math",
-  "image": "logic_and_math3.png",
-  "description_key": "logic_and_math_description",
-  "url": "chapters/logic_and_math.html"
+    "title_key": "logic_and_math",
+    "image": "logic_and_math3.png",
+    "description_key": "logic_and_math_description",
+    "url": "chapters/logic_and_math.html",
+    "keyword_keys": [
+      "kw_logic_operators",
+      "kw_math_operators",
+      "kw_boolean_logic",
+      "kw_conditional_statements"
+    ]
   },
   {
     "title_key": "digital_input_output",
     "image": "InOutDigital/Digital.gif",
     "description_key": "digital_io_description",
-    "url": "chapters/InOutDigital.html"
+    "url": "chapters/InOutDigital.html",
+    "keyword_keys": [
+      "kw_digital_io",
+      "kw_digital_input",
+      "kw_digital_output",
+      "kw_gpio",
+      "kw_led_control"
+    ]
   },
   {
     "title_key": "analog_input_output",
     "image": "InOutAnalog/Analogico.gif",
     "description_key": "analog_io_description",
-    "url": "chapters/InOutAnalog.html"
+    "url": "chapters/InOutAnalog.html",
+    "keyword_keys": [
+      "kw_analog_io",
+      "kw_analog_input",
+      "kw_analog_output",
+      "kw_adc",
+      "kw_pwm_control"
+    ]
   },
   {
     "title_key": "sensors",
     "image": "sensores.png",
     "description_key": "sensors_description",
-    "url": "chapters/sensors.html"
+    "url": "chapters/sensors.html",
+    "keyword_keys": [
+      "kw_sensors_dblocks",
+      "kw_data_collection",
+      "kw_environment_monitoring",
+      "kw_sensor_integration",
+      "kw_ldr",
+      "kw_dht11"
+    ]
   },
   {
     "title_key": "actuators",
     "image": "atuadores.png",
     "description_key": "actuators_description",
-    "url": "chapters/actuators.html"
+    "url": "chapters/actuators.html",
+    "keyword_keys": [
+      "kw_actuators_dblocks",
+      "kw_device_control",
+      "kw_motors_control",
+      "kw_servo_motor",
+      "kw_relay_module"
+    ]
   },
   {
     "title_key": "music",
     "image": "musica.png",
     "description_key": "music_description",
-    "url": "chapters/music.html"
+    "url": "chapters/music.html",
+    "keyword_keys": [
+      "kw_music_dblocks",
+      "kw_sound_programming",
+      "kw_melody_composition",
+      "kw_buzzer_control"
+    ]
   },
   {
     "title_key": "display",
     "image": "display.png",
     "description_key": "display_description",
-    "url": "chapters/display.html"
+    "url": "chapters/display.html",
+    "keyword_keys": [
+      "kw_display_dblocks",
+      "kw_oled_display",
+      "kw_text_on_display",
+      "kw_show_sensor_data"
+    ]
   },
   {
     "title_key": "resources_and_features",
     "image": "recursos.png",
     "description_key": "resources_description",
-    "url": "chapters/resources_and_features.html"
+    "url": "chapters/resources_and_features.html",
+    "keyword_keys": [
+      "kw_dblocks_resources",
+      "kw_dblocks_features",
+      "kw_advanced_features",
+      "kw_project_development"
+    ]
   }
-
 ]
