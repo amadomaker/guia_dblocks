@@ -284,6 +284,18 @@ var MSG = {
   di_intro4:
     "A continuación, veremos cómo utilizar entradas y salidas digitales en la práctica de forma sencilla e intuitiva.",
 
+  //Pushbutton
+  di_in17: "Ejemplo con botón (pushbutton)",
+  di_in18: "Ahora veamos un ejemplo utilizando un botón pulsador conectado al pin D39 de la placa Amado. El objetivo es detectar cuándo se presiona o se suelta el botón.",
+  di_in19: "En el circuito de arriba, un terminal del botón está conectado a GND a través de una resistencia (generalmente de 1kΩ o 10kΩ), otro al pin de 5V y el tercero al pin D39.",
+  di_in20: "A continuación, el programa realiza la lectura del botón e imprime su estado en la consola:",
+  di_in21: "El bloque 'leer entrada digital' lee el pin D39 sin activar pull-up, ya que el circuito utiliza una resistencia de pull-down física.",
+  di_in22: "El valor leído se almacena en la variable valorBotao.",
+  di_in23: "El programa imprime este valor en la consola cada 500 milisegundos.",
+  di_in24: "Cuando el botón está suelto, el valor leído será 0 (porque el pin está conectado a tierra mediante la resistencia).",
+  di_in25: "Cuando se presiona el botón, el valor leído será 1 (el pin se conecta a 5V).",
+  di_in26: "Consejo: es posible invertir esta lógica cambiando la resistencia del GND al pin de 5V. En ese caso, el valor leído será 1 cuando esté suelto y 0 cuando esté presionado.",
+  
   //Entrada digital
   di_in_title: "Entrada Digital",
   di_in1:

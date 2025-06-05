@@ -18,7 +18,7 @@
       <nav>
         <ul class="container-nav">
           <li><a href="/" data-translate="home">Início</a></li>
-           
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
           <li>
             <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
           </li>
@@ -26,14 +26,9 @@
           <li>
             <a
               target="_blank"
-              href="../public/guia-amadoboard.pdf"
-              data-translate="complete_amadoboard_guide"
-              >Guia Completo AmadoBoard</a
-            >
-          </li>
-          <li>
-            <a target="_blank" href="https://amadomaker.github.io/Instalador_Micropython/"
-              >Micropython</a
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
             >
           </li>
         </ul>
@@ -58,7 +53,7 @@
 
       <div class="mobile-menu" id="mobile-menu">
         <ul>
-           
+          <li><a target="_blank" href="https://bipes.net.br/wp/" data-translate="bipes">BIPES</a></li>
           <li>
             <a target="_blank" href="https://amadomaker.com.br" data-translate="amado_maker">Amado Maker</a>
           </li>
@@ -66,14 +61,9 @@
           <li>
             <a
               target="_blank"
-              href="../public/guia-amadoboard.pdf"
-              data-translate="complete_amadoboard_guide"
-              >Guia Completo AmadoBoard</a
-            >
-          </li>
-          <li>
-            <a target="_blank" href="https://amadomaker.github.io/Instalador_Micropython/"
-              >Micropython</a
+              href="../public/Dblocks_na_pratica_guia_de_projetos_reais_250306_205031.pdf"
+              data-translate="ebook"
+              >Ebook Dblocks na Prática</a
             >
           </li>
         </ul>
@@ -97,6 +87,7 @@
           <ul>
             <li><a href="#introduction" data-translate="ab_introduction">Introdução</a></li>
             <li><a href="#digital-input" data-translate="di_in_title"></a></li>
+            <li><a href="#pushbutton" data-translate="di_in17"></a></li>
             <li><a href="#digital-output" data-translate="di_out_title"></a></li>
           </ul>
         </div>
@@ -174,6 +165,45 @@
           <p data-translate="di_in16">
             À medida que o jumper é alternado entre o GND e os 3.3V, o valor de <code>x</code> muda entre <strong>0</strong> e <strong>1</strong>, e isso é refletido imediatamente no console. Essa é uma maneira eficiente e clara de testar e depurar a lógica do seu projeto.
           </p>
+
+          <h3 id="pushbutton" data-translate="di_in17">Exemplo com botão (pushbutton)</h3>
+          <p data-translate="di_in18">
+            Vamos agora ver um exemplo usando um <strong>pushbutton</strong> (botão de pressão) conectado ao pino <code>D39</code> da Amado Board.
+            O objetivo é detectar quando o botão é pressionado ou solto.
+          </p>
+
+          <img 
+            width="750px" 
+            src="../assets/images/InOutDigital/button_diagram.png" 
+            alt="Circuito com botão conectado ao pino D39"
+          />
+
+          <p data-translate="di_in19">
+            No circuito acima, um dos terminais do botão está ligado ao <strong>GND</strong>, e o outro ao pino <code>D39</code>, com um resistor de <strong>pull-up</strong> ativado via software.
+          </p>
+
+          <p data-translate="di_in20">
+            A seguir, o programa abaixo realiza a leitura do botão e imprime seu estado no console:
+          </p>
+
+          <img 
+            width="500px" 
+            src="../assets/images/InOutDigital/button_reading.png" 
+            alt="Programa de leitura de botão"
+          />
+
+          <ul>
+            <li data-translate="di_in21">O bloco <code>ler entrada digital</code> lê o pino <code>D39</code> com <strong>pull-up</strong> ativado.</li>
+            <li data-translate="di_in22">O valor lido é armazenado na variável <code>valorBotao</code>.</li>
+            <li data-translate="di_in23">O programa imprime esse valor no console a cada 500 milissegundos.</li>
+            <li data-translate="di_in24">Quando o botão está <strong>solto</strong>, a leitura será <code>1</code> (puxado para cima).</li>
+            <li data-translate="di_in25">Quando o botão é <strong>pressionado</strong>, a leitura será <code>0</code> (conectado ao GND).</li>
+          </ul>
+
+          <p data-translate="di_in26">
+            Esse exemplo mostra como o botão pode ser usado como uma entrada digital simples para interações com o usuário, controle de ações ou testes de hardware.
+          </p>
+
           <h2 id="digital-output" data-translate="di_out_title">Saída Digital</h2>
           <p data-translate="di_out1">
             As saídas digitais permitem que a placa controle dispositivos externos, enviando sinais do tipo "ligado" ou "desligado". Um exemplo clássico é o controle de um LED.
