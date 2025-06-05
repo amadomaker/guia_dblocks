@@ -320,6 +320,17 @@ var MSG = {
   di_in16:
     "À medida que o jumper é alternado entre o GND e os 3.3V, o valor de <code>x</code> muda entre <strong>0</strong> e <strong>1</strong>, e isso é refletido imediatamente no console. Essa é uma maneira eficiente e clara de testar e depurar a lógica do seu projeto.",
 
+  //Pushbutton
+  di_in17: "Exemplo com botão (pushbutton)",
+  di_in18: "Vamos agora ver um exemplo usando um pushbutton (botão de pressão) conectado ao pino D39 da Amado Board. O objetivo é detectar quando o botão é pressionado ou solto.",
+  di_in19: "No circuito acima, um dos terminais do botão está conectado ao GND através de um resistor (geralmente 1kΩ ou 10kΩ), o outro está ligado ao 5V, e o terceiro ao pino D39.",
+  di_in20: "A seguir, o programa abaixo realiza a leitura do botão e imprime seu estado no console:",
+  di_in21: "O bloco 'ler entrada digital' lê o pino D39 sem ativar pull-up, pois o circuito já utiliza pull-down físico.",
+  di_in22: "O valor lido é armazenado na variável valorBotao.",
+  di_in23: "O programa imprime esse valor no console a cada 500 milissegundos.",
+  di_in24: "Quando o botão está solto, o valor lido será 0 (porque o pino está aterrado via resistor).",
+  di_in25: "Quando o botão é pressionado, o valor lido será 1 (o pino é conectado ao 5V).",
+  di_in26: "Dica: é possível inverter essa lógica trocando o resitor do GND para o pino 5V. Nesse caso, o valor lido será 1 quando solto e 0 quando pressionado.",
   //Saida Digital
   di_out_title: "Saída Digital",
   di_out1:
