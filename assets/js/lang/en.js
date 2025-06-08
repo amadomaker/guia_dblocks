@@ -947,4 +947,5 @@ var MSG = {
   resources_save_step4:
     "Rename the file by clicking <strong>code.bipes.py</strong> at the top of the editor and changing it to <code>main.py</code>.",
   resources_save_step5: "Click <strong>Save a copy</strong>.",
+  logic_and_math: "Logic and Math",
 };

@@ -893,5 +893,5 @@ resources_save_step2: "Accede a la pestaña <strong>Archivos</strong>.",
 resources_save_step3: "En la sección \"Bloques a código\", haz clic en <code>code.bipes.py</code> para ver tu programa.",
 resources_save_step4: "Cambia el nombre del archivo haciendo clic sobre <strong>code.bipes.py</strong> en la parte superior del editor y renómbralo como <code>main.py</code>.",
 resources_save_step5: "Haz clic en <strong>Guardar una copia</strong>.",
-
+logic_and_math: "Lógica y matemáticas",
 };
