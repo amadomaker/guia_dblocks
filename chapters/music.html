@@ -139,18 +139,33 @@
 
       <img src="../assets/images/Music/music.png" width="100%" alt="Interface da aba Música" />
 
-      <p data-translate="music_features_intro">
-        A interface possui diversos controles úteis:
-      </p>
-      <ul>
-        <li><strong>Lixeira</strong>: limpa toda a melodia atual.</li>
-        <li><strong>Salvar melodia</strong>: salva a melodia atual, que ficará disponível no bloco “Reproduzir buzzer com melodia”.</li>
-        <li><strong>Play</strong>: executa a melodia criada para escutá-la diretamente na plataforma.</li>
-        <li><strong>Pausa</strong>: pausa a reprodução da melodia.</li>
-        <li><strong>BPM</strong>: define a velocidade da melodia. O padrão é 120, mas você pode ajustar conforme necessário.</li>
-        <li><strong>Baixar</strong>: exporta a melodia como arquivo <code>.json</code>.</li>
-        <li><strong>Importar</strong>: permite carregar um arquivo <code>.json</code> com uma melodia salva anteriormente.</li>
-      </ul>
+        <p data-translate="music_features_intro">
+          A interface possui diversos controles úteis:
+        </p>
+        <ul>
+          <li data-translate="music_feature_trash">
+            <strong>Lixeira</strong>: limpa toda a melodia atual.
+          </li>
+          <li data-translate="music_feature_save">
+            <strong>Salvar melodia</strong>: salva a melodia atual, que ficará disponível no bloco “Reproduzir buzzer com melodia”.
+          </li>
+          <li data-translate="music_feature_play">
+            <strong>Play</strong>: executa a melodia criada para escutá-la diretamente na plataforma.
+          </li>
+          <li data-translate="music_feature_pause">
+            <strong>Pausa</strong>: pausa a reprodução da melodia.
+          </li>
+          <li data-translate="music_feature_bpm">
+            <strong>BPM</strong>: define a velocidade da melodia. O padrão é 120, mas você pode ajustar conforme necessário.
+          </li>
+          <li data-translate="music_feature_download">
+            <strong>Baixar</strong>: exporta a melodia como arquivo <code>.json</code>.
+          </li>
+          <li data-translate="music_feature_import">
+            <strong>Importar</strong>: permite carregar um arquivo <code>.json</code> com uma melodia salva anteriormente.
+          </li>
+        </ul>
+
 
       <p data-translate="music_editor_info" style="margin-top: 15px;">
         O piano roll funciona da seguinte forma: as <strong>colunas representam o tempo</strong>, e as <strong>linhas representam notas musicais</strong>. Você pode selecionar uma nota por coluna. Se pular uma coluna, aquele instante de tempo será um silêncio.
@@ -164,19 +179,19 @@
 
       <img src="../assets/images/Music/music_step1.png" width="500px" alt="Selecionando notas da melodia" />
 
-      <p>
+      <p data-translate="music_example1_step1">
         Depois de configurar a sequência da melodia, clique em <strong>Play</strong> para ouvi-la. Você verá uma <strong>linha vermelha</strong> se deslocando da esquerda para a direita, indicando o progresso da execução.
       </p>
 
       <img src="../assets/images/Music/music_play.png" width="400px" alt="Linha vermelha tocando a melodia" />
 
-      <p>
+      <p data-translate="music_example1_step2">
         Se estiver satisfeito com o resultado, clique em <strong>Salvar melodia</strong> e digite um nome (como <code>do-re-mi</code>) na janela que será exibida.
       </p>
 
       <img src="../assets/images/Music/music_step2.png" width="300px" alt="Janela para salvar melodia" />
 
-      <p>
+      <p data-translate="music_example1_step3">
         Você pode continuar editando a melodia ou adicionar novos trechos depois. Também é possível exportar a melodia usando o botão de <strong>Exportar</strong>, gerando um arquivo <code>.json</code> que pode ser compartilhado ou salvo. Use <strong>Importar</strong> para abrir uma melodia existente.
       </p>
 
@@ -188,13 +203,14 @@
 
       <img src="../assets/images/Music/music_step3.png" width="500px" alt="Bloco para tocar melodia salva" />
 
-      <p>
+      <p data-translate="music_example2_desc1">
         No exemplo acima, usamos o pino <code>D4 / BUZZER</code>, pois o buzzer já está integrado à placa Amado Board nesse pino. Contudo, é possível utilizar buzzers externos em outros pinos, bastando selecionar o pino correspondente no bloco.
       </p>
 
-      <p>
+      <p data-translate="music_example2_desc2">
         Após conectar o bloco no programa e clicar em <strong>Play</strong>, o buzzer executará a melodia criada. Você pode compor melodias mais longas e usar vários blocos em sequência para tocar trechos diferentes ou organizar a execução de partes da música.
       </p>
+
 
       <!-- Dica Final -->
       <h3 data-translate="music_extra_info_title">Dicas adicionais</h3>

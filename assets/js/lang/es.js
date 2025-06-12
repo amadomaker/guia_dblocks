@@ -438,6 +438,10 @@ var MSG = {
   print_ex1: "Ejemplo 1: imprimir un mensaje fijo",
   print_ex2: "Ejemplo 2: imprimir el valor de una variable",
   print_ex3: "Ejemplo 3: imprimir dentro de un bucle",
+  print_ex1_desc: "Este es el ejemplo más simple del uso del bloque imprime. Solo muestra un texto fijo en la consola, como un mensaje o saludo.",
+  print_ex2_desc: "Aquí definimos una variable llamada valor con el número 10 y usamos el bloque imprime para mostrar ese valor junto con un texto explicativo. Esto es útil para saber qué valor ha almacenado la variable.",
+  print_ex3_desc: "En este ejemplo, usamos un bucle repite para contar del 1 al 10. En cada repetición, el valor de la variable se incrementa y se imprime en la consola. También hay una pausa de 1 segundo entre impresiones para facilitar la visualización.",
+
   print_console_output:
     "El resultado del último ejemplo aparece en la consola de la plataforma, mostrando la cuenta del 1 al 10:",
 
@@ -510,6 +514,11 @@ var MSG = {
   sensor_ir_example_title: "Ejemplo: lectura continua del sensor IR",
 
   sensor_ir_steps: "¿Qué hace este programa?",
+  ir_sensor_step1: "Lee continuamente el valor digital del pin D35 donde está conectado el sensor IR.",
+  ir_sensor_step2: "Almacena ese valor en la variable valor_sensor.",
+  ir_sensor_step3: "Imprime el valor en la consola (0 o 1), facilitando el monitoreo de la lectura.",
+  ir_sensor_step4: "Espera 500 milisegundos antes de realizar la siguiente lectura.",
+
 
   // Sensor de Temperatura y Humedad
   sensor_dht_title: "Sensor de Temperatura y Humedad DHT11/22",
@@ -800,6 +809,9 @@ logic_math_intro2: "La categoría Matemáticas contiene operaciones como suma, r
 
 logic_math_example1_title: "Ejemplo 1: Verificar si un número fijo es mayor que 10",
 logic_math_example1_desc: "En este ejemplo usamos los bloques si y sino para verificar si un valor fijo es mayor que 10. El bloque de decisión (si) permite ejecutar comandos solo cuando una condición es verdadera. La comparación se hace con el operador >.",
+logic_math_context1: "Este tipo de estructura es muy común en proyectos de robótica — por ejemplo, verificar si un sensor detectó un obstáculo para activar o detener un motor.",
+logic_math_context2: "La estructura si → sino si → sino se crea haciendo clic en el engranaje del bloque “si”. Esto permite crear condiciones múltiples y tomar decisiones más completas. Es común en proyectos como robots seguidores de línea, control climático o decisiones basadas en múltiples sensores.",
+logic_math_context3: "Esta estructura condicional es muy útil en sistemas embebidos de automatización, donde se deben combinar diferentes sensores para decidir cuándo activar dispositivos como ventiladores, extractores o alertas.",
 logic_math_example1_steps: "¿Qué hace este programa?",
 logic_math_example1_step1: "Crea una variable con el valor 15.",
 logic_math_example1_step2: "Verifica si el número es mayor que 10.",
@@ -829,14 +841,28 @@ logic_math_example3_tip: "Puedes cambiar los valores de las variables de tempera
 //Pagina musica
 music_section_title: "Música",
 music_section_intro: "En esta sección, aprenderemos a usar la pestaña Música de la plataforma para componer melodías personalizadas de forma visual mediante un piano roll interactivo. Estas melodías se pueden probar y luego usar en bloques con el zumbador.",
-music_features_intro: "La interfaz cuenta con varios controles útiles:",
+music_features_intro: "La interfaz ofrece varios controles útiles:",
+music_feature_trash: "Papelera: borra toda la melodía actual.",
+music_feature_save: "Guardar melodía: guarda la melodía actual, que estará disponible en el bloque “Reproducir zumbador con melodía”.",
+music_feature_play: "Reproducir: ejecuta la melodía creada para escucharla directamente en la plataforma.",
+music_feature_pause: "Pausa: pausa la reproducción de la melodía.",
+music_feature_bpm: "BPM: define la velocidad de la melodía. El valor predeterminado es 120, pero se puede ajustar según sea necesario.",
+music_feature_download: "Descargar: exporta la melodía como archivo .json.",
+music_feature_import: "Importar: permite cargar un archivo .json con una melodía guardada anteriormente.",
+
 music_editor_info: "El piano roll funciona de la siguiente manera: las columnas representan el tiempo y las filas representan las notas musicales. Puedes seleccionar una nota por columna. Si omites una columna, ese momento será un silencio.",
 
 music_example1_title: "Ejemplo: Creando la melodía \"Do-Re-Mi-Fa-Sol-La-Si\"",
 music_example1_desc: "Vamos a crear una melodía simple utilizando las notas musicales básicas.",
+music_example1_step1: "Después de configurar la secuencia de la melodía, haz clic en Reproducir para escucharla. Verás una línea roja moviéndose de izquierda a derecha, indicando el progreso de la ejecución.",
+music_example1_step2: "Si estás satisfecho con el resultado, haz clic en Guardar melodía e ingresa un nombre (como do-re-mi) en la ventana que aparecerá.",
+music_example1_step3: "Puedes seguir editando la melodía o agregar nuevos fragmentos después. También puedes exportar la melodía usando el botón Exportar, generando un archivo .json que puede ser compartido o guardado. Usa Importar para abrir una melodía existente.",
+
 
 music_example2_title: "Reproducir la melodía con el zumbador",
 music_example2_desc: "Después de guardar la melodía, ve a la pestaña Bloques. En Salidas y Actuadores → Zumbador, encontrarás el bloque Reproducir zumbador en el pin. Al seleccionar la melodía creada, podrás reproducirla con el zumbador de la placa.",
+music_example2_desc1: "En el ejemplo anterior, usamos el pin D4 / BUZZER porque el buzzer ya está integrado en la placa Amado Board en ese pin. Sin embargo, se pueden usar buzzers externos en otros pines, simplemente seleccionando el pin correspondiente en el bloque.",
+music_example2_desc2: "Después de conectar el bloque en el programa y hacer clic en Reproducir, el buzzer ejecutará la melodía creada. Puedes componer melodías más largas y usar varios bloques en secuencia para tocar diferentes partes u organizar la ejecución de secciones de la música.",
 
 music_extra_info_title: "Consejos adicionales",
 music_extra_info: "Si haces clic derecho sobre el bloque de melodía, verás opciones útiles como Eliminar o Exportar esa melodía individualmente.",

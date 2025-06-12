@@ -434,6 +434,10 @@ var MSG = {
   print_ex1: "Example 1: print a fixed message",
   print_ex2: "Example 2: print the value of a variable",
   print_ex3: "Example 3: print inside a loop",
+  print_ex1_desc: "This is the simplest example of using the print block. It simply displays a fixed text in the console, such as a message or greeting.",
+  print_ex2_desc: "Here we define a variable called value with the number 10 and use the print block to display that value along with an explanatory text. This is useful to know what value the variable is storing.",
+  print_ex3_desc: "In this example, we use a repeat loop to count from 1 to 10. On each iteration, the variable's value is incremented and printed to the console. There is also a 1-second pause between prints to make it easier to follow.",
+
   print_console_output:
     "The result of the last example appears in the platform console, showing a count from 1 to 10:",
 
@@ -506,6 +510,11 @@ var MSG = {
   sensor_ir_example_title: "Example: continuous reading of the IR sensor",
 
   sensor_ir_steps: "What does this program do?",
+  ir_sensor_step1: "Continuously reads the digital value from pin D35 where the IR sensor is connected.",
+  ir_sensor_step2: "Stores this value in the variable valor_sensor.",
+  ir_sensor_step3: "Prints the value to the console (0 or 1), making it easier to monitor the reading.",
+  ir_sensor_step4: "Waits 500 milliseconds before performing the next reading.",
+
 
   // Temperature and Humidity Sensor
   sensor_dht_title: "Temperature and Humidity Sensor DHT11/22",
@@ -808,6 +817,9 @@ var MSG = {
     "Example 1: Check if a fixed number is greater than 10",
   logic_math_example1_desc:
     "In this example, we use the if and else blocks to check if a fixed value is greater than 10. The decision block (if) allows commands to run only when a condition is true. The comparison is made using the > operator.",
+  logic_math_context1: "This type of structure is very common in robotics projects — for example, checking whether a sensor detected an obstacle to trigger or stop a motor.",
+  logic_math_context2: "The if → else if → else structure is created by clicking the gear icon on the 'if' block. This allows for multiple conditions and more complete decision-making. It is commonly used in projects like line-following robots, climate control, or decisions based on multiple sensors.",
+  logic_math_context3: "This conditional structure is very useful in embedded automation systems, where different sensors must be combined to decide when to activate devices like fans, exhaust systems, or alarms.",
   logic_math_example1_steps: "What does this program do?",
   logic_math_example1_step1: "Creates a variable with the value 15.",
   logic_math_example1_step2: "Checks if the number is greater than 10.",
@@ -850,17 +862,31 @@ var MSG = {
   music_section_title: "Music",
   music_section_intro:
     "In this section, we will learn how to use the platform's Music tab to compose custom melodies visually through an interactive piano roll. These melodies can be tested and later used in blocks with the buzzer.",
-  music_features_intro: "The interface has several useful controls:",
+  music_features_intro: "The interface offers several useful controls:",
+  music_feature_trash: "Trash: clears the entire current melody.",
+  music_feature_save: "Save melody: saves the current melody, which becomes available in the 'Play buzzer with melody' block.",
+  music_feature_play: "Play: plays the created melody so you can listen to it directly on the platform.",
+  music_feature_pause: "Pause: pauses the melody playback.",
+  music_feature_bpm: "BPM: sets the melody speed. The default is 120, but you can adjust it as needed.",
+  music_feature_download: "Download: exports the melody as a .json file.",
+  music_feature_import: "Import: allows you to load a .json file containing a previously saved melody.",
+
   music_editor_info:
     "The piano roll works as follows: the columns represent time, and the rows represent musical notes. You can select one note per column. If you skip a column, that moment will be silent.",
 
   music_example1_title: 'Example: Creating the melody "Do-Re-Mi-Fa-Sol-La-Si"',
   music_example1_desc:
     "Let's create a simple melody using basic musical notes.",
+  music_example1_step1: "After setting up the melody sequence, click Play to listen to it. You will see a red line moving from left to right, indicating the playback progress.",
+  music_example1_step2: "If you're happy with the result, click Save melody and enter a name (like do-re-mi) in the window that appears.",
+  music_example1_step3: "You can continue editing the melody or add new segments later. You can also export the melody using the Export button, which generates a .json file that can be shared or saved. Use Import to open a previously saved melody.",
+
 
   music_example2_title: "Playing the melody with the buzzer",
   music_example2_desc:
     "After saving the melody, go to the Blocks tab. In Outputs and Actuators → Buzzer, you will find the block Play buzzer on pin. By selecting the created melody, you can play it using the buzzer on the board.",
+  music_example2_desc1: "In the example above, we use pin D4 / BUZZER because the buzzer is already integrated into the Amado Board at that pin. However, you can use external buzzers on other pins by selecting the corresponding pin in the block.",
+  music_example2_desc2: "After connecting the block in the program and clicking Play, the buzzer will play the created melody. You can compose longer melodies and use multiple blocks in sequence to play different parts or structure sections of the music.",
 
   music_extra_info_title: "Additional tips",
   music_extra_info:
