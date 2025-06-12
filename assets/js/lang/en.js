@@ -111,6 +111,7 @@ var MSG = {
   var_loop_print: "Variables, loops, and printing",
   var_loop_print_description:
     "In this section, we will learn how to work with variables, control structures, and print data to the screen.",
+  logic_and_math_description: "In this section, we will learn how to use logical and mathematical operators to create more complex and interesting programs.",
 
   digital_input_output: "Digital Input and Output",
   digital_io_description:

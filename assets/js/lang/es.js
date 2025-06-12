@@ -111,6 +111,7 @@ var MSG = {
   var_loop_print: "Variables, bucles e impresión",
   var_loop_print_description:
     "En esta sección, aprenderemos a trabajar con variables, estructuras de control e imprimir datos en pantalla.",
+  logic_and_math_description: "En esta sección, aprenderemos a utilizar operadores lógicos y matemáticos para crear programas más complejos e interesantes.",
 
   digital_input_output: "Entrada y salida digital",
   digital_io_description:
