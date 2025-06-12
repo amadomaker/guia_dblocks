@@ -440,6 +440,10 @@ var MSG = {
   print_ex1: "Exemplo 1: imprimir uma mensagem fixa",
   print_ex2: "Exemplo 2: imprimir o valor de uma variável",
   print_ex3: "Exemplo 3: imprimir dentro de um laço (loop)",
+  print_ex1_desc: "Este é o exemplo mais simples de uso do código imprime. Ele apenas exibe um texto fixo no console, como uma mensagem ou saudação.",
+  print_ex2_desc: "Aqui definimos uma variável chamada valor com o número 10 e usamos o bloco imprime para exibir esse valor junto com um texto explicativo. Isso é útil para saber qual valor a variável armazenou.",
+  print_ex3_desc: "Neste exemplo, usamos um laço repita para contar de 1 até 10. A cada repetição, o valor da variável é incrementado e impresso no console. Também há uma pausa de 1 segundo entre cada impressão para facilitar a visualização.",
+
   print_console_output:
     "O resultado desse último exemplo pode ser visto no console da plataforma, mostrando a contagem de 1 até 10:",
 
@@ -506,6 +510,10 @@ var MSG = {
     "Além de carrinhos seguidores de linha, o sensor IR pode ser usado em sistemas de contagem, barreiras de segurança, presença de objetos e outras aplicações onde a detecção simples de obstáculos é necessária.",
   sensor_ir_example_title: "Exemplo: leitura contínua do sensor IR",
   sensor_ir_steps: "O que esse programa faz?",
+  ir_sensor_step1: "Lê continuamente o valor digital do pino D35 onde o sensor IR está conectado.",
+  ir_sensor_step2: "Armazena esse valor na variável valor_sensor.",
+  ir_sensor_step3: "Imprime o valor no console (0 ou 1), facilitando o monitoramento da leitura.",
+  ir_sensor_step4: "Aguarda 500 milissegundos antes de fazer a próxima leitura.",
 
   //Sensor de temperatura e umidade
   sensor_dht_title: "Sensor de Temperatura e Umidade DHT11/22",
@@ -759,6 +767,9 @@ logic_math_intro2: "A categoria Matemática contém operações como soma, subtr
 
 logic_math_example1_title: "Exemplo 1: Verificar se um número fixo é maior que 10",
 logic_math_example1_desc: "Neste exemplo usamos os blocos se e senão para verificar se um valor fixo é maior que 10. O bloco de decisão (se) permite executar comandos apenas quando uma condição é verdadeira. A comparação é feita com o operador matemático >.",
+logic_math_context1: "Este tipo de estrutura é muito comum em projetos de robótica — por exemplo, verificar se um sensor detectou um obstáculo para acionar ou parar um motor.",
+logic_math_context2: "A estrutura se → senão se → senão é criada clicando na engrenagem do bloco “se”. Com isso é possível criar condições múltiplas e tomar decisões mais completas. Isso é comum em projetos como robôs seguidores de linha, controle climático ou decisões baseadas em mais de um sensor.",
+logic_math_context3: "Essa estrutura condicional é bastante útil em sistemas embarcados para automação, onde diferentes sensores devem ser combinados para decidir a ativação de dispositivos como ventiladores, exaustores ou alertas.",
 logic_math_example1_steps: "O que esse programa faz?",
 logic_math_example1_step1: "Cria uma variável com o valor 15.",
 logic_math_example1_step2: "Compara se o número é maior que 10.",
@@ -787,13 +798,27 @@ logic_math_example3_tip: "Você pode alterar os valores das variáveis de temper
 music_section_title: "Música",
 music_section_intro: "Nesta seção, vamos aprender a utilizar a aba Música da plataforma para compor melodias personalizadas de forma visual, por meio de um piano roll interativo. Essas melodias podem ser testadas e posteriormente utilizadas em blocos com o buzzer.",
 music_features_intro: "A interface possui diversos controles úteis:",
+music_feature_trash: "Lixeira: limpa toda a melodia atual.",
+music_feature_save: "Salvar melodia: salva a melodia atual, que ficará disponível no bloco “Reproduzir buzzer com melodia”.",
+music_feature_play: "Play: executa a melodia criada para escutá-la diretamente na plataforma.",
+music_feature_pause: "Pausa: pausa a reprodução da melodia.",
+music_feature_bpm: "BPM: define a velocidade da melodia. O padrão é 120, mas você pode ajustar conforme necessário.",
+music_feature_download: "Baixar: exporta a melodia como arquivo .json.",
+music_feature_import: "Importar: permite carregar um arquivo .json com uma melodia salva anteriormente.",
+
 music_editor_info: "O piano roll funciona da seguinte forma: as colunas representam o tempo, e as linhas representam notas musicais. Você pode selecionar uma nota por coluna. Se pular uma coluna, aquele instante de tempo será um silêncio.",
 
 music_example1_title: "Exemplo: Criando a melodia \"Do-Re-Mi-Fa-Sol-La-Si\"",
 music_example1_desc: "Vamos criar uma melodia simples usando as notas musicais básicas.",
+music_example1_step1: "Depois de configurar a sequência da melodia, clique em Play para ouvi-la. Você verá uma linha vermelha se deslocando da esquerda para a direita, indicando o progresso da execução.",
+music_example1_step2: "Se estiver satisfeito com o resultado, clique em Salvar melodia e digite um nome (como do-re-mi) na janela que será exibida.",
+music_example1_step3: "Você pode continuar editando a melodia ou adicionar novos trechos depois. Também é possível exportar a melodia usando o botão de Exportar, gerando um arquivo .json que pode ser compartilhado ou salvo. Use Importar para abrir uma melodia existente.",
+
 
 music_example2_title: "Tocando a melodia com o buzzer",
 music_example2_desc: "Após salvar a melodia, vá até a aba Blocos. Em Saídas e Atuadores → Campainha (Buzzer), você encontrará o bloco Reproduzir buzzer no pino. Ao selecionar a melodia criada, você poderá reproduzi-la usando o buzzer da placa.",
+music_example2_desc1: "No exemplo acima, usamos o pino D4 / BUZZER, pois o buzzer já está integrado à placa Amado Board nesse pino. Contudo, é possível utilizar buzzers externos em outros pinos, bastando selecionar o pino correspondente no bloco.",
+music_example2_desc2: "Após conectar o bloco no programa e clicar em Play, o buzzer executará a melodia criada. Você pode compor melodias mais longas e usar vários blocos em sequência para tocar trechos diferentes ou organizar a execução de partes da música.",
 
 music_extra_info_title: "Dicas adicionais",
 music_extra_info: "Se você clicar com o botão direito do mouse sobre o bloco de melodia, verá opções úteis como Excluir ou Exportar aquela melodia individualmente.",

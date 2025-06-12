@@ -8,7 +8,7 @@
 
 .container-chapters {
   max-height: 82vh;
-  width: 250px;
+  
   border-right: 1px solid #d2d1d1;
   padding: 15px;
   margin-bottom: 20px;  
@@ -54,6 +54,7 @@
   border-radius: 8px;
   height: 96px;
   overflow: hidden;
+  width:300px;
 }
 
 .chapter:hover {
