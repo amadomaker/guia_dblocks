@@ -2,7 +2,6 @@ var MSG = {
   test: "PRUEBA",
   // Header
   home: "Inicio",
-  bipes: "BIPES",
   amado_maker: "Amado Maker",
   dblocks: "Dblocks",
   ebook: "Ebook Dblocks en la Práctica",
