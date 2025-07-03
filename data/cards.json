@@ -150,5 +150,35 @@
       "kw_advanced_features",
       "kw_project_development"
     ]
+  },
+  {
+    "title_key": "bluetooth",
+    "image": "bluetooth_card.png",
+    "description_key": "bluetooth_description",
+    "url": "chapters/bluetooth.html",
+    "keyword_keys": [
+      "kw_bluetooth",
+      "kw_ble",
+      "kw_bluetooth_esp32",
+      "kw_ble_esp32",
+      "kw_bluetooth_control",
+      "kw_bluetooth_communication",
+      "kw_bluetooth_projects",
+      "kw_ble_projects",
+      "kw_app_integration",
+      "kw_bluefruit_app",
+      "kw_data_plotting",
+      "kw_graph_plotting",
+      "kw_remote_control",
+      "kw_realtime_data",
+      "kw_control_pad",
+      "kw_bluetooth_plotter",
+      "kw_bluetooth_graphs",
+      "kw_bluetooth_sensors",
+      "kw_interactive_control",
+      "kw_wireless_control"
+    ]
+
+
   }
 ]

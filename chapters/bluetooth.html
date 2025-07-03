@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="di_title"></title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/chapters.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="../assets/images/logo-dblocks.svg"
+        alt="Logo Dblocks"
+        class="logo-dblocks"
+      />
+
+      <nav>
+        <ul class="container-nav">
+          <li><a href="/" data-translate="home">Início</a></li>
+
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container-button-lang">
+        <div class="container-lang">
+          <select id="languageMenu"></select>
+          <img
+            id="languageFlag"
+            alt="Language Flag"
+            style="width: 32px; height: 20px"
+          />
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <main class="main-chapters">
+      <aside class="container-chapters" id="sidebar">
+        <div class="header-chapters">
+          <h4 data-translate="in_this_section">Seções</h4>
+          <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
+        </div>
+        <div id="chapters-list"></div>
+      </aside>
+
+      <section class="content">
+        <h1 data-translate="bluetooth_section_title">Comunicação via Bluetooth (BLE)</h1>
+        <div class="chapter-index">
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
+          <ul>
+            <li><a href="#bluetooth_program_title" data-translate="bluetooth_program_title">Programa base de comunicação Bluetooth</a></li>
+            <li><a href="#bluetooth-example2" data-translate="bluetooth_example2_title">Acender LEDs integrados via Bluetooth</a></li>
+            <li><a href="#bluetooth-example3" data-translate="bluetooth_example3_title">Enviando dados de sensores para o gráfico do app</a></li>
+          </ul>
+        </div>
+
+        <img src="../assets/images/Bluetooth/logo-bluetooth.jpg" width="200px" alt="Logo Bluetooth" style="margin-bottom: 20px;" />
+
+        <p data-translate="bluetooth_intro">
+          O Bluetooth é uma tecnologia de comunicação sem fio de curto alcance, usada em celulares, fones de ouvido, computadores, carros e sistemas embarcados. Ele permite a troca de dados entre dispositivos próximos, de forma simples e sem cabos.
+        </p>
+
+        <p data-translate="bluetooth_ble_reason">
+          Neste projeto utilizamos o padrão BLE (Bluetooth Low Energy), que é o único suportado pelo MicroPython no ESP32. Ele é ideal para sistemas com sensores, comandos remotos, automação e monitoramento com baixo consumo de energia.
+        </p>
+
+        <p data-translate="bluetooth_project_ideas">
+          Com o BLE, é possível criar projetos como: controle remoto de robôs, envio de dados de sensores para o celular, gráficos de monitoramento em tempo real, automação residencial, sistemas de alarme e até jogos interativos usando botões virtuais.
+        </p>
+
+        <h3 data-translate="bluetooth_blocks_title">Blocos disponíveis para comunicação Bluetooth</h3>
+
+        <p data-translate="bluetooth_blocks_intro">
+          Os blocos de Bluetooth estão disponíveis na aba <strong>Comunicação → Bluetooth</strong>. Para o funcionamento do código, é necessário instalar a biblioteca <code>ble_advertising</code> clicando no botão indicado na interface.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_blocks.png" width="550px" alt="Blocos de Bluetooth no dBlocks" />
+
+        <ul>
+          <li data-translate="bluetooth_block1"><strong>Configura e inicia o Bluetooth com o nome</strong>: define o nome do dispositivo BLE visível no celular.</li>
+          <li data-translate="bluetooth_block2"><strong>Definir os dados recebidos via bluetooth para</strong>: armazena os dados enviados pelo aplicativo em uma variável.</li>
+          <li data-translate="bluetooth_block3"><strong>Verificar os dados recebidos</strong>: interpreta os comandos recebidos.</li>
+          <li data-translate="bluetooth_block4"><strong>Configurar o plotador para sensores</strong>: permite definir qual sensor será visualizado em gráfico no app.</li>
+          <li data-translate="bluetooth_block5"><strong>Enviar dados para o plotador</strong>: envia valores da aplicação para o gráfico do aplicativo.</li>
+        </ul>
+
+        <h2 id="bluetooth_program_title" data-translate="bluetooth_program_title">Programa base de comunicação Bluetooth</h2>
+
+        <p data-translate="bluetooth_tip_execution">
+          Este é o programa base mais simples e o principal ponto de partida. Com ele, já conseguimos testar se os dados estão chegando do celular para a placa.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_example1.png" width="600px" alt="Exemplo de programa Bluetooth com blocos" />
+
+        <p data-translate="bluetooth_program_steps"><strong>O que esse programa faz?</strong></p>
+        <ul>
+          <li data-translate="bluetooth_step1">Inicializa o BLE com o nome <code>meuBluetooth</code>.</li>
+          <li data-translate="bluetooth_step2">Cria a variável <code>dados</code> que recebe os comandos do celular.</li>
+          <li data-translate="bluetooth_step3">Verifica continuamente os dados recebidos e os interpreta com base no valor recebido.</li>
+        </ul>
+
+        <p data-translate="bluetooth_connected_tip">
+          Após montar, clique em <strong>Play</strong> e abra a aba <strong>Console</strong>. A mensagem “Conectado” indicará que o Bluetooth está funcionando corretamente.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_console.png" width="450px" alt="Console mostrando conexão BLE ativa" />
+
+
+        <h3 data-translate="bluetooth_app_title">Aplicativo Bluefruit Connect</h3>
+
+        <p data-translate="bluetooth_app_description">
+          Para interagir com o programa, usamos o app <strong>Bluefruit Connect</strong> da Adafruit. Ele está disponível gratuitamente para Android e iOS. Procure por “Bluefruit Connect” na loja de aplicativos, instale e abra.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_app.png" width="400px" alt="Aplicativo Bluefruit Connect na loja" />
+
+        <p data-translate="bluetooth_app_guide">No aplicativo, siga os passos abaixo:</p>
+        <ul>
+          <li data-translate="bluetooth_app_step1">Abra o app e selecione o dispositivo chamado <code>MPY ESP32</code>. Mesmo que você tenha definido outro nome no bloco, esse nome pode aparecer como padrão.</li>
+          <li data-translate="bluetooth_app_step2">Acesse a aba <strong>Controller</strong> e toque em <strong>Control Pad</strong>.</li>
+          <li data-translate="bluetooth_app_step3">Use os botões direcionais ou numéricos para enviar comandos para a placa.</li>
+        </ul>
+
+        <img src="../assets/images/Bluetooth/bluetooth_step2.png" width="1200px" alt="Passo a passo no Bluefruit Connect usando Control Pad" />
+
+        <h3 data-translate="bluetooth_console_title">Testando os botões no console</h3>
+
+        <p data-translate="bluetooth_console_info">
+          Após se conectar ao dispositivo e abrir o Control Pad, pressione os botões do app. No console da IDE, aparecerão mensagens como: <code>Dados recebidos: !B507</code>.
+        </p>
+
+        <p data-translate="bluetooth_console_example">
+          No nosso teste, usamos os botões de seta (cima, baixo, esquerda e direita). Para cada botão, o app envia dois comandos: um ao pressionar e outro ao soltar. Isso permite que o programa saiba quando o botão foi apertado e quando foi liberado.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_console1.png" width="500px" alt="Console recebendo comandos do aplicativo Bluefruit Connect" />
+        <h2 id="bluetooth-example2" data-translate="bluetooth_example2_title">
+          Acender LEDs integrados via Bluetooth
+        </h2>
+
+        <p data-translate="bluetooth_example2_intro">
+          Neste exemplo, vamos controlar dois LEDs integrados da placa através do aplicativo. Quando o botão 1 for pressionado, o LED azul (pino D2) acenderá. Quando o botão 2 for pressionado, o LED verde (pino D33) será ativado.
+        </p>
+
+        <p data-translate="bluetooth_example2_behavior">
+          O comportamento é simples: enquanto o botão estiver pressionado no aplicativo, o LED correspondente permanece aceso. Ao soltar o botão, o LED apaga imediatamente.
+        </p>
+
+        <p data-translate="bluetooth_example2_usecase">
+          Essa lógica pode ser aplicada para acionar qualquer outro dispositivo: motores, robôs, sirenes, relés e mais. Aqui usamos LEDs apenas como exemplo visual e prático para facilitar o aprendizado.
+        </p>
+
+        <p data-translate="bluetooth_example2_speed">
+          Uma das vantagens impressionantes do BLE é a velocidade de resposta. A comunicação entre o app e a placa é praticamente instantânea, o que permite criar interações em tempo real sem atrasos visíveis.
+        </p>
+
+        <p data-translate="bluetooth_example2_codeinfo">
+          O programa base continua o mesmo do exemplo anterior, mas agora adicionamos condições <code>se</code> para verificar os dados recebidos e controlar os LEDs com base neles.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_example2.png" width="500px" alt="Programa que acende LEDs via Bluetooth" />
+
+        <p data-translate="bluetooth_example2_logic">
+          O código verifica se a variável <code>dados</code> contém o valor correspondente aos botões pressionados no aplicativo:
+        </p>
+
+        <ul>
+          <li data-translate="bluetooth_example2_if1">Se <code>dados = "!B11"</code>, o LED azul (pino D2) acende.</li>
+          <li data-translate="bluetooth_example2_if2">Se <code>dados = "!B19"</code>, o LED verde (pino D33) acende.</li>
+          <li data-translate="bluetooth_example2_else">Se nenhum desses valores for detectado (ou se o botão for solto), os LEDs são apagados.</li>
+        </ul>
+
+        <h2 id="bluetooth-example3" data-translate="bluetooth_example3_title">
+          Enviando dados de sensores para o gráfico do app
+        </h2>
+
+        <p data-translate="bluetooth_example3_intro">
+          O aplicativo Bluefruit Connect oferece um recurso chamado <strong>Plotter</strong>, que permite visualizar dados em tempo real em forma de gráfico. Esse recurso é ideal para monitorar sensores analógicos, como temperatura, luminosidade (LDR), umidade, entre outros.
+        </p>
+
+        <p data-translate="bluetooth_example3_utility">
+          Essa ferramenta é muito útil para interpretar o comportamento de sensores ao longo do tempo. Ao ver as variações graficamente, conseguimos identificar picos, quedas e padrões de forma mais clara do que apenas olhando valores no console.
+        </p>
+
+        <p data-translate="bluetooth_example3_goal">
+          Neste exemplo, vamos usar o sensor de luminosidade (LDR) integrado à placa, conectado ao pino <code>D39</code>, para enviar valores via Bluetooth e visualizá-los em tempo real no gráfico.
+        </p>
+
+        <p data-translate="bluetooth_example3_plotter_config_tip">
+          Ao clicar na engrenagem azul do bloco <strong>“Configurar o plotador para sensores”</strong>, é possível adicionar mais campos para enviar até 3 valores diferentes ao gráfico, como temperatura, umidade ou outros sensores.
+        </p>
+
+        <p data-translate="bluetooth_example3_plotter_limit">
+          O aplicativo Bluefruit Connect suporta até <strong>3 gráficos simultâneos</strong>, facilitando a análise de múltiplos sensores ao mesmo tempo.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_plotter_exemple.png" width="550px" alt="Programa que envia dados para o gráfico no Bluefruit" />
+
+        <p data-translate="bluetooth_example3_code_explained"><strong>O que esse programa faz?</strong></p>
+        <ul>
+          <li data-translate="bluetooth_example3_step1">Inicializa o Bluetooth e configura o plotador com o nome do sensor.</li>
+          <li data-translate="bluetooth_example3_step2">Lê continuamente o valor do sensor LDR no pino <code>D39</code>.</li>
+          <li data-translate="bluetooth_example3_step3">Exibe esse valor no console e também envia para o gráfico no app.</li>
+          <li data-translate="bluetooth_example3_step4">Repete esse processo a cada 1 segundo.</li>
+        </ul>
+
+        <h4 data-translate="bluetooth_example3_plotter_title">Acessando o gráfico no app</h4>
+
+        <p data-translate="bluetooth_example3_plotter_access">
+          Após rodar o programa e conectar ao dispositivo, clique na opção <strong>Plotter</strong> no aplicativo Bluefruit Connect.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_plotter_app.png" width="250px" alt="Acessar Plotter no app Bluefruit Connect" />
+
+        <h4 data-translate="bluetooth_example3_result_title">Visualizando os resultados no gráfico</h4>
+
+        <p data-translate="bluetooth_example3_result_info">
+          No gráfico, é possível acompanhar a variação do valor do sensor em tempo real. A linha se movimenta conforme a luminosidade muda — ao cobrir o sensor, o valor diminui; ao iluminar, o valor aumenta.
+        </p>
+
+        <img src="../assets/images/Bluetooth/bluetooth_plotter_result.jpeg" width="600px" alt="Gráfico do Plotter exibindo os dados recebidos via Bluetooth" />
+
+        <p data-translate="bluetooth_example3_plotter_controls">
+          O Plotter também possui controles na parte inferior:
+        </p>
+
+        <ul>
+          <li data-translate="bluetooth_example3_autoscroll"><strong>AutoScroll:</strong> quando ativado, o gráfico rola automaticamente à medida que novos dados chegam.</li>
+          <li data-translate="bluetooth_example3_width"><strong>Width:</strong> ajusta a largura da linha no gráfico, útil para destacar picos ou suavizar curvas.</li>
+        </ul>
+
+      </section>
+
+    </main>
+
+    <script src="../assets/js/lang/translation.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/chapters.js"></script>
+  </body>
+</html>
