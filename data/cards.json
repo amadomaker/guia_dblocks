@@ -14,7 +14,7 @@
   },
   {
     "title_key": "knowing_amado_board",
-    "image": "amadoboard-legendas.svg",
+    "image": "AmadoBoard/amadoboard-legendas.svg",
     "description_key": "amado_board_description",
     "url": "chapters/amadoboard.html",
     "keyword_keys": [

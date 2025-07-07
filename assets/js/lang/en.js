@@ -88,7 +88,7 @@ var MSG = {
   need_help: "Need help?",
   resources_text: "Need help? Check out our additional resources:",
   ebook_link: "Dblocks in Practice Ebook",
-  complete_amadoboard_guide: "Complete AmadoBoard Guide",
+  complete_amadoboard_guide: " AmadoBoard Quick Guide",
   requirements_list_1: "AmadoBoard.",
   requirements_list_2:
     "Have the <a href='https://joaodrj.github.io/Micropython_install/' target='_blank'>MicroPython</a> library installed on the board.",

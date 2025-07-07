@@ -87,7 +87,7 @@ var MSG = {
   need_help: "¿Necesitas ayuda?",
   resources_text: "¿Necesitas ayuda? Consulta nuestros recursos adicionales:",
   ebook_link: "Ebook Dblocks en la Práctica",
-  complete_amadoboard_guide: "Guía Completa de AmadoBoard",
+  complete_amadoboard_guide: "Guía Rápida AmadoBoard",
   requirements_list_1: "Placa AmadoBoard.",
   requirements_list_2:
     "Tener la biblioteca <a href='https://joaodrj.github.io/Micropython_install/' target='_blank'>MicroPython</a> instalada en la placa.",
