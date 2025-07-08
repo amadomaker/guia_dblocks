@@ -522,7 +522,7 @@ var MSG = {
   sensor_dht_desc1:
     "The DHT11/22 sensor is used to measure two important environmental variables: <strong>temperature</strong> and <strong>relative humidity</strong>. It is commonly used in automation projects, weather stations, and environmental control.",
   sensor_dht_desc2:
-    "For the sensor to work properly with the <strong>Amado Board</strong>, it must be connected to a <strong>digital pin</strong>. We recommend using pins D5, D15, D16, D17, D18, D19, D21, D22, or D23. In this example, we’ll use pin <code>D17</code>.",
+    "For the sensor to work properly with the <strong>Amado Board</strong>, it must be connected to a <strong>digital pin</strong>. We recommend using pins , CS, D15, D16, D17, CLK, MISO, SDA, SCL or MOSI. In this example, we’ll use pin <code>D17</code>.",
   sensor_dht_desc3: "How does the example above work?",
   sensor_dht_step1:
     "We initialize the DHT11/22 sensor and specify the connection pin.",
