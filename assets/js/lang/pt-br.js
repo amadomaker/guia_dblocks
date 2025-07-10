@@ -87,7 +87,7 @@ var MSG = {
   need_help: "Precisa de ajuda?",
   resources_text: "Precisa de ajuda? Confira nossos recursos adicionais:",
   ebook_link: "Ebook Dblocks na Prática",
-  complete_amadoboard_guide: "Guia Completo AmadoBoard",
+  complete_amadoboard_guide: "Guia Rápido AmadoBoard",
   requirements_list_1: "Placa AmadoBoard.",
   requirements_list_2:
     "Ter a biblioteca <a href='https://joaodrj.github.io/Micropython_install/' target='_blank'>MicroPython</a> instalada na placa.",
@@ -250,7 +250,7 @@ var MSG = {
   en_inf_toolbox:
     "Na parte esquerda contem a toolbox com os blocos disponíveis para usar",
   en_inf_workspace:
-    "O espaçõ central é chamado de workspace e é onde colocaremos os nossos blocos.",
+    "O espaço central é chamado de workspace e é onde colocaremos os nossos blocos.",
   en_info_steel_bar:
     "Na parte superior direita temos alguns botões como o de concectar a nossa placa e o de rodar a programação.",
   en_info_extra:
@@ -521,7 +521,7 @@ var MSG = {
   sensor_dht_desc1:
     "O sensor DHT11/22 é utilizado para medir dois dados importantes do ambiente: <strong>temperatura</strong> e <strong>umidade relativa do ar</strong>. Ele é muito comum em projetos de automação, estações meteorológicas e controle ambiental.",
   sensor_dht_desc2:
-    "Para que o sensor funcione corretamente na <strong>Amado Board</strong>, ele deve estar conectado a um <strong>pino digital</strong>. Recomendamos usar os pinos D5, D15, D16, D17, D18, D19, D21, D22 ou D23. Neste exemplo, vamos utilizar o pino <code>D17</code>.",
+    "Para que o sensor funcione corretamente na <strong>Amado Board</strong>, ele deve estar conectado a um <strong>pino digital</strong>. Recomendamos usar os pinos CS, D15, D16, D17, CLK, MISO, SDA, SCL ou MOSI. Neste exemplo, vamos utilizar o pino <code>D17</code>.",
   sensor_dht_desc3: "Como funciona o exemplo acima?",
   sensor_dht_step1:
     "Inicializamos o sensor DHT11/22 e indicamos o pino de conexão.",
