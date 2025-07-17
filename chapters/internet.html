@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="internet"></title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/chapters.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="../assets/images/logo-dblocks.svg"
+        alt="Logo Dblocks"
+        class="logo-dblocks"
+      />
+
+      <nav>
+        <ul class="container-nav">
+          <li><a href="/" data-translate="home">Início</a></li>
+
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container-button-lang">
+        <div class="container-lang">
+          <select id="languageMenu"></select>
+          <img
+            id="languageFlag"
+            alt="Language Flag"
+            style="width: 32px; height: 20px"
+          />
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <main class="main-chapters">
+      <aside class="container-chapters" id="sidebar">
+        <div class="header-chapters">
+          <h4 data-translate="in_this_section">Seções</h4>
+          <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
+        </div>
+        <div id="chapters-list"></div>
+      </aside>
+
+      <section class="content">
+        <h1 data-translate="internet">Conectividade e internet</h1>
+        <div class="chapter-index">
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
+          <ul>
+            <li><a href="#bluetooth_program_title" data-translate="bluetooth_program_title">Programa base de comunicação Bluetooth</a></li>
+            <li><a href="#bluetooth-example2" data-translate="bluetooth_example2_title">Acender LEDs integrados via Bluetooth</a></li>
+            <li><a href="#bluetooth-example3" data-translate="bluetooth_example3_title">Enviando dados de sensores para o gráfico do app</a></li>
+          </ul>
+        </div>
+
+      <p data-translate="internet_intro">
+        A conectividade é um elemento essencial para projetos modernos de IoT, robótica e automação. No dBlocks, é possível conectar a placa à internet usando Wi-Fi, ou criar uma rede própria via modo ponto de acesso. Isso abre portas para controlar dispositivos remotamente, acessar servidores web, enviar dados para a nuvem, ou mesmo criar interfaces locais.
+      </p>
+
+      <p data-translate="internet_project_ideas">
+        Com esses recursos, você pode desenvolver projetos como: controle de lâmpadas e relés via celular, sensores que enviam dados para dashboards, alarmes que disparam notificações em rede, ou até um servidor local acessado por qualquer dispositivo conectado à rede da placa.
+      </p>
+
+        <p data-translate="internet_blocks_location">
+          Os blocos para conexão estão localizados na categoria <strong>Comunicação &rarr; Wifi</strong>. Eles permitem se conectar a uma rede existente, configurar a placa como um ponto de acesso, obter o IP atual e listar redes disponíveis.
+        </p>
+
+        <h3 data-translate="internet_blocks_title">Blocos para Wi-Fi e Acesso</h3>
+
+        <img src="../assets/images/Internet/internet_bocks.png" width="350px" alt="Todos os blocos de conectividade no dBlocks" />
+
+        <ul>
+          <li data-translate="wifi_block_desc"><strong>Conectar na rede Wi-Fi</strong>: insira o nome e a senha da rede para conectar a placa ao roteador local.</li>
+          <li data-translate="ap_block_desc"><strong>Configurar Modo Ponto de Acesso</strong>: cria uma rede Wi-Fi com nome e senha definidos, permitindo que outros dispositivos se conectem diretamente à placa.</li>
+          <li data-translate="list_wifi_block_desc"><strong>Listar redes Wi-Fi</strong>: mostra no console todas as redes detectadas no ambiente.</li>
+          <li data-translate="ip_block_desc"><strong>Endereço IP Atual</strong>: retorna o IP da conexão atual (modo cliente).</li>
+        </ul>
+
+       <h2 data-translate="wifi_example_title">Conectando a uma rede Wi-Fi</h2>
+
+      <img src="../assets/images/Internet/wifi_block.png" width="300px" alt="Bloco de conectar na rede Wi-Fi" />
+
+      <p data-translate="wifi_block_usage">
+        Este bloco conecta a placa a uma rede Wi-Fi usando o nome (SSID) e a senha informados. É ideal para projetos que exigem acesso à internet ou comunicação com outros dispositivos na mesma rede.
+      </p>
+
+      <p data-translate="wifi_check_console">
+        Após executar o programa, o console exibirá o processo de conexão com a rede. Você verá mensagens como <code>Waiting for Wifi connection</code> e <code>Connected</code>, indicando que a placa foi conectada com sucesso.
+      </p>
+
+      <img src="../assets/images/Internet/wifi_console.png" width="1100px" alt="Console mostrando conexão bem-sucedida" />
+
+      <p data-translate="internet_wifi_diagram_explanation">
+        Ao conectar a placa em uma rede Wi-Fi, ela passa a fazer parte da rede local do seu roteador — assim como seu celular e computador. Isso permite que todos os dispositivos conectados à mesma rede se comuniquem entre si, incluindo a placa.
+      </p>
+
+      <p data-translate="internet_wifi_diagram_usecase">
+        Esse cenário é ideal para projetos em que você deseja acessar a placa a partir de outro dispositivo, como um celular enviando comandos para acender um LED, ou um computador acessando uma interface web hospedada pela placa.
+      </p>
+
+      <img src="../assets/images/Internet/board_router.png" alt="Placa conectada ao roteador e acessada por celular e computador" />
+
+      <h2 data-translate="wifi_ip_check_title">Verificando o IP</h2>
+
+      <img src="../assets/images/Internet/wifi_ip_block.png" width="300px" alt="Bloco de endereço IP atual" />
+
+      <p data-translate="wifi_ip_check_explanation">
+        Após a conexão bem-sucedida, a placa recebe automaticamente um endereço IP atribuído pelo roteador. Esse IP identifica a placa na rede e pode ser usado para acessá-la em projetos com servidor web, envio de dados ou comandos remotos.
+      </p>
+
+      <p data-translate="wifi_ip_check_howto">
+        Para visualizar esse endereço, basta usar o bloco <strong>“Endereço IP atual”</strong> junto com o bloco <strong>“imprime”</strong>. Quando o programa for executado, o IP será mostrado diretamente no console.
+      </p>
+
+      <img src="../assets/images/Internet/wifi_ip_console.png" width="1100px" alt="IP atual mostrado no console" />
+      <p data-translate="wifi_ip_usage_tip">
+        Esse IP será muito útil em projetos que envolvam comunicação entre dispositivos, como servidores locais ou envio de dados. Com ele, é possível configurar interações mais complexas na rede, como envio de comandos ou visualização de dados em tempo real.
+      </p>
+
+      <h3 data-translate="ap_example_title">Exemplo: criando uma rede com a placa</h3>
+
+      <img src="../assets/images/Internet/acesspoint_block.png" width="300px" alt="Bloco de configurar ponto de acesso" />
+
+      <p data-translate="ap_usage">Esse bloco transforma a placa em um ponto de acesso, criando uma rede Wi-Fi própria. Outros dispositivos podem se conectar diretamente a ela sem depender de um roteador externo.</p>
+
+      <img src="../assets/images/Internet/acesspoint_console.png" width="550px" alt="Console após configurar ponto de acesso" />
+
+      <h4 data-translate="ap_ip_check_title">Verificando o IP da rede criada</h4>
+
+      <p data-translate="ap_ip_instruction">
+        Após executar o bloco, acesse o console e digite o seguinte comando para descobrir o IP da rede criada:
+      </p>
+      <code>print(ap.ifconfig())</code>
+
+      <img src="../assets/images/Internet/acesspoint_console_result.png" width="500px" alt="Resultado do IP da rede ponto de acesso" />
+
+      <h3 data-translate="internet_final_tip">Próximos passos</h3>
+
+      <p data-translate="internet_next_usage">Agora que sabemos conectar a placa ou criar uma rede própria, usaremos essa funcionalidade em conjunto com blocos de servidor HTTP para criar aplicações interativas, como controle de LEDs por navegador.</p>
+      </section>
+
+    </main>
+
+    <script src="../assets/js/lang/translation.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/chapters.js"></script>
+  </body>
+</html>
