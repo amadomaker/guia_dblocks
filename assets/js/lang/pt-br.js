@@ -139,6 +139,8 @@ var MSG = {
   ab_knowing_amado_board: "Conhecendo a AmadoBoard",
   bluetooth: "Bluetooth",
   bluetooth_description: "Nesta seção, vamos explorar como utilizar o Bluetooth para comunicação sem fio entre a placa e outros dispositivos, como celulares ou computadores.",
+  internet: "Conectividade e Internet",
+  internet_description: "Nesta seção, vamos aprender como conectar a placa à internet usando Wi-Fi e explorar formas de comunicação sem fio com outros dispositivos em rede.",
 
   // Índice
   ab_introduction: "Introdução",

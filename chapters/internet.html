@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="internet"></title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/chapters.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="../assets/images/logo-dblocks.svg"
+        alt="Logo Dblocks"
+        class="logo-dblocks"
+      />
+
+      <nav>
+        <ul class="container-nav">
+          <li><a href="/" data-translate="home">Início</a></li>
+
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container-button-lang">
+        <div class="container-lang">
+          <select id="languageMenu"></select>
+          <img
+            id="languageFlag"
+            alt="Language Flag"
+            style="width: 32px; height: 20px"
+          />
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.com.br"
+              data-translate="amado_maker"
+              >Amado Maker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://dblocks.com.br"
+              data-translate="dblocks"
+              >Dblocks</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="../public/guia-amadoboard.pdf"
+              data-translate="complete_amadoboard_guide"
+              >Guia Completo AmadoBoard</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://amadomaker.github.io/Instalador_Micropython/"
+              >Micropython</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <main class="main-chapters">
+      <aside class="container-chapters" id="sidebar">
+        <div class="header-chapters">
+          <h4 data-translate="in_this_section">Seções</h4>
+          <button id="toggle-sidebar" class="toggle-sidebar-btn">«</button>
+        </div>
+        <div id="chapters-list"></div>
+      </aside>
+
+      <section class="content">
+        <h1 data-translate="internet">Conectividade e internet</h1>
+        <div class="chapter-index">
+          <h3 data-translate="in_this_section">Nesta Seção</h3>
+          <ul>
+            <li><a href="#bluetooth_program_title" data-translate="bluetooth_program_title">Programa base de comunicação Bluetooth</a></li>
+            <li><a href="#bluetooth-example2" data-translate="bluetooth_example2_title">Acender LEDs integrados via Bluetooth</a></li>
+            <li><a href="#bluetooth-example3" data-translate="bluetooth_example3_title">Enviando dados de sensores para o gráfico do app</a></li>
+          </ul>
+        </div>
+
+      <p data-translate="internet_intro">
+        A conectividade é um elemento essencial para projetos modernos de IoT, robótica e automação. No dBlocks, é possível conectar a placa à internet usando Wi-Fi, ou criar uma rede própria via modo ponto de acesso. Isso abre portas para controlar dispositivos remotamente, acessar servidores web, enviar dados para a nuvem, ou mesmo criar interfaces locais.
+      </p>
+
+      <p data-translate="internet_project_ideas">
+        Com esses recursos, você pode desenvolver projetos como: controle de lâmpadas e relés via celular, sensores que enviam dados para dashboards, alarmes que disparam notificações em rede, ou até um servidor local acessado por qualquer dispositivo conectado à rede da placa.
+      </p>
+
+        <p data-translate="internet_blocks_location">
+          Os blocos para conexão estão localizados na categoria <strong>Comunicação &rarr; Wifi</strong>. Eles permitem se conectar a uma rede existente, configurar a placa como um ponto de acesso, obter o IP atual e listar redes disponíveis.
+        </p>
+
+        <h2 data-translate="internet_blocks_title">Blocos para Wi-Fi e Acesso</h2>
+
+        <img src="../assets/images/Internet/internet_bocks.png" width="350px" alt="Todos os blocos de conectividade no dBlocks" />
+
+        <ul>
+          <li data-translate="wifi_block_desc"><strong>Conectar na rede Wi-Fi</strong>: insira o nome e a senha da rede para conectar a placa ao roteador local.</li>
+          <li data-translate="ap_block_desc"><strong>Configurar Modo Ponto de Acesso</strong>: cria uma rede Wi-Fi com nome e senha definidos, permitindo que outros dispositivos se conectem diretamente à placa.</li>
+          <li data-translate="list_wifi_block_desc"><strong>Listar redes Wi-Fi</strong>: mostra no console todas as redes detectadas no ambiente.</li>
+          <li data-translate="ip_block_desc"><strong>Endereço IP Atual</strong>: retorna o IP da conexão atual (modo cliente).</li>
+        </ul>
+
+       <h2 data-translate="wifi_example_title">Conectando a uma rede Wi-Fi</h2>
+
+      <img src="../assets/images/Internet/wifi_block.png" width="300px" alt="Bloco de conectar na rede Wi-Fi" />
+
+      <p data-translate="wifi_block_usage">
+        Este bloco conecta a placa a uma rede Wi-Fi usando o nome (SSID) e a senha informados. É ideal para projetos que exigem acesso à internet ou comunicação com outros dispositivos na mesma rede.
+      </p>
+
+      <p data-translate="wifi_check_console">
+        Após executar o programa, o console exibirá o processo de conexão com a rede. Você verá mensagens como <code>Waiting for Wifi connection</code> e <code>Connected</code>, indicando que a placa foi conectada com sucesso.
+      </p>
+
+      <img src="../assets/images/Internet/wifi_console.png" width="1100px" alt="Console mostrando conexão bem-sucedida" />
+
+      <p data-translate="internet_wifi_diagram_explanation">
+        Ao conectar a placa em uma rede Wi-Fi, ela passa a fazer parte da rede local do seu roteador — assim como seu celular e computador. Isso permite que todos os dispositivos conectados à mesma rede se comuniquem entre si, incluindo a placa.
+      </p>
+
+      <p data-translate="internet_wifi_diagram_usecase">
+        Esse cenário é ideal para projetos em que você deseja acessar a placa a partir de outro dispositivo, como um celular enviando comandos para acender um LED, ou um computador acessando uma interface web hospedada pela placa.
+      </p>
+
+      <img src="../assets/images/Internet/board_router.png" alt="Placa conectada ao roteador e acessada por celular e computador" />
+
+      <h3 data-translate="wifi_ip_check_title">Verificando o IP</h3>
+
+      <img src="../assets/images/Internet/wifi_ip_block.png" width="300px" alt="Bloco de endereço IP atual" />
+
+      <p data-translate="wifi_ip_check_explanation">
+        Após a conexão bem-sucedida, a placa recebe automaticamente um endereço IP atribuído pelo roteador. Esse IP identifica a placa na rede e pode ser usado para acessá-la em projetos com servidor web, envio de dados ou comandos remotos.
+      </p>
+
+      <p data-translate="wifi_ip_check_howto">
+        Para visualizar esse endereço, basta usar o bloco <strong>“Endereço IP atual”</strong> junto com o bloco <strong>“imprime”</strong>. Quando o programa for executado, o IP será mostrado diretamente no console.
+      </p>
+
+      <img src="../assets/images/Internet/wifi_ip_console.png" width="1100px" alt="IP atual mostrado no console" />
+      <p data-translate="wifi_ip_usage_tip">
+        Esse IP será muito útil em projetos que envolvam comunicação entre dispositivos, como servidores locais ou envio de dados. Com ele, é possível configurar interações mais complexas na rede, como envio de comandos ou visualização de dados em tempo real.
+      </p>
+
+      <h2 data-translate="ap_example_title">Criando uma rede com a placa</h2>
+
+      <img src="../assets/images/Internet/acesspoint_block.png" width="300px" alt="Bloco de configurar ponto de acesso" />
+
+      <p data-translate="ap_usage">
+        Esse bloco transforma a placa em um ponto de acesso, ou seja, cria uma rede Wi-Fi própria. Dispositivos como celulares, tablets ou computadores podem se conectar diretamente a essa rede, sem a necessidade de um roteador.
+      </p>
+
+      <p data-translate="ap_block_usecase">
+        Esse tipo de configuração é útil em situações em que não há rede Wi-Fi disponível, ou quando se deseja uma conexão direta e isolada entre o dispositivo e a placa, como em projetos portáteis, exposições, aulas práticas ou demonstrações locais.
+      </p>
+
+      <p data-translate="ap_console_expectation">
+        Ao executar o bloco, observe o console da IDE: se a rede for criada corretamente, ele exibirá mensagens indicando que o ponto de acesso está ativo.
+      </p>
+
+      <img src="../assets/images/Internet/acesspoint_console.png" width="300px" alt="Console após configurar ponto de acesso" />
+
+      <p data-translate="ap_network_behavior">
+        Após isso, você poderá ver a nova rede Wi-Fi criada no seu celular ou computador, com o nome e senha que foram definidos no bloco. Basta se conectar a ela como faria com qualquer rede comum.
+      </p>
+
+      <p data-translate="ap_diagram_explanation">
+        No diagrama abaixo, vemos a placa atuando como um "mini roteador". Outros dispositivos podem se conectar diretamente a ela e trocar dados, como comandos ou informações de sensores.
+      </p>
+
+      <img src="../assets/images/Internet/board_ap.png" alt="Placa criando rede e conectada diretamente a outros dispositivos" />
+
+      <h3 data-translate="ap_ip_check_title">Verificando o IP da rede criada</h3>
+
+      <p data-translate="ap_ip_instruction">
+        Após executar o bloco de ponto de acesso, é possível descobrir o IP da rede criada abrindo o console e digitando o seguinte comando:
+        <code><strong>print(ap.ifconfig())</strong></code>
+      </p>
+
+      <img src="../assets/images/Internet/acesspoint_console_result.png" width="400px" alt="Resultado do IP da rede ponto de acesso" />
+
+      <p data-translate="ap_ip_explanation">
+        O IP mostrado será o endereço da placa na nova rede. Ele poderá ser usado para que outro dispositivo se comunique com ela, como em um servidor local, envio de comandos, ou páginas acessadas diretamente pelo navegador.
+      </p>
+
+      <h3 data-translate="internet_final_tip">Próximos passos</h3>
+
+      <p data-translate="internet_next_usage">
+        Agora que sabemos conectar a placa à internet ou criar uma rede própria, usaremos essas funcionalidades em conjunto com blocos de servidor HTTP. Isso permitirá criar aplicações interativas, como controle de LEDs, visualização de sensores e muito mais, diretamente pelo navegador.
+      </p>
+
+      <h2 data-translate="http_server_title">Servidor HTTP</h2>
+
+      <p data-translate="http_server_intro">
+      O protocolo HTTP é amplamente usado na internet para comunicação entre navegadores e servidores. No DBlocks, é possível transformar a placa ESP32 em um servidor HTTP, capaz de responder a solicitações vindas de dispositivos conectados à mesma rede. Isso permite criar interfaces web simples para controlar dispositivos, acessar dados de sensores e muito mais.
+      </p>
+
+      <p data-translate="http_server_usecases">
+      Entre os usos mais comuns de um servidor HTTP com a placa estão: controle de LEDs por navegador, monitoramento de sensores em tempo real, envio de comandos via navegador e exibição de informações em uma página HTML. Esse tipo de aplicação é muito útil em projetos de automação, IoT e monitoramento.
+      </p>
+
+      <h3 data-translate="http_server_blocks_title">Blocos disponíveis</h3>
+
+      <img src="../assets/images/Internet/Server_http.png" width="600px" alt="Blocos disponíveis para servidor HTTP" />
+
+      <p data-translate="http_server_blocks_intro">
+      Os blocos da categoria "Servidor HTTP" estão localizados em <strong>Comunicação > Servidor HTTP</strong> e permitem iniciar um servidor web, aguardar conexões, interpretar as requisições recebidas e responder com conteúdo HTML ou imagens. Veja a seguir os principais blocos disponíveis:
+      </p>
+
+      <ul>
+        <li><strong>Iniciar servidor HTTP Web</strong>: inicia o servidor na porta informada (normalmente 80).</li>
+        <li><strong>Aguarde cliente HTTP</strong>: bloqueia o programa até que um cliente (como um navegador) acesse o IP da placa.</li>
+        <li><strong>Página web solicitada</strong>: retorna a URL que foi solicitada pelo cliente.</li>
+        <li><strong>Enviar resposta HTTP (HTML)</strong>: permite responder ao navegador com conteúdo HTML, como texto ou botões.</li>
+        <li><strong>Enviar resposta HTTP (Imagem JPG)</strong>: envia uma imagem como resposta, caso necessário.</li>
+        <li><strong>Fechar HTTP Web Server</strong>: encerra o servidor quando necessário.</li>
+      </ul>
+
+      <h2 data-translate="http_server_example_basic">Servidor que exibe uma mensagem</h2>
+
+      <p data-translate="http_server_example_basic_explanation">
+      Vamos criar um exemplo simples em que a placa se conecta a uma rede Wi-Fi, inicia um servidor HTTP e responde com uma mensagem quando acessamos seu IP pelo navegador. Isso é útil para testar a comunicação com a placa ou como base para projetos maiores.
+      </p>
+
+      <img src="../assets/images/Internet/Server_http_exemple1.png" width="700px" alt="Exemplo de servidor que mostra uma mensagem" />
+
+      <p data-translate="http_server_example_basic_steps">
+      Nesse exemplo, os blocos fazem o seguinte:
+      </p>
+
+      <ul>
+        <li>Conectam a placa à rede Wi-Fi informando o nome e a senha.</li>
+        <li>Imprimem o endereço IP atribuído à placa (que será usado no navegador).</li>
+        <li>Iniciam um servidor web na porta 80.</li>
+        <li>Entram em um laço que aguarda requisições HTTP de clientes (como navegadores).</li>
+        <li>Verificam se a página solicitada é a principal ("/") ou uma string vazia.</li>
+        <li>Respondem com uma mensagem HTML simples: "Você acessou o servidor web do Dblocks!".</li>
+      </ul>
+
+      <h3 data-translate="http_server_example_basic_result">Resultado no navegador</h3>
+
+      <p data-translate="http_server_example_basic_result_explanation">
+      Após carregar o código na placa e observar o IP mostrado no console (por exemplo, <code>192.168.1.124</code>), digite esse IP na barra de endereços de qualquer navegador conectado à mesma rede Wi-Fi.
+      </p>
+
+      <img src="../assets/images/Internet/server_http_exemple1_result.png" width="500px" alt="Mensagem exibida ao acessar o servidor da placa" />
+
+      <p data-translate="http_server_example_basic_result_note">
+      Se tudo estiver correto, você verá a mensagem programada aparecendo no navegador, como mostrado na imagem acima. Essa é uma base útil para construir páginas com mais interações, como controle de pinos, sensores ou dashboards.
+      </p>
+
+      <p data-translate="http_server_example_basic_code_tip">
+      Se quiser personalizar a mensagem ou adicionar novos comportamentos, você pode alterar o conteúdo do bloco de resposta HTML ou adicionar novas condições verificando <code>Página web solicitada</code>.
+      </p>
+
+      <h2 data-translate="http_server_example_led">Controle de LED via navegador</h2>
+
+      <p data-translate="http_server_example_led_explanation">
+      Neste exemplo, vamos controlar um LED conectado à placa por meio de um navegador web. A placa se conecta a uma rede Wi-Fi e inicia um servidor HTTP. Quando acessamos o endereço IP da placa pelo navegador, ela exibe uma página com dois links: <strong>"Ligar LED"</strong> e <strong>"Desligar LED"</strong>.
+      </p>
+
+      <img src="../assets/images/Internet/servidor_web.png" width="700px" alt="Exemplo de servidor HTTP com controle de LED" />
+
+      <p data-translate="http_server_example_led_program_explanation">
+      O programa segue a seguinte lógica: ele aguarda uma conexão HTTP e identifica qual página foi solicitada. Se a URL acessada for <code>/on</code>, o LED conectado na porta D2 é ligado. Se for <code>/off</code>, o LED é desligado. 
+      </p>
+
+      <p data-translate="http_server_example_led_html_explanation">
+      Para isso, o programa envia uma página HTML como resposta ao navegador. Essa página contém dois links que redirecionam o usuário para as URLs específicas de controle. O HTML é uma linguagem usada para criar páginas da web. Nesse exemplo, usamos HTML básico para montar o texto e os links que o navegador interpreta como botões clicáveis.
+      </p>
+
+      <img src="../assets/images/Internet/Server_http_led_result.png" width="500px" alt="Resultado do controle via navegador" />
+
+      <h4 data-translate="http_server_led_observation">Observações e aplicações</h4>
+
+      <p data-translate="http_server_led_usecase">
+      Esse tipo de programa é ideal para projetos de automação simples, como acender lâmpadas, ativar relés ou interagir com sensores remotamente. A vantagem é que não é necessário criar um aplicativo ou interface complexa — qualquer dispositivo com navegador (celular, tablet ou computador) pode enviar comandos para a placa.
+      </p>
+
+      <p data-translate="http_server_led_browser_note">
+      Uma observação importante: repare que o navegador mostra na barra de endereço a URL acessada, como <code>/on</code> ou <code>/off</code>. Isso ajuda o programa a entender qual ação realizar, e você pode expandir esse conceito para incluir novos comandos ou páginas no seu projeto.
+      </p>
+
+      <h2 data-translate="http_server_ap_mode">Controle de led em modo ponto de acesso</h2>
+
+      <p data-translate="http_server_ap_mode_explanation">
+      Além de conectar a placa a uma rede Wi-Fi existente, também é possível configurar a placa para criar sua própria rede, usando o modo ponto de acesso (AP). Nesse modo, dispositivos como celulares e computadores se conectam diretamente à rede da placa e acessam o servidor pelo navegador.
+      </p>
+
+      <img src="../assets/images/Internet/acesspoint_servidor_local.png" width="600px" alt="Servidor HTTP funcionando em modo ponto de acesso" />
+
+      <p data-translate="http_server_ap_mode_comparison">
+      O programa usado é o mesmo do exemplo anterior de controle de LED. A única diferença está na forma de conexão: agora a placa cria a rede e os dispositivos se conectam a ela diretamente. Ao acessar o IP padrão da placa (geralmente <code>192.168.4.1</code>), o controle funciona normalmente.
+      </p>
+
+      <p data-translate="http_server_ap_mode_delay_tip">
+      Essa abordagem é útil em locais onde não há uma rede Wi-Fi disponível. No entanto, durante os testes, pode-se notar um pequeno atraso (delay) ao acessar a interface ou enviar comandos. Isso ocorre porque o desempenho do ponto de acesso da placa pode ser limitado em comparação a um roteador tradicional.
+      </p>
+
+      <h2 data-translate="http_client_intro">Cliente HTTP - Acessando dados de servidores</h2>
+
+      <p data-translate="http_client_explanation">
+      Diferente do servidor HTTP (que aguarda conexões), o cliente HTTP realiza requisições para outros servidores da web. Isso é útil para buscar dados, como a previsão do tempo, status de sensores remotos ou acessar arquivos online.
+      </p>
+
+      <p data-translate="http_client_usage_examples">
+      Esse tipo de funcionalidade é muito comum em aplicações IoT, como uma placa que consulta periodicamente a temperatura de uma cidade, envia leituras de sensores para um banco de dados ou acessa comandos via web.
+      </p>
+
+      <h3 data-translate="http_client_blocks_title">Blocos disponíveis para cliente HTTP</h3>
+
+      <img src="../assets/images/Internet/client_http_blocks.png" width="700px" alt="Blocos de cliente HTTP disponíveis" />
+
+      <ul>
+        <li>
+          <strong>Requisição HTTP GET:</strong> Realiza uma requisição do tipo GET para uma URL. Ideal para buscar dados sem precisar enviar nada no corpo da mensagem.
+        </li>
+        <li>
+          <strong>Status da resposta HTTP:</strong> Verifica se a resposta foi recebida com sucesso (código 200 significa OK).
+        </li>
+        <li>
+          <strong>Conteúdo da resposta HTTP:</strong> Mostra o que o servidor retornou. Pode ser texto simples, HTML ou dados estruturados como JSON.
+        </li>
+        <li>
+          <strong>Fazer requisição HTTP POST:</strong> Envia dados (por exemplo, temperatura ou umidade) para um servidor. 
+        </li>
+      </ul>
+
+      <h3 data-translate="http_client_example_title">Exemplo: acessando dados de um servidor</h3>
+
+      <p data-translate="http_client_example_description">
+      No exemplo abaixo, a placa se conecta à internet, realiza uma requisição para o endereço <code>https://api.open-meteo.com/v1/forecast?latitude=-23.0885&longitude=-47.2094&current_weather=true</code> e exibe o conteúdo retornado no console.
+      </p >
+
+      <img src="../assets/images/Internet/client_http_api.png" width="700px" alt="Exemplo de cliente HTTP" />
+
+      <h4 data-translate="http_client_example_steps">O que acontece nesse exemplo?</h4>
+
+      <ul>
+        <li>A placa conecta-se à rede Wi-Fi usando SSID e senha definidos.</li>
+        <li>É feito um pedido (GET) para o endereço da web.</li>
+        <li>Se o servidor retornar código 200, significa que deu tudo certo e o conteúdo será exibido no console.</li>
+        <li>Se houver erro, o código do erro será mostrado.</li>
+      </ul>
+
+      <p data-translate="http_client_example_observation">
+      Esse padrão pode ser usado com qualquer URL que retorne dados simples ou JSON. No caso de JSON, o conteúdo virá estruturado e será necessário fazer o tratamento adequado para extrair os dados desejados (isso pode exigir o uso de funções Python para manipulação de dicionários, caso necessário).
+      </p>
+
+      <h3 data-translate="http_client_console_output_title">Visualizando o resultado no console</h3>
+
+      <p data-translate="http_client_console_output_description">
+      Após realizar a requisição, o conteúdo retornado será exibido no console serial. Ele estará em formato JSON, como no exemplo abaixo:
+      </p>
+
+      <img src="../assets/images/Internet/client_temp_result_console.png" width="1000px" alt="Resultado da requisição no console" />
+
+      <p data-translate="http_client_console_output_fields">
+      A resposta contém vários campos úteis:
+      </p>
+
+      <ul>
+        <li><strong>temperature:</strong> Temperatura atual em graus Celsius.</li>
+        <li><strong>windspeed:</strong> Velocidade do vento em km/h.</li>
+        <li><strong>winddirection:</strong> Direção do vento em graus (0 = Norte, 90 = Leste, etc.).</li>
+        <li><strong>is_day:</strong> Indica se é dia (1) ou noite (0).</li>
+        <li><strong>time:</strong> Horário da última medição, no formato ISO 8601 (ex: "2025-07-30T17:45").</li>
+        <li><strong>weathercode:</strong> Código numérico representando o tipo de tempo (sol, nublado, etc.).</li>
+      </ul>
+
+      <p data-translate="http_client_next_steps">
+      No próximo exemplo, você aprenderá a interpretar esse conteúdo JSON para extrair apenas as informações desejadas, como a temperatura, e usá-las em sua aplicação.
+      </p>
+
+      <h4 data-translate="http_client_custom_city">Usando outras cidades na API</h4>
+
+      <p data-translate="http_client_custom_city_description">
+      O link da requisição que usamos tem este formato:
+      </p>
+
+      <pre><code>
+https://api.open-meteo.com/v1/forecast?latitude=-23.0885&longitude=-47.2094&current_weather=true
+      </code></pre>
+
+      <p data-translate="http_client_custom_city_tip">
+      Para usar outra cidade, basta substituir os valores de <code>latitude</code> e <code>longitude</code> na URL. Você pode obter esses valores facilmente com um aplicativo de mapas como o Google Maps.
+      </p>
+
+      <p data-translate="http_client_custom_city_example">
+      Por exemplo, para São Paulo (SP), a URL ficaria assim:
+      </p>
+
+      <pre><code>
+https://api.open-meteo.com/v1/forecast?latitude=-23.5505&longitude=-46.6333&current_weather=true
+      </code></pre>
+
+      <p data-translate="http_client_custom_city_remark">
+      Não é necessário chave de API, cadastro ou autenticação — basta acessar diretamente a URL com os parâmetros corretos.
+      </p>
+
+
+
+
+    </main>
+
+    <script src="../assets/js/lang/translation.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/chapters.js"></script>
+  </body>
+</html>
