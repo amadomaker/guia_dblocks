@@ -134,6 +134,11 @@ var MSG = {
   resources_description:
     "Conoce los recursos y funcionalidades que Dblocks ofrece para evolucionar tus proyectos.",
   ab_knowing_amado_board: "Conociendo la AmadoBoard",
+  bluetooth: "Bluetooth",
+  bluetooth_description: "En esta sección, exploraremos cómo utilizar Bluetooth para la comunicación inalámbrica entre la placa y otros dispositivos, como teléfonos móviles o computadoras.",
+  internet: "Conectividad e Internet",
+  internet_description: "En esta sección, aprenderemos cómo conectar la placa a Internet mediante Wi-Fi y exploraremos formas de comunicación inalámbrica con otros dispositivos en red.",
+
 
   // Índice
   ab_introduction: "Introducción",

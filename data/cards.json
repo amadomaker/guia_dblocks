@@ -180,5 +180,13 @@
     ]
 
 
+  },
+   {
+    "title_key": "internet",
+    "image": "Internet/internet_card.png",
+    "description_key": "internet_description",
+    "url": "chapters/internet.html"
+
+
   }
 ]

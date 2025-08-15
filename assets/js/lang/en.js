@@ -135,6 +135,11 @@ var MSG = {
   resources_description:
     "Discover the resources and features Dblocks offers to enhance your projects.",
   ab_knowing_amado_board: "Getting to Know the AmadoBoard",
+  bluetooth: "Bluetooth",
+  bluetooth_description: "In this section, we will explore how to use Bluetooth for wireless communication between the board and other devices, such as smartphones or computers.",
+  internet: "Connectivity and Internet",
+  internet_description: "In this section, we will learn how to connect the board to the internet using Wi-Fi and explore ways to communicate wirelessly with other networked devices.",
+
 
   // Índice
   ab_introduction: "Introduction",
