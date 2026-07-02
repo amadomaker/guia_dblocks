@@ -12,6 +12,7 @@ jobs:
   plan:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    environment: production
     permissions:
       contents: read
       id-token: write # necessario para o token OIDC do Workload Identity Federation
@@ -55,6 +56,7 @@ jobs:
   apply:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    environment: production
     permissions:
       contents: read
       id-token: write # necessario para o token OIDC do Workload Identity Federation
