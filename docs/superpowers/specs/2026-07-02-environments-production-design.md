@@ -17,7 +17,7 @@ Ver specs anteriores:
 
 - `project_id` = `dblocks-500317`
 - `service_name` = `guia-prod` (mesmo nome já usado pelo CI para a branch `main`, ver `.github/workflows/deploy-gcp.yml`)
-- `image` = `us-central1-docker.pkg.dev/dblocks-500317/aplication/guia-prod:latest` (mesmo padrão de path do Artifact Registry usado pelo CI; tag `latest` como valor inicial de bootstrap — deploys seguintes continuam via `gcloud run deploy` com a tag do commit, e o módulo `cloud-run` já ignora mudanças de imagem via `lifecycle`)
+- `image` = `us-docker.pkg.dev/cloudrun/container/hello` (imagem "Hello World" pública mantida pelo Google, usada só para o `apply` inicial — a imagem real da aplicação ainda não existe no Artifact Registry do projeto. Deploys seguintes continuam via `gcloud run deploy` apontando pra imagem real, e o módulo `cloud-run` já ignora mudanças de imagem via `lifecycle`)
 - Backend remoto: bucket `guia-dblocks-500317-tfstate` (criado por `infra/bootstrap`), prefix `environments/production`
 
 ## Estrutura de arquivos

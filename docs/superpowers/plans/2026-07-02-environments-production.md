@@ -10,7 +10,7 @@
 
 ## Global Constraints
 
-- `project_id = "dblocks-500317"`, `service_name = "guia-prod"`, `image = "us-central1-docker.pkg.dev/dblocks-500317/aplication/guia-prod:latest"` — real values, go only in `terraform.tfvars`, never in `.tf` files.
+- `project_id = "dblocks-500317"`, `service_name = "guia-prod"`, `image = "us-docker.pkg.dev/cloudrun/container/hello"` (public Google "Hello World" sample image — the real app image isn't in the project's Artifact Registry yet) — real values, go only in `terraform.tfvars`, never in `.tf` files.
 - Backend: `bucket = "guia-dblocks-500317-tfstate"`, `prefix = "environments/production"`.
 - `*.tfvars` already gitignored (added in the `infra/bootstrap` plan) — no `.gitignore` change needed here.
 - No `terraform.tfvars.example` or extra docs — out of scope per spec.
@@ -119,7 +119,7 @@ output "url" {
 ```hcl
 project_id   = "dblocks-500317"
 service_name = "guia-prod"
-image        = "us-central1-docker.pkg.dev/dblocks-500317/aplication/guia-prod:latest"
+image        = "us-docker.pkg.dev/cloudrun/container/hello"
 ```
 
 - [ ] **Step 8: Format check**
