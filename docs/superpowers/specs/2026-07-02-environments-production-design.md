@@ -20,12 +20,20 @@ Ver specs anteriores:
 - `image` = `us-docker.pkg.dev/cloudrun/container/hello` (imagem "Hello World" pública mantida pelo Google, usada só para o `apply` inicial — a imagem real da aplicação ainda não existe no Artifact Registry do projeto. Deploys seguintes continuam via `gcloud run deploy` apontando pra imagem real, e o módulo `cloud-run` já ignora mudanças de imagem via `lifecycle`)
 - Backend remoto: bucket `guia-dblocks-500317-tfstate` (criado por `infra/bootstrap`), prefix `environments/production`
 
+> **Correção (2026-07-02, após revisão):** `backend.tf` usa configuração
+> parcial (`backend "gcs" {}`, sem `bucket`/`prefix` hardcoded). O
+> bucket/prefix são passados via `-backend-config` no `terraform init` —
+> tanto localmente quanto na pipeline de CI. Ver
+> `docs/superpowers/specs/2026-07-02-infra-terraform-pipeline-design.md`
+> para o racional completo (segue o padrão já usado no projeto
+> `applications/website`).
+
 ## Estrutura de arquivos
 
 ```
 infra/environments/production/
 ├── versions.tf       # terraform { required_version, required_providers.google } — mesmo range dos modulos
-├── backend.tf         # terraform { backend "gcs" { bucket = "guia-dblocks-500317-tfstate", prefix = "environments/production" } }
+├── backend.tf         # terraform { backend "gcs" {} } — bucket/prefix via -backend-config no init
 ├── provider.tf         # provider "google" { project = var.project_id, region = "us-central1" }
 ├── variables.tf        # project_id, service_name, image — sem default (convencao do projeto)
 ├── main.tf              # module "cloud_run" { source = "../../modules/cloud-run", project_id = var.project_id, service_name = var.service_name, image = var.image }
@@ -47,6 +55,14 @@ validação é estática:
 para quando o usuário rodar isso manualmente com suas credenciais GCP —
 nessa ordem: primeiro `infra/bootstrap` (cria o bucket), depois
 `infra/environments/production` (usa o bucket como backend).
+
+> **Atualização (2026-07-02):** `infra/bootstrap` e
+> `infra/environments/production` já foram aplicados de verdade pelo
+> usuário fora desta sessão — o bucket `guia-dblocks-500317-tfstate` e o
+> serviço Cloud Run `guia-prod` já existem no GCP. Validado localmente com
+> `terraform init -backend-config="bucket=guia-dblocks-500317-tfstate"
+> -backend-config="prefix=environments/production"` + `terraform plan`,
+> que reportou "No changes" — o código bate com a infra real.
 
 ## Fora de escopo
 

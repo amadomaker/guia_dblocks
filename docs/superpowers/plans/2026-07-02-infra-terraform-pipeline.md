@@ -8,12 +8,25 @@
 
 **Tech Stack:** GitHub Actions, `google-github-actions/auth@v2`, `hashicorp/setup-terraform@v3`, Terraform 1.13.2 (matches local dev version).
 
+> **Correção (2026-07-02, post-execution):** the YAML in Step 1 below is the
+> *original* version of this plan and is now stale — it used a static
+> `secrets.GCP_SA_KEY` and a fully-hardcoded `backend "gcs"` block, which
+> didn't match this repo's actual GCP setup or the pattern used in the
+> sibling `applications/website` project. The **committed**
+> `.github/workflows/infra-terraform.yml` uses Workload Identity Federation
+> (`workload_identity_provider`/`service_account`, `permissions: id-token:
+> write`) and `terraform init -backend-config=...` against the partial
+> `backend "gcs" {}` in `backend.tf`, per the corrected
+> `docs/superpowers/specs/2026-07-02-infra-terraform-pipeline-design.md`.
+> Read the actual file for the current, correct content.
+
 ## Global Constraints
 
 - Trigger paths: `infra/**`, branch: `main` only (both `pull_request` and `push` events).
 - Only `infra/environments/production` — never run `infra/bootstrap` in CI (local-state-only, manual, one-time).
-- Reuse existing secrets: `secrets.GCP_SA_KEY`, `secrets.GCP_PROJECT_ID` (already used by `.github/workflows/deploy-gcp.yml`).
-- Terraform vars passed via `-var` flags (no tfvars file in CI, since `terraform.tfvars` is gitignored): `project_id=${{ secrets.GCP_PROJECT_ID }}`, `service_name=guia-prod`, `image=us-docker.pkg.dev/cloudrun/container/hello`.
+- Auth via Workload Identity Federation (provider `github-guia-dblocks` on the existing `github-actions` pool, SA `github-actions-ci@dblocks-500317.iam.gserviceaccount.com`) — no static keys.
+- `terraform init` uses `-backend-config="bucket=guia-dblocks-500317-tfstate" -backend-config="prefix=environments/production"` against the partial `backend "gcs" {}` block.
+- Terraform vars passed via `-var` flags (no tfvars file in CI, since `terraform.tfvars` is gitignored): `project_id=dblocks-500317`, `service_name=guia-prod`, `image=us-docker.pkg.dev/cloudrun/container/hello`.
 - No `staging` environment, no `deploy-gcp.yml` changes, no manual-approval gate — all out of scope per spec.
 
 ---

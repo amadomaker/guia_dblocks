@@ -10,9 +10,22 @@ pipeline de CI que roda `terraform plan`/`apply` de verdade contra
 `infra/environments/production`, usando o backend remoto (`bucket
 guia-dblocks-500317-tfstate`) já configurado em `infra/environments/production/backend.tf`.
 
+> **Correção (2026-07-02, após revisão do usuário):** a primeira versão
+> deste spec/pipeline usava chave estática (`secrets.GCP_SA_KEY`) e backend
+> com bucket/prefix hardcoded em `backend.tf`. O usuário apontou que isso
+> não segue o padrão já estabelecido no projeto irmão
+> `applications/website` (`.github/workflows/deploy.yml`): autenticação via
+> **Workload Identity Federation** (sem chave estática) e **backend parcial**
+> (`backend "gcs" {}`, bucket/prefix via `-backend-config` no `init`). Este
+> spec já reflete a versão corrigida. Ver seção "Autenticação (WIF)" abaixo
+> para o que foi criado no GCP.
+
 Referência de convenções de CI já usadas no repo:
 `.github/workflows/deploy-gcp.yml` (auth via `google-github-actions/auth@v2`
-com `secrets.GCP_SA_KEY`, project id em `secrets.GCP_PROJECT_ID`).
+com `secrets.GCP_SA_KEY`, project id em `secrets.GCP_PROJECT_ID`) — esse
+workflow continua como está, não foi alterado. O padrão seguido aqui é o do
+job de produção em `applications/website/.github/workflows/deploy.yml`, que
+usa WIF.
 
 ## Escopo
 
@@ -44,20 +57,42 @@ on:
 - Push em `main` tocando `infra/**` (inclui merges de PR) → job `apply`
   (`terraform apply -auto-approve`).
 
+## Autenticação (WIF)
+
+O provider WIF existente no projeto (`github-actions` pool,
+provider `github`) está restrito por `attributeCondition` a um único repo
+(`amadomaker/BIPES_Amado`) e não podia ser alterado (instrução explícita do
+usuário: só criar coisas novas, nunca remover/alterar o que já existe).
+Criado **de forma aditiva** no GCP (via `gcloud`, fora do Terraform, mesmo
+padrão do projeto `website` que também não gerencia WIF via `.tf`):
+
+- Novo provider `github-guia-dblocks` no mesmo pool `github-actions`,
+  `attributeCondition = assertion.repository=='amadomaker/guia_dblocks'`.
+  Resource name completo: `projects/2077626448/locations/global/workloadIdentityPools/github-actions/providers/github-guia-dblocks`.
+- Novo binding `roles/iam.workloadIdentityUser` na service account já
+  existente `github-actions-ci@dblocks-500317.iam.gserviceaccount.com`
+  (que já tinha `roles/editor` no projeto, suficiente pra gerenciar o
+  bucket de state e o Cloud Run), para o `principalSet` do repo
+  `amadomaker/guia_dblocks`. O binding existente do BIPES_Amado nessa
+  mesma SA não foi tocado.
+
 ## Jobs
 
 Dois jobs (`plan` e `apply`), cada um rodando em `infra/environments/production`
 (`working-directory`), com os mesmos passos de setup:
 
 1. `actions/checkout@v4`
-2. `google-github-actions/auth@v2` com `credentials_json: ${{ secrets.GCP_SA_KEY }}`
-3. `hashicorp/setup-terraform@v3` com `terraform_version: "1.13.2"` (mesma
+2. `permissions: id-token: write` no job (obrigatório pra pedir o token OIDC do WIF)
+3. `google-github-actions/auth@v2` com `workload_identity_provider` e
+   `service_account` (ver seção "Autenticação (WIF)" acima) — sem chave
+   estática
+4. `hashicorp/setup-terraform@v3` com `terraform_version: "1.13.2"` (mesma
    versão instalada no ambiente de desenvolvimento local)
-4. `terraform fmt -check`
-5. `terraform init` (usa o `backend "gcs"` já declarado em `backend.tf`,
-   autenticado via a service account do passo 2 — diferente da validação
-   local, que usa `-backend=false`)
-6. `terraform validate`
+5. `terraform fmt -check`
+6. `terraform init -backend-config="bucket=guia-dblocks-500317-tfstate"
+   -backend-config="prefix=environments/production"` (backend parcial,
+   igual ao `backend.tf`; autenticado via a service account do passo 3)
+7. `terraform validate`
 
 Depois dos passos comuns:
 - Job `plan`: roda só em eventos `pull_request` — `terraform plan` com as
@@ -73,11 +108,15 @@ Os dois jobs recebem `if: github.event_name == 'pull_request'` /
 
 `infra/environments/production/terraform.tfvars` é gitignored (convenção do
 projeto, ver `docs/superpowers/specs/2026-07-02-bootstrap-tfstate-bucket-design.md`),
-então não existe no checkout da CI. As vars são passadas via `-var` direto
-no comando `terraform plan`/`apply`:
+então não existe no checkout da CI. Nenhum dos valores usados é secreto
+(project id, service name, imagem pública, provider WIF e email da service
+account são todos identificadores, não credenciais), então ficam
+hardcoded como `env:` do workflow em vez de exigir configurar `vars`/`secrets`
+novos no GitHub (que eu não tenho acesso pra criar por aqui — sem `gh` CLI
+configurado nesta sessão):
 
 ```
--var="project_id=${{ secrets.GCP_PROJECT_ID }}"
+-var="project_id=dblocks-500317"
 -var="service_name=guia-prod"
 -var="image=us-docker.pkg.dev/cloudrun/container/hello"
 ```
