@@ -8,12 +8,6 @@ on:
     branches: [main]
     paths: ["infra/**"]
 
-env:
-  WORKLOAD_IDENTITY_PROVIDER: projects/2077626448/locations/global/workloadIdentityPools/github-actions/providers/github-guia-dblocks
-  SERVICE_ACCOUNT: github-actions-ci@dblocks-500317.iam.gserviceaccount.com
-  TF_STATE_BUCKET: guia-dblocks-500317-tfstate
-  GCP_PROJECT_ID: dblocks-500317
-
 jobs:
   plan:
     if: github.event_name == 'pull_request'
@@ -31,8 +25,8 @@ jobs:
       - name: Autenticate to GCP
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ env.SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ vars.GCP_PROD_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_PROD_SA_EMAIL }}
 
       - name: Configurar Terraform
         uses: hashicorp/setup-terraform@v3
@@ -45,7 +39,7 @@ jobs:
       - name: Terraform init
         run: |
           terraform init \
-            -backend-config="bucket=${{ env.TF_STATE_BUCKET }}" \
+            -backend-config="bucket=${{ vars.TF_STATE_BUCKET_PROD }}" \
             -backend-config="prefix=environments/production"
 
       - name: Terraform validate
@@ -54,7 +48,7 @@ jobs:
       - name: Terraform plan
         run: |
           terraform plan \
-            -var="project_id=${{ env.GCP_PROJECT_ID }}" \
+            -var="project_id=${{ vars.GCP_PROD_PROJECT }}" \
             -var="service_name=guia-prod" \
             -var="image=us-docker.pkg.dev/cloudrun/container/hello"
 
@@ -74,8 +68,8 @@ jobs:
       - name: Autenticate to GCP
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ env.SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ vars.GCP_PROD_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_PROD_SA_EMAIL }}
 
       - name: Configurar Terraform
         uses: hashicorp/setup-terraform@v3
@@ -88,7 +82,7 @@ jobs:
       - name: Terraform init
         run: |
           terraform init \
-            -backend-config="bucket=${{ env.TF_STATE_BUCKET }}" \
+            -backend-config="bucket=${{ vars.TF_STATE_BUCKET_PROD }}" \
             -backend-config="prefix=environments/production"
 
       - name: Terraform validate
@@ -97,6 +91,6 @@ jobs:
       - name: Terraform apply
         run: |
           terraform apply -auto-approve \
-            -var="project_id=${{ env.GCP_PROJECT_ID }}" \
+            -var="project_id=${{ vars.GCP_PROD_PROJECT }}" \
             -var="service_name=guia-prod" \
             -var="image=us-docker.pkg.dev/cloudrun/container/hello"

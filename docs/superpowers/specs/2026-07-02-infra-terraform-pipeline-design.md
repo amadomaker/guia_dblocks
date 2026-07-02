@@ -108,20 +108,46 @@ Os dois jobs recebem `if: github.event_name == 'pull_request'` /
 
 `infra/environments/production/terraform.tfvars` é gitignored (convenção do
 projeto, ver `docs/superpowers/specs/2026-07-02-bootstrap-tfstate-bucket-design.md`),
-então não existe no checkout da CI. Nenhum dos valores usados é secreto
-(project id, service name, imagem pública, provider WIF e email da service
-account são todos identificadores, não credenciais), então ficam
-hardcoded como `env:` do workflow em vez de exigir configurar `vars`/`secrets`
-novos no GitHub (que eu não tenho acesso pra criar por aqui — sem `gh` CLI
-configurado nesta sessão):
+então não existe no checkout da CI.
+
+> **Correção (2026-07-02):** a versão anterior deste spec hardcodeava esses
+> valores direto no workflow (bloco `env:`). O usuário apontou que isso não
+> segue o padrão de `applications/website/.github/workflows/deploy.yml`,
+> que usa `vars.*` (GitHub Actions repository variables) pra tudo que
+> identifica o ambiente. Corrigido pra seguir o mesmo padrão — os
+> identificadores não são secretos, mas ficam como variáveis do GitHub em
+> vez de hardcoded no YAML, o que permite reconfigurar sem editar código e
+> mantém o workflow igual ao do projeto irmão.
+
+Variáveis de repositório (`Settings → Secrets and variables → Actions →
+Variables`) que precisam existir — **eu não consigo criá-las por aqui**
+(sem `gh` CLI/token nesta sessão), então o usuário precisa criá-las
+manualmente com estes valores:
+
+| Nome | Valor |
+|---|---|
+| `GCP_PROD_PROJECT` | `dblocks-500317` |
+| `GCP_PROD_WIF_PROVIDER` | `projects/2077626448/locations/global/workloadIdentityPools/github-actions/providers/github-guia-dblocks` |
+| `GCP_PROD_SA_EMAIL` | `github-actions-ci@dblocks-500317.iam.gserviceaccount.com` |
+| `TF_STATE_BUCKET_PROD` | `guia-dblocks-500317-tfstate` |
+
+Usadas no workflow como `${{ vars.GCP_PROD_PROJECT }}`,
+`${{ vars.GCP_PROD_WIF_PROVIDER }}`, `${{ vars.GCP_PROD_SA_EMAIL }}`,
+`${{ vars.TF_STATE_BUCKET_PROD }}` — mesmos nomes usados em
+`applications/website/.github/workflows/deploy.yml`.
+
+`service_name` e `image` continuam fixos direto no `-var=` (mesmo padrão do
+projeto `website`, que também hardcoda `REGION`/`IMAGE_NAME` como `env:`
+constantes em vez de `vars.*`, por serem valores realmente estáticos do
+próprio workflow, não configuração de ambiente):
 
 ```
--var="project_id=dblocks-500317"
+-var="project_id=${{ vars.GCP_PROD_PROJECT }}"
 -var="service_name=guia-prod"
 -var="image=us-docker.pkg.dev/cloudrun/container/hello"
 ```
 
-`service_name` e `image` são fixos (não há segredo neles). `image` usa a
+`image` usa a
 mesma imagem pública "Hello World" do Google usada no `terraform.tfvars`
 local — o módulo `cloud-run` já ignora mudanças de imagem via
 `lifecycle.ignore_changes` (ver `docs/superpowers/specs/2026-07-02-cloud-run-module-design.md`),
