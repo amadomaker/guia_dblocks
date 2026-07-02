@@ -10,5 +10,5 @@ module "artifact_registry" {
   source = "../../modules/artifact-registry"
 
   project_id    = var.project_id
-  repository_id = "aplication"
+  repository_id = "guia-prod"
 }
