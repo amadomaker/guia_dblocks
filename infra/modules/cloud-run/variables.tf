@@ -34,7 +34,7 @@ variable "cpu" {
 variable "memory" {
   description = "Memory limit for the container."
   type        = string
-  default     = "256Mi"
+  default     = "512Mi"
 }
 
 variable "allow_unauthenticated" {
