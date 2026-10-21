@@ -21,6 +21,7 @@ const rotas: RouteObject[] = idiomasPublicados.map((idioma) => ({
     { index: true, element: <Home /> },
     { path: 'capitulos/:slug', element: <Capitulo /> },
     { path: 'projetos', element: <Projetos /> },
+    { path: 'exemplos', element: <NaoEncontrada emConstrucao /> },
     { path: 'projetos/:slug', element: <Projeto /> },
     { path: 'privacidade', element: <Legal slug="privacidade" /> },
     { path: 'termos', element: <Legal slug="termos" /> },

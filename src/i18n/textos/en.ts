@@ -168,6 +168,11 @@ export const en: Dicionario = {
     subtitulo: 'Open Dblocks in another tab and follow the guide side by side. Nothing to install.',
     primeirosPassos: 'See first steps',
   },
+  emConstrucao: {
+    titulo: 'Page under construction',
+    tituloAba: 'Ready-made examples — Coming soon',
+    texto: 'We are preparing the ready-made examples. This page will be available soon.',
+  },
   naoEncontrada: {
     titulo: 'This page does not exist',
     tituloAba: 'Page not found',

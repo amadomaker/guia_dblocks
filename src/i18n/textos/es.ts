@@ -168,6 +168,11 @@ export const es: Dicionario = {
     subtitulo: 'Abre Dblocks en otra pestaña y sigue la guía al lado. No hace falta instalar nada.',
     primeirosPassos: 'Ver primeros pasos',
   },
+  emConstrucao: {
+    titulo: 'Página en construcción',
+    tituloAba: 'Ejemplos listos — Próximamente',
+    texto: 'Estamos preparando los ejemplos listos. Esta página estará disponible pronto.',
+  },
   naoEncontrada: {
     titulo: 'Esta página no existe',
     tituloAba: 'Página no encontrada',

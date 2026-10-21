@@ -14,8 +14,7 @@ export const links = {
   // Link do Figma sem URL; usando a página oficial de drivers da Silicon Labs.
   driverCp210x: 'https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers',
   instaladorMicropython: 'https://amadomaker.github.io/Instalador_Micropython/',
-  // TODO: link para os exemplos prontos dentro do editor.
-  exemplos: 'https://dblocks.com.br',
+  exemplos: '/exemplos',
   pdfGuiaAmadoBoard: `${pdfBase}/guia-completo-amadoboard.pdf`,
   pdfDblocksNaPratica: `${pdfBase}/dblocks-na-pratica.pdf`,
 } as const;
