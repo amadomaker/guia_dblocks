@@ -42,7 +42,11 @@ jobs:
 
       - name: Build da Imagem Docker
         run: |
-          docker build -t us-central1-docker.pkg.dev/${{ vars.GCP_PROD_PROJECT }}/guia-prod/${{ env.SERVICE_NAME }}:${{ github.sha }} .
+          docker build \
+            --build-arg VITE_PDF_BASE_URL=https://storage.googleapis.com/guia-dblocks-materiais \
+            --build-arg VITE_FEEDBACK_URL=${{ vars.GUIA_FEEDBACK_URL }} \
+            --build-arg VITE_JOSE_PUBLICADO=${{ vars.GUIA_JOSE_PUBLICADO }} \
+            -t us-central1-docker.pkg.dev/${{ vars.GCP_PROD_PROJECT }}/guia-prod/${{ env.SERVICE_NAME }}:${{ github.sha }} .
 
       - name: Deploy da Imagem Docker
         run: |

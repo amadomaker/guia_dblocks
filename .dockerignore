@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.github
+.vscode
+.figma-cache
+infra
+materiais
+scripts
+Dockerfile
+.dockerignore
+*.md
+*.log

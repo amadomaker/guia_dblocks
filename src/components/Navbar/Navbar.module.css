@@ -1,0 +1,266 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--neutro-branco);
+  box-shadow: var(--sombra-nav);
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: var(--nav-altura);
+  padding-block: 12px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 174.245px;
+  height: 56.128px;
+}
+
+.seloGuia {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--marca-laranja-claro);
+  color: var(--marca-laranja);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.link {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--neutro-quase-preto);
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--marca-laranja);
+}
+
+.link[aria-current='page']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--marca-laranja);
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.idioma {
+  position: relative;
+}
+
+.idiomaBotao {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px 8px 12px;
+  border: 1px solid var(--borda-suave);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--neutro-quase-preto);
+  transition: border-color 0.15s ease;
+}
+
+.idiomaBotao svg {
+  color: var(--neutro-texto-secundario);
+}
+
+.idiomaBotao:hover {
+  border-color: var(--neutro-cinza-400);
+}
+
+.chevronAberto {
+  transform: rotate(180deg);
+}
+
+.idiomaLista {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 168px;
+  padding: 6px;
+  list-style: none;
+  background: var(--neutro-branco);
+  border: 1px solid var(--borda-suave);
+  border-radius: 12px;
+  box-shadow: var(--sombra-busca);
+}
+
+.idiomaOpcao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  color: var(--neutro-quase-preto);
+}
+
+.idiomaOpcao:hover,
+.idiomaOpcao[aria-selected='true'] {
+  background: var(--fundo-sutil);
+}
+
+.idiomaOpcao:disabled {
+  cursor: default;
+  color: var(--neutro-cinza-500);
+  background: none;
+}
+
+.emBreve {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--fundo-sutil);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--neutro-cinza-500);
+}
+
+.idiomaCodigo {
+  width: 22px;
+  font-weight: 800;
+  color: var(--neutro-texto-secundario);
+}
+
+.abrir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 1px solid var(--marca-laranja);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--marca-laranja);
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.abrir:hover {
+  background: var(--marca-laranja);
+  color: var(--neutro-branco);
+}
+
+.menuBotao {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid var(--borda-suave);
+  border-radius: 8px;
+}
+
+.menuBotao span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--neutro-quase-preto);
+}
+
+@media (max-width: 1180px) {
+  .menuBotao {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px var(--gutter) 16px;
+    background: var(--neutro-branco);
+    box-shadow: 0 8px 16px -8px rgba(15, 26, 46, 0.18);
+  }
+
+  .linksAbertos {
+    display: flex;
+  }
+
+  .link {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--fundo-trilho);
+  }
+
+  .link[aria-current='page'] {
+    color: var(--marca-laranja);
+  }
+
+  .link[aria-current='page']::after {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .barra {
+    gap: 12px;
+  }
+
+  .marca {
+    gap: 8px;
+  }
+
+  .acoes {
+    gap: 8px;
+  }
+
+  .logo {
+    width: 112px;
+    height: auto;
+  }
+
+  .seloGuia {
+    padding: 4px 10px;
+    font-size: 13px;
+  }
+
+  .abrir {
+    display: none;
+  }
+}

@@ -3,10 +3,10 @@ name: Provisionar Infra (Terraform)
 on:
   pull_request:
     branches: [main]
-    paths: ["infra/**"]
+    paths: ["infra/**", "materiais/**"]
   push:
     branches: [main]
-    paths: ["infra/**"]
+    paths: ["infra/**", "materiais/**"]
 
 jobs:
   plan:
