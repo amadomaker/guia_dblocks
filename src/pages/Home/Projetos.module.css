@@ -1,0 +1,267 @@
+.secao {
+  padding: 112px 0;
+  background: var(--fundo-escuro);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.textoCabecalho {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.titulo {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: -0.44px;
+  color: var(--neutro-branco);
+}
+
+.subtitulo {
+  width: 760px;
+  max-width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--neutro-cinza-400);
+}
+
+.verTodos {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--neutro-branco);
+  white-space: nowrap;
+}
+
+.verTodos svg,
+.verProjeto svg {
+  transition: transform 0.2s ease;
+}
+
+.verTodos:hover svg,
+.destaque:hover .verProjeto svg {
+  transform: translateX(3px);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: 664fr 672fr;
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.destaque,
+.projeto {
+  background: var(--fundo-escuro-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.destaque:hover,
+.projeto:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.destaque {
+  display: flex;
+  flex-direction: column;
+}
+
+.imagem {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: var(--fundo-escuro);
+}
+
+/* O export do Figma já inclui a sombra e o recorte do container. */
+.imagem img {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  width: 580px;
+  height: 274px;
+  max-width: none;
+  transform: translateX(-50%);
+}
+
+.seloDestaque {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--marca-laranja);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--neutro-branco);
+}
+
+.textoDestaque {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px 36px 32px;
+}
+
+.tituloDestaque {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.15px;
+  color: var(--neutro-branco);
+}
+
+.resumoDestaque {
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--neutro-cinza-400);
+}
+
+.rodapeDestaque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.verProjeto {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--marca-laranja);
+}
+
+.outros {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.projeto {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 26px 28px;
+}
+
+.iconeProjeto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  color: var(--neutro-branco);
+}
+
+.textoProjeto {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.topoProjeto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tituloProjeto {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--neutro-branco);
+}
+
+.resumoProjeto {
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--neutro-cinza-400);
+}
+
+@media (max-width: 1180px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .secao {
+    padding-block: 72px;
+  }
+
+  .titulo {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .subtitulo {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .imagem {
+    height: auto;
+    aspect-ratio: 662 / 300;
+  }
+
+  .imagem img {
+    top: 8.67%;
+    width: 87.6%;
+    height: auto;
+  }
+
+  .textoDestaque {
+    padding: 24px;
+  }
+
+  .projeto {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .topoProjeto {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .rodapeDestaque {
+    flex-wrap: wrap;
+  }
+}

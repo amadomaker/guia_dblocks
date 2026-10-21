@@ -1,0 +1,298 @@
+.carregando {
+  min-height: 100vh;
+}
+
+/* Faixa de título */
+.faixa {
+  padding: 88px 0 72px;
+  background: var(--fundo-pagina);
+}
+
+.faixa :global(.container) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.trilha {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--neutro-cinza-500);
+  white-space: pre;
+}
+
+.trilha a:hover {
+  color: var(--neutro-quase-preto);
+}
+
+.titulo {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 60px;
+  color: var(--neutro-quase-preto);
+}
+
+.descricao {
+  width: 760px;
+  max-width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--neutro-texto-secundario);
+}
+
+.atualizacao {
+  padding: 6px 14px 6px 12px;
+  border: 1px solid var(--borda-suave);
+  border-radius: 999px;
+  background: var(--neutro-branco);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--neutro-texto-secundario);
+}
+
+/* Corpo: sumário fixo + conteúdo */
+.fundoCorpo {
+  background: var(--neutro-branco);
+}
+
+.corpo {
+  display: grid;
+  grid-template-columns: 316px minmax(0, 896px);
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.sumario {
+  position: sticky;
+  top: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--fundo-sutil);
+}
+
+.sumarioTitulo {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--marca-laranja);
+}
+
+.sumarioItens {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sumarioItem,
+.sumarioAtivo {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: normal;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sumarioItem {
+  font-weight: 600;
+  color: var(--neutro-texto-secundario);
+}
+
+.sumarioItem:hover {
+  color: var(--neutro-quase-preto);
+}
+
+.sumarioAtivo {
+  background: var(--marca-laranja-claro);
+  font-weight: 700;
+  color: var(--marca-laranja);
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  min-width: 0;
+}
+
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  scroll-margin-top: 104px;
+}
+
+.secaoTitulo {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  color: var(--neutro-quase-preto);
+}
+
+.paragrafo,
+.lista li,
+.aviso {
+  font-size: 17px;
+  line-height: 27px;
+  color: var(--neutro-texto-secundario);
+}
+
+.paragrafo strong,
+.lista strong,
+.aviso strong,
+.tabela strong {
+  font-weight: 700;
+  color: var(--neutro-quase-preto);
+}
+
+/* O destaque de pendência vence a cor do negrito. */
+.conteudo strong[class] {
+  color: var(--aviso-texto);
+}
+
+.paragrafo a {
+  color: var(--marca-azul);
+  text-decoration: underline;
+}
+
+.forte {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--neutro-quase-preto);
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+/* Bolinha laranja de 6px alinhada à base da primeira linha (caixa 6 × 17 no Figma). */
+.lista li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.lista li::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--marca-laranja);
+}
+
+.tabela {
+  overflow: hidden;
+  border: 1px solid var(--borda-suave);
+  border-radius: 14px;
+}
+
+.tabelaCabecalho,
+.tabelaLinha {
+  display: grid;
+}
+
+.tabelaCabecalho span,
+.tabelaLinha span {
+  min-width: 0;
+  padding: 14px 18px;
+}
+
+.tabelaCabecalho {
+  background: var(--fundo-sutil);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 18px;
+  color: var(--neutro-quase-preto);
+}
+
+.tabelaLinha {
+  border-top: 1px solid var(--borda-suave);
+  background: var(--neutro-branco);
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--neutro-texto-secundario);
+}
+
+.tabelaLinha span:first-child {
+  font-weight: 600;
+  color: var(--neutro-quase-preto);
+}
+
+.aviso {
+  padding: 20px 24px;
+  border: 1px solid var(--aviso-borda);
+  border-radius: 14px;
+  background: var(--aviso-fundo);
+  color: var(--aviso-texto);
+}
+
+@media (max-width: 1180px) {
+  .corpo {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .sumario {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .faixa {
+    padding: 48px 0 40px;
+  }
+
+  .titulo {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .descricao {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .corpo {
+    padding-top: 40px;
+    padding-bottom: 72px;
+  }
+
+  .secaoTitulo {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* Tabela vira lista de cartões: cada linha empilha as células. */
+  .tabelaCabecalho {
+    display: none;
+  }
+
+  .tabelaLinha {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tabelaLinha span {
+    padding: 4px 18px;
+  }
+
+  .tabelaLinha span:first-child {
+    padding-top: 14px;
+  }
+
+  .tabelaLinha span:last-child {
+    padding-bottom: 14px;
+  }
+}

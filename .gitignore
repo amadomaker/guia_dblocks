@@ -11,3 +11,14 @@ override.tf.json
 .terraformrc
 terraform.rc
 *.tfvars
+
+# Node / Vite
+node_modules/
+dist/
+*.local
+
+# Exports crus do Figma (as versões otimizadas ficam em src/assets)
+.figma-cache/
+
+# Configuração local do Codex
+.codex/

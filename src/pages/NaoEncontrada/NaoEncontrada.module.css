@@ -1,0 +1,41 @@
+.secao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 120px var(--gutter);
+  text-align: center;
+}
+
+.codigo {
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -4.8px;
+  color: color-mix(in srgb, var(--marca-laranja) 24%, transparent);
+}
+
+.titulo {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: var(--neutro-quase-preto);
+}
+
+.texto {
+  max-width: 520px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--neutro-texto-secundario);
+}
+
+.botao {
+  margin-top: 8px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  background: var(--marca-laranja);
+  box-shadow: var(--sombra-botao);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--neutro-branco);
+}

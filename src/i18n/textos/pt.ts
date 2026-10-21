@@ -1,0 +1,331 @@
+// Textos em português (fonte: Figma). en.ts e es.ts seguem exatamente este formato.
+export const pt = {
+  meta: {
+    tituloSite: 'Guia Dblocks',
+    tituloInicial: 'Guia Dblocks · Aprenda a criar com o Dblocks',
+    descricao:
+      'Guias passo a passo sobre o Dblocks, a AmadoBoard e cada recurso do editor. Feito para alunos, professores e qualquer pessoa curiosa.',
+  },
+  comum: {
+    abrirDblocks: 'Abrir o Dblocks',
+    paginaInicial: 'Guia Dblocks, página inicial',
+    pularParaConteudo: 'Pular para o conteúdo',
+    capitulo: 'Capítulo',
+    capituloMaiusculo: 'CAPÍTULO',
+    trilhaMaiusculo: 'TRILHA',
+    min: 'min',
+    niveis: { Iniciante: 'Iniciante', Intermediário: 'Intermediário', Avançado: 'Avançado' },
+    selos: { Novo: 'Novo', Atualizado: 'Atualizado' },
+    usaOsCapitulos: 'Usa os capítulos',
+    capAbreviado: 'cap.',
+  },
+  nav: {
+    selo: 'Guia',
+    principal: 'Principal',
+    inicio: 'Início',
+    primeirosPassos: 'Primeiros passos',
+    trilhas: 'Trilhas',
+    projetos: 'Projetos',
+    jose: 'IA José',
+    materiais: 'Materiais',
+    idioma: 'Idioma',
+    abrirMenu: 'Abrir menu',
+    fecharMenu: 'Fechar menu',
+    emBreve: 'em breve',
+  },
+  rodape: {
+    descricao: 'Programação em blocos, simulador e inteligência artificial para a educação maker. Direto no navegador.',
+    /** Usada enquanto o José (IA) está oculto (src/config/recursos.ts). */
+    descricaoSemJose: 'Programação em blocos e simulador para a educação maker. Direto no navegador.',
+    umaPlataforma: 'Uma plataforma',
+    colunas: {
+      guia: 'Guia',
+      escolas: 'Para escolas',
+      plataforma: 'Plataforma',
+    },
+    links: {
+      primeirosPassos: 'Primeiros passos',
+      trilhas: 'Trilhas',
+      projetos: 'Projetos',
+      materiais: 'Materiais de apoio',
+      digitalmenteMaker: 'Digitalmente Maker',
+      salaMaker: 'Sala Maker',
+      demonstracao: 'Solicitar demonstração',
+      experimentar: 'Experimentar o Dblocks',
+      simulador: 'Simulador',
+      site: 'Site do Dblocks',
+    },
+    direitos: '© 2026 Amado Maker. Todos os direitos reservados.',
+    bipesAntes: 'Software livre baseado no ',
+    bipesDepois: ' (GPLv3)',
+    privacidade: 'Política de privacidade',
+    termos: 'Termos de uso',
+  },
+  hero: {
+    titulo1: 'Aprenda a criar com o Dblocks,',
+    titulo2: 'um bloco de cada vez.',
+    subtitulo1: 'Guias passo a passo sobre a plataforma, a AmadoBoard e cada recurso do editor.',
+    subtitulo2: 'Feito para alunos, professores e qualquer pessoa curiosa.',
+    blocos: [
+      'repetir 10 vezes',
+      'ligar LED  pino 2',
+      'temperatura',
+      'detectar mão',
+      'se  então',
+      'tocar nota  Dó',
+      'conectar Wi‑Fi',
+      'girar servo 90°',
+    ],
+    maisProcurados: 'Mais procurados:',
+    chips: ['Conectar a placa', 'Servo motor', 'Sensor DHT11', 'Simulador', 'Wi‑Fi', 'Display OLED'],
+    numeros: ['capítulos', 'trilhas', 'capítulos novos', 'no navegador'],
+  },
+  busca: {
+    rotulo: 'Buscar no guia',
+    placeholder: 'Busque por capítulo, bloco ou componente… ex.: servo, LED...',
+    botao: 'Buscar',
+    vazio: (termo: string) => `Nada encontrado para “${termo}”. Tente outro termo, como “LED” ou “sensor”.`,
+    projeto: 'Projeto',
+  },
+  trilhasSecao: {
+    titulo: 'Escolha por onde começar',
+    subtitulo:
+      'Nunca usou o Dblocks? Comece pela Trilha 1. Já conhece a plataforma? Vá direto ao assunto que precisa. A cor de cada capítulo é a mesma da categoria de blocos que ele ensina.',
+    todas: 'Todas',
+    filtrar: 'Filtrar trilhas',
+    capitulos: 'capítulos',
+    verTrilha: 'Ver trilha completa',
+  },
+  projetosSecao: {
+    titulo: 'Junte os capítulos em projetos de verdade',
+    subtitulo:
+      'Projetos passo a passo com os componentes do kit. Cada projeto mostra quais capítulos você vai usar, então dá para aprender o que faltar no caminho.',
+    verTodos: 'Ver todos os projetos',
+    altDestaque:
+      'Simulador do Dblocks com o circuito da janela automática: AmadoBoard, servo e sensor DHT11, e os blocos do programa',
+    seloDestaque: 'Projeto em destaque',
+    verProjeto: 'Ver o projeto',
+  },
+  joseSecao: {
+    alt: 'José, o robô de IA do Dblocks, com tela azul e olhos sorridentes',
+    balao1: 'Oi! Quer montar meu sorriso',
+    balao2: 'com os blocos de Aparência?',
+    tituloAntes: 'Conheça o ',
+    tituloDepois1: ', a IA que',
+    tituloDepois2: 'a turma monta por blocos',
+    aviso: 'Disponível para escolas das redes parceiras do Digitalmente Maker',
+    ler: 'Ler o capítulo do José',
+    escola: 'Minha escola quer o José',
+  },
+  paginaProjetos: {
+    tituloAba: 'Projetos na prática',
+    titulo: 'Projetos na prática',
+    subtitulo:
+      'Projetos passo a passo com os componentes do kit. Cada projeto mostra quais capítulos você vai usar, então dá para aprender o que faltar no caminho.',
+    passos: [
+      {
+        titulo: 'Escolha um projeto',
+        texto: 'Comece pelo nível que combina com você: iniciante, intermediário ou avançado.',
+      },
+      { titulo: 'Veja os capítulos que ele usa', texto: 'Cada projeto lista os capítulos do guia e o que você usa de cada um.' },
+      { titulo: 'Aprenda o que faltar e monte', texto: 'Não sabe uma parte? Abra o capítulo, aprenda e volte para o projeto.' },
+    ],
+    maisTitulo: 'Mais projetos para a turma',
+    maisSubtitulo:
+      'O PDF Dblocks na prática tem mais 15 projetos básicos e de música, um por página, prontos para imprimir.',
+  },
+  materiaisSecao: {
+    titulo: 'Para levar para a sala de aula',
+    subtitulo: 'Documentos completos, ferramentas e exemplos que complementam os capítulos.',
+    pdf: '(PDF)',
+    itens: {
+      guiaAmadoBoard: {
+        titulo: 'Guia completo da AmadoBoard',
+        resumo: 'Todos os componentes, pinos e especificações da placa em um só documento.',
+        tipo: 'PDF · nova edição',
+        acao: 'Baixar',
+      },
+      naPratica: {
+        titulo: 'Dblocks na prática',
+        resumo: 'Projetos reais, passo a passo, para aplicar com a turma.',
+        tipo: 'PDF · nova edição',
+        acao: 'Baixar',
+      },
+      instalador: {
+        titulo: 'Instalador do MicroPython',
+        resumo: 'Grave o MicroPython na sua placa direto pelo navegador, sem instalar nada.',
+        tipo: 'Ferramenta online',
+        acao: 'Abrir',
+      },
+      exemplos: {
+        titulo: 'Exemplos prontos',
+        resumo: 'Programas de exemplo para abrir no editor, rodar e adaptar.',
+        tipo: 'No editor',
+        acao: 'Ver exemplos',
+      },
+    },
+  },
+  chamadaFinal: {
+    titulo: 'Pronto para colocar a mão na massa?',
+    subtitulo: 'Abra o Dblocks em outra aba e siga o guia lado a lado. Não precisa instalar nada.',
+    primeirosPassos: 'Ver primeiros passos',
+  },
+  naoEncontrada: {
+    titulo: 'Esta página não existe',
+    tituloAba: 'Página não encontrada',
+    texto: 'O endereço pode ter mudado com o novo Guia. Volte para o início e escolha uma trilha.',
+    voltar: 'Voltar para o início',
+  },
+  doc: {
+    todasAsTrilhas: 'Todas as trilhas',
+    navegacaoTrilha: 'Navegação da trilha',
+    progresso: 'Progresso na trilha',
+    deCapitulos: (atual: number, total: number) => `${atual} de ${total} ${total === 1 ? 'capítulo' : 'capítulos'}`,
+    totalCapitulos: (total: number) => `${total} ${total === 1 ? 'capítulo' : 'capítulos'}`,
+    outrasTrilhas: 'OUTRAS TRILHAS',
+    nestaPagina: 'NESTA PÁGINA',
+    sigaOGuia: 'Siga o guia com o Dblocks aberto em outra aba.',
+    voceEstaEm: 'Você está em',
+    minDeLeitura: (min: number) => `${min} min de leitura`,
+    atualizadoEm: (data: string) => `Atualizado em ${data}`,
+    carregando: 'Carregando capítulo',
+    emBreve: 'Este capítulo está sendo escrito',
+    capituloEspecial: 'CAPÍTULO ESPECIAL',
+  },
+  conteudo: {
+    noConsole: 'No Console:',
+    naTelinha: 'Na telinha:',
+    abrir: 'Abrir',
+    aprendaMaisNo: 'Aprenda mais no',
+  },
+  projeto: {
+    rotulo: 'PROJETO',
+    grupo: 'PROJETOS',
+    deProjetos: (atual: number, total: number) => `${atual} de ${total} ${total === 1 ? 'projeto' : 'projetos'}`,
+    minDeProjeto: (min: number) => `${min} min de projeto`,
+    ajudou: 'Este projeto ajudou?',
+    todos: 'Todos os projetos',
+    voltar: 'Voltar',
+    anterior: 'Projeto anterior',
+    proximo: 'Próximo projeto',
+    fim: 'Fim dos projetos',
+    carregando: 'Carregando projeto',
+  },
+  legal: {
+    atualizadoEm: (data: string) => `Última atualização: ${data}`,
+    carregando: 'Carregando documento',
+  },
+  fim: {
+    motivoPergunta: 'Que pena! O que faltou ou não ficou claro? (opcional)',
+    motivoExemplo: 'Ex.: não entendi como ligar o sensor; faltou um exemplo com o LED…',
+    motivoAviso: 'Não escreva dados pessoais, como nome, e-mail ou telefone.',
+    pular: 'Pular',
+    enviar: 'Enviar',
+    ajudou: 'Este capítulo ajudou?',
+    sim: 'Sim',
+    nao: 'Não',
+    obrigadoSim: 'Que bom! Obrigado pela resposta.',
+    obrigadoNao: 'Obrigado! Vamos usar sua resposta para melhorar o Guia.',
+    anteriorEProximo: 'Anterior e próximo',
+    voltarPara: 'Voltar para',
+    anterior: (n: string) => `Anterior · Capítulo ${n}`,
+    proximo: (n: string) => `Próximo · Capítulo ${n}`,
+    trilhaAnterior: (n: string) => `Trilha anterior · Capítulo ${n}`,
+    proximaTrilha: (n: string) => `Próxima trilha · Capítulo ${n}`,
+    fimDoGuia: 'Fim do guia',
+    voltarAoInicio: 'Voltar ao início',
+  },
+
+  // Catálogo
+  trilhas: {
+    'primeiros-passos': {
+      titulo: 'Primeiros passos',
+      resumo: 'Da conta criada ao primeiro programa rodando na placa, passando por cada parte da interface.',
+      duracao: 'cerca de 34 min',
+    },
+    'programacao-em-blocos': {
+      titulo: 'Programação em blocos',
+      resumo: 'Os fundamentos da lógica de programação, com os blocos que você usa em todo projeto.',
+      duracao: 'cerca de 50 min',
+    },
+    'amadoboard-e-eletronica': {
+      titulo: 'AmadoBoard e eletrônica',
+      resumo: 'Pinos, sensores, motores, som e telas: faça a placa interagir com o mundo real.',
+      duracao: 'cerca de 1h30',
+    },
+    'ferramentas-da-plataforma': {
+      titulo: 'Ferramentas da plataforma',
+      resumo: 'Tudo o que existe além da área de blocos: simulador, console, arquivos, projetos e visão.',
+      duracao: 'cerca de 45 min',
+    },
+    'conectividade-e-iot': {
+      titulo: 'Conectividade e IoT',
+      resumo: 'Tire a placa do cabo: Bluetooth, Wi‑Fi, servidores web e painéis de dados na nuvem.',
+      duracao: 'cerca de 45 min',
+    },
+  },
+  capitulos: {
+    'o-que-e-o-dblocks': { titulo: 'O que é o Dblocks', resumo: 'Conheça a plataforma, o que dá para criar e como os blocos viram código de verdade.' },
+    'sua-conta-e-seu-perfil': { titulo: 'Sua conta e seu perfil', resumo: 'Entre com o Google, escolha o idioma e veja para que serve o botão Limpar cache.' },
+    'conhecendo-a-interface': { titulo: 'Conhecendo a interface', resumo: 'Barra de abas, caixa de blocos, área de trabalho e os botões de executar e gravar na placa.' },
+    'conectando-a-placa': { titulo: 'Conectando a placa', resumo: 'Instale o MicroPython, conecte por USB, Bluetooth ou Wi‑Fi e saiba o que fazer se a conexão falhar.' },
+    'seu-primeiro-programa': { titulo: 'Seu primeiro programa', resumo: 'Faça um LED piscar, bloco a bloco, e grave o programa na AmadoBoard.' },
+    'variaveis-e-valores': { titulo: 'Variáveis e valores', resumo: 'Guarde números, textos e listas e mostre valores no console.' },
+    'lacos-e-tempo': { titulo: 'Laços e tempo', resumo: 'Repita ações, controle pausas e contagens, e saia de um laço quando precisar.' },
+    'matematica-e-logica': { titulo: 'Matemática e lógica', resumo: 'Aprenda a usar operadores matemáticos e lógicos para tomar decisões com se / senão.' },
+    'funcoes-e-texto': { titulo: 'Funções e texto', resumo: 'Crie seus próprios blocos reutilizáveis e trabalhe com textos.' },
+    'do-bloco-ao-python': { titulo: 'Do bloco ao Python', resumo: 'Veja o MicroPython gerado pelos seus blocos e aprenda lendo o código.' },
+    'conhecendo-a-amadoboard': { titulo: 'Conhecendo a AmadoBoard', resumo: 'Explore a AmadoBoard em 3D: veja pinos, componentes e faça um tour guiado pela placa.' },
+    'entradas-e-saidas-digitais': { titulo: 'Entradas e saídas digitais', resumo: 'Aprenda a ler botões e controlar LEDs entendendo os estados digitais ligado e desligado.' },
+    'entradas-e-saidas-analogicas': { titulo: 'Entradas e saídas analógicas', resumo: 'Aprenda a ler sensores analógicos como o LDR e o potenciômetro, e controle o brilho de um LED com PWM.' },
+    sensores: { titulo: 'Sensores', resumo: 'Aprenda a usar sensores de temperatura, umidade, distância, infravermelho e RFID na prática.' },
+    'atuadores-e-motores': { titulo: 'Atuadores e motores', resumo: 'Controle relé, servo e motor DC e faça a placa mover coisas de verdade.' },
+    'musica-com-o-buzzer': { titulo: 'Música com o buzzer', resumo: 'Toque notas, monte melodias e controle o ritmo das músicas.' },
+    displays: { titulo: 'Displays', resumo: 'Mostre textos, variáveis e leituras de sensores no display OLED.' },
+    'simulador-de-circuitos': { titulo: 'Simulador de circuitos', resumo: 'Monte circuitos e teste seus programas sem ter a placa na mão.' },
+    'console-e-arquivos': { titulo: 'Console e arquivos', resumo: 'Use o terminal da placa e gerencie os arquivos gravados nela.' },
+    'projetos-salvar-e-compartilhar': { titulo: 'Projetos: salvar e compartilhar', resumo: 'Crie vários projetos, salve no navegador, exporte e compartilhe.' },
+    'visao-computacional': { titulo: 'Visão computacional', resumo: 'Controle a placa com visão computacional: reconheça gestos, poses e cores pela câmera do computador.' },
+    bluetooth: { titulo: 'Bluetooth', resumo: 'Converse com o celular, envie comandos e plote dados sem fio.' },
+    'wi-fi-e-internet': { titulo: 'Wi‑Fi e internet', resumo: 'Conecte a placa à rede, crie um servidor web e faça requisições.' },
+    'iot-e-paineis-de-dados': { titulo: 'IoT e painéis de dados', resumo: 'Publique dados com o EasyMQTT e acompanhe tudo em gráficos ao vivo.' },
+    'conhecendo-o-jose': {
+      tituloCurto: 'José',
+      titulo: 'Conhecendo o José',
+      resumo:
+        'Aprenda a montar a aparência e o comportamento do José, conversar com ele pela aba IA e entender, na prática, como uma inteligência artificial funciona por dentro.',
+    },
+  },
+  projetos: {
+    semaforo: { titulo: 'Semáforo', tituloCurto: 'Semáforo com os LEDs da placa', resumo: 'Acenda os 3 LEDs da AmadoBoard na ordem certa e controle o tempo de cada cor.' },
+    'alarme-de-distancia': { titulo: 'Alarme de distância', tituloCurto: 'Alarme de distância', resumo: 'Use o sensor ultrassônico para medir a distância e tocar o buzzer quando algo chegar perto.' },
+    'janela-automatica': {
+      titulo: 'Janela automática',
+      tituloCurto: 'Janela automática',
+      resumo:
+        'Leia a temperatura com o sensor DHT11. Quando passar de 30 °C, o servo gira para abrir a janela e o LED vermelho acende. Monte primeiro no simulador e depois na placa.',
+    },
+    'carrinho-seguidor-de-linha': { titulo: 'Carrinho seguidor de linha', tituloCurto: 'Carrinho seguidor de linha', resumo: 'Junte o sensor TCRT5000 e os dois motores DC para o carrinho seguir uma linha no chão.' },
+  },
+  /** Rótulos curtos dos chips "Usa os capítulos", por número do capítulo. */
+  chipsCapitulos: {
+    7: 'Laços e tempo',
+    8: 'Lógica',
+    12: 'Digitais',
+    14: 'Sensores',
+    15: 'Motores',
+    16: 'Música',
+    18: 'Simulador',
+  } as Record<number, string>,
+};
+
+type Ampliar<T> = T extends (...a: infer A) => infer R
+  ? (...a: A) => R
+  : T extends string
+    ? string
+    : T extends readonly string[]
+      ? string[]
+      : { [K in keyof T]: Ampliar<T[K]> };
+
+/** Formato que en.ts e es.ts precisam seguir (mesmas chaves, qualquer texto). */
+export type Dicionario = Ampliar<typeof pt>;

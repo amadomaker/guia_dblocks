@@ -1,0 +1,147 @@
+.trilhaNavegacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 24px;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.trilhaNavegacao a {
+  font-weight: 600;
+  color: var(--neutro-texto-secundario);
+}
+
+.trilhaNavegacao a:hover {
+  color: var(--marca-laranja);
+}
+
+.trilhaNavegacao span[aria-hidden] {
+  color: var(--neutro-cinza-500);
+}
+
+.atual {
+  font-weight: 700;
+  color: var(--neutro-quase-preto);
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 32px;
+}
+
+.etiquetas {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.etiquetaCapitulo,
+.seloNovo,
+.seloAtualizado {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.etiquetaCapitulo {
+  background: var(--marca-laranja-claro);
+  color: var(--marca-laranja);
+  letter-spacing: 0.72px;
+}
+
+.seloNovo {
+  background: var(--marca-laranja);
+  color: var(--neutro-branco);
+}
+
+.seloAtualizado {
+  background: var(--info-fundo);
+  color: var(--marca-azul);
+}
+
+.titulo {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: -0.72px;
+  color: var(--neutro-quase-preto);
+}
+
+.descricao {
+  font-size: 21px;
+  line-height: 32px;
+  color: var(--neutro-texto-secundario);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  padding-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--neutro-texto-secundario);
+}
+
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta svg {
+  color: var(--neutro-cinza-500);
+}
+
+.carregando {
+  height: 428px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--fundo-sutil), var(--fundo-pagina), var(--fundo-sutil));
+  background-size: 200% 100%;
+  animation: brilho 1.2s ease-in-out infinite;
+}
+
+@keyframes brilho {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.emBreve {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  border: 1px dashed var(--borda-suave);
+  border-radius: 14px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--neutro-texto-secundario);
+}
+
+.emBreveTitulo {
+  font-weight: 700;
+  color: var(--neutro-quase-preto);
+}
+
+@media (max-width: 640px) {
+  .titulo {
+    font-size: 34px;
+    line-height: 42px;
+    letter-spacing: -0.5px;
+  }
+
+  .descricao {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

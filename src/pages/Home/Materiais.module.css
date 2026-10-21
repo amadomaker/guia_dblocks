@@ -1,0 +1,147 @@
+.secao {
+  padding: 112px 0;
+  background: var(--fundo-pagina);
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: -0.44px;
+  color: var(--neutro-quase-preto);
+}
+
+.subtitulo {
+  width: 620px;
+  max-width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--neutro-texto-secundario);
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(4, 322px);
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 295px;
+  padding: 28px 28px 24px;
+  background: var(--neutro-branco);
+  border: 1px solid var(--borda-suave);
+  border-radius: 20px;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.tipo {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eef1f5;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--neutro-texto-secundario);
+  white-space: nowrap;
+}
+
+.nome {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--neutro-quase-preto);
+}
+
+.resumo {
+  flex: 1;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--neutro-texto-secundario);
+}
+
+.acao {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding-top: 6px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--marca-laranja);
+}
+
+.acao:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Notebooks e Windows com escala 125%: os 4 cards encolhem em vez de quebrar em 3 + 1. */
+@media (max-width: 1400px) {
+  .lista {
+    grid-template-columns: repeat(4, minmax(0, 322px));
+  }
+
+  .card {
+    height: auto;
+    min-height: 295px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .lista {
+    grid-template-columns: repeat(2, minmax(0, 322px));
+  }
+}
+
+@media (max-width: 640px) {
+  .secao {
+    padding-block: 72px;
+  }
+
+  .titulo {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .subtitulo {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .lista {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: auto;
+  }
+}

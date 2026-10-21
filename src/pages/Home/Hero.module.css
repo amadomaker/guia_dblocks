@@ -1,0 +1,186 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  min-height: 800px;
+  padding: 112px var(--gutter) 120px;
+  overflow: hidden;
+  background: var(--fundo-pagina) url('../../assets/home/hero-bg.png') center / cover no-repeat;
+  text-align: center;
+}
+
+.titulo {
+  position: relative;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 76px;
+  letter-spacing: -0.96px;
+  color: var(--neutro-quase-preto);
+}
+
+.titulo span {
+  color: var(--marca-laranja);
+}
+
+.subtitulo {
+  position: relative;
+  font-size: 22px;
+  line-height: 34px;
+  color: var(--neutro-texto-secundario);
+}
+
+.busca {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  padding-top: 12px;
+}
+
+.maisProcurados {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.rotuloProcurados {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--neutro-texto-secundario);
+}
+
+.chip {
+  padding: 7px 14px;
+  border: 1px solid var(--borda-suave);
+  border-radius: 999px;
+  background: var(--neutro-branco);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--neutro-quase-preto);
+  white-space: nowrap;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--marca-laranja);
+  color: var(--marca-laranja);
+}
+
+.numeros {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 40px;
+  padding-top: 20px;
+  list-style: none;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.numeros li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.numeros strong {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--neutro-quase-preto);
+}
+
+.numeros span {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--neutro-texto-secundario);
+}
+
+/* Blocos flutuantes */
+.blocos {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bloco {
+  position: absolute;
+  top: var(--cy);
+  left: calc(50% + var(--fx) * 100%);
+  width: var(--w);
+  padding: 12px 20px 12px 18px;
+  border-radius: 8px;
+  background: var(--cor);
+  box-shadow: 0 16px 30px -8px rgba(26, 38, 64, 0.12), 0 4px 0 0 rgba(0, 0, 0, 0.14);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--neutro-branco);
+  white-space: pre;
+  opacity: 0.95;
+  /* O centro da caixa de 51px do Figma fica 3px acima do centro do corpo (o dente ocupa o topo). */
+  transform: translate(-50%, -50%) rotate(var(--rot)) translateY(3px) scale(var(--escala, 1));
+}
+
+/* Encaixe do bloco (o "dente" em cima) */
+.bloco::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 16px;
+  width: 22px;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--cor);
+}
+
+/* Notebooks e Windows com escala 125% (1280–1536px): blocos um pouco menores para não encostar no texto. */
+@media (max-width: 1600px) {
+  .bloco {
+    --escala: 0.85;
+  }
+}
+
+/* Abaixo disso os blocos encostam na busca e nos chips. */
+@media (max-width: 1400px) {
+  .blocos {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 0;
+    padding-block: 72px 80px;
+    gap: 20px;
+  }
+
+  .titulo {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.6px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .subtitulo br,
+  .titulo br {
+    display: none;
+  }
+
+  .titulo span {
+    display: block;
+  }
+}

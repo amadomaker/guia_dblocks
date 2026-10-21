@@ -1,129 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dblocks na prática</title>
-    <link href="assets/css/global.css" rel="stylesheet" />
-    <link href="assets/css/main.css" rel="stylesheet" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Google Material Icons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Guias passo a passo sobre o Dblocks, a AmadoBoard e cada recurso do editor. Feito para alunos, professores e qualquer pessoa curiosa." />
+    <meta name="theme-color" content="#fa7324" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Guia Dblocks · Aprenda a criar com o Dblocks</title>
   </head>
   <body>
-    <header class="header">
-      <img
-        src="assets/images/logo-dblocks.svg"
-        alt="Logo Dblocks"
-        class="logo-dblocks"
-      />
-
-      <nav class="">
-        <ul class="container-nav">
-          <li>
-            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
-          </li>
-          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
-          <li>
-            <a
-              target="_blank"
-              href="../public/guia-amadoboard.pdf"
-              data-translate="complete_amadoboard_guide"
-              >Guia Completo AmadoBoard</a
-            >
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://amadomaker.github.io/Instalador_Micropython/"
-              >Micropython</a
-            >
-          </li>
-        </ul>
-      </nav>
-
-      <div class="container-button-lang">
-        <div class="container-lang">
-          <select id="languageMenu"></select>
-          <img
-            id="languageFlag"
-            alt="Language Flag"
-            style="width: 32px; height: 20px"
-          />
-        </div>
-      </div>
-
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="mobile-menu" id="mobile-menu">
-        <ul>
-          <li>
-            <a target="_blank" href="https://amadomaker.com.br">Amado Maker</a>
-          </li>
-          <li><a target="_blank" href="https://dblocks.com.br">Dblocks</a></li>
-          <li>
-            <a
-              target="_blank"
-              href="../public/guia-amadoboard.pdf"
-              data-translate="complete_amadoboard_guide"
-              >Guia Completo AmadoBoard</a
-            >
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://amadomaker.github.io/Instalador_Micropython/"
-              >Micropython</a
-            >
-          </li>
-        </ul>
-      </div>
-    </header>
-
-    <main class="content-main">
-      <section class="container-title">
-        <h2 class="title">
-          Seja bem-vindo(a) ao <strong class="strong">Guia Dblocks!</strong>
-        </h2>
-
-        <h5 class="description">
-          Explore o Dblocks e aprenda programação passo a passo com um guia
-          interativo e acessível.
-        </h5>
-
-        <div class="container-search">
-          <input
-            type="text"
-            class="standard-input"
-            placeholder="Pesquise por capítulos..."
-          />
-
-          <button class="btn btn-primary btn-search" id="btn-search">
-            <i class="material-icons">search</i>
-          </button>
-        </div>
-      </section>
-
-      <section id="container-cards"></section>
-    </main>
-
-    <script src="assets/js/lang/translation.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/common.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

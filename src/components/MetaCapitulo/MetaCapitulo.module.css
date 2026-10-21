@@ -1,0 +1,28 @@
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--neutro-texto-secundario);
+  white-space: nowrap;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icone {
+  color: var(--neutro-cinza-500);
+}
+
+.escuro {
+  color: var(--neutro-cinza-400);
+}
+
+.escuro .icone {
+  color: var(--neutro-cinza-400);
+}

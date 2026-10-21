@@ -1,0 +1,128 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 387px;
+  overflow: hidden;
+  background: var(--neutro-branco);
+  border: 1px solid var(--borda-suave);
+  border-radius: 20px;
+  box-shadow: var(--sombra-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--cor) 40%, var(--borda-suave));
+  box-shadow: 0 16px 32px -12px rgba(15, 26, 46, 0.14);
+}
+
+.capa {
+  position: relative;
+  flex-shrink: 0;
+  height: 164px;
+  overflow: hidden;
+  background: var(--capa);
+}
+
+.numeroFundo {
+  position: absolute;
+  top: 41px;
+  right: -8px;
+  font-size: 120px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -4.8px;
+  color: color-mix(in srgb, var(--cor) 14%, transparent);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.pilula {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--neutro-branco);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  color: var(--neutro-texto-secundario);
+}
+
+.seloNovo,
+.seloAtualizado {
+  position: absolute;
+  top: 24px;
+  right: 22px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.seloNovo {
+  background: var(--marca-laranja);
+  color: var(--neutro-branco);
+}
+
+.seloAtualizado {
+  background: var(--info-fundo);
+  color: var(--marca-azul);
+}
+
+.icone {
+  position: absolute;
+  top: 76px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: var(--cor);
+  color: var(--neutro-branco);
+}
+
+.texto {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 24px;
+  overflow: hidden;
+}
+
+.titulo {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--neutro-quase-preto);
+}
+
+.resumo {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--neutro-texto-secundario);
+}
+
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px 16px;
+  border-top: 1px solid var(--borda-suave);
+}
+
+.seta {
+  color: var(--marca-laranja);
+  transition: transform 0.2s ease;
+}
+
+.card:hover .seta {
+  transform: translateX(3px);
+}

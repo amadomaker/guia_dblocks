@@ -1,0 +1,69 @@
+/* Tokens extraídos das variáveis do Figma (arquivo Dblocks · página Guia Dblocks). */
+:root {
+  /* marca */
+  --marca-laranja: #fa7324;
+  --marca-laranja-claro: #fff1e8;
+  --marca-azul: #326eb4;
+  /* Ícone do José na barra lateral do capítulo especial */
+  --jose-azul: #1d5c8b;
+
+  /* neutros */
+  --neutro-quase-preto: #111111;
+  --neutro-grafite: #2c2d34;
+  --neutro-texto-secundario: #4a5563;
+  --neutro-cinza-500: #8a94a3;
+  --neutro-cinza-300: #b8c2d4;
+  --neutro-cinza-400: #9aa7b8;
+  --neutro-branco: #ffffff;
+
+  /* fundos e bordas */
+  --fundo-pagina: #f3f7fc;
+  --fundo-sutil: #f5f7fa;
+  --fundo-trilho: #e3e9f1;
+  --fundo-escuro: #1b2533;
+  --fundo-escuro-card: #243146;
+  --borda-suave: #d6dfeb;
+  --borda-azul-suave: #c7d7ec;
+
+  /* estados */
+  --info-fundo: #e6eef8;
+  --aviso-fundo: #fff3dc;
+  --aviso-borda: #f3d9a4;
+  --aviso-texto: #a15c00;
+
+  /* categorias de blocos (cor principal / capa do card) */
+  --cat-marca: #fa7324;
+  --cat-marca-capa: #fff1e8;
+  --cat-variaveis: #e8590c;
+  --cat-variaveis-capa: #fdeee7;
+  --cat-controle: #ffb000;
+  --cat-controle-capa: #fff7e5;
+  --cat-logica: #00a069;
+  --cat-logica-capa: #e5f5f0;
+  --cat-funcoes: #822d96;
+  --cat-funcoes-capa: #f2eaf4;
+  --cat-codigo: #2c2d34;
+  --cat-codigo-capa: #eaeaeb;
+  --cat-placa: #326eb4;
+  --cat-placa-capa: #eaf0f7;
+  --cat-visao: #e64980;
+  --cat-visao-capa: #fcedf2;
+  --cat-bluetooth: #0b8a8f;
+  --cat-bluetooth-capa: #e7f3f4;
+  --cat-internet: #5b4bc4;
+  --cat-internet-capa: #efedf9;
+
+  /* sombras */
+  --sombra-nav: 0 0 4px 0 rgba(0, 0, 0, 0.18);
+  --sombra-card: 0 8px 24px -8px rgba(15, 26, 46, 0.06);
+  --sombra-busca: 0 16px 40px -12px rgba(31, 51, 89, 0.1);
+  --sombra-botao: 0 12px 16px rgba(0, 0, 0, 0.16);
+
+  /* layout */
+  --container: 1360px;
+  --gutter: 24px;
+  --nav-altura: 80px;
+
+  --fonte: 'Mulish', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fonte-codigo: 'Roboto Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
