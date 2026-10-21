@@ -170,6 +170,11 @@ export const pt = {
     subtitulo: 'Abra o Dblocks em outra aba e siga o guia lado a lado. Não precisa instalar nada.',
     primeirosPassos: 'Ver primeiros passos',
   },
+  emConstrucao: {
+    titulo: 'Página em construção',
+    tituloAba: 'Exemplos prontos — Em construção',
+    texto: 'Estamos preparando os exemplos prontos. Esta página será disponibilizada em breve.',
+  },
   naoEncontrada: {
     titulo: 'Esta página não existe',
     tituloAba: 'Página não encontrada',

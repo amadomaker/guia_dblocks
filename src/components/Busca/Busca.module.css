@@ -88,11 +88,27 @@
   max-height: 420px;
   padding: 8px;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--marca-azul) #f5f5f5;
   list-style: none;
   background: var(--neutro-branco);
   border: 1px solid var(--borda-suave);
   border-radius: 18px;
   box-shadow: var(--sombra-busca);
+}
+
+.lista::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lista::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 24px;
+}
+
+.lista::-webkit-scrollbar-thumb {
+  background: var(--marca-azul);
+  border-radius: 22px;
 }
 
 .item {

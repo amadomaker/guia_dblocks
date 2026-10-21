@@ -1,6 +1,7 @@
 import { Icon } from '../../components/Icon/Icon';
+import { Link } from 'react-router-dom';
 import { materiais, type Material } from '../../data/materiais';
-import { useT } from '../../i18n/contexto';
+import { useRota, useT } from '../../i18n/contexto';
 import styles from './Materiais.module.css';
 
 export function Materiais() {
@@ -26,6 +27,7 @@ export function Materiais() {
 
 export function CardMaterial({ material: m }: { material: Material }) {
   const t = useT();
+  const rota = useRota();
   const textos = t.materiaisSecao.itens[m.chave];
   return (
     <article className={styles.card}>
@@ -37,11 +39,18 @@ export function CardMaterial({ material: m }: { material: Material }) {
       </div>
       <h3 className={styles.nome}>{textos.titulo}</h3>
       <p className={styles.resumo}>{textos.resumo}</p>
-      <a href={m.href} target="_blank" rel="noreferrer" className={styles.acao}>
-        {textos.acao}
-        <Icon name={m.acaoIcone} size={18} />
-        {m.download && <span className="visually-hidden"> {t.materiaisSecao.pdf}</span>}
-      </a>
+      {m.href.startsWith('/') ? (
+        <Link to={rota(m.href)} className={styles.acao}>
+          {textos.acao}
+          <Icon name={m.acaoIcone} size={18} />
+        </Link>
+      ) : (
+        <a href={m.href} target="_blank" rel="noreferrer" className={styles.acao}>
+          {textos.acao}
+          <Icon name={m.acaoIcone} size={18} />
+          {m.download && <span className="visually-hidden"> {t.materiaisSecao.pdf}</span>}
+        </a>
+      )}
     </article>
   );
 }
