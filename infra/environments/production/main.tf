@@ -12,3 +12,14 @@ module "artifact_registry" {
   project_id    = var.project_id
   repository_id = "guia-prod"
 }
+
+module "materiais" {
+  source = "../../modules/public-bucket"
+
+  project_id   = var.project_id
+  bucket_name  = "guia-dblocks-materiais"
+  source_dir   = "${path.root}/../../../materiais"
+  file_pattern = "*.pdf"
+  content_type = "application/pdf"
+  labels       = { app = "guia-dblocks" }
+}
