@@ -6,7 +6,6 @@
   gap: 28px;
   min-height: 800px;
   padding: 112px var(--gutter) 120px;
-  overflow: hidden;
   background: var(--fundo-pagina) url('../../assets/home/hero-bg.png') center / cover no-repeat;
   text-align: center;
 }
@@ -109,6 +108,8 @@
 .blocos {
   position: absolute;
   inset: 0;
+  /* Recorta apenas a decoração, permitindo que a busca ultrapasse o hero. */
+  overflow: hidden;
   pointer-events: none;
 }
 
