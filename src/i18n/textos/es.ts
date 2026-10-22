@@ -243,7 +243,7 @@ export const es: Dicionario = {
     'primeiros-passos': {
       titulo: 'Primeros pasos',
       resumo: 'Desde crear tu cuenta hasta el primer programa funcionando en la placa, pasando por cada parte de la interfaz.',
-      duracao: 'unos 34 min',
+      duracao: 'unos 44 min',
     },
     'programacao-em-blocos': {
       titulo: 'Programación con bloques',

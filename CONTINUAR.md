@@ -9,7 +9,7 @@ Atualizado a cada etapa concluída. **Última atualização: todas as telas do F
 - O site foi reconstruído do zero em **Vite + React 19 + TypeScript + React Router 7**, com CSS Modules.
 - A referência visual é o Figma. **O objetivo é pixel perfect**: cada tela tem que ficar igual ao Figma em 1920px.
   - Arquivo Figma: `ladFObEJwKg8cZFVKfvYtE`
-  - Página **"Guia Dblocks"** (id `1010:861`): home, 25 capítulos, "Projetos na prática" e 4 projetos.
+  - Página **"Guia Dblocks"** (id `1010:861`): home, 26 capítulos, "Projetos na prática" e 4 projetos.
   - Política de privacidade e Termos de uso estão na página **"Website"**: frames `911:83` e `914:83`.
 - Branch de trabalho: `refatoracao-frontend-react` (criada a partir da `main`). **Nada foi commitado ainda.**
 - Comunicação com o dono do projeto em **português (pt-BR)**.
@@ -37,6 +37,38 @@ npx eslint .
 docker build -t guia-dblocks:local . && docker run -d --name guia-dblocks -p 8090:8080 guia-dblocks:local
 # (a porta 8080 da máquina do dono está ocupada por outro container; use 8090)
 ```
+
+## Atualização de outubro de 2026 (branch `feat/revisao-do-guia-no-figma`)
+
+O Figma foi revisado depois da migração para React. Já está no código:
+
+- **Capítulo novo 04 · Conhecendo a AmadoBoard** e renumeração: os antigos 04–25 viraram 05–26 (o José é o 26).
+  O antigo 11 virou **12 · Explorando a placa em 3D** (slug `explorando-a-placa-em-3d`). O número vem de
+  `src/data/catalogo.ts`; as referências cruzadas ("Capítulo NN", `capitulo: N`, chips dos projetos em
+  `src/data/projetos.ts`) foram deslocadas junto.
+- Capítulos 03, 05–24 conferidos contra o Figma (textos, prints refeitos e diagramas de ligação novos).
+- **Capítulo 25 reescrito**: IoT só pela aba IOT, pelo cabo USB (o EasyMQTT vai ter capítulo próprio, ainda não feito).
+- Projetos: diagrama de ligação no Alarme de distância e na Janela automática (a capa do Simulador saiu).
+- Novas opções de bloco: `quebra` em `figuras` (as imagens que não cabem descem de linha) e `legendaLivre` em `figura`
+  (a legenda não quebra na largura do print). O bloco `blocosEOled` agora recebe a imagem da telinha (`telinha`).
+
+### Como conferir contra o Figma (`tools/figma/`)
+
+- `regressao.py` compara a altura de cada capítulo com a do frame. **Rode com o José ligado**, que é como o Figma foi
+  desenhado: `VITE_JOSE_PUBLICADO=true npx vite --port 5174` e depois `python3 tools/figma/regressao.py 5174`.
+  Sem o José o rodapé fica 24px mais curto (descrição de 2 linhas em vez de 3).
+- `dif_textos.py` + `FIGMA_JS.md`: diff de texto entre o código e o frame (por hash, sem despejar tudo na tela).
+- `conferir.sh` + `comparar.mjs`: dizem se um print exportado do Figma é diferente do WebP do repo
+  (print refeito com o mesmo tamanho não aparece na comparação por tamanho).
+- `alturas.py`, `secoes.py`, `tamanho.py`: altura da página, altura por seção e ajuste de largura/altura no `imagens.ts`.
+- O `tools/visual/shot.js` está quebrado (é CommonJS e o `package.json` é `"type": "module"`).
+
+### Diferenças que não são do código
+
+Em 18 dos 24 capítulos a altura bate com o Figma em até 3px. O resto é: uma linha que quebra diferente entre o Figma e o
+navegador (07, 09, 19, 20, 23) e o frame do capítulo 22, que no Figma tem o `Corpo` deslocado 100px para baixo.
+Itens do **Figma** que ficaram desatualizados: o card do capítulo 25 na home (ainda diz EasyMQTT, 15 min) e os chips
+"cap. NN" do capítulo 01 (numeração antiga).
 
 ## Arquitetura (onde fica cada coisa)
 
@@ -127,7 +159,7 @@ Verifique também `document.documentElement.scrollWidth === innerWidth` (sem rol
 | Item | Situação |
 |---|---|
 | Home | pronta (diff < 1%) |
-| Capítulos 01 a 25 | prontos, todos com altura exata do Figma |
+| Capítulos 01 a 26 | prontos (ver "Atualização de outubro de 2026"); altura conferida com `tools/figma/regressao.py` |
 | Página "Projetos na prática" (`/projetos`) | pronta (diff < 1%; reaproveita `GradeProjetos` e `CardMaterial` da home) |
 | 4 projetos (`/projetos/:slug`) | prontos (altura exata, diff < 1%); conteúdo em `src/content/projetos/NN-slug/`, página `src/pages/Projeto/` |
 | Política de privacidade e Termos de uso | prontas (`/privacidade`, `/termos`; conteúdo em `src/content/legal/`; textos `{{...}}` são pendências do jurídico, destacadas em laranja-escuro como no Figma) |

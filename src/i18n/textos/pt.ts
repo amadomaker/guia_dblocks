@@ -246,7 +246,7 @@ export const pt = {
     'primeiros-passos': {
       titulo: 'Primeiros passos',
       resumo: 'Da conta criada ao primeiro programa rodando na placa, passando por cada parte da interface.',
-      duracao: 'cerca de 34 min',
+      duracao: 'cerca de 44 min',
     },
     'programacao-em-blocos': {
       titulo: 'Programação em blocos',

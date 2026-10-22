@@ -243,7 +243,7 @@ export const en: Dicionario = {
     'primeiros-passos': {
       titulo: 'First steps',
       resumo: 'From creating your account to your first program running on the board, going through every part of the interface.',
-      duracao: 'about 34 min',
+      duracao: 'about 44 min',
     },
     'programacao-em-blocos': {
       titulo: 'Block programming',
