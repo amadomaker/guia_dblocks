@@ -294,7 +294,7 @@ export const pt = {
     'visao-computacional': { titulo: 'Visão computacional', resumo: 'Controle a placa com visão computacional: reconheça gestos, poses e cores pela câmera do computador.' },
     bluetooth: { titulo: 'Bluetooth', resumo: 'Converse com o celular, envie comandos e plote dados sem fio.' },
     'wi-fi-e-internet': { titulo: 'Wi‑Fi e internet', resumo: 'Conecte a placa à rede, crie um servidor web e faça requisições.' },
-    'iot-e-paineis-de-dados': { titulo: 'IoT e painéis de dados', resumo: 'Publique dados com o EasyMQTT e acompanhe tudo em gráficos ao vivo.' },
+    'iot-e-paineis-de-dados': { titulo: 'IoT e painéis de dados', resumo: 'Monte um painel com medidores e gráficos e acompanhe as leituras da placa em tempo real, pelo cabo USB.' },
     'conhecendo-o-jose': {
       tituloCurto: 'José',
       titulo: 'Conhecendo o José',

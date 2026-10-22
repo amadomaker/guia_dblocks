@@ -291,7 +291,7 @@ export const en: Dicionario = {
     'visao-computacional': { titulo: 'Computer vision', resumo: 'Control the board with hand gestures using the computer camera.' },
     bluetooth: { titulo: 'Bluetooth', resumo: 'Talk to your phone, send commands and plot data wirelessly.' },
     'wi-fi-e-internet': { titulo: 'Wi‑Fi and internet', resumo: 'Connect the board to the network, create a web server and make requests.' },
-    'iot-e-paineis-de-dados': { titulo: 'IoT and data dashboards', resumo: 'Publish data with EasyMQTT and follow everything in live charts.' },
+    'iot-e-paineis-de-dados': { titulo: 'IoT and data dashboards', resumo: 'Build a panel with gauges and charts and follow the board\'s readings in real time, over the USB cable.' },
     'conhecendo-o-jose': {
       tituloCurto: 'José',
       titulo: 'Meet José',

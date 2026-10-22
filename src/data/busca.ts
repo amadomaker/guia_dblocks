@@ -38,7 +38,7 @@ const palavrasChave: Record<string, string> = {
   'visao-computacional': 'câmera gestos mão mediapipe esp32-cam visão',
   bluetooth: 'bluetooth ble celular app plotter',
   'wi-fi-e-internet': 'wifi rede servidor web http requisição access point',
-  'iot-e-paineis-de-dados': 'iot mqtt easymqtt painel dashboard databoard gráfico nuvem',
+  'iot-e-paineis-de-dados': 'iot painel painéis dashboard medidor gráfico aba iot usb bipes mostrar valor sensor tempo real quadro widget fonte de dados',
   'conhecendo-o-jose': 'josé ia inteligência artificial chat robô',
 };
 

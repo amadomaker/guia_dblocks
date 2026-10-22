@@ -108,7 +108,7 @@ const estrutura: BaseTrilha[] = [
     capitulos: [
       { numero: 23, slug: 'bluetooth', icone: 'bluetooth', categoria: 'bluetooth', minutos: 15, nivel: 'Intermediário' },
       { numero: 24, slug: 'wi-fi-e-internet', icone: 'wifi', categoria: 'internet', minutos: 15, nivel: 'Avançado' },
-      { numero: 25, slug: 'iot-e-paineis-de-dados', icone: 'chart', categoria: 'internet', minutos: 15, nivel: 'Avançado', selo: 'Novo' },
+      { numero: 25, slug: 'iot-e-paineis-de-dados', icone: 'chart', categoria: 'internet', minutos: 20, nivel: 'Avançado', selo: 'Novo' },
     ],
   },
 ];

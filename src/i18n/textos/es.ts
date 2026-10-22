@@ -291,7 +291,7 @@ export const es: Dicionario = {
     'visao-computacional': { titulo: 'Visión por computadora', resumo: 'Controla la placa con gestos de la mano usando la cámara de la computadora.' },
     bluetooth: { titulo: 'Bluetooth', resumo: 'Habla con el celular, envía comandos y grafica datos sin cables.' },
     'wi-fi-e-internet': { titulo: 'Wi‑Fi e internet', resumo: 'Conecta la placa a la red, crea un servidor web y haz solicitudes.' },
-    'iot-e-paineis-de-dados': { titulo: 'IoT y paneles de datos', resumo: 'Publica datos con EasyMQTT y sigue todo en gráficos en vivo.' },
+    'iot-e-paineis-de-dados': { titulo: 'IoT y paneles de datos', resumo: 'Monta un panel con medidores y gráficos y sigue las lecturas de la placa en tiempo real, por el cable USB.' },
     'conhecendo-o-jose': {
       tituloCurto: 'José',
       titulo: 'Conociendo a José',
