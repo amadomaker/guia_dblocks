@@ -6,15 +6,6 @@ const conteudo: ConteudoCapitulo = {
   descricao:
     'Leia a temperatura com o sensor DHT11. Quando passar de 30 °C, o servo gira para abrir a janela e o LED vermelho acende.',
   atualizadoEm: 'outubro de 2026',
-  abertura: {
-    tipo: 'figura',
-    topo: 8,
-    imagem: {
-      ...img.capaSimulador,
-      alt: 'Simulador do Dblocks com a AmadoBoard, o servo e o sensor DHT11 ligados, e os blocos do programa ao lado',
-    },
-    legenda: 'O circuito da janela automática montado no Simulador do Dblocks.',
-  },
   secoes: [
     {
       id: 'capitulos-que-voce-vai-usar',
@@ -73,6 +64,14 @@ const conteudo: ConteudoCapitulo = {
             { titulo: 'Ligue o servo no SERVO B.', texto: 'Marrom no GND, vermelho no VS e amarelo no D16.', capitulo: 16 },
             { titulo: 'Dê força para o servo.', texto: 'No CONN 5, coloque um jumper ligando o VS ao 5V.', capitulo: 16 },
           ],
+        },
+        {
+          tipo: 'figura',
+          imagem: {
+            ...img.ligacaoDht11Servo,
+            alt: 'Diagrama de ligação do DHT11 no CONN 4 e do servo no SERVO B, com o jumper ligando o VS ao 5V',
+          },
+          legenda: 'O DHT11 no CONN 4 (3V3, D18 e GND) e o servo no SERVO B (D16), com o jumper ligando o VS ao 5V.',
         },
         {
           tipo: 'destaque',

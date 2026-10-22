@@ -60,12 +60,13 @@ const conteudo: ConteudoCapitulo = {
           ],
         },
         {
-          tipo: 'destaque',
-          variante: 'info',
-          icone: 'book',
-          titulo: 'Use o 3V3 nos sensores',
-          texto:
-            'Os pinos da placa trabalham com até 3,3V. Ligar 5V direto em um pino de entrada pode estragar a placa.',
+          tipo: 'figura',
+          legendaLivre: true,
+          imagem: {
+            ...img.ligacaoUltrassonico,
+            alt: 'Diagrama de ligação do sensor ultrassônico no CONN 7: VCC no 5V, TRIG no D17, ECHO no D34 e GND no GND',
+          },
+          legenda: 'O sensor ultrassônico no CONN 7: VCC no 5V, TRIG no D17, ECHO no D34 e GND no GND.',
         },
       ],
     },
