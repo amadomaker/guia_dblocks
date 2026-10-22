@@ -24,7 +24,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'Os blocos ficam em Saídas e atuadores, um grupo para cada tipo: Módulo relé, Servo motor, Motor DC e Campainha. A campainha (buzzer) tem um capítulo só dela, o 16.',
+            'Os blocos ficam em Saídas e atuadores, um grupo para cada tipo: Módulo relé, Servo motor, Motor DC e Campainha. A campainha (buzzer) tem um capítulo só dela, o 17.',
         },
         { tipo: 'caminho', itens: ['Saídas e atuadores'] },
       ],
@@ -55,6 +55,11 @@ const conteudo: ConteudoCapitulo = {
               itens: ['1. Liga o relé no pino D17.', '2. Espera 3 segundos.', '3. Desliga o relé.'],
             },
           ],
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoRele, alt: 'Diagrama de ligação do módulo relé: VCC no 5V, IN2 no D17 e GND no GND' },
+          legenda: 'O módulo relé: VCC no 5V, IN2 no D17 e GND no GND. Do outro lado, o relé liga e desliga o LED das pilhas.',
         },
         {
           tipo: 'destaque',
@@ -94,6 +99,11 @@ const conteudo: ConteudoCapitulo = {
           titulo: 'Dê energia ao servo',
           texto:
             'Ao lado dos pinos dos servos ficam os pinos 3V3, VS e 5V. Coloque um jumper ligando o VS ao 5V. Sem isso, o servo fica sem força para girar.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoServo, alt: 'Diagrama de ligação do servo motor no SERVO A, com o jumper ligando o VS ao 5V' },
+          legenda: 'O servo no SERVO A: sinal (laranja) no D15, VS (vermelho) e GND (marrom). O jumper preto liga o VS ao 5V.',
         },
         { tipo: 'caminho', itens: ['Saídas e atuadores', 'Servo motor'] },
         {
@@ -135,7 +145,7 @@ const conteudo: ConteudoCapitulo = {
               tipo: 'explicacao',
               titulo: 'O que esse programa faz?',
               itens: [
-                '1. Usa o laço contar do capítulo 07 para ir de 0 até 180 graus, um grau de cada vez.',
+                '1. Usa o laço contar do capítulo 08 para ir de 0 até 180 graus, um grau de cada vez.',
                 '2. Espera 10 milisegundos a cada grau, para o movimento ficar suave.',
                 '3. Depois faz o caminho de volta, de 180 até 0.',
               ],
@@ -180,6 +190,11 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'paragrafo',
           texto:
             'Os fios do motor vão nos bornes azuis da placa: Motor A no J1 e Motor B no J3. O Motor A usa os pinos D12, D13 e D14, e o Motor B usa D25, D26 e D27.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoMotorDc, alt: 'Motor DC preso nos dois parafusos do borne J1 (Motor A)' },
+          legenda: 'O motor DC preso nos dois parafusos do borne J1 (Motor A).',
         },
         { tipo: 'caminho', itens: ['Saídas e atuadores', 'Motor DC'] },
         {
@@ -232,13 +247,13 @@ const conteudo: ConteudoCapitulo = {
           itens: [
             {
               titulo: 'Cancela de estacionamento',
-              texto: 'Abra a cancela (servo em 90 graus) quando o botão do capítulo 12 for apertado.',
+              texto: 'Abra a cancela (servo em 90 graus) quando o botão do capítulo 13 for apertado.',
             },
             {
               titulo: 'Carrinho',
               texto: 'Ligue os dois motores para frente ao mesmo tempo. O que acontece se um for para frente e o outro para trás?',
             },
-            { titulo: 'Velocidade', texto: 'Use o trimpot do capítulo 13 para controlar a potência do motor.' },
+            { titulo: 'Velocidade', texto: 'Use o trimpot do capítulo 14 para controlar a potência do motor.' },
           ],
         },
       ],

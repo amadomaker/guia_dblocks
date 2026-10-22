@@ -882,7 +882,7 @@
   color: var(--neutro-texto-secundario);
 }
 
-/* Blocos + telinha OLED desenhada */
+/* Blocos + imagem da telinha OLED */
 .blocosEOled {
   display: flex;
   align-items: flex-start;
@@ -897,26 +897,6 @@
 
 .blocosEOled .console {
   gap: 8px;
-}
-
-/* Posições dos textos vêm do Figma, medidas a partir da borda externa (6px). */
-.oled {
-  position: relative;
-  width: 256px;
-  height: 128px;
-  overflow: hidden;
-  border: 6px solid #334054;
-  border-radius: 6px;
-  background: #0a0d12;
-  font-family: var(--fonte-codigo);
-  font-size: 16px;
-  line-height: normal;
-  color: #99dbff;
-  white-space: nowrap;
-}
-
-.oled span {
-  position: absolute;
 }
 
 /* Projetos: capítulos usados */

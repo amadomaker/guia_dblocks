@@ -115,10 +115,10 @@ const conteudo: ConteudoCapitulo = {
               texto:
                 'Pelo cabo. É o jeito mais fácil e o melhor para começar. A opção Reiniciar a placa ao conectar faz a placa reiniciar toda vez que você conecta.',
             },
-            { titulo: 'Bluetooth', texto: 'Sem fio, com a placa perto do computador. O capítulo 22 explica.' },
+            { titulo: 'Bluetooth', texto: 'Sem fio, com a placa perto do computador. O capítulo 23 explica.' },
             {
               titulo: 'Rede (Wi‑Fi)',
-              texto: 'Sem fio, pela rede Wi‑Fi. Precisa do Endereço e da Senha da placa. O capítulo 23 explica.',
+              texto: 'Sem fio, pela rede Wi‑Fi. Precisa do Endereço e da Senha da placa. O capítulo 24 explica.',
             },
             { titulo: 'Procurar placas', texto: 'Procura placas que estão por perto.' },
           ],

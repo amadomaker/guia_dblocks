@@ -30,7 +30,7 @@ const conteudo: ConteudoCapitulo = {
           icone: 'book',
           titulo: 'A placa recebe os gestos pelo Wi‑Fi',
           texto:
-            'O computador e a placa precisam estar na mesma rede Wi‑Fi. O computador manda o gesto e a placa responde. O capítulo 23 mostra como ligar a placa no Wi‑Fi.',
+            'O computador e a placa precisam estar na mesma rede Wi‑Fi. O computador manda o gesto e a placa responde. O capítulo 24 mostra como ligar a placa no Wi‑Fi.',
         },
       ],
     },

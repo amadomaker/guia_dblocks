@@ -114,7 +114,7 @@ const conteudo: ConteudoCapitulo = {
           variante: 'dica',
           icone: 'sparkles',
           titulo: 'Monte primeiro no Simulador',
-          texto: 'Na aba Simulador você testa o programa e o circuito sem a placa. Veja como no capítulo 18.',
+          texto: 'Na aba Simulador você testa o programa e o circuito sem a placa. Veja como no capítulo 19.',
         },
       ],
     },
@@ -125,8 +125,8 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'desafios',
           itens: [
-            { titulo: 'Mostre a temperatura', texto: 'Escreva a temperatura no display OLED (capítulo 17).' },
-            { titulo: 'Ventilador', texto: 'Troque o servo por um motor DC (capítulo 15) que liga quando esquenta.' },
+            { titulo: 'Mostre a temperatura', texto: 'Escreva a temperatura no display OLED (capítulo 18).' },
+            { titulo: 'Ventilador', texto: 'Troque o servo por um motor DC (capítulo 16) que liga quando esquenta.' },
           ],
         },
         {

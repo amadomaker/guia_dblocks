@@ -63,7 +63,7 @@ const conteudo: ConteudoCapitulo = {
       blocos: [
         {
           tipo: 'paragrafo',
-          texto: 'Vamos comparar os blocos do Pisca LED, do capítulo 05, com o código que o Dblocks criou para eles:',
+          texto: 'Vamos comparar os blocos do Pisca LED, do capítulo 06, com o código que o Dblocks criou para eles:',
         },
         {
           tipo: 'figuras',
@@ -102,7 +102,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'As primeiras linhas preparam o programa. from machine import Pin e import time trazem as ferramentas para usar os pinos e o tempo. Logo depois, o Dblocks cria uma pequena função para ligar e desligar pinos, como as funções do capítulo 09.',
+            'As primeiras linhas preparam o programa. from machine import Pin e import time trazem as ferramentas para usar os pinos e o tempo. Logo depois, o Dblocks cria uma pequena função para ligar e desligar pinos, como as funções do capítulo 10.',
         },
         {
           tipo: 'paragrafo',
@@ -133,7 +133,7 @@ const conteudo: ConteudoCapitulo = {
           itens: [
             { titulo: 'Ache o número', texto: 'No Pisca LED, troque esperar 1 por 0.5. Qual número mudou no código?' },
             { titulo: 'Outra cor', texto: 'Troque o pino para D33 / LED VERDE. O que muda no código?' },
-            { titulo: 'Laço de contar', texto: 'Abra o código do exemplo da tabuada do capítulo 07 e encontre a palavra for.' },
+            { titulo: 'Laço de contar', texto: 'Abra o código do exemplo da tabuada do capítulo 08 e encontre a palavra for.' },
           ],
         },
         {

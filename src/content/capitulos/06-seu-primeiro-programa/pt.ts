@@ -25,7 +25,7 @@ const conteudo: ConteudoCapitulo = {
           variante: 'info',
           icone: 'book',
           titulo: 'Ainda não conectou a placa?',
-          texto: 'Volte ao capítulo 04. Se você ainda não tem a placa, o capítulo 18 mostra como testar circuitos no Simulador.',
+          texto: 'Volte ao capítulo 05. Se você ainda não tem a placa, o capítulo 19 mostra como testar circuitos no Simulador.',
         },
       ],
     },
@@ -142,7 +142,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'passos',
           itens: [
-            { titulo: 'Conecte a placa', texto: 'Siga o capítulo 04. Quando a placa conecta, a tomada da barra de cima fica azul.' },
+            { titulo: 'Conecte a placa', texto: 'Siga o capítulo 05. Quando a placa conecta, a tomada da barra de cima fica azul.' },
             { titulo: 'Clique em Executar o programa', texto: 'Olhe para a placa: a luz vermelha começa a piscar a cada segundo!' },
             {
               titulo: 'Para parar, clique de novo',

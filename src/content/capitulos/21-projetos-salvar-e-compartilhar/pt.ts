@@ -18,7 +18,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'Todo projeto começa com o bloco Dados do projeto. Nele você escreve o seu nome em Autor e o que o programa faz em Descrição. O IOT ID só é usado nos projetos de internet, do capítulo 24.',
+            'Todo projeto começa com o bloco Dados do projeto. Nele você escreve o seu nome em Autor e o que o programa faz em Descrição. O IOT ID só é usado nos projetos de internet, do capítulo 25.',
         },
         {
           tipo: 'figura',
@@ -118,7 +118,7 @@ const conteudo: ConteudoCapitulo = {
           icone: 'book',
           titulo: 'Salvar arquivo não é o mesmo que salvar na placa',
           texto:
-            'Salvar blocos para arquivo guarda o projeto no computador. Para o programa ficar dentro da placa e rodar sozinho, use Salvar na placa (main.py), como no capítulo 05.',
+            'Salvar blocos para arquivo guarda o projeto no computador. Para o programa ficar dentro da placa e rodar sozinho, use Salvar na placa (main.py), como no capítulo 06.',
         },
       ],
     },

@@ -6,7 +6,7 @@ export type Recurso = 'jose';
 
 /**
  * O José (IA) só aparece com VITE_JOSE_PUBLICADO=true no build.
- * Desligado: some a seção da home, o link "IA José" da navbar, o capítulo 25 (vira 404 e sai da busca),
+ * Desligado: some a seção da home, o link "IA José" da navbar, o capítulo 26 (vira 404 e sai da busca),
  * os trechos de capítulo marcados com `recurso: 'jose'`, e a política/termos usam a versão sem o José.
  */
 export const recursosPublicados: Record<Recurso, boolean> = {

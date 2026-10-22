@@ -26,6 +26,11 @@ const conteudo: ConteudoCapitulo = {
           texto:
             'Pense na diferença entre um interruptor e um botão de volume. O interruptor só liga ou desliga. O volume pode ficar baixinho, médio ou alto. Com as entradas e saídas analógicas, a placa consegue medir e controlar esse “mais ou menos”.',
         },
+        {
+          tipo: 'figura',
+          imagem: { ...img.sinalAnalogico, alt: 'Gráfico de um sinal analógico: a tensão varia aos poucos entre 0V e 3,3V ao longo do tempo' },
+          legenda: 'Um sinal analógico muda aos poucos e pode ter qualquer valor entre 0V e 3,3V.',
+        },
         { tipo: 'caminho', itens: ['Pinos entrada/saída', 'Ler entrada analógica'] },
       ],
     },
@@ -37,6 +42,11 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'paragrafo',
           texto:
             'A AmadoBoard já tem um sensor de luz, o LDR. Para o programa ler esse sensor, ligue um fio (jumper) do LDR, no conector CONN 10, até o pino D39.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoLdr, alt: 'Diagrama de ligação do LDR: um jumper liga o LDR, no CONN 10, ao pino D39' },
+          legenda: 'Um jumper liga o LDR, no CONN 10, até o pino D39.',
         },
         {
           tipo: 'exemplo',
@@ -68,7 +78,17 @@ const conteudo: ConteudoCapitulo = {
           icone: 'book',
           titulo: 'O que são ATTN_11DB e WIDTH_12BIT?',
           texto:
-            'São ajustes do bloco. Com ATTN_11DB a placa consegue medir toda a energia do pino, até 3,3 volts. Com WIDTH_12BIT o valor vai de 0 a 4095. Use sempre esses dois e não precisa se preocupar com o resto.',
+            'São ajustes do bloco. Quando você arrasta o bloco, ele vem com ATTN_0DB e WIDTH_9BIT: assim ele só mede até cerca de 1 volt, e o valor vai só de 0 a 511. Troque para ATTN_11DB e WIDTH_12BIT, como no exemplo. Com eles a placa mede até 3,3 volts e o valor vai de 0 a 4095.',
+        },
+        {
+          tipo: 'paragrafo',
+          texto:
+            'Também dá para usar um módulo sensor de luz externo, como o do Simulador. Ligue o AO do módulo no D36, o GND no GND e o VCC no 3V3. No programa, troque o pino D39 por D36.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoLdrExterno, alt: 'Diagrama de ligação do módulo LDR externo: AO no D36, GND no GND e VCC no 3V3' },
+          legenda: 'O módulo externo: AO no D36, GND no GND e VCC no 3V3. O pino DO fica livre.',
         },
       ],
     },
@@ -124,7 +144,7 @@ const conteudo: ConteudoCapitulo = {
               titulo: 'O que esse programa faz?',
               itens: [
                 '1. Lê a luz do ambiente e guarda em luz.',
-                '2. Usa o mapear do capítulo 08 para transformar a luz (0 a 4095) em brilho (1023 a 0). Muita luz vira pouco brilho, e pouca luz vira muito brilho.',
+                '2. Usa o mapear do capítulo 09 para transformar a luz (0 a 4095) em brilho (1023 a 0). Muita luz vira pouco brilho, e pouca luz vira muito brilho.',
                 '3. Manda esse brilho para o LED com o PWM.',
                 '4. Espera um pouquinho e repete.',
               ],

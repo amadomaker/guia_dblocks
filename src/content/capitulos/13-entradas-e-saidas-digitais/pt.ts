@@ -22,6 +22,11 @@ const conteudo: ConteudoCapitulo = {
             'Digital quer dizer que só existem dois jeitos: ligado ou desligado. É como um interruptor de luz. Para a placa, ligado vale 1 (verdadeiro) e desligado vale 0 (falso).',
         },
         {
+          tipo: 'figura',
+          imagem: { ...img.sinalDigital, alt: 'Gráfico de um sinal digital: a tensão alterna entre 3,3V (valor 1) e 0V (valor 0) ao longo do tempo' },
+          legenda: 'Um sinal digital só tem dois valores: 1 (ligado, 3,3V) ou 0 (desligado, 0V).',
+        },
+        {
           tipo: 'paragrafo',
           texto:
             'Uma entrada digital é quando a placa pergunta para o mundo: o botão está apertado ou solto? Uma saída digital é quando a placa manda no mundo: acende o LED ou apaga o LED.',
@@ -55,7 +60,7 @@ const conteudo: ConteudoCapitulo = {
                 '1. Repete para sempre.',
                 '2. Lê o pino D16 com o bloco ler entrada digital e guarda na variável x.',
                 '3. Mostra Valor de x: e o número no Console.',
-                '4. Espera 500 milisegundos (meio segundo) e lê de novo.',
+                '4. Espera 500 milissegundos (meio segundo) e lê de novo.',
               ],
             },
             { tipo: 'console', imagem: { ...img.console1, alt: 'Console mostrando Valor de x: 0 e Valor de x: 1' } },
@@ -68,6 +73,13 @@ const conteudo: ConteudoCapitulo = {
           titulo: 'Como testar na placa',
           texto:
             'Ligue um fio (jumper) no pino D16. Encoste a outra ponta no GND e o Console mostra 0. Encoste no 3V3 e o Console mostra 1. Assim você vê a entrada mudando na hora.',
+        },
+        {
+          tipo: 'figuras',
+          itens: [
+            { imagem: { ...img.jumperGnd, alt: 'Fio do pino D16 encostado no GND' }, legenda: 'Fio do D16 no GND: o Console mostra 0.' },
+            { imagem: { ...img.jumperTresV3, alt: 'Fio do pino D16 encostado no 3V3' }, legenda: 'Fio do D16 no 3V3: o Console mostra 1.' },
+          ],
         },
         {
           tipo: 'exemplo',
@@ -104,6 +116,11 @@ const conteudo: ConteudoCapitulo = {
           ],
         },
         {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoBotao, alt: 'Diagrama de ligação do botão: uma perna no D39, a outra no 3V3 e um resistor de 10kΩ entre o D39 e o GND' },
+          legenda: 'O botão no D39, a outra perna no 3V3 e o resistor de 10kΩ até o GND.',
+        },
+        {
           tipo: 'destaque',
           variante: 'aviso',
           icone: 'book',
@@ -119,7 +136,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'exemplo',
           titulo: 'Exemplo 3: piscando o LED azul',
-          texto: 'Você já fez isso no capítulo 05 com o LED vermelho. Aqui o LED azul, no pino D2, pisca a cada meio segundo.',
+          texto: 'Você já fez isso no capítulo 06 com o LED vermelho. Aqui o LED azul, no pino D2, pisca a cada meio segundo.',
           blocos: [
             {
               tipo: 'figura',
@@ -148,7 +165,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'exemplo',
           titulo: 'Exemplo 4: o botão acende a luz',
-          texto: 'Agora a placa lê o botão e decide o que fazer com o LED, usando o se do capítulo 08.',
+          texto: 'Agora a placa lê o botão e decide o que fazer com o LED, usando o se do capítulo 09.',
           blocos: [
             {
               tipo: 'figura',

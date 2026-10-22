@@ -50,7 +50,7 @@ const conteudo: ConteudoCapitulo = {
             {
               titulo: 'Escolha o canal de conexão',
               texto:
-                'Escolhe o caminho que o computador usa para falar com a placa: pelo cabo (USB), por Bluetooth ou por Wi‑Fi. O capítulo 04 explica.',
+                'Escolhe o caminho que o computador usa para falar com a placa: pelo cabo (USB), por Bluetooth ou por Wi‑Fi. O capítulo 05 explica.',
             },
             { titulo: 'Conectar/Desconectar', texto: 'Liga e desliga a conexão com a placa.' },
             { titulo: 'Selecionar Placa', texto: 'Mostra qual placa você está usando: a AmadoBoard.' },

@@ -77,7 +77,7 @@ const conteudo: ConteudoCapitulo = {
           itens: [
             {
               titulo: 'Sinal para pedestres',
-              texto: 'Coloque um botão (capítulo 12): quando apertado, o sinal fecha mais rápido.',
+              texto: 'Coloque um botão (capítulo 13): quando apertado, o sinal fecha mais rápido.',
             },
             { titulo: 'Hora do rush', texto: 'Deixe o verde aceso por mais tempo e o vermelho por menos.' },
           ],

@@ -123,7 +123,7 @@ const conteudo: ConteudoCapitulo = {
           icone: 'sparkles',
           titulo: 'Laço para sempre precisa de pausa',
           texto:
-            'Um laço que repete para sempre roda muito rápido. Coloque um esperar dentro dele para dar tempo de ver o que está acontecendo, como no Pisca LED do capítulo 05.',
+            'Um laço que repete para sempre roda muito rápido. Coloque um esperar dentro dele para dar tempo de ver o que está acontecendo, como no Pisca LED do capítulo 06.',
         },
       ],
     },

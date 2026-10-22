@@ -7,8 +7,8 @@ const conteudo: ConteudoCapitulo = {
   atualizadoEm: 'outubro de 2026',
   abertura: {
     tipo: 'figura',
-    imagem: { ...img.programaDisplay, alt: 'Programa no Dblocks que escreve Olá, Maker! na telinha OLED' },
-    legenda: 'Um programa que escreve Olá, Maker! na telinha OLED.',
+    imagem: { ...img.programaDisplay, alt: 'Programa no Dblocks que escreve Ola, Maker! na telinha OLED' },
+    legenda: 'Um programa que escreve Ola, Maker! na telinha OLED.',
   },
   secoes: [
     {
@@ -23,7 +23,12 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'A AmadoBoard tem um encaixe só para ela, escrito OLED DISPLAY. É só encaixar a telinha ali. Ela usa os pinos D21 (SDA) e D22 (SCL).',
+            'A AmadoBoard tem um encaixe só para ela, escrito OLED DISPLAY. É só encaixar a telinha ali, ou ligar com fios como na imagem abaixo. Ela usa os pinos D21 (SDA) e D22 (SCL).',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoDisplayOled, alt: 'Diagrama de ligação do display OLED no conector I2C: SDA no D21, SCK (SCL) no D22, VDD no 3V3 e GND no GND' },
+          legenda: 'O display OLED no conector I2C: SDA no D21, SCK (SCL) no D22, VDD no 3V3 e GND no GND.',
         },
         {
           tipo: 'paragrafo',
@@ -59,7 +64,15 @@ const conteudo: ConteudoCapitulo = {
           icone: 'book',
           titulo: 'O que são as posições X e Y?',
           texto:
-            'A tela tem 128 pontinhos de largura e 64 de altura. X diz quantos pontinhos andar para a direita, e Y quantos andar para baixo. X 0 e Y 0 é o canto de cima, à esquerda.',
+            'A tela tem 128 pontinhos de largura e 64 de altura. X diz quantos pontinhos andar para a direita, e Y quantos andar para baixo. X 0 e Y 0 é o canto de cima, à esquerda. Cada letra ocupa 8 por 8 pontinhos: cabem 16 letras em uma linha e 8 linhas na tela.',
+        },
+        {
+          tipo: 'destaque',
+          variante: 'info',
+          icone: 'book',
+          titulo: 'A telinha não tem acentos',
+          texto:
+            'As letras da telinha não têm acento. Escreva Ola em vez de Olá: se usar acento, aparece um quadradinho no lugar da letra.',
         },
       ],
     },
@@ -73,8 +86,8 @@ const conteudo: ConteudoCapitulo = {
           blocos: [
             {
               tipo: 'blocosEOled',
-              imagem: { ...img.exemploRecado, alt: 'Programa que limpa a tela, escreve Olá, Maker! em X 20 e Y 28 e atualiza' },
-              linhas: [{ texto: 'Olá, Maker!', x: 44, y: 52 }],
+              imagem: { ...img.exemploRecado, alt: 'Programa que limpa a tela, escreve Ola, Maker! em X 20 e Y 28 e atualiza' },
+              telinha: { ...img.telinhaRecado, alt: 'Telinha OLED mostrando Ola, Maker! no meio da tela' },
             },
             {
               tipo: 'explicacao',
@@ -82,7 +95,7 @@ const conteudo: ConteudoCapitulo = {
               itens: [
                 '1. Prepara a telinha: I2C 1, SCL 22 e SDA 21.',
                 '2. Limpa a tela.',
-                '3. Escreve Olá, Maker! na posição X 20 e Y 28.',
+                '3. Escreve Ola, Maker! na posição X 20 e Y 28.',
                 '4. Atualiza a tela para o texto aparecer.',
               ],
             },
@@ -95,7 +108,7 @@ const conteudo: ConteudoCapitulo = {
             {
               tipo: 'blocosEOled',
               imagem: { ...img.exemploContador, alt: 'Programa que mostra o contador na tela, soma 1 e espera 1 segundo' },
-              linhas: [{ texto: '7', x: 116, y: 52 }],
+              telinha: { ...img.telinhaContador, alt: 'Telinha OLED mostrando o número 7 no meio da tela' },
             },
             {
               tipo: 'explicacao',
@@ -111,15 +124,12 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'exemplo',
           titulo: 'Exemplo 3: mostrando a luz do ambiente',
-          texto: 'Junta o display com o sensor de luz do capítulo 13 (o jumper do LDR vai no D39).',
+          texto: 'Junta o display com o sensor de luz do capítulo 14 (o jumper do LDR vai no D39).',
           blocos: [
             {
               tipo: 'blocosEOled',
               imagem: { ...img.exemploLuz, alt: 'Programa que lê o LDR e mostra Luz: e o valor na tela a cada meio segundo' },
-              linhas: [
-                { texto: 'Luz:', x: 4, y: 16 },
-                { texto: '2730', x: 4, y: 56 },
-              ],
+              telinha: { ...img.telinhaLuz, alt: 'Telinha OLED mostrando Luz: e, embaixo, o valor lido do sensor' },
             },
             {
               tipo: 'explicacao',
@@ -151,8 +161,8 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'desafios',
           itens: [
             { titulo: 'O seu nome', texto: 'Escreva o seu nome no meio da tela.' },
-            { titulo: 'Termômetro', texto: 'Mostre a temperatura do DHT11, do capítulo 14, na telinha.' },
-            { titulo: 'Placar', texto: 'Use o botão do capítulo 12 para somar pontos e mostrar o placar na tela.' },
+            { titulo: 'Termômetro', texto: 'Mostre a temperatura do DHT11, do capítulo 15, na telinha.' },
+            { titulo: 'Placar', texto: 'Use o botão do capítulo 13 para somar pontos e mostrar o placar na tela.' },
           ],
         },
       ],

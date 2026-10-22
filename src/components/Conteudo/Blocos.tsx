@@ -665,13 +665,7 @@ function BlocoConteudo({ bloco }: { bloco: Bloco }) {
           <Figura imagem={bloco.imagem} />
           <div className={styles.console}>
             <p className={styles.consoleRotulo}>{t.conteudo.naTelinha}</p>
-            <div className={styles.oled} role="img" aria-label={bloco.linhas.map((l) => l.texto).join(' ')}>
-              {bloco.linhas.map((l) => (
-                <span key={l.texto} style={{ left: l.x - 6, top: l.y - 6 }} aria-hidden>
-                  {l.texto}
-                </span>
-              ))}
-            </div>
+            <Figura imagem={bloco.telinha} />
           </div>
         </div>
       );

@@ -32,6 +32,16 @@ const conteudo: ConteudoCapitulo = {
           imagem: { ...img.categoriaCampainha, alt: 'Categoria Campainha com os blocos de som e os botões para instalar as bibliotecas' },
           legenda: 'A categoria Campainha, com os botões para instalar as bibliotecas.',
         },
+        {
+          tipo: 'paragrafo',
+          texto:
+            'Cada biblioteca tem uma função: a rtttl toca as notas e as melodias, e a songs guarda as músicas prontas, como a do Super Mario. Quando a instalação termina, o Console mostra uma mensagem como esta:',
+        },
+        { tipo: 'console', imagem: { ...img.consoleBiblioteca, alt: 'Console avisando que a biblioteca foi instalada' } },
+        {
+          tipo: 'paragrafo',
+          texto: 'Para conferir, abra a aba Arquivos, atualize a lista do dispositivo e procure os arquivos rtttl.py e songs.py.',
+        },
       ],
     },
     {
@@ -59,6 +69,16 @@ const conteudo: ConteudoCapitulo = {
           ],
         },
         {
+          tipo: 'figura',
+          semSombra: true,
+          imagem: { ...img.notas, alt: 'As sete notas: C é Dó, D é Ré, E é Mi, F é Fá, G é Sol, A é Lá e B é Si' },
+        },
+        {
+          tipo: 'paragrafo',
+          texto:
+            'O número depois da letra diz se a nota é mais grave ou mais aguda. C4 é o Dó do meio do piano, e C5 é o Dó seguinte, mais agudo.',
+        },
+        {
           tipo: 'exemplo',
           compacto: true,
           titulo: 'Uma música pronta',
@@ -66,6 +86,23 @@ const conteudo: ConteudoCapitulo = {
             'Toca uma música que já vem pronta, como o tema do Super Mario. Os nomes das músicas ficam no fim da categoria Campainha.',
           blocos: [
             { tipo: 'figura', semSombra: true, imagem: { ...img.blocoMusica, alt: 'Bloco que toca uma música pronta no buzzer' } },
+          ],
+        },
+        {
+          tipo: 'exemplo',
+          titulo: 'Exemplo: sirene',
+          texto: 'O buzzer troca entre um som agudo e um som grave, como a sirene de uma ambulância.',
+          blocos: [
+            {
+              tipo: 'figura',
+              semSombra: true,
+              imagem: { ...img.exemploSirene, alt: 'Programa que toca 1000 por 0,3 segundo e 600 por 0,3 segundo, repetindo para sempre' },
+            },
+            {
+              tipo: 'explicacao',
+              titulo: 'O que esse programa faz?',
+              itens: ['1. Toca 1000 (som agudo) por 0,3 segundo.', '2. Toca 600 (som grave) por 0,3 segundo.', '3. Repete para sempre.'],
+            },
           ],
         },
       ],
@@ -124,6 +161,11 @@ const conteudo: ConteudoCapitulo = {
             },
           ],
         },
+        {
+          tipo: 'figura',
+          imagem: { ...img.linhaVermelha, alt: 'Grade da aba Música com a linha vermelha passando pela nota que está tocando' },
+          legenda: 'Ao clicar em Tocar, a linha vermelha mostra a nota que está tocando.',
+        },
       ],
     },
     {
@@ -147,6 +189,16 @@ const conteudo: ConteudoCapitulo = {
           titulo: 'Mais opções da melodia',
           texto: 'Clique com o botão direito no bloco da melodia para apagar ou exportar só aquela melodia.',
         },
+        {
+          tipo: 'figura',
+          imagem: { ...img.menuMelodia, alt: 'Menu do bloco de melodia com as opções Excluir e Exportar' },
+          legenda: 'O menu do bloco de melodia, com Excluir e Exportar.',
+        },
+        {
+          tipo: 'paragrafo',
+          texto:
+            'Você também pode usar vários blocos de melodia, um embaixo do outro, para tocar partes diferentes da música em sequência.',
+        },
         { tipo: 'subtitulo', grande: true, texto: 'Exemplo: Parabéns pra você' },
         {
           tipo: 'paragrafo',
@@ -160,6 +212,22 @@ const conteudo: ConteudoCapitulo = {
       ],
     },
     {
+      id: 'usando-um-buzzer-externo',
+      titulo: 'Usando um buzzer externo',
+      blocos: [
+        {
+          tipo: 'paragrafo',
+          texto:
+            'Além do buzzer da placa, você pode ligar um buzzer externo em outro pino digital. Ligue a perna + no pino D19 e a outra perna no GND. Nos blocos, escolha o pino D19 no lugar do D4 / BUZZER.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoBuzzerExterno, alt: 'Diagrama de ligação do buzzer externo: perna + no D19 e a outra perna no GND' },
+          legenda: 'O buzzer externo: perna + no D19 e a outra no GND.',
+        },
+      ],
+    },
+    {
       id: 'desafios',
       titulo: 'Desafios',
       blocos: [
@@ -167,7 +235,7 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'desafios',
           itens: [
             { titulo: 'Escada para baixo', texto: 'Faça a melodia descer: de C5 até C4.' },
-            { titulo: 'Alarme', texto: 'Use o bloco de apito dentro de um laço para fazer um alarme que liga e desliga.' },
+            { titulo: 'Alarme com botão', texto: 'Toque a sirene só enquanto o botão do capítulo 13 estiver apertado.' },
             { titulo: 'Termine a música', texto: 'Continue o Parabéns pra você até o final.' },
           ],
         },

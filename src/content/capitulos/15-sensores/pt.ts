@@ -41,7 +41,12 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'Ele tem 3 pinos (VCC, GND e sinal) e funciona como o botão do capítulo 12: o resultado é 0 ou 1. Ligue o sinal em uma das entradas D34, D35, D36 ou D39. Por isso o bloco é o ler entrada digital, de Pinos entrada/saída.',
+            'Ele tem 3 pinos (VCC, GND e sinal) e funciona como o botão do capítulo 13: o resultado é 0 ou 1. Ligue o sinal em uma das entradas D34, D35, D36 ou D39. Por isso o bloco é o ler entrada digital, de Pinos entrada/saída.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoInfravermelho, alt: 'Diagrama de ligação do sensor infravermelho: OUT no D35, GND no GND e VCC no 3V3' },
+          legenda: 'O sensor infravermelho: OUT no D35, GND no GND e VCC no 3V3.',
         },
         {
           tipo: 'exemplo',
@@ -73,9 +78,14 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'O DHT11 mede duas coisas: a temperatura e a umidade do ar, ou seja, quanta água tem no ar. É ótimo para fazer uma estação do tempo. Ligue o sinal dele em um pino digital, como o D17.',
+            'O DHT11 mede duas coisas: a temperatura e a umidade do ar, ou seja, quanta água tem no ar. É ótimo para fazer uma estação do tempo. Use o módulo de 3 pinos: ligue o VCC no 3V3, o DATA em um pino digital, como o D17, e o GND no GND.',
         },
         { tipo: 'caminho', itens: ['Sensores', 'Temperatura e umidade'] },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoDht11, alt: 'Diagrama de ligação do módulo DHT11 de 3 pinos: VCC no 3V3, DATA no D17 e GND no GND' },
+          legenda: 'O módulo DHT11 de 3 pinos: VCC no 3V3, DATA no D17 e GND no GND.',
+        },
         {
           tipo: 'exemplo',
           titulo: 'Exemplo: estação do tempo',
@@ -120,6 +130,11 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'paragrafo',
           texto:
             'A AmadoBoard já tem um lugar certinho para ele, o CONN 7. Ali o pino trigger (o que grita) é o D17 e o echo (o que escuta) é o D34.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoUltrassonico, alt: 'Diagrama de ligação do sensor ultrassônico no CONN 7: VCC no 5V, TRIG no D17, ECHO no D34 e GND no GND' },
+          legenda: 'O sensor ultrassônico no CONN 7: VCC no 5V, TRIG no D17, ECHO no D34 e GND no GND.',
         },
         { tipo: 'caminho', itens: ['Sensores', 'Ultrassônico'] },
         {
@@ -174,6 +189,11 @@ const conteudo: ConteudoCapitulo = {
             { titulo: 'RST', texto: 'D22 / SCL' },
             { titulo: 'SDA do leitor', texto: 'D5 / CS' },
           ],
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.ligacaoRfid, alt: 'Diagrama de ligação do leitor RFID: o RST vai no D22, do outro lado da placa' },
+          legenda: 'O leitor RFID ligado como na tabela. O RST vai no D22, do outro lado da placa.',
         },
         {
           tipo: 'exemplo',

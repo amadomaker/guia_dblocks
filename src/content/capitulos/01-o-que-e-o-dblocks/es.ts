@@ -101,7 +101,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'En la pestaña Dispositivo puedes girar la placa en 3D y ver el nombre de cada parte. El capítulo 11 muestra todo esto con calma.',
+            'En la pestaña Dispositivo puedes girar la placa en 3D y ver el nombre de cada parte. El capítulo 12 muestra todo esto con calma.',
         },
       ],
     },
@@ -126,7 +126,7 @@ const conteudo: ConteudoCapitulo = {
               icone: 'check',
               titulo: 'MicroPython en la placa',
               texto:
-                'Es lo que hace que la placa entienda los programas de Dblocks. Se graba una sola vez, y el capítulo 04 muestra cómo hacerlo.',
+                'Es lo que hace que la placa entienda los programas de Dblocks. Se graba una sola vez, y el capítulo 05 muestra cómo hacerlo.',
             },
           ],
         },

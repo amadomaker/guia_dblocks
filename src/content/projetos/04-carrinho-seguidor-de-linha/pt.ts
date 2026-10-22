@@ -112,7 +112,7 @@ const conteudo: ConteudoCapitulo = {
           icone: 'sparkles',
           titulo: 'Teste os sensores antes',
           texto:
-            'Use o exemplo do sensor infravermelho do capítulo 14 para ver se cada sensor lê 1 em cima da fita.',
+            'Use o exemplo do sensor infravermelho do capítulo 15 para ver se cada sensor lê 1 em cima da fita.',
         },
       ],
     },

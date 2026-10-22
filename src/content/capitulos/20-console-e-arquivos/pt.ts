@@ -122,7 +122,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'Embaixo ficam dois arquivos que o Dblocks cria sozinho a partir dos seus blocos: o .py, com o código em Python, e o workspace.dblocks.xml, de uso interno. Clique no .py para ver o código. O capítulo 10 explica como ler esse código.',
+            'Embaixo ficam dois arquivos que o Dblocks cria sozinho a partir dos seus blocos: o .py, com o código em Python, e o workspace.dblocks.xml, de uso interno. Clique no .py para ver o código. O capítulo 11 explica como ler esse código.',
         },
       ],
     },
