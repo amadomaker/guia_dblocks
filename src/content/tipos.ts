@@ -36,6 +36,8 @@ export type Bloco = MarcaRecurso & (
       tamanho?: 'normal' | 'pequena';
       semSombra?: boolean;
       topo?: number;
+      /** A legenda pode passar da largura do print (no Figma ela ocupa a largura toda e não quebra). */
+      legendaLivre?: boolean;
     }
   /** `enfase`: corpo em semibold com entrelinha normal (aviso curto, sem parágrafo). */
   | {
@@ -52,7 +54,8 @@ export type Bloco = MarcaRecurso & (
   /** `inicio`: número do primeiro passo, quando a lista continua depois de um print. */
   | { tipo: 'passos'; itens: Passo[]; inicio?: number; /** Projetos: 6px entre título e texto. */ montagem?: boolean }
   /** Figuras lado a lado, cada uma com legenda opcional. */
-  | { tipo: 'figuras'; itens: { imagem: Imagem; legenda?: TextoRico }[]; semSombra?: boolean; gap?: number }
+  /** `quebra`: cada figura mantém a sua largura e as que não cabem descem para a linha de baixo. */
+  | { tipo: 'figuras'; itens: { imagem: Imagem; legenda?: TextoRico }[]; semSombra?: boolean; gap?: number; quebra?: boolean }
   /** Print à esquerda e, ao lado, itens com uma borda colorida (ex.: painel de perfil). */
   | { tipo: 'figuraComItens'; imagem: Imagem; itens: { cor: string; titulo: string; texto: TextoRico }[] }
   /** Print com marcadores numerados por cima (posição em px dentro da imagem). */

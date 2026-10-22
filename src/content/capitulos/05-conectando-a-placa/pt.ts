@@ -53,6 +53,17 @@ const conteudo: ConteudoCapitulo = {
               titulo: 'Baixe o driver CP210x',
               texto: 'Ele fica no site da Silicon Labs. Procure por Downloads e baixe a versão do seu computador.',
             },
+          ],
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.downloadDriver, alt: 'Aba Downloads do site da Silicon Labs com a versão CP210x Windows Drivers' },
+          legenda: 'Na aba Downloads do site da Silicon Labs, baixe a versão CP210x Windows Drivers.',
+        },
+        {
+          tipo: 'passos',
+          inicio: 2,
+          itens: [
             {
               titulo: 'Instale e reconecte a placa',
               texto: 'Abra o arquivo baixado e siga a instalação. Depois, tire o cabo da placa e coloque de novo.',
@@ -88,11 +99,40 @@ const conteudo: ConteudoCapitulo = {
               texto:
                 'Ligue a placa no computador e clique em Conectar. Vai abrir uma janela com uma lista: escolha a placa e confirme.',
             },
+          ],
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.conectarPorta, alt: 'Janela do navegador para escolher a porta da placa e clicar em Conectar' },
+        },
+        {
+          tipo: 'passos',
+          inicio: 3,
+          itens: [
             {
-              titulo: 'Aguarde a instalação',
-              texto: 'Leva uns 2 minutos, às vezes um pouco mais. Não tire o cabo enquanto isso.',
+              titulo: 'Coloque a placa em modo de gravação',
+              texto: 'Na placa, segure o botão BOOT, aperte e solte o RESET e depois solte o BOOT.',
             },
           ],
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.botoesBootReset, alt: 'Os botões BOOT e RESET na AmadoBoard' },
+        },
+        {
+          tipo: 'passos',
+          inicio: 4,
+          itens: [
+            {
+              titulo: 'Instale o MicroPython',
+              texto:
+                'Clique em Install MicroPython e depois em Install. Leva uns 2 minutos; não tire o cabo enquanto isso. No final, aperte o RESET da placa.',
+            },
+          ],
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.instalacaoConcluida, alt: 'Tela de instalação do MicroPython concluída' },
         },
       ],
     },

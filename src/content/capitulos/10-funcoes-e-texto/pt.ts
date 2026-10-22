@@ -27,14 +27,19 @@ const conteudo: ConteudoCapitulo = {
         { tipo: 'caminho', itens: ['Funções', 'Funções criadas'] },
         {
           tipo: 'figuras',
+          quebra: true,
           itens: [
             {
               imagem: { ...img.funcoesCriadasComeco, alt: 'Grupo Funções criadas com os blocos para criar funções' },
-              legenda: 'No começo: os blocos para criar funções.',
+              legenda: '1. No começo: os blocos para criar funções.',
+            },
+            {
+              imagem: { ...img.funcaoPiscarMontada, alt: 'A função piscar montada na área de trabalho' },
+              legenda: '2. Monte a função piscar na área de trabalho.',
             },
             {
               imagem: { ...img.funcoesCriadasPiscar, alt: 'Grupo Funções criadas com o bloco novo piscar' },
-              legenda: 'Depois de criar a função piscar, ela vira um bloco novo.',
+              legenda: '3. Depois: a função piscar vira um bloco novo na lista.',
             },
           ],
         },

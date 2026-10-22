@@ -67,6 +67,7 @@ const conteudo: ConteudoCapitulo = {
         },
         {
           tipo: 'tabela',
+          respiro: 12.5,
           itens: [
             { titulo: 'LED vermelho', texto: 'Pino D32.' },
             { titulo: 'LED verde', texto: 'Pino D33.' },
@@ -135,6 +136,7 @@ const conteudo: ConteudoCapitulo = {
         { tipo: 'paragrafo', texto: 'Além das peças prontas, a placa tem pinos livres para ligar outras coisas:' },
         {
           tipo: 'tabela',
+          respiro: 12.5,
           itens: [
             { titulo: 'Só entrada', texto: 'D34, D35, D36 e D39. Servem para ler sensores.' },
             {
@@ -167,6 +169,7 @@ const conteudo: ConteudoCapitulo = {
         { tipo: 'paragrafo', texto: 'Estes são os componentes extras que você pode ligar na placa:' },
         {
           tipo: 'tabela',
+          respiro: 12.5,
           itens: [
             { titulo: 'Sensor ultrassônico HC-SR04', texto: 'Mede distâncias.' },
             { titulo: 'Seguidor de linha TCRT5000', texto: 'Percebe linhas no chão.' },

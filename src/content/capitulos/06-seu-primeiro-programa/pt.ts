@@ -37,7 +37,7 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'paragrafo',
           texto:
-            'Clique em Controle, depois em Laços. Arraste o bloco repita enquanto para a área de trabalho e solte embaixo de Dados do projeto. Esse bloco faz tudo o que estiver dentro dele se repetir. Chamamos isso de laço.',
+            'Clique em Controle, depois em Laços. Arraste o bloco repita enquanto para a área de trabalho e solte em um espaço vazio, abaixo de Dados do projeto. Esse bloco faz tudo o que estiver dentro dele se repetir. Chamamos isso de laço.',
         },
         { tipo: 'caminho', itens: ['Controle', 'Laços', 'repita enquanto'] },
         {

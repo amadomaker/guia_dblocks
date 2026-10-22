@@ -9,6 +9,6 @@ export const img = {
   codigoPiscaLed: { src: codigoPiscaLed, largura: 760, altura: 428 },
   painelBlocosParaCodigo: { src: painelBlocosParaCodigo, largura: 300, altura: 300 },
   blocosPiscaLed: { src: blocosPiscaLed, largura: 368, altura: 177 },
-  trechoCodigo: { src: trechoCodigo, largura: 368, altura: 132 },
-  comecoCodigo: { src: comecoCodigo, largura: 560, altura: 190 },
+  trechoCodigo: { src: trechoCodigo, largura: 368, altura: 129 },
+  comecoCodigo: { src: comecoCodigo, largura: 560, altura: 328 },
 };

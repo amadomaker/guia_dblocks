@@ -13,7 +13,7 @@ import exemplo4 from '../../../assets/capitulos/13/exemplo-4.webp';
 // Tamanhos das caixas no Figma; os textos alternativos ficam em cada idioma.
 export const img = {
   botaoAcendeLed: { src: botaoAcendeLed, largura: 760, altura: 428 },
-  sinalDigital: { src: sinalDigital, largura: 760, altura: 288 },
+  sinalDigital: { src: sinalDigital, largura: 760, altura: 260 },
   exemplo1: { src: exemplo1, largura: 589, altura: 237 },
   console1: { src: console1, largura: 200, altura: 99 },
   jumperGnd: { src: jumperGnd, largura: 368, altura: 182 },

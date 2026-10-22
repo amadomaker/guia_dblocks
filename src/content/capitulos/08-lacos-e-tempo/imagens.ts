@@ -1,3 +1,5 @@
+import console3 from '../../../assets/capitulos/08/console-3.webp';
+import console6 from '../../../assets/capitulos/08/console-6.webp';
 import categoriaLacos from '../../../assets/capitulos/08/categoria-lacos.webp';
 import exemplo1 from '../../../assets/capitulos/08/exemplo-1.webp';
 import console1 from '../../../assets/capitulos/08/console-1.webp';
@@ -13,6 +15,8 @@ import unidadesEsperar from '../../../assets/capitulos/08/unidades-esperar.webp'
 
 // Tamanhos das caixas no Figma; os textos alternativos ficam em cada idioma.
 export const img = {
+  console3: { src: console3, largura: 150, altura: 98 },
+  console6: { src: console6, largura: 150, altura: 98 },
   categoriaLacos: { src: categoriaLacos, largura: 760, altura: 428 },
   exemplo1: { src: exemplo1, largura: 360, altura: 129 },
   console1: { src: console1, largura: 150, altura: 70 },

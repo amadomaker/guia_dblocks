@@ -58,6 +58,7 @@ const conteudo: ConteudoCapitulo = {
         },
         {
           tipo: 'figura',
+          legendaLivre: true,
           imagem: { ...img.ligacaoRele, alt: 'Diagrama de ligação do módulo relé: VCC no 5V, IN2 no D17 e GND no GND' },
           legenda: 'O módulo relé: VCC no 5V, IN2 no D17 e GND no GND. Do outro lado, o relé liga e desliga o LED das pilhas.',
         },

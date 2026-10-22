@@ -97,7 +97,7 @@ const conteudo: ConteudoCapitulo = {
             { titulo: 'EasyMQTT', texto: 'Mostra os dados enviados com o EasyMQTT. Capítulo 25.' },
             { titulo: 'Música', texto: 'Monte músicas para o buzzer tocar. Capítulo 17.' },
             { titulo: 'Simulador', texto: 'Teste circuitos e programas sem a placa. Capítulo 19.' },
-            { titulo: 'Visão', texto: 'Controle a placa com gestos, usando a câmera. Capítulo 22.' },
+            { titulo: 'Visão', texto: 'Controle a placa com visão computacional: reconheça gestos, poses e cores. Capítulo 22.' },
             { titulo: 'IA', texto: 'O José. Capítulo 26.', recurso: 'jose' },
           ],
         },
@@ -135,6 +135,11 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'paragrafo',
           texto:
             'É o espaço onde você monta o programa. Arraste um bloco para perto de outro e solte: se as pontas combinarem, eles se encaixam, como peças de quebra‑cabeça. O bloco Dados do projeto já vem pronto. Nele você pode escrever o seu nome e o que o programa faz.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.areaDeTrabalho, alt: 'A área de trabalho do Dblocks com o bloco Dados do projeto e os controles no canto direito' },
+          legenda: 'A área de trabalho com o bloco Dados do projeto, que já vem pronto, e os controles no canto direito.',
         },
         {
           tipo: 'figuraComLista',

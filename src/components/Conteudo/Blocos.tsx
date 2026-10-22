@@ -81,7 +81,7 @@ function BlocoConteudo({ bloco }: { bloco: Bloco }) {
         <figure
           className={pequena ? styles.figuraPequena : styles.figura}
           // Na figura pequena a legenda pode passar da largura do print (no Figma ela não quebra).
-          style={{ ...(pequena ? undefined : { maxWidth: bloco.imagem.largura }), paddingTop: bloco.topo }}
+          style={{ ...(pequena || bloco.legendaLivre ? undefined : { maxWidth: bloco.imagem.largura }), paddingTop: bloco.topo }}
         >
           <Figura
             imagem={bloco.imagem}
@@ -166,9 +166,13 @@ function BlocoConteudo({ bloco }: { bloco: Bloco }) {
 
     case 'figuras':
       return (
-        <div className={styles.figuras} style={bloco.gap ? { gap: bloco.gap } : undefined}>
+        <div className={`${styles.figuras} ${bloco.quebra ? styles.figurasQuebra : ''}`} style={bloco.gap ? { gap: bloco.gap } : undefined}>
           {bloco.itens.map((item) => (
-            <figure key={item.imagem.src} className={styles.figura} style={{ maxWidth: item.imagem.largura }}>
+            <figure
+              key={item.imagem.src}
+              className={styles.figura}
+              style={bloco.quebra ? { width: item.imagem.largura } : { maxWidth: item.imagem.largura }}
+            >
               <Figura imagem={item.imagem} className={bloco.semSombra ? styles.imagemSemSombra : styles.imagemSombra} />
               {item.legenda && (
                 <figcaption className={styles.legenda}>

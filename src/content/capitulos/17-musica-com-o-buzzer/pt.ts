@@ -163,6 +163,7 @@ const conteudo: ConteudoCapitulo = {
         },
         {
           tipo: 'figura',
+          legendaLivre: true,
           imagem: { ...img.linhaVermelha, alt: 'Grade da aba Música com a linha vermelha passando pela nota que está tocando' },
           legenda: 'Ao clicar em Tocar, a linha vermelha mostra a nota que está tocando.',
         },

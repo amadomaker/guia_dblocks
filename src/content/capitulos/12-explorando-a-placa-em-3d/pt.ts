@@ -31,7 +31,6 @@ const conteudo: ConteudoCapitulo = {
           imagem: {
             ...img.painelDispositivo,
             alt: 'Painel da aba Dispositivo com as vistas, as camadas de Ver na placa e os comandos Tour guiado, Componentes e Explodir',
-            recorte: { x: -1.45, y: -1.96, largura: 101.45, altura: 101.78 },
           },
           itens: [
             { titulo: 'Vistas', texto: 'No canto de cima, escolha Superior, Frente, 3/4 ou Verso para ver a placa de outro jeito.' },

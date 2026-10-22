@@ -113,7 +113,7 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'figura',
           semSombra: true,
           imagem: { ...img.comecoCodigo, alt: 'Começo do código com os comentários, os imports e a função gpio_set' },
-          legenda: 'O começo do código, com as ferramentas e a função gpio_set.',
+          legenda: 'O começo do código: as ferramentas, a função gpio_set e os comentários.',
         },
         {
           tipo: 'destaque',

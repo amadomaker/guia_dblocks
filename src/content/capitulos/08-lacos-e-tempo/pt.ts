@@ -68,7 +68,7 @@ const conteudo: ConteudoCapitulo = {
           'O repita enquanto também pode repetir só enquanto uma regra for verdade. Aqui, ele repete enquanto o número for menor que 5. Quando o número chega a 5, a regra deixa de ser verdade e o laço para.',
           img.exemplo3,
           'Bloco repita enquanto número menor que 5, somando 1 ao número a cada volta',
-          img.console2,
+          img.console3,
           'Console mostrando os números de 1 a 4',
         ),
         exemplo(
@@ -92,7 +92,7 @@ const conteudo: ConteudoCapitulo = {
           'O encerra o laço faz o laço parar na hora, mesmo sem ter terminado. Aqui, a contagem iria até 10, mas para quando chega no 6. Por isso o Console mostra só de 1 a 5.',
           img.exemplo6,
           'Bloco contar até 10 com um se que encerra o laço quando i chega a 6',
-          img.console2,
+          img.console6,
           'Console mostrando os números de 1 a 5',
         ),
       ],
@@ -112,7 +112,7 @@ const conteudo: ConteudoCapitulo = {
           layout: { colunas: 28, itens: 14, topo: 8, titulo: 17, linhaTexto: 23 },
           imagem: { ...img.unidadesEsperar, alt: 'Bloco esperar com a lista de unidades aberta: segundos, milisegundos e microsegundos' },
           itens: [
-            { titulo: 'segundos', texto: 'O tempo do relógio. 1 segundo é mais ou menos o tempo de falar “um”.' },
+            { titulo: 'segundos', texto: 'O tempo do relógio. 1 segundo é mais ou menos o tempo de falar “mil e um”.' },
             { titulo: 'milisegundos', texto: 'Pedacinhos de um segundo: 1000 milisegundos são 1 segundo.' },
             { titulo: 'microsegundos', texto: 'Pedacinhos ainda menores. Quase nunca são usados nos primeiros projetos.' },
           ],

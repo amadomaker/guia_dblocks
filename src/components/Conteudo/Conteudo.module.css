@@ -130,6 +130,14 @@
   min-width: 0;
 }
 
+.figurasQuebra {
+  flex-wrap: wrap;
+}
+
+.figurasQuebra > .figura {
+  flex: 0 0 auto;
+}
+
 .figuraComItens {
   display: flex;
   align-items: flex-start;
