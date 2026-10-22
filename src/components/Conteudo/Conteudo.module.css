@@ -83,12 +83,17 @@
   max-width: none;
 }
 
-.imagemSombra {
-  box-shadow: 0 12px 32px -8px rgba(15, 26, 46, 0.1);
-}
-
+/* No Figma os prints só têm a borda de 1px, sem sombra. */
+.imagemSombra,
 .imagemSemSombra {
   box-shadow: none;
+}
+
+/* Imagens que no Figma não têm moldura (ex.: a telinha OLED). */
+.imagemSemBorda {
+  border: 0;
+  border-radius: 0;
+  background: none;
 }
 
 .figura {

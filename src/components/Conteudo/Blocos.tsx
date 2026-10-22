@@ -669,7 +669,7 @@ function BlocoConteudo({ bloco }: { bloco: Bloco }) {
           <Figura imagem={bloco.imagem} />
           <div className={styles.console}>
             <p className={styles.consoleRotulo}>{t.conteudo.naTelinha}</p>
-            <Figura imagem={bloco.telinha} />
+            <Figura imagem={bloco.telinha} className={styles.imagemSemBorda} />
           </div>
         </div>
       );
