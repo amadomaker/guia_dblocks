@@ -39,7 +39,7 @@ export function Hero() {
   const rota = useRota();
   // A largura medida no Figma só vale para o texto em português.
   const larguraFixa = useIdioma() === 'pt';
-  // Total de capítulos vem do catálogo: com o José oculto, o capítulo 25 sai da conta.
+  // Total de capítulos vem do catálogo: com o José oculto, o capítulo 26 sai da conta.
   const { trilhas, todosOsCapitulos } = useCatalogo();
   const numeros = [
     String(todosOsCapitulos.length),

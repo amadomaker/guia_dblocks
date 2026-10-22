@@ -51,7 +51,7 @@ const conteudo: ConteudoCapitulo = {
           variante: 'info',
           icone: 'book',
           titulo: 'Ainda não instalou o MicroPython?',
-          texto: 'O capítulo 04, Conectando a placa, mostra o passo a passo.',
+          texto: 'O capítulo 05, Conectando a placa, mostra o passo a passo.',
         },
       ],
     },
@@ -69,7 +69,7 @@ const conteudo: ConteudoCapitulo = {
           imagem: { ...img.painelDePerfil, alt: 'Painel de perfil aberto com a saudação, a lista de projetos, Configurações e Sair' },
           itens: [
             { cor: '#2c2d34', titulo: 'Olá, seu nome', texto: 'Mostra o nome da sua conta Google.' },
-            { cor: '#fa7324', titulo: 'Projetos', texto: 'Mostra os seus projetos. O botão + cria um projeto novo. O capítulo 20 explica mais.' },
+            { cor: '#fa7324', titulo: 'Projetos', texto: 'Mostra os seus projetos. O botão + cria um projeto novo. O capítulo 21 explica mais.' },
             { cor: '#326eb4', titulo: 'Configurações', texto: 'Aqui você troca o idioma e encontra o botão Limpar cache.' },
             { cor: '#326eb4', titulo: 'Sair', texto: 'Sai da sua conta neste computador.' },
           ],

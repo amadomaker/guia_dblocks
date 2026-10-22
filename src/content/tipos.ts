@@ -36,6 +36,8 @@ export type Bloco = MarcaRecurso & (
       tamanho?: 'normal' | 'pequena';
       semSombra?: boolean;
       topo?: number;
+      /** A legenda pode passar da largura do print (no Figma ela ocupa a largura toda e não quebra). */
+      legendaLivre?: boolean;
     }
   /** `enfase`: corpo em semibold com entrelinha normal (aviso curto, sem parágrafo). */
   | {
@@ -52,7 +54,8 @@ export type Bloco = MarcaRecurso & (
   /** `inicio`: número do primeiro passo, quando a lista continua depois de um print. */
   | { tipo: 'passos'; itens: Passo[]; inicio?: number; /** Projetos: 6px entre título e texto. */ montagem?: boolean }
   /** Figuras lado a lado, cada uma com legenda opcional. */
-  | { tipo: 'figuras'; itens: { imagem: Imagem; legenda?: TextoRico }[]; semSombra?: boolean; gap?: number }
+  /** `quebra`: cada figura mantém a sua largura e as que não cabem descem para a linha de baixo. */
+  | { tipo: 'figuras'; itens: { imagem: Imagem; legenda?: TextoRico }[]; semSombra?: boolean; gap?: number; quebra?: boolean }
   /** Print à esquerda e, ao lado, itens com uma borda colorida (ex.: painel de perfil). */
   | { tipo: 'figuraComItens'; imagem: Imagem; itens: { cor: string; titulo: string; texto: TextoRico }[] }
   /** Print com marcadores numerados por cima (posição em px dentro da imagem). */
@@ -107,7 +110,6 @@ export type Bloco = MarcaRecurso & (
   | { tipo: 'textoComFigura'; titulo: string; paragrafos: TextoRico[]; imagem: Imagem }
   /** Print pequeno e, ao lado, um título com uma tabela compacta (ex.: ligações de um módulo). */
   | { tipo: 'figuraComLigacoes'; imagem: Imagem; titulo: string; itens: ItemTexto[] }
-  /** Print dos blocos e, ao lado, uma ilustração da telinha OLED (x/y em px do Figma, 256×128). */
   /** Janela de navegador desenhada (barra com a URL) com o print da página dentro. */
   /** Print ao lado de uma lista com borda, cada item marcado por uma faixa colorida. */
   | { tipo: 'figuraComFaixas'; imagem: Imagem; itens: { cor: string; titulo: string; texto: TextoRico }[] }
@@ -127,7 +129,8 @@ export type Bloco = MarcaRecurso & (
   | { tipo: 'navegador'; url: string; imagem: Imagem; legenda?: TextoRico }
   /** Endereço ou trecho de código em fonte mono, numa caixa cinza. */
   | { tipo: 'endereco'; texto: string }
-  | { tipo: 'blocosEOled'; imagem: Imagem; linhas: { texto: string; x: number; y: number }[] }
+  /** Print dos blocos e, ao lado, a imagem do que aparece na telinha OLED. */
+  | { tipo: 'blocosEOled'; imagem: Imagem; telinha: Imagem }
 );
 
 /** Espaçamentos (px) do bloco figuraComLista, que variam um pouco entre as telas do Figma. */

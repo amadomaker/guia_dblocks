@@ -1,3 +1,4 @@
+import areaDeTrabalho from '../../../assets/capitulos/03/area-de-trabalho.webp';
 import visaoGeral from '../../../assets/capitulos/03/visao-geral.webp';
 import barraSuperior from '../../../assets/capitulos/03/barra-superior.webp';
 import abasDaLateral from '../../../assets/capitulos/03/abas-da-lateral.webp';
@@ -9,6 +10,7 @@ import comentarioNoBloco from '../../../assets/capitulos/03/comentario-no-bloco.
 import blocosNaLixeira from '../../../assets/capitulos/03/blocos-na-lixeira.webp';
 
 export const img = {
+  areaDeTrabalho: { src: areaDeTrabalho, largura: 760, altura: 456 },
   visaoGeral: { src: visaoGeral, largura: 760, altura: 428 },
   barraSuperior: { src: barraSuperior, largura: 760, altura: 83 },
   abasDaLateral: { src: abasDaLateral, largura: 56, altura: 544 },

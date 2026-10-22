@@ -246,7 +246,7 @@ export const pt = {
     'primeiros-passos': {
       titulo: 'Primeiros passos',
       resumo: 'Da conta criada ao primeiro programa rodando na placa, passando por cada parte da interface.',
-      duracao: 'cerca de 34 min',
+      duracao: 'cerca de 44 min',
     },
     'programacao-em-blocos': {
       titulo: 'Programação em blocos',
@@ -273,6 +273,7 @@ export const pt = {
     'o-que-e-o-dblocks': { titulo: 'O que é o Dblocks', resumo: 'Conheça a plataforma, o que dá para criar e como os blocos viram código de verdade.' },
     'sua-conta-e-seu-perfil': { titulo: 'Sua conta e seu perfil', resumo: 'Entre com o Google, escolha o idioma e veja para que serve o botão Limpar cache.' },
     'conhecendo-a-interface': { titulo: 'Conhecendo a interface', resumo: 'Barra de abas, caixa de blocos, área de trabalho e os botões de executar e gravar na placa.' },
+    'conhecendo-a-amadoboard': { titulo: 'Conhecendo a AmadoBoard', resumo: 'Conheça as peças da placa, como ela recebe energia e em quais pinos ligar cada coisa.' },
     'conectando-a-placa': { titulo: 'Conectando a placa', resumo: 'Instale o MicroPython, conecte por USB, Bluetooth ou Wi‑Fi e saiba o que fazer se a conexão falhar.' },
     'seu-primeiro-programa': { titulo: 'Seu primeiro programa', resumo: 'Faça um LED piscar, bloco a bloco, e grave o programa na AmadoBoard.' },
     'variaveis-e-valores': { titulo: 'Variáveis e valores', resumo: 'Guarde números, textos e listas e mostre valores no console.' },
@@ -280,7 +281,7 @@ export const pt = {
     'matematica-e-logica': { titulo: 'Matemática e lógica', resumo: 'Aprenda a usar operadores matemáticos e lógicos para tomar decisões com se / senão.' },
     'funcoes-e-texto': { titulo: 'Funções e texto', resumo: 'Crie seus próprios blocos reutilizáveis e trabalhe com textos.' },
     'do-bloco-ao-python': { titulo: 'Do bloco ao Python', resumo: 'Veja o MicroPython gerado pelos seus blocos e aprenda lendo o código.' },
-    'conhecendo-a-amadoboard': { titulo: 'Conhecendo a AmadoBoard', resumo: 'Explore a AmadoBoard em 3D: veja pinos, componentes e faça um tour guiado pela placa.' },
+    'explorando-a-placa-em-3d': { titulo: 'Explorando a placa em 3D', resumo: 'Explore a AmadoBoard em 3D: veja pinos, componentes e faça um tour guiado pela placa.' },
     'entradas-e-saidas-digitais': { titulo: 'Entradas e saídas digitais', resumo: 'Aprenda a ler botões e controlar LEDs entendendo os estados digitais ligado e desligado.' },
     'entradas-e-saidas-analogicas': { titulo: 'Entradas e saídas analógicas', resumo: 'Aprenda a ler sensores analógicos como o LDR e o potenciômetro, e controle o brilho de um LED com PWM.' },
     sensores: { titulo: 'Sensores', resumo: 'Aprenda a usar sensores de temperatura, umidade, distância, infravermelho e RFID na prática.' },
@@ -293,7 +294,7 @@ export const pt = {
     'visao-computacional': { titulo: 'Visão computacional', resumo: 'Controle a placa com visão computacional: reconheça gestos, poses e cores pela câmera do computador.' },
     bluetooth: { titulo: 'Bluetooth', resumo: 'Converse com o celular, envie comandos e plote dados sem fio.' },
     'wi-fi-e-internet': { titulo: 'Wi‑Fi e internet', resumo: 'Conecte a placa à rede, crie um servidor web e faça requisições.' },
-    'iot-e-paineis-de-dados': { titulo: 'IoT e painéis de dados', resumo: 'Publique dados com o EasyMQTT e acompanhe tudo em gráficos ao vivo.' },
+    'iot-e-paineis-de-dados': { titulo: 'IoT e painéis de dados', resumo: 'Monte um painel com medidores e gráficos e acompanhe as leituras da placa em tempo real, pelo cabo USB.' },
     'conhecendo-o-jose': {
       tituloCurto: 'José',
       titulo: 'Conhecendo o José',
@@ -314,13 +315,13 @@ export const pt = {
   },
   /** Rótulos curtos dos chips "Usa os capítulos", por número do capítulo. */
   chipsCapitulos: {
-    7: 'Laços e tempo',
-    8: 'Lógica',
-    12: 'Digitais',
-    14: 'Sensores',
-    15: 'Motores',
-    16: 'Música',
-    18: 'Simulador',
+    8: 'Laços e tempo',
+    9: 'Lógica',
+    13: 'Digitais',
+    15: 'Sensores',
+    16: 'Motores',
+    17: 'Música',
+    19: 'Simulador',
   } as Record<number, string>,
 };
 

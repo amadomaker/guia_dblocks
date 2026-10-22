@@ -17,6 +17,7 @@ const palavrasChave: Record<string, string> = {
   'o-que-e-o-dblocks': 'introdução plataforma bipes blocos micropython',
   'sua-conta-e-seu-perfil': 'login google conta perfil idioma limpar cache',
   'conhecendo-a-interface': 'abas toolbox caixa de ferramentas área de trabalho executar play stop salvar',
+  'conhecendo-a-amadoboard': 'placa amadoboard esp32 pinos energia usb fonte leds buzzer motores servos conectores',
   'conectando-a-placa': 'usb serial driver micropython instalador conexão falhou esp32 bluetooth wi-fi conectar',
   'seu-primeiro-programa': 'pisca led blink gravar placa',
   'variaveis-e-valores': 'variável lista número texto console print imprimir',
@@ -24,7 +25,7 @@ const palavrasChave: Record<string, string> = {
   'matematica-e-logica': 'se senão if else comparação operadores e ou não aritmética',
   'funcoes-e-texto': 'função procedimento texto string juntar',
   'do-bloco-ao-python': 'python micropython código gerado',
-  'conhecendo-a-amadoboard': 'placa pinos pinout 3d dispositivo esp32 componentes tour',
+  'explorando-a-placa-em-3d': 'placa pinos pinout 3d dispositivo esp32 componentes tour',
   'entradas-e-saidas-digitais': 'botão led digital gpio ligar desligar',
   'entradas-e-saidas-analogicas': 'analógico ldr potenciômetro pwm brilho adc',
   sensores: 'dht11 temperatura umidade ultrassônico distância infravermelho ir rfid tcrt5000',
@@ -37,7 +38,7 @@ const palavrasChave: Record<string, string> = {
   'visao-computacional': 'câmera gestos mão mediapipe esp32-cam visão',
   bluetooth: 'bluetooth ble celular app plotter',
   'wi-fi-e-internet': 'wifi rede servidor web http requisição access point',
-  'iot-e-paineis-de-dados': 'iot mqtt easymqtt painel dashboard databoard gráfico nuvem',
+  'iot-e-paineis-de-dados': 'iot painel painéis dashboard medidor gráfico aba iot usb bipes mostrar valor sensor tempo real quadro widget fonte de dados',
   'conhecendo-o-jose': 'josé ia inteligência artificial chat robô',
 };
 

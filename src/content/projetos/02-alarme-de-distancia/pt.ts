@@ -19,14 +19,14 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'capitulosUsados',
           itens: [
             {
-              capitulo: 14,
+              capitulo: 15,
               texto: 'O que você usa: Como ligar o sensor ultrassônico no CONN 7 e medir a distância em milímetros.',
             },
             {
-              capitulo: 8,
+              capitulo: 9,
               texto: 'O que você usa: O se / senão e a comparação menor que, para decidir quando o alarme toca.',
             },
-            { capitulo: 16, texto: 'O que você usa: O bloco de apito do buzzer, com frequência e duração.' },
+            { capitulo: 17, texto: 'O que você usa: O bloco de apito do buzzer, com frequência e duração.' },
           ],
         },
       ],
@@ -55,17 +55,18 @@ const conteudo: ConteudoCapitulo = {
             {
               titulo: 'Encaixe o sensor ultrassônico no conector CONN 7.',
               texto: 'Ele já tem o lugar certo: trigger no D17 e echo no D34.',
-              capitulo: 14,
+              capitulo: 15,
             },
           ],
         },
         {
-          tipo: 'destaque',
-          variante: 'info',
-          icone: 'book',
-          titulo: 'Use o 3V3 nos sensores',
-          texto:
-            'Os pinos da placa trabalham com até 3,3V. Ligar 5V direto em um pino de entrada pode estragar a placa.',
+          tipo: 'figura',
+          legendaLivre: true,
+          imagem: {
+            ...img.ligacaoUltrassonico,
+            alt: 'Diagrama de ligação do sensor ultrassônico no CONN 7: VCC no 5V, TRIG no D17, ECHO no D34 e GND no GND',
+          },
+          legenda: 'O sensor ultrassônico no CONN 7: VCC no 5V, TRIG no D17, ECHO no D34 e GND no GND.',
         },
       ],
     },
@@ -82,13 +83,13 @@ const conteudo: ConteudoCapitulo = {
           },
           titulo: 'O que esse programa faz?',
           linhas: [
-            { texto: 'Prepara o sensor ultrassônico: echo no D34 e trigger no D17.', capitulo: 14 },
-            { texto: 'Mede a distância e guarda em distancia.', capitulo: 14 },
+            { texto: 'Prepara o sensor ultrassônico: echo no D34 e trigger no D17.', capitulo: 15 },
+            { texto: 'Mede a distância e guarda em distancia.', capitulo: 15 },
             {
               texto: 'Se a distância for menor que 200 mm (20 cm), acende o LED vermelho e apita.',
-              capitulo: 8,
+              capitulo: 9,
             },
-            { texto: 'Senão, apaga o LED. Espera 100 milissegundos e repete.', capitulo: 8 },
+            { texto: 'Senão, apaga o LED. Espera 100 milissegundos e repete.', capitulo: 9 },
           ],
         },
         {

@@ -50,7 +50,7 @@ const conteudo: ConteudoCapitulo = {
             {
               titulo: 'Escolha o canal de conexão',
               texto:
-                'Escolhe o caminho que o computador usa para falar com a placa: pelo cabo (USB), por Bluetooth ou por Wi‑Fi. O capítulo 04 explica.',
+                'Escolhe o caminho que o computador usa para falar com a placa: pelo cabo (USB), por Bluetooth ou por Wi‑Fi. O capítulo 05 explica.',
             },
             { titulo: 'Conectar/Desconectar', texto: 'Liga e desliga a conexão com a placa.' },
             { titulo: 'Selecionar Placa', texto: 'Mostra qual placa você está usando: a AmadoBoard.' },
@@ -90,15 +90,15 @@ const conteudo: ConteudoCapitulo = {
           imagem: { ...img.abasDaLateral, alt: 'Barra lateral do Dblocks com os ícones das dez abas, um embaixo do outro' },
           itens: [
             { titulo: 'Blocos', texto: 'Onde você monta o programa com os blocos.' },
-            { titulo: 'Console', texto: 'Mostra as mensagens que a placa manda. Capítulo 19.' },
-            { titulo: 'Arquivos', texto: 'Mostra os arquivos guardados dentro da placa. Capítulo 19.' },
-            { titulo: 'Dispositivo', texto: 'A AmadoBoard em 3D. Capítulo 11.' },
-            { titulo: 'IOT', texto: 'Mostra em gráficos os dados que a placa envia pela internet. Capítulo 24.' },
-            { titulo: 'EasyMQTT', texto: 'Mostra os dados enviados com o EasyMQTT. Capítulo 24.' },
-            { titulo: 'Música', texto: 'Monte músicas para o buzzer tocar. Capítulo 16.' },
-            { titulo: 'Simulador', texto: 'Teste circuitos e programas sem a placa. Capítulo 18.' },
-            { titulo: 'Visão', texto: 'Controle a placa com gestos, usando a câmera. Capítulo 21.' },
-            { titulo: 'IA', texto: 'O José. Capítulo 25.', recurso: 'jose' },
+            { titulo: 'Console', texto: 'Mostra as mensagens que a placa manda. Capítulo 20.' },
+            { titulo: 'Arquivos', texto: 'Mostra os arquivos guardados dentro da placa. Capítulo 20.' },
+            { titulo: 'Dispositivo', texto: 'A AmadoBoard em 3D. Capítulo 12.' },
+            { titulo: 'IOT', texto: 'Mostra em gráficos os dados que a placa envia pela internet. Capítulo 25.' },
+            { titulo: 'EasyMQTT', texto: 'Mostra os dados enviados com o EasyMQTT. Capítulo 25.' },
+            { titulo: 'Música', texto: 'Monte músicas para o buzzer tocar. Capítulo 17.' },
+            { titulo: 'Simulador', texto: 'Teste circuitos e programas sem a placa. Capítulo 19.' },
+            { titulo: 'Visão', texto: 'Controle a placa com visão computacional: reconheça gestos, poses e cores. Capítulo 22.' },
+            { titulo: 'IA', texto: 'O José. Capítulo 26.', recurso: 'jose' },
           ],
         },
       ],
@@ -135,6 +135,11 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'paragrafo',
           texto:
             'É o espaço onde você monta o programa. Arraste um bloco para perto de outro e solte: se as pontas combinarem, eles se encaixam, como peças de quebra‑cabeça. O bloco Dados do projeto já vem pronto. Nele você pode escrever o seu nome e o que o programa faz.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.areaDeTrabalho, alt: 'A área de trabalho do Dblocks com o bloco Dados do projeto e os controles no canto direito' },
+          legenda: 'A área de trabalho com o bloco Dados do projeto, que já vem pronto, e os controles no canto direito.',
         },
         {
           tipo: 'figuraComLista',

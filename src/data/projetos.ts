@@ -16,10 +16,10 @@ type BaseProjeto = {
 export type Projeto = BaseProjeto & { titulo: string; tituloCurto: string; resumo: string };
 
 const estrutura: BaseProjeto[] = [
-  { slug: 'semaforo', icone: 'semaforo', categoria: 'controle', minutos: 20, nivel: 'Iniciante', capitulos: [7, 12] },
-  { slug: 'alarme-de-distancia', icone: 'bell', categoria: 'placa', minutos: 30, nivel: 'Intermediário', capitulos: [8, 14, 16] },
-  { slug: 'janela-automatica', icone: 'thermo', categoria: 'placa', minutos: 40, nivel: 'Intermediário', capitulos: [7, 8, 14, 15, 18] },
-  { slug: 'carrinho-seguidor-de-linha', icone: 'car', categoria: 'logica', minutos: 60, nivel: 'Avançado', capitulos: [8, 14, 15] },
+  { slug: 'semaforo', icone: 'semaforo', categoria: 'controle', minutos: 20, nivel: 'Iniciante', capitulos: [8, 13] },
+  { slug: 'alarme-de-distancia', icone: 'bell', categoria: 'placa', minutos: 30, nivel: 'Intermediário', capitulos: [9, 15, 17] },
+  { slug: 'janela-automatica', icone: 'thermo', categoria: 'placa', minutos: 40, nivel: 'Intermediário', capitulos: [8, 9, 15, 16, 19] },
+  { slug: 'carrinho-seguidor-de-linha', icone: 'car', categoria: 'logica', minutos: 60, nivel: 'Avançado', capitulos: [9, 15, 16] },
 ];
 
 export const SLUG_DESTAQUE = 'janela-automatica';

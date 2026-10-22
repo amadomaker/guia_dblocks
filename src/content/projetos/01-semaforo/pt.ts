@@ -19,11 +19,11 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'capitulosUsados',
           itens: [
             {
-              capitulo: 7,
+              capitulo: 8,
               texto:
                 'O que você usa: O repita enquanto, para o semáforo nunca parar, e o esperar, para dar o tempo de cada cor.',
             },
-            { capitulo: 12, texto: 'O que você usa: O ajustar pino de saida, para acender e apagar cada LED.' },
+            { capitulo: 13, texto: 'O que você usa: O ajustar pino de saida, para acender e apagar cada LED.' },
           ],
         },
       ],
@@ -53,10 +53,10 @@ const conteudo: ConteudoCapitulo = {
           },
           titulo: 'O que esse programa faz?',
           linhas: [
-            { texto: 'Acende o LED verde (D33) e espera 3 segundos.', capitulo: 12 },
-            { texto: 'Apaga o verde e acende o azul (D2) por 1 segundo. Ele faz o papel do amarelo.', capitulo: 12 },
-            { texto: 'Apaga o azul e acende o vermelho (D32) por 3 segundos.', capitulo: 12 },
-            { texto: 'Apaga o vermelho e repete tudo para sempre.', capitulo: 7 },
+            { texto: 'Acende o LED verde (D33) e espera 3 segundos.', capitulo: 13 },
+            { texto: 'Apaga o verde e acende o azul (D2) por 1 segundo. Ele faz o papel do amarelo.', capitulo: 13 },
+            { texto: 'Apaga o azul e acende o vermelho (D32) por 3 segundos.', capitulo: 13 },
+            { texto: 'Apaga o vermelho e repete tudo para sempre.', capitulo: 8 },
           ],
         },
         {
@@ -77,7 +77,7 @@ const conteudo: ConteudoCapitulo = {
           itens: [
             {
               titulo: 'Sinal para pedestres',
-              texto: 'Coloque um botão (capítulo 12): quando apertado, o sinal fecha mais rápido.',
+              texto: 'Coloque um botão (capítulo 13): quando apertado, o sinal fecha mais rápido.',
             },
             { titulo: 'Hora do rush', texto: 'Deixe o verde aceso por mais tempo e o vermelho por menos.' },
           ],

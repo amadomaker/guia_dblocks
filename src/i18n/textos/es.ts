@@ -243,7 +243,7 @@ export const es: Dicionario = {
     'primeiros-passos': {
       titulo: 'Primeros pasos',
       resumo: 'Desde crear tu cuenta hasta el primer programa funcionando en la placa, pasando por cada parte de la interfaz.',
-      duracao: 'unos 34 min',
+      duracao: 'unos 44 min',
     },
     'programacao-em-blocos': {
       titulo: 'Programación con bloques',
@@ -270,6 +270,7 @@ export const es: Dicionario = {
     'o-que-e-o-dblocks': { titulo: 'Qué es Dblocks', resumo: 'Conoce la plataforma, lo que puedes crear y cómo los bloques se convierten en código de verdad.' },
     'sua-conta-e-seu-perfil': { titulo: 'Tu cuenta y tu perfil', resumo: 'Entra con Google, elige el idioma y descubre para qué sirve el botón Limpiar caché.' },
     'conhecendo-a-interface': { titulo: 'Conociendo la interfaz', resumo: 'Barra de pestañas, caja de bloques, área de trabajo y los botones para ejecutar y grabar en la placa.' },
+    'conhecendo-a-amadoboard': { titulo: 'Conociendo la AmadoBoard', resumo: 'Conoce las piezas de la placa, cómo recibe energía y en qué pines conectar cada cosa.' },
     'conectando-a-placa': { titulo: 'Conectando la placa', resumo: 'Instala MicroPython, conecta por USB, Bluetooth o Wi‑Fi y aprende qué hacer si la conexión falla.' },
     'seu-primeiro-programa': { titulo: 'Tu primer programa', resumo: 'Arma un LED que parpadea bloque a bloque, ejecútalo en la AmadoBoard y graba el programa en la placa.' },
     'variaveis-e-valores': { titulo: 'Variables y valores', resumo: 'Guarda números, textos y listas y muestra valores en la consola.' },
@@ -277,7 +278,7 @@ export const es: Dicionario = {
     'matematica-e-logica': { titulo: 'Matemáticas y lógica', resumo: 'Operadores, comparaciones y decisiones con si / si no.' },
     'funcoes-e-texto': { titulo: 'Funciones y texto', resumo: 'Crea tus propios bloques reutilizables y trabaja con textos.' },
     'do-bloco-ao-python': { titulo: 'Del bloque a Python', resumo: 'Mira el MicroPython que generan tus bloques y aprende leyendo el código.' },
-    'conhecendo-a-amadoboard': { titulo: 'Conociendo la AmadoBoard', resumo: 'Explora la placa en 3D en la pestaña Dispositivo: pines, componentes y recorrido guiado.' },
+    'explorando-a-placa-em-3d': { titulo: 'Explorando la placa en 3D', resumo: 'Explora la placa en 3D en la pestaña Dispositivo: pines, componentes y recorrido guiado.' },
     'entradas-e-saidas-digitais': { titulo: 'Entradas y salidas digitales', resumo: 'Botones, LEDs y lo que encendido y apagado significan para la placa.' },
     'entradas-e-saidas-analogicas': { titulo: 'Entradas y salidas analógicas', resumo: 'Lee el LDR y el potenciómetro y controla el brillo con PWM.' },
     sensores: { titulo: 'Sensores', resumo: 'Temperatura, humedad, distancia, infrarrojo y RFID en la práctica.' },
@@ -290,7 +291,7 @@ export const es: Dicionario = {
     'visao-computacional': { titulo: 'Visión por computadora', resumo: 'Controla la placa con gestos de la mano usando la cámara de la computadora.' },
     bluetooth: { titulo: 'Bluetooth', resumo: 'Habla con el celular, envía comandos y grafica datos sin cables.' },
     'wi-fi-e-internet': { titulo: 'Wi‑Fi e internet', resumo: 'Conecta la placa a la red, crea un servidor web y haz solicitudes.' },
-    'iot-e-paineis-de-dados': { titulo: 'IoT y paneles de datos', resumo: 'Publica datos con EasyMQTT y sigue todo en gráficos en vivo.' },
+    'iot-e-paineis-de-dados': { titulo: 'IoT y paneles de datos', resumo: 'Monta un panel con medidores y gráficos y sigue las lecturas de la placa en tiempo real, por el cable USB.' },
     'conhecendo-o-jose': {
       tituloCurto: 'José',
       titulo: 'Conociendo a José',

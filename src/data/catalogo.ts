@@ -55,8 +55,9 @@ const estrutura: BaseTrilha[] = [
       { numero: 1, slug: 'o-que-e-o-dblocks', icone: 'rocket', categoria: 'marca', minutos: 5, nivel: 'Iniciante', selo: 'Atualizado' },
       { numero: 2, slug: 'sua-conta-e-seu-perfil', icone: 'user', categoria: 'marca', minutos: 4, nivel: 'Iniciante', selo: 'Novo' },
       { numero: 3, slug: 'conhecendo-a-interface', icone: 'layout', categoria: 'marca', minutos: 8, nivel: 'Iniciante', selo: 'Novo' },
-      { numero: 4, slug: 'conectando-a-placa', icone: 'plug', categoria: 'marca', minutos: 7, nivel: 'Iniciante', selo: 'Atualizado' },
-      { numero: 5, slug: 'seu-primeiro-programa', icone: 'play', categoria: 'marca', minutos: 10, nivel: 'Iniciante', selo: 'Atualizado' },
+      { numero: 4, slug: 'conhecendo-a-amadoboard', icone: 'cpu', categoria: 'marca', minutos: 10, nivel: 'Iniciante', selo: 'Novo' },
+      { numero: 5, slug: 'conectando-a-placa', icone: 'plug', categoria: 'marca', minutos: 7, nivel: 'Iniciante', selo: 'Atualizado' },
+      { numero: 6, slug: 'seu-primeiro-programa', icone: 'play', categoria: 'marca', minutos: 10, nivel: 'Iniciante', selo: 'Atualizado' },
     ],
   },
   {
@@ -65,11 +66,11 @@ const estrutura: BaseTrilha[] = [
     icone: 'repeat',
     categoria: 'controle',
     capitulos: [
-      { numero: 6, slug: 'variaveis-e-valores', icone: 'braces', categoria: 'variaveis', minutos: 9, nivel: 'Iniciante', selo: 'Atualizado' },
-      { numero: 7, slug: 'lacos-e-tempo', icone: 'repeat', categoria: 'controle', minutos: 10, nivel: 'Iniciante', selo: 'Atualizado' },
-      { numero: 8, slug: 'matematica-e-logica', icone: 'calculator', categoria: 'logica', minutos: 10, nivel: 'Iniciante' },
-      { numero: 9, slug: 'funcoes-e-texto', icone: 'func', categoria: 'funcoes', minutos: 12, nivel: 'Intermediário', selo: 'Novo' },
-      { numero: 10, slug: 'do-bloco-ao-python', icone: 'code', categoria: 'codigo', minutos: 8, nivel: 'Intermediário', selo: 'Novo' },
+      { numero: 7, slug: 'variaveis-e-valores', icone: 'braces', categoria: 'variaveis', minutos: 9, nivel: 'Iniciante', selo: 'Atualizado' },
+      { numero: 8, slug: 'lacos-e-tempo', icone: 'repeat', categoria: 'controle', minutos: 10, nivel: 'Iniciante', selo: 'Atualizado' },
+      { numero: 9, slug: 'matematica-e-logica', icone: 'calculator', categoria: 'logica', minutos: 10, nivel: 'Iniciante' },
+      { numero: 10, slug: 'funcoes-e-texto', icone: 'func', categoria: 'funcoes', minutos: 12, nivel: 'Intermediário', selo: 'Novo' },
+      { numero: 11, slug: 'do-bloco-ao-python', icone: 'code', categoria: 'codigo', minutos: 8, nivel: 'Intermediário', selo: 'Novo' },
     ],
   },
   {
@@ -78,13 +79,13 @@ const estrutura: BaseTrilha[] = [
     icone: 'cpu',
     categoria: 'placa',
     capitulos: [
-      { numero: 11, slug: 'conhecendo-a-amadoboard', icone: 'cube', categoria: 'placa', minutos: 10, nivel: 'Iniciante', selo: 'Atualizado' },
-      { numero: 12, slug: 'entradas-e-saidas-digitais', icone: 'toggle', categoria: 'placa', minutos: 12, nivel: 'Iniciante' },
-      { numero: 13, slug: 'entradas-e-saidas-analogicas', icone: 'wave', categoria: 'placa', minutos: 12, nivel: 'Intermediário' },
-      { numero: 14, slug: 'sensores', icone: 'thermo', categoria: 'placa', minutos: 15, nivel: 'Intermediário' },
-      { numero: 15, slug: 'atuadores-e-motores', icone: 'cog', categoria: 'placa', minutos: 15, nivel: 'Intermediário' },
-      { numero: 16, slug: 'musica-com-o-buzzer', icone: 'music', categoria: 'placa', minutos: 10, nivel: 'Iniciante' },
-      { numero: 17, slug: 'displays', icone: 'monitor', categoria: 'placa', minutos: 12, nivel: 'Intermediário' },
+      { numero: 12, slug: 'explorando-a-placa-em-3d', icone: 'cube', categoria: 'placa', minutos: 10, nivel: 'Iniciante', selo: 'Atualizado' },
+      { numero: 13, slug: 'entradas-e-saidas-digitais', icone: 'toggle', categoria: 'placa', minutos: 12, nivel: 'Iniciante' },
+      { numero: 14, slug: 'entradas-e-saidas-analogicas', icone: 'wave', categoria: 'placa', minutos: 12, nivel: 'Intermediário' },
+      { numero: 15, slug: 'sensores', icone: 'thermo', categoria: 'placa', minutos: 15, nivel: 'Intermediário' },
+      { numero: 16, slug: 'atuadores-e-motores', icone: 'cog', categoria: 'placa', minutos: 15, nivel: 'Intermediário' },
+      { numero: 17, slug: 'musica-com-o-buzzer', icone: 'music', categoria: 'placa', minutos: 10, nivel: 'Iniciante' },
+      { numero: 18, slug: 'displays', icone: 'monitor', categoria: 'placa', minutos: 12, nivel: 'Intermediário' },
     ],
   },
   {
@@ -93,10 +94,10 @@ const estrutura: BaseTrilha[] = [
     icone: 'layout',
     categoria: 'codigo',
     capitulos: [
-      { numero: 18, slug: 'simulador-de-circuitos', icone: 'circuit', categoria: 'codigo', minutos: 12, nivel: 'Iniciante', selo: 'Atualizado' },
-      { numero: 19, slug: 'console-e-arquivos', icone: 'terminal', categoria: 'codigo', minutos: 10, nivel: 'Intermediário', selo: 'Atualizado' },
-      { numero: 20, slug: 'projetos-salvar-e-compartilhar', icone: 'folder', categoria: 'codigo', minutos: 8, nivel: 'Iniciante', selo: 'Atualizado' },
-      { numero: 21, slug: 'visao-computacional', icone: 'vision', categoria: 'visao', minutos: 15, nivel: 'Intermediário', selo: 'Atualizado' },
+      { numero: 19, slug: 'simulador-de-circuitos', icone: 'circuit', categoria: 'codigo', minutos: 12, nivel: 'Iniciante', selo: 'Atualizado' },
+      { numero: 20, slug: 'console-e-arquivos', icone: 'terminal', categoria: 'codigo', minutos: 10, nivel: 'Intermediário', selo: 'Atualizado' },
+      { numero: 21, slug: 'projetos-salvar-e-compartilhar', icone: 'folder', categoria: 'codigo', minutos: 8, nivel: 'Iniciante', selo: 'Atualizado' },
+      { numero: 22, slug: 'visao-computacional', icone: 'vision', categoria: 'visao', minutos: 15, nivel: 'Intermediário', selo: 'Atualizado' },
     ],
   },
   {
@@ -105,16 +106,16 @@ const estrutura: BaseTrilha[] = [
     icone: 'wifi',
     categoria: 'internet',
     capitulos: [
-      { numero: 22, slug: 'bluetooth', icone: 'bluetooth', categoria: 'bluetooth', minutos: 15, nivel: 'Intermediário' },
-      { numero: 23, slug: 'wi-fi-e-internet', icone: 'wifi', categoria: 'internet', minutos: 15, nivel: 'Avançado' },
-      { numero: 24, slug: 'iot-e-paineis-de-dados', icone: 'chart', categoria: 'internet', minutos: 15, nivel: 'Avançado', selo: 'Novo' },
+      { numero: 23, slug: 'bluetooth', icone: 'bluetooth', categoria: 'bluetooth', minutos: 15, nivel: 'Intermediário' },
+      { numero: 24, slug: 'wi-fi-e-internet', icone: 'wifi', categoria: 'internet', minutos: 15, nivel: 'Avançado' },
+      { numero: 25, slug: 'iot-e-paineis-de-dados', icone: 'chart', categoria: 'internet', minutos: 20, nivel: 'Avançado', selo: 'Novo' },
     ],
   },
 ];
 
-/** Capítulo 25 fica fora das trilhas: tem seção própria na home. */
+/** Capítulo 26 fica fora das trilhas: tem seção própria na home. */
 const estruturaJose: BaseCapitulo = {
-  numero: 25,
+  numero: 26,
   slug: 'conhecendo-o-jose',
   icone: 'bot',
   categoria: 'marca',
@@ -133,7 +134,7 @@ function montarCatalogo(idioma: Idioma) {
     ...t.trilhas[tr.slug as keyof typeof t.trilhas],
     capitulos: tr.capitulos.map(cap),
   }));
-  // Com o José oculto (src/config/recursos.ts), o capítulo 25 sai da navegação, da busca e das rotas.
+  // Com o José oculto (src/config/recursos.ts), o capítulo 26 sai da navegação, da busca e das rotas.
   const capituloJose = publicado('jose') ? cap(estruturaJose) : null;
   const todosOsCapitulos = [...trilhas.flatMap((tr) => tr.capitulos), ...(capituloJose ? [capituloJose] : [])];
 
