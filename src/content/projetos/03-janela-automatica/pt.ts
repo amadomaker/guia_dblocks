@@ -28,18 +28,18 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'capitulosUsados',
           itens: [
-            { capitulo: 14, texto: 'O que você usa: Como ligar o DHT11 e ler a temperatura.' },
-            { capitulo: 15, texto: 'O que você usa: Como ligar o servo no SERVO B e girar até um ângulo.' },
+            { capitulo: 15, texto: 'O que você usa: Como ligar o DHT11 e ler a temperatura.' },
+            { capitulo: 16, texto: 'O que você usa: Como ligar o servo no SERVO B e girar até um ângulo.' },
             {
-              capitulo: 8,
+              capitulo: 9,
               texto: 'O que você usa: O se / senão e a comparação maior que, para decidir quando abrir.',
             },
             {
-              capitulo: 7,
+              capitulo: 8,
               texto: 'O que você usa: O repita enquanto e o esperar, para ler a temperatura de tempos em tempos.',
             },
             {
-              capitulo: 18,
+              capitulo: 19,
               texto: 'O que você usa: Como montar e testar o circuito no Simulador, antes de usar a placa.',
             },
           ],
@@ -69,9 +69,9 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'passos',
           montagem: true,
           itens: [
-            { titulo: 'Ligue o DHT11.', texto: 'VCC no 3V3, GND no GND e o sinal no D18, no conector CONN 4.', capitulo: 14 },
-            { titulo: 'Ligue o servo no SERVO B.', texto: 'Marrom no GND, vermelho no VS e amarelo no D16.', capitulo: 15 },
-            { titulo: 'Dê força para o servo.', texto: 'No CONN 5, coloque um jumper ligando o VS ao 5V.', capitulo: 15 },
+            { titulo: 'Ligue o DHT11.', texto: 'VCC no 3V3, GND no GND e o sinal no D18, no conector CONN 4.', capitulo: 15 },
+            { titulo: 'Ligue o servo no SERVO B.', texto: 'Marrom no GND, vermelho no VS e amarelo no D16.', capitulo: 16 },
+            { titulo: 'Dê força para o servo.', texto: 'No CONN 5, coloque um jumper ligando o VS ao 5V.', capitulo: 16 },
           ],
         },
         {
@@ -96,16 +96,16 @@ const conteudo: ConteudoCapitulo = {
           },
           titulo: 'O que esse programa faz?',
           linhas: [
-            { texto: 'Prepara o DHT11 no D18 e o servo no D16.', capitulo: 14 },
-            { texto: 'Atualiza a leitura e guarda a temperatura.', capitulo: 14 },
+            { texto: 'Prepara o DHT11 no D18 e o servo no D16.', capitulo: 15 },
+            { texto: 'Atualiza a leitura e guarda a temperatura.', capitulo: 15 },
             {
               texto: 'Se passar de 30 graus, gira o servo para 90 graus e acende o LED vermelho.',
-              capitulo: 15,
+              capitulo: 16,
             },
-            { texto: 'Senão, volta o servo para 0 e apaga o LED.', capitulo: 8 },
+            { texto: 'Senão, volta o servo para 0 e apaga o LED.', capitulo: 9 },
             {
               texto: 'Espera 2 segundos e repete. O DHT11 precisa de pelo menos 1 segundo entre as leituras.',
-              capitulo: 7,
+              capitulo: 8,
             },
           ],
         },

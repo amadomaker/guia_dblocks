@@ -18,13 +18,13 @@ const conteudo: ConteudoCapitulo = {
         {
           tipo: 'capitulosUsados',
           itens: [
-            { capitulo: 14, texto: 'O que você usa: Como o sensor infravermelho lê 0 ou 1 e onde ligar o sinal.' },
+            { capitulo: 15, texto: 'O que você usa: Como o sensor infravermelho lê 0 ou 1 e onde ligar o sinal.' },
             {
-              capitulo: 15,
+              capitulo: 16,
               texto: 'O que você usa: Como ligar os motores DC no J1 e no J3 e mudar a potência e a direção.',
             },
             {
-              capitulo: 8,
+              capitulo: 9,
               texto: 'O que você usa: O se / senão se / senão, para escolher entre virar ou seguir em frente.',
             },
           ],
@@ -58,10 +58,10 @@ const conteudo: ConteudoCapitulo = {
             {
               titulo: 'Ligue os sensores na frente do carrinho.',
               texto: 'Esquerda: sinal no D35 (CONN 1). Direita: sinal no D36 (CONN 8). VCC no 3V3 e GND no GND.',
-              capitulo: 14,
+              capitulo: 15,
             },
-            { titulo: 'Ligue os motores.', texto: 'Motor da esquerda no J1 e motor da direita no J3.', capitulo: 15 },
-            { titulo: 'Ligue a bateria na entrada J2.', texto: 'Sem ela, os motores ficam fracos.', capitulo: 15 },
+            { titulo: 'Ligue os motores.', texto: 'Motor da esquerda no J1 e motor da direita no J3.', capitulo: 16 },
+            { titulo: 'Ligue a bateria na entrada J2.', texto: 'Sem ela, os motores ficam fracos.', capitulo: 16 },
             { titulo: 'Faça a pista.', texto: 'Cole fita preta no chão claro, com curvas suaves.' },
           ],
         },
@@ -87,22 +87,22 @@ const conteudo: ConteudoCapitulo = {
           },
           titulo: 'O que esse programa faz?',
           linhas: [
-            { texto: 'Prepara o motor1 (J1) e o motor2 (J3) e põe a potência dos dois em 700.', capitulo: 15 },
+            { texto: 'Prepara o motor1 (J1) e o motor2 (J3) e põe a potência dos dois em 700.', capitulo: 16 },
             {
               texto: 'Lê os sensores: esquerda no D35 e direita no D36. Sobre a linha preta, o sensor lê 1.',
-              capitulo: 14,
+              capitulo: 15,
             },
             {
               texto: 'Se a esquerda vê a linha, para o motor1 e anda com o motor2: o carrinho vira para a esquerda.',
-              capitulo: 8,
+              capitulo: 9,
             },
             {
               texto: 'Se a direita vê a linha, anda com o motor1 e para o motor2: vira para a direita.',
-              capitulo: 8,
+              capitulo: 9,
             },
             {
               texto: 'Se nenhum vê a linha, os dois motores andam e o carrinho segue em frente.',
-              capitulo: 15,
+              capitulo: 16,
             },
           ],
         },
