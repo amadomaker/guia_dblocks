@@ -33,7 +33,7 @@ const conteudo: ConteudoCapitulo = {
           itens: [
             { titulo: 'conectar na rede wifi', texto: 'Liga a placa na rede Wi‑Fi. Escreva o nome da rede e a senha.' },
             { titulo: 'Configurar Modo Ponto de Acesso', texto: 'Faz a placa criar a própria rede Wi‑Fi.' },
-            { titulo: 'listar redes wifi', texto: 'Mostra no Console as redes que a placa encontra.' },
+            { titulo: 'listar redes wifi', texto: 'Devolve a lista das redes que a placa encontra. Coloque dentro de um imprime para ver as redes no Console.' },
             { titulo: 'Endereço IP Atual', texto: 'Diz o endereço da placa na rede.' },
           ],
         },

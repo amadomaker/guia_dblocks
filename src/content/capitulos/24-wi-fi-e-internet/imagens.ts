@@ -15,8 +15,8 @@ export const img = {
   exemploConectar: { src: exemploConectar, largura: 406, altura: 160 },
   consoleWifi: { src: consoleWifi, largura: 500, altura: 56 },
   exemploPontoAcesso: { src: exemploPontoAcesso, largura: 470, altura: 133 },
-  categoriaServidorHttp: { src: categoriaServidorHttp, largura: 760, altura: 566 },
-  exemploLedWeb: { src: exemploLedWeb, largura: 710, altura: 601 },
+  categoriaServidorHttp: { src: categoriaServidorHttp, largura: 760, altura: 525 },
+  exemploLedWeb: { src: exemploLedWeb, largura: 712, altura: 601 },
   paginaPlaca: { src: paginaPlaca, largura: 560, altura: 150 },
-  exemploPrevisao: { src: exemploPrevisao, largura: 710, altura: 268 },
+  exemploPrevisao: { src: exemploPrevisao, largura: 712, altura: 268 },
 };

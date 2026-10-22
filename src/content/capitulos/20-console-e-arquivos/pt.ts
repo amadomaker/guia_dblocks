@@ -127,6 +127,66 @@ const conteudo: ConteudoCapitulo = {
       ],
     },
     {
+      id: 'editando-um-arquivo',
+      titulo: 'Editando um arquivo',
+      blocos: [
+        {
+          tipo: 'paragrafo',
+          texto: 'Clique no nome de um arquivo da lista e ele abre no editor, do lado direito da tela. Ali dá para ler e mudar o conteúdo dele.',
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.editorArquivos, alt: 'Editor de arquivos aberto com o nome do arquivo em cima e o botão Salvar uma cópia' },
+          legenda: 'O arquivo aberto no editor, com o nome em cima e o botão Salvar uma cópia.',
+        },
+        {
+          tipo: 'paragrafo',
+          texto:
+            'Para guardar as mudanças na placa, clique em Salvar uma cópia, no alto do editor. Você também pode trocar o nome do arquivo antes de salvar.',
+        },
+      ],
+    },
+    {
+      id: 'tirando-o-programa-da-placa',
+      titulo: 'Tirando o programa da placa',
+      blocos: [
+        {
+          tipo: 'paragrafo',
+          texto:
+            'Depois de usar o Salvar na placa, o main.py roda sozinho toda vez que a placa é ligada. É isso que deixa o projeto funcionar longe do computador, só com uma fonte ou uma bateria.',
+        },
+        {
+          tipo: 'paragrafo',
+          texto: 'Mas, enquanto esse programa está rodando, a placa pode ficar ocupada e não responder ao Dblocks. Quando quiser voltar ao normal, faça assim:',
+        },
+        {
+          tipo: 'passos',
+          itens: [
+            {
+              titulo: 'Clique em Parar',
+              texto: 'O botão de parar fica na barra do Console. Com o programa parado, o botão de executar aparece de novo.',
+            },
+            {
+              titulo: 'Se não adiantar, reinicie a placa',
+              texto: 'Clique em desconectar, aperte o botão RESET da placa e conecte de novo.',
+            },
+            {
+              titulo: 'Apague o main.py',
+              texto: 'Na aba Arquivos, clique na lixeira ao lado do main.py. Depois clique em atualizar para conferir que ele saiu da lista.',
+            },
+          ],
+        },
+        {
+          tipo: 'destaque',
+          variante: 'info',
+          icone: 'book',
+          titulo: 'Guarde o projeto antes',
+          texto:
+            'Apagar o main.py tira o programa da placa, mas não apaga os seus blocos. Mesmo assim, salve o projeto antes, como mostra o capítulo 21.',
+        },
+      ],
+    },
+    {
       id: 'desafios',
       titulo: 'Desafios',
       blocos: [

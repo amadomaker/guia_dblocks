@@ -57,9 +57,9 @@ const conteudo: ConteudoCapitulo = {
               titulo: 'Mãos, Corpo e Cor',
               texto: 'Escolhem o que a câmera vai procurar: gestos da mão, poses do corpo ou uma cor que você segura.',
             },
-            { titulo: 'Câmera', texto: 'Escolhe qual câmera usar, a do computador ou uma câmera externa.' },
+            { titulo: 'Câmera', texto: 'Escolhe qual câmera usar, a do computador (Notebook) ou uma ESP32-CAM.' },
             { titulo: 'Wi‑Fi', texto: 'Onde você escreve o IP da placa, o endereço dela na rede.' },
-            { titulo: 'Definir gestos', texto: 'Mostra a lista de gestos que a câmera reconhece.' },
+            { titulo: 'Definir gestos', texto: 'Mostra a lista de gestos que a câmera reconhece. Com os blocos da categoria Visão você não precisa preencher nada aqui: a lista serve para ver os gestos e, se quiser, mandar um gesto para outro endereço.' },
           ],
         },
       ],
@@ -77,7 +77,7 @@ const conteudo: ConteudoCapitulo = {
             {
               titulo: 'Rode o programa na placa',
               texto:
-                'Use o exemplo abaixo. Quando a Visão começa, o Console mostra uma linha com o IP da placa, como 192.168.1.100.',
+                'Use o exemplo abaixo. O Console mostra quatro endereços entre parênteses: o primeiro é o IP da placa.',
             },
             {
               titulo: 'Escreva o IP na aba Visão',
@@ -85,6 +85,11 @@ const conteudo: ConteudoCapitulo = {
             },
             { titulo: 'Ligue a câmera', texto: 'Clique no ▶ e faça um gesto na frente da câmera.' },
           ],
+        },
+        {
+          tipo: 'figura',
+          imagem: { ...img.consoleIp, alt: 'Console mostrando quatro endereços entre parênteses; o primeiro, circulado, é o IP da placa' },
+          legenda: 'O primeiro endereço é o IP da placa.',
         },
       ],
     },
@@ -96,7 +101,7 @@ const conteudo: ConteudoCapitulo = {
           tipo: 'figura',
           semSombra: true,
           imagem: { ...img.definirGestos, alt: 'Janela Definir gestos com os 7 gestos da mão que a câmera reconhece' },
-          legenda: 'Os 7 gestos da mão que a câmera reconhece.',
+          legenda: 'Os 7 gestos da mão que a câmera reconhece. Com os blocos da categoria Visão, não precisa preencher os campos de comando.',
         },
         {
           tipo: 'tabela',
@@ -106,12 +111,12 @@ const conteudo: ConteudoCapitulo = {
             {
               titulo: 'Mãos',
               texto:
-                'Punho fechado, Mão aberta, Apontar, Polegar para cima, Polegar para baixo, Vitória e Eu te amo. Também mede a posição da mão e a pinça entre os dedos.',
+                'Punho fechado, Mão aberta, Apontando, Polegar para cima, Polegar para baixo, Vitória e Eu te amo. Também mede a posição da mão e a pinça entre os dedos.',
             },
             {
               titulo: 'Corpo',
               texto:
-                'Braços para cima, Braços abertos (T), Braço direito, Braço esquerdo, Mãos na cabeça e Braços cruzados.',
+                'Braços para cima, Braços abertos (T), Braço direito levantado, Braço esquerdo levantado, Mãos na cabeça e Braços cruzados.',
             },
             {
               titulo: 'Cor',

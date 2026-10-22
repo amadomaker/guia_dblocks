@@ -50,7 +50,7 @@ const conteudo: ConteudoCapitulo = {
           layout: { itens: 14, topo: 4, linhaTexto: 23 },
           imagem: { ...img.listaProjetos, alt: 'Lista de projetos com o botão +, e os botões de baixar e apagar em cada projeto' },
           itens: [
-            { titulo: 'Criar um projeto', texto: 'Clique no + ao lado de Projetos. Um projeto novo, vazio, abre na hora.' },
+            { titulo: 'Criar um projeto', texto: 'Clique em + Novo projeto. Um projeto novo, vazio, abre na hora.' },
             { titulo: 'Trocar de projeto', texto: 'Clique no nome do projeto que você quer abrir. O que está aberto fica em laranja.' },
             { titulo: 'Baixar', texto: 'A seta para baixo salva aquele projeto em um arquivo no computador.' },
             { titulo: 'Apagar', texto: 'A lixeira apaga o projeto.' },

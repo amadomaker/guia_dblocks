@@ -45,6 +45,13 @@ const conteudo: ConteudoCapitulo = {
             {
               titulo: 'Instale o app no celular',
               texto: 'Procure Bluefruit Connect na loja de aplicativos do celular. Ele é gratuito para Android e iPhone.',
+              blocos: [
+                {
+                  tipo: 'figura',
+                  imagem: { ...img.appBluefruit, alt: 'O aplicativo Bluefruit Connect, da Adafruit, na loja de aplicativos do celular' },
+                  legenda: 'O app Bluefruit Connect, da Adafruit, na loja de aplicativos.',
+                },
+              ],
             },
           ],
         },
@@ -98,14 +105,19 @@ const conteudo: ConteudoCapitulo = {
           itens: [
             '1. Rode o programa e abra o app. Escolha o aparelho MPY ESP32 na lista. Esse nome pode aparecer mesmo se você escolheu outro no bloco.',
             '2. Toque em Controller e depois em Control Pad.',
-            '3. Aperte os botões. No Console aparece Dados recebidos e o código do botão, como !B11.',
+            '3. Aperte os botões. No Console aparece Dados recebidos e o código do botão, como !B507.',
           ],
           blocos: [
-            { tipo: 'console', imagem: { ...img.consoleBotoes, alt: 'Console mostrando Dados recebidos: !B11 e !B10' } },
+            { tipo: 'console', imagem: { ...img.consoleBotoes, alt: 'Console mostrando Dados recebidos com os códigos !B516 e !B507 dos botões de seta' } },
             {
               tipo: 'nota',
               texto:
-                'Cada botão manda dois códigos: um quando você aperta e outro quando solta. Por exemplo, o botão 1 manda !B11 ao apertar e !B10 ao soltar.',
+                'Cada botão manda dois códigos: um quando você aperta e outro quando solta. No teste do print acima foram usados os botões de seta: a seta para cima mandou !B516 ao apertar e !B507 ao soltar.',
+            },
+            {
+              tipo: 'figura',
+              imagem: { ...img.passosNoApp, alt: 'Passos no app: escolher o MPY ESP32, abrir Controller e depois o Control Pad' },
+              legenda: 'No app: escolha o MPY ESP32, abra Controller e, dentro dele, o Control Pad.',
             },
           ],
         },
@@ -117,14 +129,14 @@ const conteudo: ConteudoCapitulo = {
             {
               tipo: 'figura',
               semSombra: true,
-              imagem: { ...img.exemploLeds, alt: 'Programa que acende o LED azul com !B11, o verde com !B19 e senão apaga os dois' },
+              imagem: { ...img.exemploLeds, alt: 'Programa que acende o LED azul com !B11, o verde com !B219 e senão apaga os dois' },
             },
             {
               tipo: 'explicacao',
               titulo: 'O que esse programa faz?',
               itens: [
                 '1. Se chegar !B11 (botão 1 apertado), acende o LED azul (D2).',
-                '2. Se chegar !B19 (botão 2 apertado), acende o LED verde (D33).',
+                '2. Se chegar !B219 (botão 2 apertado), acende o LED verde (D33).',
                 '3. Senão, apaga os dois LEDs.',
               ],
             },
@@ -157,6 +169,11 @@ const conteudo: ConteudoCapitulo = {
             {
               tipo: 'nota',
               texto: 'No app, toque em Plotter para ver o gráfico. Cubra o sensor com a mão e veja a linha descer.',
+            },
+            {
+              tipo: 'figura',
+              imagem: { ...img.graficoNoApp, alt: 'Gráfico no app acompanhando a luz do ambiente em tempo real' },
+              legenda: 'O gráfico no app, acompanhando a luz do ambiente em tempo real.',
             },
           ],
         },
